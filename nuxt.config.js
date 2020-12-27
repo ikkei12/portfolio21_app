@@ -2,8 +2,7 @@ export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
   server: {
-    port: 3000,
-    host: '0.0.0.0',
+    port: 3300,
   },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -20,7 +19,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['@/plugins/composition-api', '@/plugins/axios'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,

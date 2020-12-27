@@ -1,33 +1,17 @@
 <template>
-  <div class="container">
-    <div>
-      <h1 class="title">app</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+  <div class="container"></div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({})
+import { defineComponent } from '@vue/composition-api'
+export default defineComponent({
+  setup(_props, context) {
+    context.root.$axios
+      .get('/products')
+      .then((res: Response) => console.log(res.data))
+      .catch((e: Error) => console.log(e))
+  },
+})
 </script>
 
 <style>
