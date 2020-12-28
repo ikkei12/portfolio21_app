@@ -8,8 +8,8 @@ export default defineComponent({
   setup(_props, context) {
     context.root.$axios
       .get('/products')
-      .then((res: Response) => console.log(res.data))
-      .catch((e: Error) => console.log(e))
+      .then((res) => console.log(res.data))
+      .catch((e) => console.log(e))
   },
 })
 </script>

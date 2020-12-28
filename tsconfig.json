@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noImplicitAny": true,
     "target": "ES2018",
     "module": "ESNext",
     "moduleResolution": "Node",
@@ -25,7 +26,9 @@
     },
     "types": [
       "@types/node",
-      "@nuxt/types"
+      "@nuxt/types",
+      "@nuxtjs/axios",
+
     ]
   },
   "exclude": [
