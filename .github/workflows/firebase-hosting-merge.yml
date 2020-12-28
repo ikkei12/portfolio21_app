@@ -31,3 +31,23 @@ jobs:
           projectId: portfolio21-56e7e
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
+      # テスト成功時はこちらのステップが実行される
+      - name: Slack Notification on Success
+        if: success()
+        uses: rtCamp/action-slack-notify@v2.0.2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_CHANNEL: 1001_harashima
+          SLACK_TITLE: Deploy Success
+          SLACK_COLOR: good
+          
+
+      # テスト失敗時はこちらのステップが実行される
+      - name: Slack Notification on Failure
+        if: failure()
+        uses: rtCamp/action-slack-notify@v2.0.2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_CHANNEL: 1001_harashima
+          SLACK_TITLE: Deploy Failure
+          SLACK_COLOR: danger
