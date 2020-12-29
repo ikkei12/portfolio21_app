@@ -10,6 +10,7 @@
         v-for="(product, i) in products"
         :key="'product' + i"
         :product="product"
+        :index="i + 1"
         @onMouseOver="dispatchEvent"
       />
     </div>
@@ -49,6 +50,7 @@ export default defineComponent({
   }
   .list-items__wrapper {
     width: 60%;
+    padding: 0 5vw;
   }
 }
 </style>
