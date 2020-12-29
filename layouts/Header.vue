@@ -4,8 +4,9 @@
       v-for="(item, i) in headerItems"
       :key="'item' + i"
       :to="item.path"
+      class="link"
     >
-      <p>{{ item.title }}</p>
+      <p class="link__text">{{ item.title }}</p>
     </nuxt-link>
   </header>
 </template>
@@ -38,9 +39,22 @@ export default defineComponent({
   },
 })
 </script>
-<style scoped>
+<style scoped lang="scss">
 .header {
   position: fixed;
   top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-right: 32px;
+  .link {
+    margin-right: 16px;
+    text-decoration: none;
+    .link__text {
+      font-weight: bold;
+      color: black;
+    }
+  }
 }
 </style>
