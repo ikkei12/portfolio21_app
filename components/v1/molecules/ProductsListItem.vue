@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click="onItemClick">
     <p>{{ product.title }}</p>
   </div>
 </template>
@@ -12,6 +12,12 @@ export default defineComponent({
       type: Object as PropType<Product>,
       required: true,
     },
+  },
+  setup(props, context) {
+    const onItemClick = () => {
+      context.emit('onItemClick', props.product)
+    }
+    return { onItemClick }
   },
 })
 </script>

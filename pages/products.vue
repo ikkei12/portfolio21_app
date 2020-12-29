@@ -1,15 +1,20 @@
 <template>
   <div class="container">
-    <ProductPage :products="products" />
+    <ProductsProvider>
+      <ProductsPage :products="products" />
+    </ProductsProvider>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, reactive } from '@vue/composition-api'
-import ProductPage from '@/components/v1/templates/ProductsPage.vue'
+import ProductsPage from '@/components/v1/templates/ProductsPage.vue'
+import ProductsProvider from '@/components/v1/providers/ProductsProvider.vue'
+
 export default defineComponent({
   components: {
-    ProductPage,
+    ProductsPage,
+    ProductsProvider,
   },
   setup(_props, context) {
     const products = reactive<Product[]>([])

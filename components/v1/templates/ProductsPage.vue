@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="products-page__container">
     <ProductsList :products="products" />
   </div>
 </template>
@@ -19,3 +19,8 @@ export default defineComponent({
   },
 })
 </script>
+<style scoped>
+.products-page__container {
+  padding: 10rem 3rem;
+}
+</style>
