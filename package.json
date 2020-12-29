@@ -16,9 +16,12 @@
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/dotenv": "^1.4.1",
     "@types/axios": "^0.14.0",
+    "@types/swiper": "^5.4.1",
     "@vue/composition-api": "^1.0.0-beta.22",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "swiper": "^6.4.5",
+    "vue-awesome-swiper": "^4.1.1"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.6",

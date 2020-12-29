@@ -19,7 +19,11 @@ export default {
   css: [{ src: '~/assets/scss/global.scss', lang: 'scss' }],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['@/plugins/composition-api', '@/plugins/axios'],
+  plugins: [
+    '@/plugins/composition-api',
+    '@/plugins/axios',
+    '@/plugins/vue-awesome-swiper',
+  ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,

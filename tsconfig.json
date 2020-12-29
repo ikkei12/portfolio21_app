@@ -28,7 +28,7 @@
       "@types/node",
       "@nuxt/types",
       "@nuxtjs/axios",
-
+      "@types/swiper",
     ]
   },
   "exclude": [
