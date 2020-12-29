@@ -1,8 +1,12 @@
 <template>
   <div class="product-detail__page">
-    <swiper ref="swiperRef" :options="swiperOptions">
+    <swiper
+      ref="swiperRef"
+      :options="swiperOptions"
+      @slideChange="onSlideChange"
+    >
       <swiper-slide
-        v-for="(productContent, i) in product.productContents"
+        v-for="(productContent, i) in productContents"
         :key="'slide' + i"
       >
         <div>
@@ -15,8 +19,16 @@
       :length="contentLength"
       @onClickPaginationDot="onClickPaginationDot"
     />
-    <div class="swiper-button-prev" @click="slidePrev" />
-    <div class="swiper-button-next" @click="slideNext" />
+    <div
+      class="swiper-button-prev"
+      :class="{ '--disabled': activeIndex === 1 }"
+      @click="slidePrev"
+    />
+    <div
+      class="swiper-button-next"
+      :class="{ '--disabled': activeIndex === contentLength }"
+      @click="slideNext"
+    />
   </div>
 </template>
 
@@ -36,38 +48,35 @@ export default defineComponent({
     const swiperRef = ref<HTMLImageElement>({})
     const activeIndex = ref<number>(1)
     const swiperOptions = {
-      loop: true,
+      slidesPerView: 1.4,
+      spaceBetween: 70,
+      slideToClickedSlide: true,
+      centeredSlides: true,
     }
     const contentLength = computed(() => {
       return props.product?.productContents?.length
     })
-
+    const productContents = computed(() => {
+      return props.product.productContents
+    })
     const slideNext = () => {
       swiperRef.value.$swiper.slideNext()
-      if (contentLength.value) {
-        if (activeIndex.value >= contentLength.value) {
-          changeSlideIndex(1)
-          return
-        }
-      }
-      activeIndex.value += 1
     }
     const slidePrev = () => {
       swiperRef.value.$swiper.slidePrev()
-      if (activeIndex.value <= 1) {
-        changeSlideIndex(contentLength?.value)
-        return
-      }
-      activeIndex.value -= 1
     }
     const changeSlideIndex = (num: number | undefined) => {
       activeIndex.value = num
     }
     const onClickPaginationDot = (num: number) => {
-      swiperRef.value.$swiper.slideTo(num)
+      swiperRef.value.$swiper.slideTo(num - 1)
       changeSlideIndex(num)
     }
+    const onSlideChange = (e) => {
+      changeSlideIndex(e.activeIndex + 1)
+    }
     return {
+      productContents,
       activeIndex,
       contentLength,
       slideNext,
@@ -75,16 +84,36 @@ export default defineComponent({
       swiperRef,
       swiperOptions,
       onClickPaginationDot,
+      onSlideChange,
     }
   },
 })
 </script>
 <style scoped lang="scss">
 .product-detail__page {
-  padding: 0 8vw;
   padding-top: 60px;
   position: relative;
   .swiper-button-next {
+  }
+}
+.swiper-slide {
+  opacity: 0.4;
+  &-active {
+    opacity: 1;
+  }
+  &-next,
+  &-prev {
+    cursor: pointer;
+  }
+}
+.swiper-button-prev {
+  &.--disabled {
+    display: none;
+  }
+}
+.swiper-button-next {
+  &.--disabled {
+    display: none;
   }
 }
 </style>

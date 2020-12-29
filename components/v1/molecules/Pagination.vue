@@ -25,7 +25,7 @@ export default defineComponent({
     },
   },
   setup(_props, context) {
-    const onClickPaginationDot = (i) => {
+    const onClickPaginationDot = (i: number) => {
       context.emit('onClickPaginationDot', i)
     }
     return { onClickPaginationDot }
@@ -48,6 +48,7 @@ export default defineComponent({
     width: 15px;
     height: 15px;
     margin-right: 8px;
+    cursor: pointer;
     &.--active {
       background: rgb(212, 212, 212);
     }
