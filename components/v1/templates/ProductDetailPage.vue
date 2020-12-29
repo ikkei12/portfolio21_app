@@ -1,34 +1,44 @@
 <template>
   <div class="product-detail__page">
-    <swiper
-      ref="swiperRef"
-      :options="swiperOptions"
-      @slideChange="onSlideChange"
-    >
-      <swiper-slide
-        v-for="(productContent, i) in productContents"
-        :key="'slide' + i"
+    <div class="swiper__wrapper">
+      <swiper
+        ref="swiperRef"
+        :options="swiperOptions"
+        @slideChange="onSlideChange"
       >
-        <div>
-          <img :src="productContent.image.url" style="width: 100%" />
-        </div>
-      </swiper-slide>
-    </swiper>
-    <Pagination
-      :active-index="activeIndex"
-      :length="contentLength"
-      @onClickPaginationDot="onClickPaginationDot"
-    />
-    <div
-      class="swiper-button-prev"
-      :class="{ '--disabled': activeIndex === 1 }"
-      @click="slidePrev"
-    />
-    <div
-      class="swiper-button-next"
-      :class="{ '--disabled': activeIndex === contentLength }"
-      @click="slideNext"
-    />
+        <swiper-slide
+          v-for="(productContent, i) in productContents"
+          :key="'slide' + i"
+        >
+          <div>
+            <img :src="productContent.image.url" style="width: 100%" />
+          </div>
+        </swiper-slide>
+      </swiper>
+      <Pagination
+        :active-index="activeIndex"
+        :length="contentLength"
+        @onClickPaginationDot="onClickPaginationDot"
+      />
+      <div
+        class="swiper-button-prev"
+        :class="{ '--disabled': activeIndex === 1 }"
+        @click="slidePrev"
+      />
+      <div
+        class="swiper-button-next"
+        :class="{ '--disabled': activeIndex === contentLength }"
+        @click="slideNext"
+      />
+    </div>
+    <p
+      v-for="(productContent, i) in productContents"
+      :key="'slide' + i"
+      class="description"
+      :class="{ '--active': activeIndex - 1 == i }"
+    >
+      {{ productContent.description }}
+    </p>
   </div>
 </template>
 
@@ -92,18 +102,22 @@ export default defineComponent({
 <style scoped lang="scss">
 .product-detail__page {
   padding-top: 60px;
+  height: 100vh;
   position: relative;
-  .swiper-button-next {
+  .swiper__wrapper {
+    position: relative;
   }
 }
-.swiper-slide {
-  opacity: 0.4;
-  &-active {
-    opacity: 1;
-  }
-  &-next,
-  &-prev {
-    cursor: pointer;
+.swiper-container {
+  .swiper-slide {
+    opacity: 0.4;
+    &-active {
+      opacity: 1;
+    }
+    &-next,
+    &-prev {
+      cursor: pointer;
+    }
   }
 }
 .swiper-button-prev {
@@ -114,6 +128,16 @@ export default defineComponent({
 .swiper-button-next {
   &.--disabled {
     display: none;
+  }
+}
+.description {
+  opacity: 0;
+  filter: blur(4px);
+  position: absolute;
+  &.--active {
+    transition: 1s;
+    opacity: 1;
+    filter: blur(0);
   }
 }
 </style>

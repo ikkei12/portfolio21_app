@@ -18,8 +18,8 @@ export default defineComponent({
     const fetchContent = async () => {
       await context.root.$axios
         .get(path)
-        .then((res) => {
-          state.product = res.data
+        .then(async (res) => {
+          state.product = await res.data
         })
         .catch((e) => {
           console.error(e)

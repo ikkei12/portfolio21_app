@@ -1,5 +1,5 @@
 <template>
-  <div class="log-in__provider w-full">
+  <div class="provider">
     <slot />
   </div>
 </template>
@@ -15,3 +15,9 @@ export default defineComponent({
   },
 })
 </script>
+<style lang="scss" scoped>
+.provider {
+  widows: 100%;
+  height: 100%;
+}
+</style>
