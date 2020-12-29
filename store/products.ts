@@ -2,7 +2,9 @@ import { reactive } from '@vue/composition-api'
 
 export default function ProductsStore() {
   const state = reactive({
-    currentProduct: <Product>{},
+    currentProduct: <Product>{
+      productContents: [{ image: { url: '' } }],
+    },
   })
 
   return {

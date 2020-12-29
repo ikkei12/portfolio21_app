@@ -2,11 +2,7 @@
   <div class="list__wrapper">
     <div class="thumbnail__wrapper">
       <ProductsListThumbnail
-        :url="
-          productsStore.currentProduct.productContents
-            ? productsStore.currentProduct.productContents[0].image.url
-            : 'https://i.imgur.com/2IVtaiA.jpg'
-        "
+        :url="productsStore.currentProduct.productContents[0].image.url"
       />
     </div>
     <div class="list-items__wrapper">
