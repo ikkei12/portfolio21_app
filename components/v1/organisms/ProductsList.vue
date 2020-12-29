@@ -2,13 +2,16 @@
   <div class="list__wrapper">
     <div class="thumbnail__wrapper">
       <ProductsListThumbnail
-        :url="productsStore.currentProduct.productContents[0].image.url"
+        v-for="(product, i) in products"
+        :key="'thumbnail' + i"
+        :url="product.productContents[0].image.url"
+        :class="{ '--active': product.id == productsStore.currentProduct.id }"
       />
     </div>
     <div class="list-items__wrapper">
       <ProductsListItem
         v-for="(product, i) in products"
-        :key="'product' + i"
+        :key="'list-item' + i"
         :product="product"
         :index="i + 1"
         @onMouseOver="dispatchEvent"
@@ -48,13 +51,18 @@ export default defineComponent({
   display: flex;
   align-items: center;
   .thumbnail__wrapper {
-    width: 50%;
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
   }
   .list-items__wrapper {
     width: 60%;
     padding: 0 0 0 1rem;
+    margin-left: 40vw;
     height: 100%;
     overflow-y: scroll;
+    z-index: 2;
     &::-webkit-scrollbar {
       box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
       width: 8px;
