@@ -1,18 +1,20 @@
 <template>
-  <div>
-    <ProductsListThumbnail
-      :url="
-        productsStore.currentProduct.productContents
-          ? productsStore.currentProduct.productContents[0].image.url
-          : 'https://i.imgur.com/2IVtaiA.jpg'
-      "
-    />
-    <div>
+  <div class="list__wrapper">
+    <div class="thumbnail__wrapper">
+      <ProductsListThumbnail
+        :url="
+          productsStore.currentProduct.productContents
+            ? productsStore.currentProduct.productContents[0].image.url
+            : 'https://i.imgur.com/2IVtaiA.jpg'
+        "
+      />
+    </div>
+    <div class="list-items__wrapper">
       <ProductsListItem
         v-for="(product, i) in products"
         :key="'product' + i"
         :product="product"
-        @onItemClick="dispatchEvent"
+        @onMouseOver="dispatchEvent"
       />
     </div>
   </div>
@@ -37,10 +39,20 @@ export default defineComponent({
   setup(_props, _context) {
     const productsStore = inject(ProductsStoreKey)
     const dispatchEvent = (product: Product) => {
-      console.log(product)
       productsStore.setCurrentProduct(product)
     }
     return { productsStore, dispatchEvent }
   },
 })
 </script>
+<style scoped lang="scss">
+.list__wrapper {
+  display: flex;
+  .thumbnail__wrapper {
+    width: 40%;
+  }
+  .list-items__wrapper {
+    width: 60%;
+  }
+}
+</style>

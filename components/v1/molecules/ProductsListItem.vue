@@ -1,5 +1,5 @@
 <template>
-  <div @click="onItemClick">
+  <div @mouseover="onMouseOver">
     <p>{{ product.title }}</p>
   </div>
 </template>
@@ -14,10 +14,10 @@ export default defineComponent({
     },
   },
   setup(props, context) {
-    const onItemClick = () => {
-      context.emit('onItemClick', props.product)
+    const onMouseOver = () => {
+      context.emit('onMouseOver', props.product)
     }
-    return { onItemClick }
+    return { onMouseOver }
   },
 })
 </script>
