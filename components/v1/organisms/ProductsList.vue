@@ -44,6 +44,7 @@ export default defineComponent({
 </script>
 <style scoped lang="scss">
 .list__wrapper {
+  height: 100%;
   display: flex;
   .thumbnail__wrapper {
     width: 40%;
@@ -51,6 +52,15 @@ export default defineComponent({
   .list-items__wrapper {
     width: 60%;
     padding: 0 5vw;
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(212, 212, 212, 0.5);
+    }
   }
 }
 </style>
