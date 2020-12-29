@@ -10,7 +10,11 @@
         </div>
       </swiper-slide>
     </swiper>
-    <Pagination :active-index="activeIndex" :length="contentLength" />
+    <Pagination
+      :active-index="activeIndex"
+      :length="contentLength"
+      @onClickPaginationDot="onClickPaginationDot"
+    />
     <div class="swiper-button-prev" @click="slidePrev" />
     <div class="swiper-button-next" @click="slideNext" />
   </div>
@@ -59,7 +63,10 @@ export default defineComponent({
     const changeSlideIndex = (num: number | undefined) => {
       activeIndex.value = num
     }
-
+    const onClickPaginationDot = (num: number) => {
+      swiperRef.value.$swiper.slideTo(num)
+      changeSlideIndex(num)
+    }
     return {
       activeIndex,
       contentLength,
@@ -67,6 +74,7 @@ export default defineComponent({
       slidePrev,
       swiperRef,
       swiperOptions,
+      onClickPaginationDot,
     }
   },
 })

@@ -5,6 +5,7 @@
       :key="'pagination' + i"
       class="pagination__dot"
       :class="{ '--active': i == activeIndex }"
+      @click="onClickPaginationDot(i)"
     />
   </div>
 </template>
@@ -23,7 +24,12 @@ export default defineComponent({
       default: 1,
     },
   },
-  setup() {},
+  setup(_props, context) {
+    const onClickPaginationDot = (i) => {
+      context.emit('onClickPaginationDot', i)
+    }
+    return { onClickPaginationDot }
+  },
 })
 </script>
 <style lang="scss" scoped>
