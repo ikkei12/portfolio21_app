@@ -24,7 +24,6 @@ export default defineComponent({
         res.data.contents.forEach((product: Product) => products.push(product))
       )
       .catch((e) => console.log(e))
-
     return { products }
   },
 })

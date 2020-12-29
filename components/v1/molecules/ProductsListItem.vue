@@ -35,6 +35,12 @@ export default defineComponent({
 <style scoped lang="scss">
 .list-item__link {
   text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  &:first-child {
+    margin-top: 5rem;
+  }
+
   .list-item {
     display: flex;
     align-items: center;

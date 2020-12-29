@@ -52,7 +52,6 @@ export default defineComponent({
   }
   .list-items__wrapper {
     width: 60%;
-    margin-top: 10rem;
     padding: 0 0 0 1rem;
     height: 100%;
     overflow-y: scroll;
