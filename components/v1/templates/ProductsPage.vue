@@ -21,7 +21,7 @@ export default defineComponent({
 </script>
 <style scoped>
 .products-page__container {
-  padding: 10rem 3rem 0;
+  padding: 0 3rem 0;
   height: 100vh;
   overflow: hidden;
 }

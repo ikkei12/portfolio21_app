@@ -46,12 +46,14 @@ export default defineComponent({
 .list__wrapper {
   height: 100%;
   display: flex;
+  align-items: center;
   .thumbnail__wrapper {
-    width: 40%;
+    width: 50%;
   }
   .list-items__wrapper {
     width: 60%;
-    padding: 0 5vw;
+    margin-top: 10rem;
+    padding: 0 0 0 1rem;
     height: 100%;
     overflow-y: scroll;
     &::-webkit-scrollbar {

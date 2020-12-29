@@ -35,19 +35,17 @@ export default defineComponent({
 <style scoped lang="scss">
 .list-item__link {
   text-decoration: none;
-
   .list-item {
     display: flex;
     align-items: center;
-    padding: 3vh 2vw;
+    padding: 4vh 2vw 2vw;
     cursor: pointer;
-    border-bottom: 2px solid rgb(220, 220, 220);
-
+    border-bottom: 2px solid rgb(241, 241, 241);
     .list-item__index {
       font-weight: bold;
       font-size: 1rem;
       margin-right: 3vw;
-      color: black;
+      color: rgb(94, 94, 94);
     }
     .list-item__text {
       font-weight: bold;
