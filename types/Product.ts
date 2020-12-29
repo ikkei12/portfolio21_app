@@ -3,10 +3,10 @@ declare type Product = {
   title?: string
   productionPeriod?: string
   url?: string
-  createdDate?: Date
+  createdDate?: string
   productContents?: ProductContent[]
-  createdAt?: Date
-  updatedAt?: Date
-  revisedAt?: Date
-  publishedAt?: Date
+  createdAt?: string
+  updatedAt?: string
+  revisedAt?: string
+  publishedAt?: string
 }

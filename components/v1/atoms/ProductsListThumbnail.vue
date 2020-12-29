@@ -1,5 +1,5 @@
 <template>
-  <img :src="url" class="thumbnail" />
+  <img :src="url" class="thumbnail" :class="{ '--active': active }" />
 </template>
 <script>
 import { defineComponent } from '@vue/composition-api'
@@ -7,6 +7,9 @@ import { defineComponent } from '@vue/composition-api'
 export default defineComponent({
   props: {
     url: { type: String, required: true },
+    active: {
+      type: Boolean,
+    },
   },
 })
 </script>

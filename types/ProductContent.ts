@@ -6,8 +6,8 @@ declare type ProductContent = {
   order: number
   description: string
   image: Image
-  createdAt: Date
-  updatedAt: Date
-  revisedAt: Date
-  publishedAt: Date
+  createdAt: string
+  updatedAt: string
+  revisedAt: string
+  publishedAt: string
 }

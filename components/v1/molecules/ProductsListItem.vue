@@ -1,8 +1,13 @@
 <template>
-  <nuxt-link class="list-item__link" :to="'/products/' + product.id">
+  <nuxt-link
+    class="list-item__link"
+    :to="'/products/' + product.id"
+    :class="{ '--active': active }"
+  >
     <div class="list-item" @mouseover="onMouseOver">
       <p class="list-item__index">{{ itemIndex }}.</p>
       <p class="list-item__text">{{ product.title }}</p>
+      <p class="list-item__created-date">{{ createdDate }}</p>
     </div>
   </nuxt-link>
 </template>
@@ -19,6 +24,9 @@ export default defineComponent({
       type: Number,
       required: true,
     },
+    active: {
+      type: Boolean,
+    },
   },
   setup(props, context) {
     const onMouseOver = () => {
@@ -28,7 +36,20 @@ export default defineComponent({
       if (props.index <= 9) return '0' + props.index
       else return props.index
     })
-    return { onMouseOver, itemIndex }
+    const createdDate = computed(() => {
+      let date = ''
+      new Date(props.product.createdDate)
+        .toLocaleDateString()
+        .split('/')
+        .forEach((item, i) => {
+          const formatted = item.length < 2 ? '0' + item : item
+          if (i === 2) date += formatted
+          else date += formatted + '-'
+        })
+
+      return date
+    })
+    return { onMouseOver, itemIndex, createdDate }
   },
 })
 </script>
@@ -37,26 +58,45 @@ export default defineComponent({
   text-decoration: none;
   display: inline-block;
   width: 100%;
+  margin-top: 2vh;
   &:first-child {
     margin-top: 5rem;
   }
-
   .list-item {
     display: flex;
     align-items: center;
-    padding: 4vh 2vw 2vw;
+    padding: 3vh 2vw;
     cursor: pointer;
     border-bottom: 2px solid rgb(241, 241, 241);
+    position: relative;
     .list-item__index {
-      font-weight: bold;
       font-size: 1rem;
       margin-right: 3vw;
-      color: rgb(94, 94, 94);
+      color: rgb(210, 210, 210);
     }
     .list-item__text {
       font-weight: bold;
       font-size: 1.5rem;
+      color: rgb(210, 210, 210);
+    }
+    .list-item__created-date {
+      color: rgb(121, 121, 121);
+      position: absolute;
+      top: 5px;
+      right: 8px;
+      opacity: 0;
+    }
+  }
+  &.--active {
+    background: rgba(225, 225, 225, 0.295);
+    .list-item__index {
       color: black;
+    }
+    .list-item__text {
+      color: black;
+    }
+    .list-item__created-date {
+      opacity: 1;
     }
   }
 }

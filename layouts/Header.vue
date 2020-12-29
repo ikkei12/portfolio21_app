@@ -48,6 +48,7 @@ export default defineComponent({
   align-items: center;
   height: 60px;
   padding-right: 32px;
+  z-index: 5;
   .link {
     margin-right: 16px;
     text-decoration: none;

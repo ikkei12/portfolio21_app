@@ -4,18 +4,27 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from '@vue/composition-api'
+import { defineComponent, reactive, inject } from '@vue/composition-api'
 import ProductsList from '@/components/v1/organisms/ProductsList.vue'
+import ProductsStoreKey from '@/components/v1/storeKeys/ProductsStoreKey'
+
 export default defineComponent({
   name: 'ProductsPage',
   components: {
     ProductsList,
   },
-  props: {
-    products: {
-      type: Array as PropType<Product[]>,
-      required: true,
-    },
+  setup(_props, context) {
+    const productsStore = inject(ProductsStoreKey)
+    const products = reactive<Product[]>([])
+    context.root.$axios
+      .get('/products')
+      .then((res) => {
+        productsStore.setCurrentProduct(res.data.contents[0])
+        res.data.contents.forEach((product: Product) => products.push(product))
+      })
+      .catch((e) => console.log(e))
+
+    return { products }
   },
 })
 </script>

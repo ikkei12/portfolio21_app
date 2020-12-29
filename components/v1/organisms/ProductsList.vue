@@ -5,7 +5,7 @@
         v-for="(product, i) in products"
         :key="'thumbnail' + i"
         :url="product.productContents[0].image.url"
-        :class="{ '--active': product.id == productsStore.currentProduct.id }"
+        :active="product.id == productsStore.currentProduct.id"
       />
     </div>
     <div class="list-items__wrapper">
@@ -14,6 +14,7 @@
         :key="'list-item' + i"
         :product="product"
         :index="i + 1"
+        :active="product.id == productsStore.currentProduct.id"
         @onMouseOver="dispatchEvent"
       />
     </div>
