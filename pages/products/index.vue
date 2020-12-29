@@ -18,5 +18,7 @@ export default defineComponent({
   },
 })
 </script>
-
-<style></style>
+<style scoped lang="scss">
+.container {
+}
+</style>

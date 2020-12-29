@@ -1,5 +1,8 @@
 <template>
-  <img :src="url" class="thumbnail" :class="{ '--active': active }" />
+  <div class="thumbnail" :class="{ '--active': active }">
+    <img :src="url" />
+    <div />
+  </div>
 </template>
 <script>
 import { defineComponent } from '@vue/composition-api'
@@ -16,15 +19,28 @@ export default defineComponent({
 <style scoped lang="scss">
 .thumbnail {
   width: 100%;
+  height: 100%;
   opacity: 0;
-  transform: translateY(100px);
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto;
+  height: fit-content;
+  img {
+    width: 100%;
+  }
   &.--active {
     opacity: 1;
     transition: 0.8s;
+    animation: fadeIn;
+    animation-duration: 0.8s;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
     transform: translateY(0);
   }
 }

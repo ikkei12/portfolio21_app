@@ -28,7 +28,7 @@ export default defineComponent({
   },
 })
 </script>
-<style scoped>
+<style scoped lang="scss">
 .products-page__container {
   padding: 0 3rem 0;
   height: 100vh;
