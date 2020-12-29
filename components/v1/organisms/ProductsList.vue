@@ -1,15 +1,18 @@
 <template>
   <div>
-    <ProductsList :products="products" />
+    <ProductsListItem
+      v-for="(product, i) in products"
+      :key="'product' + i"
+      :product="product"
+    />
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
-import ProductsList from '@/components/v1/organisms/ProductsList.vue'
+import ProductsListItem from '@/components/v1/molecules/ProductsListItem.vue'
 export default defineComponent({
-  name: 'ProductsPage',
   components: {
-    ProductsList,
+    ProductsListItem,
   },
   props: {
     products: {
