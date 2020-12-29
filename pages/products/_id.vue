@@ -15,14 +15,17 @@ export default defineComponent({
     const state = reactive({
       product: {},
     })
-    context.root.$axios
-      .get(path)
-      .then((res) => {
-        state.product = res.data
-      })
-      .catch((e) => {
-        console.error(e)
-      })
+    const fetchContent = async () => {
+      await context.root.$axios
+        .get(path)
+        .then((res) => {
+          state.product = res.data
+        })
+        .catch((e) => {
+          console.error(e)
+        })
+    }
+    fetchContent()
 
     return { state }
   },

@@ -10,15 +10,15 @@
         </div>
       </swiper-slide>
     </swiper>
-    <Pagination current="" :length="product.productContents.length" />
+    <Pagination :active-index="activeIndex" :length="contentLength" />
     <div class="swiper-button-prev" @click="slidePrev" />
     <div class="swiper-button-next" @click="slideNext" />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, ref } from '@vue/composition-api'
-import { Pagination } from '@/components/v1/molecules/Pagination.vue'
+import { computed, defineComponent, PropType, ref } from '@vue/composition-api'
+import Pagination from '@/components/v1/molecules/Pagination.vue'
 
 export default defineComponent({
   components: { Pagination },
@@ -28,19 +28,46 @@ export default defineComponent({
       require: true,
     },
   },
-  setup(_props, _context) {
+  setup(props, _context) {
     const swiperRef = ref<HTMLImageElement>({})
+    const activeIndex = ref<number>(1)
     const swiperOptions = {
       loop: true,
     }
+    const contentLength = computed(() => {
+      return props.product?.productContents?.length
+    })
+
     const slideNext = () => {
       swiperRef.value.$swiper.slideNext()
+      if (contentLength.value) {
+        if (activeIndex.value >= contentLength.value) {
+          changeSlideIndex(1)
+          return
+        }
+      }
+      activeIndex.value += 1
     }
     const slidePrev = () => {
       swiperRef.value.$swiper.slidePrev()
+      if (activeIndex.value <= 1) {
+        changeSlideIndex(contentLength?.value)
+        return
+      }
+      activeIndex.value -= 1
+    }
+    const changeSlideIndex = (num: number | undefined) => {
+      activeIndex.value = num
     }
 
-    return { slideNext, slidePrev, swiperRef, swiperOptions }
+    return {
+      activeIndex,
+      contentLength,
+      slideNext,
+      slidePrev,
+      swiperRef,
+      swiperOptions,
+    }
   },
 })
 </script>
@@ -48,6 +75,7 @@ export default defineComponent({
 .product-detail__page {
   padding: 0 8vw;
   padding-top: 60px;
+  position: relative;
   .swiper-button-next {
   }
 }
