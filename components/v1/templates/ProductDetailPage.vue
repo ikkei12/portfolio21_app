@@ -104,8 +104,17 @@ export default defineComponent({
   padding-top: 60px;
   height: 100vh;
   position: relative;
+  animation: fadeIn 2s;
   .swiper__wrapper {
     position: relative;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .swiper-container {
