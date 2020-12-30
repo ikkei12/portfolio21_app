@@ -29,6 +29,7 @@
       "@nuxt/types",
       "@nuxtjs/axios",
       "@types/swiper",
+      "@nuxt/content"
     ]
   },
   "exclude": [
