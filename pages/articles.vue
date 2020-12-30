@@ -7,11 +7,14 @@
 </template>
 
 <script lang="ts">
+import { Context } from '@nuxt/types'
+import { IContentDocument } from '@nuxt/content/types/content'
+
 import { defineComponent } from '@vue/composition-api'
 export default defineComponent({
-  async asyncData({ $content }) {
+  async asyncData({ $content }: Context) {
     const articlesContent = await $content('articles').fetch()
-    const articles = articlesContent.map((article) => {
+    const articles = articlesContent.map((article: IContentDocument) => {
       return { title: article.toc[0].text }
     })
     return { articles }
