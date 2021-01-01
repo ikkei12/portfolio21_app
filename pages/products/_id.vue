@@ -19,6 +19,7 @@ export default defineComponent({
       await context.root.$axios
         .get(path)
         .then(async (res) => {
+          console.log(res.data)
           state.product = await res.data
         })
         .catch((e) => {

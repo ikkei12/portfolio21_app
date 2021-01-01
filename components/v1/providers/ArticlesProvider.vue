@@ -5,12 +5,12 @@
 </template>
 <script lang="ts">
 import { defineComponent, provide } from '@vue/composition-api'
-import ProductsStoreKey from '@/components/v1/storeKeys/ProductsStoreKey.ts'
-import ProductsStore from '~/store/products'
+import ArticlesStoreKey from '@/components/v1/storeKeys/ArticlesStoreKey.ts'
+import ArticleStore from '~/store/articles'
 
 export default defineComponent({
   setup(_props, _context) {
-    provide(ProductsStoreKey, ProductsStore())
+    provide(ArticlesStoreKey, ArticleStore())
     return {}
   },
 })
