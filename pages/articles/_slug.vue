@@ -1,5 +1,5 @@
 <template>
-  <ArticleDetailPage :page="page" />
+  <ArticleDetailPage :page="page" :prev="prev" :next="next" />
 </template>
 
 <script lang="ts">
@@ -10,7 +10,10 @@ export default defineComponent({
   components: { ArticleDetailPage },
   async asyncData({ params, $content }: Context) {
     const page = await $content('articles', params.slug).fetch()
-    return { page }
+    const [prev, next]: any = await $content('articles')
+      .surround(params.slug)
+      .fetch()
+    return { page, prev, next }
   },
 })
 </script>

@@ -11,6 +11,17 @@
       </li>
     </ul>
     <nuxt-content :document="page" />
+    <div class="page-nation">
+      <NuxtLink v-if="prev" :to="'/articles/' + prev.slug" class="prev">
+        <img class="prev__thumbnail" :src="prev.thumbnail" />
+        {{ prev.title }}
+      </NuxtLink>
+
+      <NuxtLink v-if="next" :to="'/articles/' + next.slug" class="next">
+        <img class="next__thumbnail" :src="next.thumbnail" />
+        {{ next.title }}
+      </NuxtLink>
+    </div>
   </div>
 </template>
 <script lang="ts">
@@ -18,7 +29,11 @@ import { defineComponent, PropType } from '@vue/composition-api'
 import { IContentDocument } from '@nuxt/content/types/content'
 
 export default defineComponent({
-  props: { page: { type: Object as PropType<IContentDocument> } },
+  props: {
+    page: { type: Object as PropType<IContentDocument> },
+    prev: { type: Object as PropType<IContentDocument> },
+    next: { type: Object as PropType<IContentDocument> },
+  },
 })
 </script>
 <style scoped lang="scss">
@@ -48,5 +63,19 @@ export default defineComponent({
   //   box-shadow: 0px 0px 20px whitesmoke;
   border-radius: 20px;
   background: white;
+}
+.page-nation {
+  display: flex;
+  justify-content: space-between;
+  .prev {
+    .prev__thumbnail {
+      width: 100%;
+    }
+  }
+  .next {
+    .next__thumbnail {
+      width: 100%;
+    }
+  }
 }
 </style>
