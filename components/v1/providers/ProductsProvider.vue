@@ -3,7 +3,7 @@
     <slot />
   </div>
 </template>
-<script>
+<script lang="ts">
 import { defineComponent, provide } from '@vue/composition-api'
 import ProductsStoreKey from '@/components/v1/storeKeys/ProductsStoreKey.ts'
 import ProductsStore from '~/store/products'
