@@ -45,8 +45,8 @@
 <script lang="ts">
 import { computed, defineComponent, PropType, ref } from '@vue/composition-api'
 import Pagination from '@/components/v1/molecules/Pagination.vue'
-import Swiper, { SwiperModule } from 'swiper'
-
+import SwiperClass from 'swiper'
+import { SwiperEvents } from 'swiper/types/swiper-events'
 export default defineComponent({
   components: { Pagination },
   props: {
@@ -56,7 +56,7 @@ export default defineComponent({
     },
   },
   setup(props, _context) {
-    const swiperRef = ref<HTMLImageElement>()
+    const swiperRef = ref<SwiperClass>()
     const activeIndex = ref<number>(1)
     const swiperOptions = {
       slidesPerView: 1.4,
@@ -72,20 +72,20 @@ export default defineComponent({
       return props.product.productContents
     })
     const slideNext = () => {
-      ;(swiperRef.value as SwiperModule).$swiper.slideNext()
+      swiperRef.value!.slideNext()
     }
     const slidePrev = () => {
-      ;(swiperRef.value as SwiperModule).slidePrev()
+      swiperRef.value!.slidePrev()
     }
     const changeSlideIndex = (num: number | undefined) => {
       if (!num) return
       activeIndex.value = num
     }
     const onClickPaginationDot = (num: number) => {
-      ;(swiperRef.value as SwiperModule).slideTo(num - 1)
+      swiperRef.value!.slideTo(num - 1)
       changeSlideIndex(num)
     }
-    const onSlideChange = (e: Swiper) => {
+    const onSlideChange = (e: SwiperClass) => {
       changeSlideIndex(e.activeIndex + 1)
     }
     return {

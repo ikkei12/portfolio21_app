@@ -12,10 +12,13 @@ html {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
   }
-
-  ::-webkit-scrollbar {
-    display: none;
+  body {
+    background: #fafafa;
   }
+
+  // ::-webkit-scrollbar {
+  //   display: none;
+  // }
 
   *,
   *::before,
