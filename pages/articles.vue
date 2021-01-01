@@ -17,7 +17,7 @@ export default defineComponent({
   async asyncData({ $content }: Context) {
     const articlesContent = await $content('articles').fetch()
     const articles = articlesContent.map((article: IContentDocument) => {
-      return { title: article.toc[0].text }
+      return { title: article.title, thumbnail: article.thumbnail }
     })
     return { articles }
   },

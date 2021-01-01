@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="article-card">
+    <img :src="article.thumbnail" />
     <p>{{ article.title }}</p>
   </div>
 </template>
@@ -13,3 +14,7 @@ export default defineComponent({
   },
 })
 </script>
+<style scoped lang="scss">
+.article-card {
+}
+</style>
