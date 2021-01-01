@@ -38,6 +38,7 @@ export default defineComponent({
     })
     const createdDate = computed(() => {
       let date = ''
+      if (!props.product.createdDate) return
       new Date(props.product.createdDate)
         .toLocaleDateString()
         .split('/')
