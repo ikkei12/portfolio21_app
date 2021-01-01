@@ -18,6 +18,7 @@ export default defineComponent({
 </script>
 <style scoped>
 .article-page {
+  background: #fafafa;
   padding-top: 120px;
   display: flex;
   justify-content: center;

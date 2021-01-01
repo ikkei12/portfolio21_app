@@ -22,7 +22,9 @@ export default defineComponent({
     const articles = articlesContent.map((article: IContentDocument) => {
       return {
         title: article.title,
+        slug: article.slug,
         thumbnail: article.thumbnail,
+        createdAt: article.createdAt,
       }
     })
 
