@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="article-card__group">
     <ArticleCard
       v-for="(article, i) in articles"
       :key="`article${i}`"
@@ -11,6 +11,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
 import ArticleCard from '@/components/v1/molecules/ArticleCard.vue'
+
 export default defineComponent({
   props: {
     articles: {
@@ -22,3 +23,11 @@ export default defineComponent({
   },
 })
 </script>
+<style scoped lang="scss">
+.article-card__group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 12vw;
+}
+</style>
