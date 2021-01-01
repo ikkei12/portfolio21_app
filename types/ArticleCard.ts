@@ -1,0 +1,3 @@
+type ArticleCard = {
+  title: string
+}
