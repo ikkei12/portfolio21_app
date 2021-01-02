@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Chip v-for="(chip, i) in chips" :key="`chip${i}`" :text="chip" />
+  <div class="chip__group">
+    <Chip v-for="(chip, i) in chips" :key="`chip${i}`" :chip="chip" />
   </div>
 </template>
 <script lang="ts">
@@ -9,7 +9,7 @@ import Chip from '@/components/v1/atoms/Chip.vue'
 export default defineComponent({
   props: {
     chips: {
-      type: Array as PropType<String[]>,
+      type: Array as PropType<Chip[]>,
     },
   },
   components: {
@@ -17,3 +17,8 @@ export default defineComponent({
   },
 })
 </script>
+<style scoped lang="scss">
+.chip__group {
+  display: flex;
+}
+</style>

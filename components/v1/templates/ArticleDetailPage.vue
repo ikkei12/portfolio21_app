@@ -1,7 +1,7 @@
 <template>
   <div class="article-detail">
     <div class="article-detail__content">
-      <ChipGroup :chips="article.categories" />
+      <ChipGroup :chips="chips" />
       <nuxt-content :document="article" />
       <ContentPagination :next="next" :prev="prev" />
     </div>
@@ -9,7 +9,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from '@vue/composition-api'
+import { computed, defineComponent, PropType } from '@vue/composition-api'
 import { IContentDocument } from '@nuxt/content/types/content'
 import ContentPagination from '@/components/v1/organisms/ContentPagination.vue'
 import ContentsTable from '@/components/v1/organisms/ContentsTable.vue'
@@ -25,6 +25,15 @@ export default defineComponent({
     ContentPagination,
     ContentsTable,
     ChipGroup,
+  },
+  setup(props) {
+    const chips = computed(() => {
+      const color = '#333'
+      return props.article?.categories.map((category: string) => {
+        return { text: category, color }
+      })
+    })
+    return { chips }
   },
 })
 </script>
