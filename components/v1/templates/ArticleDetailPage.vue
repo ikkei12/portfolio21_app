@@ -1,7 +1,6 @@
 <template>
   <div class="article-detail">
     <div class="article-detail__content">
-      <ChipGroup :chips="chips" />
       <nuxt-content :document="article" />
       <ContentPagination :next="next" :prev="prev" />
     </div>
@@ -16,6 +15,7 @@ import ContentsTable from '@/components/v1/organisms/ContentsTable.vue'
 import ChipGroup from '@/components/v1/molecules/ChipGroup.vue'
 
 export default defineComponent({
+  name: 'ChipGroup',
   props: {
     article: { type: Object as PropType<IContentDocument> },
     prev: { type: Object as PropType<IContentDocument> },
@@ -28,7 +28,7 @@ export default defineComponent({
   },
   setup(props) {
     const chips = computed(() => {
-      const color = '#333'
+      const color = 'grey'
       return props.article?.categories.map((category: string) => {
         return { text: category, color }
       })
@@ -41,42 +41,45 @@ export default defineComponent({
 .article-detail {
   display: flex;
   justify-content: center;
-  margin-top: 120px;
+  margin-top: 80px;
   .article-detail__content {
     width: 60%;
+    background: white;
+    padding: 5vh 100px 5vw;
   }
 }
 ::v-deep .nuxt-content-container {
   .nuxt-content {
-    padding: 5vh 100px 5vw;
-    background: white;
-    h1 {
-      margin-bottom: 0;
-    }
+    h1,
     h2,
     h3,
     h4 {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     p {
       line-height: 1.9;
       margin-bottom: 10px;
     }
-    .created-date {
+    .info {
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin-bottom: 20px;
-      p {
-        margin-left: 8px;
-        margin-bottom: 0;
-        color: grey;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      .created-date {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        p {
+          margin-left: 8px;
+          margin-bottom: 0;
+          color: grey;
+        }
       }
     }
     .thumbnail {
       width: 100%;
       border-radius: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 80px;
     }
   }
 }

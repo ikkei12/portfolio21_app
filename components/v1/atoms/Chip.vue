@@ -19,9 +19,11 @@ export default defineComponent({
 .chip {
   border-radius: 30px;
   padding: 5px 20px;
+  height: 30px;
   .chip__text {
     font-size: 10px;
     font-weight: bold;
+    margin-bottom: 0 !important;
   }
 }
 </style>
