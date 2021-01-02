@@ -1,6 +1,6 @@
 <template>
   <Card>
-    <h3>About</h3>
+    <h3>Career</h3>
     <p>エンジニアです</p>
     <p>エンジニアです</p>
     <p>エンジニアです</p>
