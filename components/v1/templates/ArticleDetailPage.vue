@@ -6,7 +6,9 @@
       </div>
       <ContentPagination :next="next" :prev="prev" />
     </div>
+
     <ContentsTable :article="article" />
+    <ReadingTimeCard :reading-time="article.readingTime" />
   </div>
 </template>
 <script lang="ts">
@@ -15,6 +17,7 @@ import { IContentDocument } from '@nuxt/content/types/content'
 import ContentPagination from '@/components/v1/organisms/ContentPagination.vue'
 import ContentsTable from '@/components/v1/organisms/ContentsTable.vue'
 import ChipGroup from '@/components/v1/molecules/ChipGroup.vue'
+import ReadingTimeCard from '@/components/v1/molecules/ReadingTimeCard.vue'
 
 export default defineComponent({
   name: 'ChipGroup',
@@ -27,6 +30,7 @@ export default defineComponent({
     ContentPagination,
     ContentsTable,
     ChipGroup,
+    ReadingTimeCard,
   },
   setup(props) {
     const chips = computed(() => {

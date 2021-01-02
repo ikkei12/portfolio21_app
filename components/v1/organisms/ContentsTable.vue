@@ -1,31 +1,37 @@
 <template>
   <div class="contents-table">
-    <h4>目次</h4>
-    <ul ref="linkGroupRef">
-      <li
-        v-for="link of article.toc"
-        :key="link.id"
-        :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
-      >
-        <NuxtLink
-          v-scroll-to="{
-            el: `#${link.text}`,
-            onStart: changeActiveLink,
-          }"
-          to="#"
-          >{{ link.text }}</NuxtLink
+    <Card>
+      <h4>目次</h4>
+      <ul ref="linkGroupRef">
+        <li
+          v-for="link of article.toc"
+          :key="link.id"
+          :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
         >
-      </li>
-    </ul>
+          <NuxtLink
+            v-scroll-to="{
+              el: `#${link.text}`,
+              onStart: changeActiveLink,
+            }"
+            to="#"
+            >{{ link.text }}</NuxtLink
+          >
+        </li>
+      </ul>
+    </Card>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, PropType, ref } from '@vue/composition-api'
 import { IContentDocument } from '@nuxt/content/types/content'
+import Card from '@/components/v1/molecules/Card.vue'
 
 export default defineComponent({
   props: {
     article: { type: Object as PropType<IContentDocument> },
+  },
+  components: {
+    Card,
   },
   setup(_props, _context) {
     const linkGroupRef = ref<HTMLElement>()
@@ -49,11 +55,7 @@ export default defineComponent({
   position: fixed;
   right: 25px;
   top: 120px;
-  padding: 15px 20px;
   width: 15%;
-  //   box-shadow: 0px 0px 20px whitesmoke;
-  // border-radius: 20px;
-  background: white;
   h4 {
     font-size: 14px;
     margin-bottom: 4px;
@@ -66,7 +68,7 @@ export default defineComponent({
       a {
         color: grey;
         text-decoration: none;
-        font-size: 11px;
+        font-size: 12px;
       }
       a {
         &.--active {
