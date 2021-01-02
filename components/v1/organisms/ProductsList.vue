@@ -51,7 +51,6 @@ export default defineComponent({
   height: 100%;
   display: flex;
   align-items: center;
-
   .thumbnail__wrapper {
     width: 45%;
     height: 100%;
@@ -66,6 +65,7 @@ export default defineComponent({
     overflow-y: scroll;
     z-index: 2;
     padding-right: 10px;
+    padding: 5rem 0;
     &::-webkit-scrollbar {
       box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
       width: 8px;

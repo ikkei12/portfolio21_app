@@ -25,7 +25,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .reading-time__card {
   position: fixed;
-  right: 25px;
+  right: 50px;
   top: 300px;
   width: 15%;
   h4 {

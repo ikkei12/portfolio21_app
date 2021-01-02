@@ -60,9 +60,6 @@ export default defineComponent({
   display: inline-block;
   width: 100%;
   margin-top: 2vh;
-  &:first-child {
-    margin-top: 5rem;
-  }
   .list-item {
     display: flex;
     align-items: center;

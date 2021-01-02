@@ -2,7 +2,7 @@
   <div class="card">
     <img class="thumbnail" :src="content.thumbnail" />
     <div class="inner">
-      <p class="created-at">{{ content.createdAt }}</p>
+      <p class="created-at">{{ content.createdDate }}</p>
       <p class="title">{{ content.title }}</p>
     </div>
   </div>

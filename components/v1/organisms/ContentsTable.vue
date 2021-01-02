@@ -53,7 +53,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .contents-table {
   position: fixed;
-  right: 25px;
+  right: 50px;
   top: 120px;
   width: 15%;
   h4 {
