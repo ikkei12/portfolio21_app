@@ -1,10 +1,11 @@
 <template>
   <div class="article-detail">
     <div class="article-detail__content">
-      <nuxt-content :document="page" />
+      <ChipGroup :chips="article.categories" />
+      <nuxt-content :document="article" />
       <ContentPagination :next="next" :prev="prev" />
     </div>
-    <ContentsTable :page="page" />
+    <ContentsTable :article="article" />
   </div>
 </template>
 <script lang="ts">
@@ -12,16 +13,18 @@ import { defineComponent, PropType } from '@vue/composition-api'
 import { IContentDocument } from '@nuxt/content/types/content'
 import ContentPagination from '@/components/v1/organisms/ContentPagination.vue'
 import ContentsTable from '@/components/v1/organisms/ContentsTable.vue'
+import ChipGroup from '@/components/v1/molecules/ChipGroup.vue'
 
 export default defineComponent({
   props: {
-    page: { type: Object as PropType<IContentDocument> },
+    article: { type: Object as PropType<IContentDocument> },
     prev: { type: Object as PropType<IContentDocument> },
     next: { type: Object as PropType<IContentDocument> },
   },
   components: {
     ContentPagination,
     ContentsTable,
+    ChipGroup,
   },
 })
 </script>

@@ -3,7 +3,7 @@
     <h4>目次</h4>
     <ul ref="linkGroupRef">
       <li
-        v-for="link of page.toc"
+        v-for="link of article.toc"
         :key="link.id"
         :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
       >
@@ -25,7 +25,7 @@ import { IContentDocument } from '@nuxt/content/types/content'
 
 export default defineComponent({
   props: {
-    page: { type: Object as PropType<IContentDocument> },
+    article: { type: Object as PropType<IContentDocument> },
   },
   setup(_props, _context) {
     const linkGroupRef = ref<HTMLElement>()
