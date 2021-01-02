@@ -18,7 +18,10 @@ export default defineComponent({
     const articles = await $content('articles')
       .sortBy('createdAt', 'asc')
       .fetch()
-
+    const A = await $content('articles')
+      .where({ category: { $contains: 111 } })
+      .fetch()
+    console.log(A)
     return { articles }
   },
 })

@@ -1,24 +1,22 @@
 <template>
-  <div class="contents-table__wrapper">
-    <div class="contents-table">
-      <h4>目次</h4>
-      <ul ref="linkGroupRef">
-        <li
-          v-for="link of page.toc"
-          :key="link.id"
-          :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
+  <div class="contents-table">
+    <h4>目次</h4>
+    <ul ref="linkGroupRef">
+      <li
+        v-for="link of page.toc"
+        :key="link.id"
+        :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
+      >
+        <NuxtLink
+          v-scroll-to="{
+            el: `#${link.text}`,
+            onStart: changeActiveLink,
+          }"
+          to="#"
+          >{{ link.text }}</NuxtLink
         >
-          <NuxtLink
-            v-scroll-to="{
-              el: `#${link.text}`,
-              onStart: changeActiveLink,
-            }"
-            to="#"
-            >{{ link.text }}</NuxtLink
-          >
-        </li>
-      </ul>
-    </div>
+      </li>
+    </ul>
   </div>
 </template>
 <script lang="ts">
@@ -47,24 +45,32 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="scss">
-.contents-table__wrapper {
+.contents-table {
+  position: fixed;
+  right: 25px;
+  top: 120px;
+  padding: 15px 20px;
   width: 15%;
-  .contents-table {
-    position: fixed;
-    right: 1vw;
-    top: 120px;
-    padding: 20px 50px;
-    //   box-shadow: 0px 0px 20px whitesmoke;
-    // border-radius: 20px;
-    background: white;
+  //   box-shadow: 0px 0px 20px whitesmoke;
+  // border-radius: 20px;
+  background: white;
+  h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  ul {
+    padding-left: 30px;
     li {
       list-style: circle;
+      margin-bottom: 3px;
       a {
         color: grey;
         text-decoration: none;
+        font-size: 11px;
       }
       a {
         &.--active {
+          font-weight: bold;
           color: #333;
         }
       }
