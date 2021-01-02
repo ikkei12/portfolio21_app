@@ -1,5 +1,5 @@
 <template>
-  <Card>
+  <Card class="info__card">
     <img
       src="~/assets/images/profile.jpg"
       alt="Profile image"
@@ -27,16 +27,25 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="scss">
-.link {
-  height: 30px;
+.info__card {
+  padding: 75px 115px 90px;
   display: flex;
-  text-decoration: none;
-  color: black;
+  flex-direction: column;
   align-items: center;
-  .icon {
-    height: 100%;
-    border-radius: 50%;
-    margin-right: 8px;
+  .profile-image {
+    width: 100%;
+  }
+  .link {
+    height: 30px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    .icon {
+      height: 100%;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
   }
 }
 </style>
