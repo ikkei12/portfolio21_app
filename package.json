@@ -23,7 +23,8 @@
     "nuxt": "^2.14.6",
     "prism-themes": "^1.5.0",
     "swiper": "^6.4.5",
-    "vue-awesome-swiper": "^4.1.1"
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.6",

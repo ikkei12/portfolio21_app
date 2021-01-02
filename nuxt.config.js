@@ -23,6 +23,7 @@ export default {
     '@/plugins/composition-api',
     '@/plugins/axios',
     '@/plugins/vue-awesome-swiper',
+    '@/plugins/vue-scrollto',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
