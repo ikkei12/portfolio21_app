@@ -41,6 +41,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
     '@nuxt/content',
+    '@nuxtjs/dayjs',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -52,6 +53,19 @@ export default {
       },
     },
   },
+  dayjs: {
+    locales: ['en', 'ja'],
+    defaultLocale: 'ja',
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        const { time } = require('reading-time')(document.text)
+
+        document.readingTime = time
+      }
+    },
+  },
 }
