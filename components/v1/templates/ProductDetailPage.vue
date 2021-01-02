@@ -46,7 +46,6 @@
 import { computed, defineComponent, PropType, ref } from '@vue/composition-api'
 import Pagination from '@/components/v1/molecules/Pagination.vue'
 import SwiperClass from 'swiper'
-import { SwiperEvents } from 'swiper/types/swiper-events'
 export default defineComponent({
   components: { Pagination },
   props: {

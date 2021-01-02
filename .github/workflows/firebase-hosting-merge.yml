@@ -40,8 +40,6 @@ jobs:
           SLACK_CHANNEL: 1001_harashima
           SLACK_TITLE: Deploy Success
           SLACK_COLOR: good
-          
-
       # テスト失敗時はこちらのステップが実行される
       - name: Slack Notification on Failure
         if: failure()

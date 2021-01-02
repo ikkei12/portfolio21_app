@@ -1,60 +1,95 @@
 <template>
-  <div>
-    <ul class="contents-table">
-      <p>目次</p>
-      <li
-        v-for="link of page.toc"
-        :key="link.id"
-        :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
-      >
-        <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-      </li>
-    </ul>
-    <nuxt-content :document="page" />
-    <ContentPagination :next="next" :prev="prev" />
+  <div class="article-detail">
+    <div class="article-detail__inner">
+      <div class="article-detail__content">
+        <nuxt-content :document="article" />
+      </div>
+      <ContentPagination :next="next" :prev="prev" />
+    </div>
+
+    <ContentsTable :article="article" />
+    <ReadingTimeCard :reading-time="article.readingTime" />
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from '@vue/composition-api'
+import { computed, defineComponent, PropType } from '@vue/composition-api'
 import { IContentDocument } from '@nuxt/content/types/content'
 import ContentPagination from '@/components/v1/organisms/ContentPagination.vue'
+import ContentsTable from '@/components/v1/organisms/ContentsTable.vue'
+import ChipGroup from '@/components/v1/molecules/ChipGroup.vue'
+import ReadingTimeCard from '@/components/v1/molecules/ReadingTimeCard.vue'
+
 export default defineComponent({
+  name: 'ChipGroup',
   props: {
-    page: { type: Object as PropType<IContentDocument> },
+    article: { type: Object as PropType<IContentDocument> },
     prev: { type: Object as PropType<IContentDocument> },
     next: { type: Object as PropType<IContentDocument> },
   },
   components: {
     ContentPagination,
+    ContentsTable,
+    ChipGroup,
+    ReadingTimeCard,
+  },
+  setup(props) {
+    const chips = computed(() => {
+      const color = 'grey'
+      return props.article?.categories.map((category: string) => {
+        return { text: category, color }
+      })
+    })
+    return { chips }
   },
 })
 </script>
 <style scoped lang="scss">
-::v-deep .nuxt-content-container {
-  width: 85%;
-  .nuxt-content {
-    padding: 100px 5vw;
-    h1 {
-      margin-bottom: 50px;
-    }
-    h2,
-    h3,
-    h4 {
-      margin-bottom: 20px;
-    }
-    p {
-      margin-bottom: 10px;
+.article-detail {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  .article-detail__inner {
+    width: 60%;
+    .article-detail__content {
+      background: white;
+      padding: 5vh 100px 5vw;
     }
   }
 }
 
-.contents-table {
-  position: fixed;
-  right: 1vw;
-  top: 120px;
-  padding: 50px 80px;
-  //   box-shadow: 0px 0px 20px whitesmoke;
-  border-radius: 20px;
-  background: white;
+::v-deep .nuxt-content-container {
+  .nuxt-content {
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.9;
+      margin-bottom: 10px;
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      .created-date {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        p {
+          margin-left: 8px;
+          margin-bottom: 0;
+          color: grey;
+        }
+      }
+    }
+    .thumbnail {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 80px;
+    }
+  }
 }
 </style>

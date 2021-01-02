@@ -1,5 +1,5 @@
 <template>
-  <ArticleDetailPage :page="page" :prev="prev" :next="next" />
+  <ArticleDetailPage :article="article" :prev="prev" :next="next" />
 </template>
 
 <script lang="ts">
@@ -9,11 +9,11 @@ import ArticleDetailPage from '@/components/v1/templates/ArticleDetailPage.vue'
 export default defineComponent({
   components: { ArticleDetailPage },
   async asyncData({ params, $content }: Context) {
-    const page = await $content('articles', params.slug).fetch()
+    const article = await $content('articles', params.slug).fetch()
     const [prev, next]: any = await $content('articles')
       .surround(params.slug)
       .fetch()
-    return { page, prev, next }
+    return { article, prev, next }
   },
 })
 </script>
