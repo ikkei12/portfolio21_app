@@ -1,15 +1,7 @@
 <template>
   <div>
-    <ul class="contents-table">
-      <p>目次</p>
-      <li
-        v-for="link of page.toc"
-        :key="link.id"
-        :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
-      >
-        <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-      </li>
-    </ul>
+    <ContentsTable :page="page" />
+
     <nuxt-content :document="page" />
     <ContentPagination :next="next" :prev="prev" />
   </div>
@@ -18,6 +10,8 @@
 import { defineComponent, PropType } from '@vue/composition-api'
 import { IContentDocument } from '@nuxt/content/types/content'
 import ContentPagination from '@/components/v1/organisms/ContentPagination.vue'
+import ContentsTable from '@/components/v1/organisms/ContentsTable.vue'
+
 export default defineComponent({
   props: {
     page: { type: Object as PropType<IContentDocument> },
@@ -26,6 +20,7 @@ export default defineComponent({
   },
   components: {
     ContentPagination,
+    ContentsTable,
   },
 })
 </script>
@@ -46,15 +41,5 @@ export default defineComponent({
       margin-bottom: 10px;
     }
   }
-}
-
-.contents-table {
-  position: fixed;
-  right: 1vw;
-  top: 120px;
-  padding: 50px 80px;
-  //   box-shadow: 0px 0px 20px whitesmoke;
-  border-radius: 20px;
-  background: white;
 }
 </style>
