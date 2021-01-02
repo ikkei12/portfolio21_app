@@ -29,15 +29,17 @@ export default defineComponent({
 .article-detail {
   display: flex;
   justify-content: center;
+  margin-top: 120px;
   .article-detail__content {
     width: 60%;
   }
 }
 ::v-deep .nuxt-content-container {
   .nuxt-content {
-    padding: 100px 5vw;
+    padding: 5vh 100px 5vw;
+    background: white;
     h1 {
-      margin-bottom: 50px;
+      margin-bottom: 0;
     }
     h2,
     h3,
@@ -45,7 +47,24 @@ export default defineComponent({
       margin-bottom: 20px;
     }
     p {
+      line-height: 1.9;
       margin-bottom: 10px;
+    }
+    .created-date {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+      p {
+        margin-left: 8px;
+        margin-bottom: 0;
+        color: grey;
+      }
+    }
+    .thumbnail {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
   }
 }

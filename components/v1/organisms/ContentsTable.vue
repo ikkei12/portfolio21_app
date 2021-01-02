@@ -55,7 +55,7 @@ export default defineComponent({
     top: 120px;
     padding: 20px 50px;
     //   box-shadow: 0px 0px 20px whitesmoke;
-    border-radius: 20px;
+    // border-radius: 20px;
     background: white;
     li {
       list-style: circle;
