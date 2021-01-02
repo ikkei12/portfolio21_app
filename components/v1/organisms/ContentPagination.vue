@@ -1,9 +1,14 @@
 <template>
-  <div class="page-nation">
-    <h3>次に読む</h3>
-    <div class="page-nation__inner">
-      <ContentPaginationLink :content="prev" />
-      <ContentPaginationLink :content="next" />
+  <div class="pagination">
+    <div class="pagination__inner">
+      <div v-if="next" class="link__wrapper">
+        <h3 class="link__desc">次の記事</h3>
+        <ContentPaginationLink :content="next" />
+      </div>
+      <div v-if="prev" class="link__wrapper">
+        <h3 class="link__desc">前の記事</h3>
+        <ContentPaginationLink :content="prev" />
+      </div>
     </div>
   </div>
 </template>
@@ -24,11 +29,17 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.page-nation {
-  padding: 100px 5vw;
-  .page-nation__inner {
-    display: flex;
-    justify-content: space-between;
+.pagination {
+  margin: 50px 0;
+  .pagination__inner {
+    .link__wrapper {
+      height: 150px;
+      width: 100%;
+      margin-bottom: 80px;
+      .link__desc {
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 </style>

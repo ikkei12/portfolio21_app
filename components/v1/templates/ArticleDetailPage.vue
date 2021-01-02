@@ -1,7 +1,9 @@
 <template>
   <div class="article-detail">
-    <div class="article-detail__content">
-      <nuxt-content :document="article" />
+    <div class="article-detail__inner">
+      <div class="article-detail__content">
+        <nuxt-content :document="article" />
+      </div>
       <ContentPagination :next="next" :prev="prev" />
     </div>
     <ContentsTable :article="article" />
@@ -42,12 +44,15 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   margin-top: 80px;
-  .article-detail__content {
+  .article-detail__inner {
     width: 60%;
-    background: white;
-    padding: 5vh 100px 5vw;
+    .article-detail__content {
+      background: white;
+      padding: 5vh 100px 5vw;
+    }
   }
 }
+
 ::v-deep .nuxt-content-container {
   .nuxt-content {
     h1,
