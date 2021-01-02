@@ -28,8 +28,9 @@ export default defineComponent({
 <style scoped lang="scss">
 .article-detail {
   display: flex;
+  justify-content: center;
   .article-detail__content {
-    width: 85%;
+    width: 60%;
   }
 }
 ::v-deep .nuxt-content-container {

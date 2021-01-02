@@ -1,7 +1,10 @@
 <template>
   <div class="page-nation">
-    <ContentPaginationLink :content="prev" />
-    <ContentPaginationLink :content="next" />
+    <h3>次に読む</h3>
+    <div class="page-nation__inner">
+      <ContentPaginationLink :content="prev" />
+      <ContentPaginationLink :content="next" />
+    </div>
   </div>
 </template>
 <script lang="ts">
@@ -22,7 +25,10 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .page-nation {
-  display: flex;
-  justify-content: space-between;
+  padding: 100px 5vw;
+  .page-nation__inner {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 </style>
