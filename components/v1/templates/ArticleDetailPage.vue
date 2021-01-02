@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div class="article-detail">
+    <div class="article-detail__content">
+      <nuxt-content :document="page" />
+      <ContentPagination :next="next" :prev="prev" />
+    </div>
     <ContentsTable :page="page" />
-
-    <nuxt-content :document="page" />
-    <ContentPagination :next="next" :prev="prev" />
   </div>
 </template>
 <script lang="ts">
@@ -25,8 +26,13 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="scss">
+.article-detail {
+  display: flex;
+  .article-detail__content {
+    width: 85%;
+  }
+}
 ::v-deep .nuxt-content-container {
-  width: 85%;
   .nuxt-content {
     padding: 100px 5vw;
     h1 {
