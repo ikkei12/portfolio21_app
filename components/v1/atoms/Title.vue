@@ -21,10 +21,11 @@ export default defineComponent({
 @import '~/assets/scss/variables.scss';
 
 .title__wrapper {
-  padding-bottom: 8px;
+  padding: 8px 0;
   font-weight: 100;
   position: sticky;
   top: 0;
+  background: $body_bg;
   .title {
     font-size: 1.8rem;
   }
