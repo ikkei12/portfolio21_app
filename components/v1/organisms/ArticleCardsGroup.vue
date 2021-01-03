@@ -27,7 +27,5 @@ export default defineComponent({
 .article-card__group {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 12.5% 10%;
-  max-width: 1000px;
 }
 </style>

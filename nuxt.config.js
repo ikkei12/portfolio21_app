@@ -42,6 +42,7 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxt/content',
     '@nuxtjs/dayjs',
+    ['nuxt-sass-resources-loader', ['~/assets/scss/variables.scss']],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

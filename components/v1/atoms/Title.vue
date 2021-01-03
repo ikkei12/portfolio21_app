@@ -1,0 +1,32 @@
+<template>
+  <div class="title__wrapper" :style="'border-bottom: 4px solid ' + color">
+    <h2 class="title">{{ title }}</h2>
+  </div>
+</template>
+<script lang="ts">
+import { defineComponent } from '@vue/composition-api'
+
+export default defineComponent({
+  props: {
+    title: {
+      type: String,
+    },
+    color: {
+      type: String,
+    },
+  },
+})
+</script>
+<style lang="scss" scoped>
+@import '~/assets/scss/variables.scss';
+
+.title__wrapper {
+  padding-bottom: 8px;
+  font-weight: 100;
+  position: sticky;
+  top: 0;
+  .title {
+    font-size: 1.8rem;
+  }
+}
+</style>
