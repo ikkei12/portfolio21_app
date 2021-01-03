@@ -86,7 +86,7 @@ export default defineComponent({
     }
   }
   &.--active {
-    background: rgba(225, 225, 225, 0.295);
+    background: #0066660b;
     .list-item__index {
       color: black;
     }

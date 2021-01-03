@@ -32,8 +32,10 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 20px;
   .profile-image {
     width: 100%;
+    border-radius: 20px;
   }
   .link {
     height: 30px;

@@ -1,5 +1,5 @@
 <template>
-  <Card>
+  <Card class="career__card">
     <h3>Career</h3>
     <p>エンジニアです</p>
     <p>エンジニアです</p>
@@ -43,3 +43,8 @@ export default defineComponent({
   },
 })
 </script>
+<style scoped lang="scss">
+.career__card {
+  border-radius: 20px;
+}
+</style>

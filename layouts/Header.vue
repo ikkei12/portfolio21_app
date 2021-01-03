@@ -53,8 +53,8 @@ export default defineComponent({
     margin-right: 16px;
     text-decoration: none;
     .link__text {
-      font-weight: bold;
-      color: black;
+      font-weight: 600;
+      color: #006666;
     }
   }
 }
