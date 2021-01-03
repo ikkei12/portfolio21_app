@@ -57,39 +57,37 @@ export default defineComponent({
   }
 }
 
-::v-deep .nuxt-content-container {
-  .nuxt-content {
-    h1,
-    h2,
-    h3,
-    h4 {
-      margin-bottom: 10px;
-    }
-    p {
-      line-height: 1.9;
-      margin-bottom: 10px;
-    }
-    .info {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 40px;
+::v-deep .nuxt-content {
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 10px;
+  }
+  p {
+    line-height: 1.9;
+    margin-bottom: 10px;
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
 
-      .created-date {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        p {
-          margin-left: 8px;
-          margin-bottom: 0;
-          color: grey;
-        }
+    .created-date {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      p {
+        margin-left: 8px;
+        margin-bottom: 0;
+        color: grey;
       }
     }
-    .thumbnail {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 80px;
-    }
+  }
+  .thumbnail {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 80px;
   }
 }
 </style>
