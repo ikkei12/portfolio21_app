@@ -5,7 +5,7 @@
         v-for="(product, i) in products"
         :key="'thumbnail' + i"
         :url="product.productContents[0].image.url"
-        :active="product.id == productsStore.currentProduct.id"
+        :active="product.id == currentProduct.id"
       />
     </div>
     <div class="list-items__wrapper">
@@ -14,17 +14,17 @@
         :key="'list-item' + i"
         :product="product"
         :index="i + 1"
-        :active="product.id == productsStore.currentProduct.id"
+        :active="product.id == currentProduct.id"
         @onMouseOver="dispatchEvent"
       />
     </div>
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, inject, PropType } from '@vue/composition-api'
+import { defineComponent, PropType, ref } from '@vue/composition-api'
 import ProductsListItem from '@/components/v1/molecules/ProductsListItem.vue'
 import ProductsListThumbnail from '@/components/v1/atoms/ProductsListThumbnail.vue'
-import ProductsStoreKey from '@/components/v1/storeKeys/ProductsStoreKey'
+import productStore from '@/store/products.ts'
 
 export default defineComponent({
   components: {
@@ -37,12 +37,20 @@ export default defineComponent({
       required: true,
     },
   },
-  setup(_props, _context) {
-    const productsStore = inject(ProductsStoreKey)
+  setup(props, _context) {
+    const currentProduct = ref<Product>({})
     const dispatchEvent = (product: Product) => {
-      productsStore.setCurrentProduct(product)
+      currentProduct.value = product
     }
-    return { productsStore, dispatchEvent }
+    currentProduct.value = props.products[0]
+    return {
+      dispatchEvent,
+      currentProduct,
+    }
+  },
+  async asyncData() {
+    const store = await productStore()
+    console.log(store)
   },
 })
 </script>
