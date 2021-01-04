@@ -46,6 +46,7 @@
 import { computed, defineComponent, PropType, ref } from '@vue/composition-api'
 import Pagination from '@/components/v1/molecules/Pagination.vue'
 import SwiperClass from 'swiper'
+import { SwiperDOM } from '~/types/Swiper'
 export default defineComponent({
   components: { Pagination },
   props: {
@@ -55,7 +56,7 @@ export default defineComponent({
     },
   },
   setup(props, _context) {
-    const swiperRef = ref<SwiperClass>()
+    const swiperRef = ref<SwiperDOM>()
     const activeIndex = ref<number>(1)
     const swiperOptions = {
       slidesPerView: 1.4,
@@ -70,18 +71,19 @@ export default defineComponent({
       if (!props.product) return
       return props.product.productContents
     })
+
     const slideNext = () => {
-      swiperRef.value!.slideNext()
+      swiperRef.value!.$swiper.slideNext()
     }
     const slidePrev = () => {
-      swiperRef.value!.slidePrev()
+      swiperRef.value!.$swiper.slidePrev()
     }
     const changeSlideIndex = (num: number | undefined) => {
       if (!num) return
       activeIndex.value = num
     }
     const onClickPaginationDot = (num: number) => {
-      swiperRef.value!.slideTo(num - 1)
+      swiperRef.value!.$swiper.slideTo(num - 1)
       changeSlideIndex(num)
     }
     const onSlideChange = (e: SwiperClass) => {

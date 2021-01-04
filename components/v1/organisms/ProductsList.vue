@@ -50,7 +50,6 @@ export default defineComponent({
   },
   async asyncData() {
     const store = await productStore()
-    console.log(store)
   },
 })
 </script>
