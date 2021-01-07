@@ -1,22 +1,28 @@
 <template>
   <div class="container">
-    <ProfilePage />
+    <ProfilePage :career-nodes="CareerNodes" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
 import ProfilePage from '@/components/v1/templates/ProfilePage.vue'
+import { IContentDocument } from '@nuxt/content/types/content'
+
 export default defineComponent({
   components: {
     ProfilePage,
   },
-  // setup(_props, context) {
-  //   context.root.$axios
-  //     .get('/products')
-  //     .then((res) => console.log(res.data))
-  //     .catch((e) => console.log(e))
-  // },
+  async asyncData({ $content }) {
+    const fetchData = await $content('profile').fetch()
+    const CareerNodes: CareerNode[] = fetchData.find(
+      (item: IContentDocument) => {
+        return item.slug === 'career'
+      }
+    )!.nodes
+
+    return { CareerNodes }
+  },
 })
 </script>
 

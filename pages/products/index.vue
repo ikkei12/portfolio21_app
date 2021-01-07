@@ -7,10 +7,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, ref } from '@vue/composition-api'
+import { defineComponent, reactive } from '@vue/composition-api'
 import ProductsPage from '@/components/v1/templates/ProductsPage.vue'
 import ProductsProvider from '@/components/v1/providers/ProductsProvider.vue'
-// import ProductsStoreKey from '@/components/v1/storeKeys/ProductsStoreKey'
 import productsStore from '@/store/products.ts'
 export default defineComponent({
   components: {
