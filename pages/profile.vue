@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ProfilePage :career-nodes="CareerNodes" />
+    <ProfilePage :career-nodes="careerNodes" />
   </div>
 </template>
 
@@ -15,13 +15,13 @@ export default defineComponent({
   },
   async asyncData({ $content }) {
     const fetchData = await $content('profile').fetch()
-    const CareerNodes: CareerNode[] = fetchData.find(
+    const careerNodes: CareerNode[] = fetchData.find(
       (item: IContentDocument) => {
         return item.slug === 'career'
       }
     )!.nodes
 
-    return { CareerNodes }
+    return { careerNodes }
   },
 })
 </script>

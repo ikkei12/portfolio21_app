@@ -5,17 +5,25 @@
     </div>
     <div class="profile-page__inner">
       <ProfileAboutCard class="profile-page__card" />
-      <ProfileCareerCard class="profile-page__card" />
+      <ProfileCareerCard
+        class="profile-page__card"
+        :career-nodes="careerNodes"
+      />
     </div>
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent, PropType } from '@vue/composition-api'
 import ProfileInformationCard from '@/components/v1/molecules/ProfileInformationCard.vue'
 import ProfileAboutCard from '@/components/v1/molecules/ProfileAboutCard.vue'
 import ProfileCareerCard from '@/components/v1/molecules/ProfileCareerCard.vue'
 
 export default defineComponent({
+  props: {
+    careerNodes: {
+      type: Array as PropType<CareerNode[]>,
+    },
+  },
   components: {
     ProfileInformationCard,
     ProfileAboutCard,
