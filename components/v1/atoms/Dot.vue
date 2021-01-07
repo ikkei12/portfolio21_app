@@ -6,7 +6,10 @@
       }px; background:${color}`"
       class="dot__core"
     ></div>
-    <div class="dot__outline" :style="`border:2px solid ${color};`"></div>
+    <div
+      class="dot__outline"
+      :style="`width:${size}px; height:${size}px; border:2px solid ${color};`"
+    ></div>
   </div>
 </template>
 <script lang="ts">
@@ -31,9 +34,7 @@ export default defineComponent({
     transform: translate(-50%, -50%);
   }
   .dot__outline {
-    width: 100%;
-    height: 100%;
-    background: transparent;
+    background: white;
     border-radius: 50%;
   }
 }
