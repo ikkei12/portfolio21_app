@@ -41,7 +41,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .about__card {
   border-radius: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   .title {
     margin-bottom: 8px;
   }

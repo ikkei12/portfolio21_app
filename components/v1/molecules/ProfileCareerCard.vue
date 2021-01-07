@@ -1,37 +1,6 @@
 <template>
   <Card class="career__card">
-    <h3>Career</h3>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
-    <p>エンジニアです</p>
+    <h3 class="title">Career</h3>
   </Card>
 </template>
 <script lang="ts">
@@ -46,5 +15,8 @@ export default defineComponent({
 <style scoped lang="scss">
 .career__card {
   border-radius: 20px;
+  .title {
+    margin-bottom: 8px;
+  }
 }
 </style>
