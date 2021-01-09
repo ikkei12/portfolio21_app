@@ -1,5 +1,6 @@
 <template>
   <div class="article-page">
+    <div><ArticleCategoriesList :categories="categories" /></div>
     <div>
       <Title title="最新の記事" color="#AEDADA" />
       <ArticleCardsGroup :articles="articles" />
@@ -10,11 +11,16 @@
 import { defineComponent, PropType } from '@vue/composition-api'
 import ArticleCardsGroup from '@/components/v1/organisms/ArticleCardsGroup.vue'
 import Title from '@/components/v1/atoms/Title.vue'
+import ArticleCategoriesList from '@/components/v1/organisms/ArticleCategoriesList.vue'
+
 export default defineComponent({
-  components: { ArticleCardsGroup, Title },
+  components: { ArticleCardsGroup, Title, ArticleCategoriesList },
   props: {
     articles: {
       type: Array as PropType<ArticleCard[]>,
+    },
+    categories: {
+      type: Array as PropType<ArticleCategoryItem[]>,
     },
   },
 })
