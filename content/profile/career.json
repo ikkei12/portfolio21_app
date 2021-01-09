@@ -1,11 +1,26 @@
 {
   "nodes": [
-    { "title": "日本大学第二高校卒業", "date": "2016-03" },
-    { "title": "テスト", "description": "desc", "date": "2018-03" },
+    { "title": "日本大学第二高校卒業", "date": "2016-03~" },
+    { "title": "慶應義塾大学経済学部入学", "date": "2017-04~" },
+    {
+      "title": "株式会社7garden インターン開始",
+      "description": "ゲストハウスの立ち上げ",
+      "date": "2018-05~"
+    },
+    {
+      "title": "株式会社カイエン インターン開始",
+      "description": "webフロント開発",
+      "date": "2019-02~"
+    },
+    {
+      "title": "株式会社Parchie インターン開始",
+      "description": "スタートアップでVue.js × Ruby on Railsのアプリケーション開発",
+      "date": "2020-02~"
+    },
     {
       "title": "株式会社 forStartups インターン開始",
       "description": "Startup DataBaseの開発",
-      "date": "2020-10"
+      "date": "2020-10~"
     }
   ]
 }
