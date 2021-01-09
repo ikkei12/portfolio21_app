@@ -1,7 +1,9 @@
 <template>
   <div class="article-page">
-    <div><ArticleCategoriesList :categories="categories" /></div>
-    <div>
+    <div class="categories-list__wrapper">
+      <ArticleCategoriesList :categories="categories" />
+    </div>
+    <div class="article-page__inner">
       <Title title="最新の記事" color="#AEDADA" />
       <ArticleCardsGroup :articles="articles" />
     </div>
@@ -29,8 +31,19 @@ export default defineComponent({
 .article-page {
   padding-top: 120px;
   display: flex;
+  width: 100%;
   justify-content: center;
-  flex-direction: column;
-  max-width: 940px;
+  position: relative;
+  .article-page__inner {
+    max-width: 940px;
+  }
+  .categories-list__wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 18%;
+    height: 100%;
+    background: white;
+  }
 }
 </style>

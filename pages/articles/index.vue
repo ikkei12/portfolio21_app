@@ -1,6 +1,6 @@
 <template>
   <ArticlesProvider>
-    <ArticlePage :articles="articles" />
+    <ArticlePage :articles="articles" :categories="categories" />
   </ArticlesProvider>
 </template>
 
@@ -9,6 +9,8 @@ import { Context } from '@nuxt/types'
 import ArticlePage from '@/components/v1/templates/ArticlePage.vue'
 import { defineComponent } from '@vue/composition-api'
 import ArticlesProvider from '@/components/v1/providers/ArticlesProvider.vue'
+import { IContentDocument } from '@nuxt/content/types/content'
+
 export default defineComponent({
   components: {
     ArticlePage,
@@ -18,7 +20,27 @@ export default defineComponent({
     const articles = await $content('articles')
       .sortBy('createdDate', 'asc')
       .fetch()
-    return { articles }
+    // const categories = await $content('articles').only(['categories']).fetch()
+    const categoryTitles: Array<String> = []
+    const categories: ArticleCategoryItem[] = []
+    articles.forEach((article: IContentDocument) => {
+      if (article.categories) {
+        article.categories.forEach((category: string) => {
+          if (!categoryTitles.includes(category)) {
+            categoryTitles.push(category)
+            categories.push({
+              title: category,
+              count: 1,
+              url: `/articles?caetgory=${category}`,
+            })
+          } else {
+            const index = categoryTitles.indexOf(category)
+            categories[index].count += 1
+          }
+        })
+      }
+    })
+    return { articles, categories }
   },
 })
 </script>
