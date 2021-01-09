@@ -3,3 +3,9 @@ type ArticleCard = {
   title: string
   createdDate: string
 }
+
+type ArticleCategoryItem = {
+  category: string
+  count: number
+  url: string
+}
