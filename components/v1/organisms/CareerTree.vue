@@ -28,9 +28,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .career-tree {
   position: relative;
-  .career-tree__node {
-    margin-bottom: 10px;
-  }
+
   .node-dor__line {
     border: 1px solid rgb(207, 207, 207);
     width: 1px;

@@ -27,6 +27,7 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .node {
+  padding: 16px 0;
   .node__inner {
     display: flex;
     align-items: center;
@@ -36,11 +37,13 @@ export default defineComponent({
     }
     .title {
       font-size: 15px;
+      margin-left: 8px;
     }
   }
   .description__wrapper {
     height: 18px;
-    padding-left: 36px;
+    padding-left: 126px;
+    display: inline-block;
     .description {
       color: #7b7b7b;
     }

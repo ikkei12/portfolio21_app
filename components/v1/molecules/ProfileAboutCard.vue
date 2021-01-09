@@ -2,15 +2,15 @@
   <Card class="about__card">
     <h3 class="title">About</h3>
     <div class="flex">
-      <Icon icon-name="house" :size="18" color="#333" />
+      <Icon icon-name="house" :size="16" color="#5d5d5d" />
       <p>Tokyo</p>
     </div>
     <div class="flex">
-      <Icon icon-name="birthDay" :size="18" color="#333" />
+      <Icon icon-name="birthDay" :size="16" color="#5d5d5d" />
       <p>{{ age }}歳</p>
     </div>
     <div class="flex">
-      <Icon icon-name="building" :size="18" color="#333" />
+      <Icon icon-name="building" :size="16" color="#5d5d5d" />
       <p>慶應義塾大学 / forStartups</p>
     </div>
   </Card>
@@ -42,12 +42,14 @@ export default defineComponent({
 .about__card {
   border-radius: 20px;
   margin-bottom: 20px;
+  margin-top: 20px;
   .title {
     margin-bottom: 8px;
   }
   .flex {
     display: flex;
     align-items: center;
+    margin-bottom: 8px;
     p {
       margin-left: 8px;
     }
