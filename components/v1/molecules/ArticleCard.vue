@@ -30,7 +30,7 @@ export default defineComponent({
 <style scoped lang="scss">
 article {
   width: calc(100% / 3);
-  padding: 0 20px;
+  padding: 0 2%;
   margin-top: 50px;
   &:hover {
     .card__inner {

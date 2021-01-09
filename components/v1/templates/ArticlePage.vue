@@ -17,7 +17,7 @@ export default defineComponent({
   },
 })
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .article-page {
   padding-top: 120px;
   margin: 0 22.5% 10%;

@@ -14,11 +14,12 @@ html {
   }
   body {
     background: $body_bg;
+    &::-webkit-scrollbar {
+      display: none;  
+    }
   }
 
-  // ::-webkit-scrollbar {
-  //   display: none;
-  // }
+
 
   *,
   *::before,
@@ -56,3 +57,4 @@ html {
     background-color: #35495e;
   }
   
+

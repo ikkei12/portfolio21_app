@@ -17,10 +17,10 @@ import { defineComponent, reactive } from '@vue/composition-api'
 export default defineComponent({
   setup() {
     const headerItems: Array<{ title: string; path: string }> = reactive([
-      {
-        title: 'HOME',
-        path: '/',
-      },
+      // {
+      //   title: 'HOME',
+      //   path: '/',
+      // },
       {
         title: 'PROFILE ',
         path: '/profile',
