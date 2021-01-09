@@ -42,6 +42,8 @@ export default defineComponent({
     flex-direction: column;
     align-items: center;
     padding-top: 60px;
+    height: 100%;
+    justify-content: center;
     &.--info {
       position: fixed;
       left: 0;

@@ -30,6 +30,9 @@
 .link__group {
   height: 30px;
   display: flex;
+  width: 50%;
+  justify-content: space-around;
+
   .link {
     height: 100%;
     img {

@@ -1,21 +1,27 @@
 <template>
-  <Card class="info__card">
-    <img
-      src="~/assets/images/profile.jpg"
-      alt="Profile image"
-      class="profile-image"
-    />
-    <h3>原島 一桂</h3>
-    <p>Ikkei Harashima</p>
-    <LinkIconGroup />
-    <a href="mailto:ikkei12.inw@gmail.com" class="link">
-      <img src="~/assets/images/logo/email.png" class="icon" alt="email icon" />
-      <p>ikkei12.inw@gmail.com</p>
-    </a>
-  </Card>
+  <div class="info__card">
+    <div class="inner">
+      <img
+        src="~/assets/images/profile.jpg"
+        alt="Profile image"
+        class="profile-image"
+      />
+      <h3 class="name-ja">原島 一桂</h3>
+      <p class="name-en">Harashima Ikkei</p>
+      <LinkIconGroup />
+      <a href="mailto:ikkei12.inw@gmail.com" class="link">
+        <img
+          src="~/assets/images/logo/email.png"
+          class="icon"
+          alt="email icon"
+        />
+        <p>ikkei12.inw@gmail.com</p>
+      </a>
+    </div>
+  </div>
 </template>
 <script lang="ts">
-import { defineComponent, reactive } from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api'
 import Card from '@/components/v1/molecules/Card.vue'
 import LinkIconGroup from '@/components/v1/organisms/LinkIconGroup.vue'
 
@@ -28,25 +34,41 @@ export default defineComponent({
 </script>
 <style scoped lang="scss">
 .info__card {
-  padding: 75px 115px 90px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 70%;
   border-radius: 20px;
-  .profile-image {
-    width: 100%;
-    border-radius: 20px;
-  }
-  .link {
-    height: 30px;
+  display: flex;
+  justify-content: center;
+  .inner {
+    width: 50%;
     display: flex;
-    text-decoration: none;
-    color: black;
+    flex-direction: column;
     align-items: center;
-    .icon {
-      height: 100%;
-      border-radius: 50%;
-      margin-right: 8px;
+    .profile-image {
+      border-radius: 20px;
+    }
+    .name-ja {
+      font-size: 3.3vw;
+      font-weight: 100;
+      margin-top: 4vh;
+    }
+    .name-en {
+      font-size: 2.3vw;
+      font-weight: 100;
+      letter-spacing: 0.15vw;
+      margin-bottom: 4vh;
+    }
+    .link {
+      height: 30px;
+      display: flex;
+      text-decoration: none;
+      color: black;
+      align-items: center;
+      margin-top: 4vh;
+      .icon {
+        height: 100%;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
     }
   }
 }
