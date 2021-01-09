@@ -33,5 +33,7 @@ export default defineComponent({
 </script>
 <style scoped lang="scss">
 .container {
+  display: flex;
+  justify-content: center;
 }
 </style>

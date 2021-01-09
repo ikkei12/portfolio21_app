@@ -19,5 +19,7 @@ export default defineComponent({
 .provider {
   widows: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 </style>

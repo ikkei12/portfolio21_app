@@ -12,7 +12,13 @@
             </p>
           </div>
         </div>
-        <h4 class="title">{{ article.title }}</h4>
+        <h4 class="title">
+          {{
+            article.title.length > 27
+              ? `${article.title.substring(0, 27)}…`
+              : article.title
+          }}
+        </h4>
       </div>
     </nuxt-link>
   </article>

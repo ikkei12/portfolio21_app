@@ -27,5 +27,6 @@ export default defineComponent({
 .article-card__group {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 </style>
