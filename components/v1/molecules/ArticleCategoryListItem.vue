@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <p>{{ category.title }}</p>
-  </div>
+  <nuxt-link :to="category.url" class="category-item__link {">
+    <div class="category-item">
+      <p class="category-item__title">
+        {{ category.title }} ({{ category.count }})
+      </p>
+    </div>
+  </nuxt-link>
 </template>
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
@@ -14,4 +18,18 @@ export default defineComponent({
   },
 })
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.category-item__link {
+  text-decoration: none;
+  color: #006666;
+  .category-item {
+    padding: 1vh 1vw;
+    border-bottom: 1px solid #efefef;
+    overflow-x: scroll;
+    white-space: nowrap;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+</style>

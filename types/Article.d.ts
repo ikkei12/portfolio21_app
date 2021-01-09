@@ -5,7 +5,7 @@ type ArticleCard = {
 }
 
 type ArticleCategoryItem = {
-  category: string
+  title: string
   count: number
   url: string
 }
