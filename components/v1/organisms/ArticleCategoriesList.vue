@@ -30,6 +30,7 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   padding-top: 160px;
+  box-shadow: 0 0px 10px rgba(89, 89, 89, 0.072);
   .categoryies-list__title {
     padding: 1vh;
     padding-bottom: 0.5vh;

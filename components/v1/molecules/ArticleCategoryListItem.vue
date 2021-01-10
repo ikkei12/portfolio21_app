@@ -28,7 +28,7 @@ export default defineComponent({
     }
   }
   .category-item {
-    padding: 1vh 1vw;
+    padding: 1vh;
     border-bottom: 1px solid #efefef;
     overflow-x: scroll;
     white-space: nowrap;
