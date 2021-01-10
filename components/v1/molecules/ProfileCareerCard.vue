@@ -1,7 +1,7 @@
 <template>
   <Card class="career__card">
     <div class="card__inner">
-      <h3 class="title">Career</h3>
+      <h2 class="title">Career</h2>
       <CareerTree :career-nodes="careerNodes" />
     </div>
   </Card>
@@ -24,12 +24,15 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="scss">
+@import '~/assets/scss/variables.scss';
+
 .career__card {
   border-radius: 20px;
   .card__inner {
     padding-bottom: 10px;
     .title {
       margin-bottom: 8px;
+      color: $primary;
     }
   }
 }

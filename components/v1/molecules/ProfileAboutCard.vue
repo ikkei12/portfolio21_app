@@ -1,16 +1,16 @@
 <template>
   <Card class="about__card">
-    <h3 class="title">About</h3>
+    <h2 class="title">About</h2>
     <div class="flex">
-      <Icon icon-name="house" :size="16" color="#5d5d5d" />
+      <Icon icon-name="house" :size="16" color="#7db5b5" />
       <p>Tokyo</p>
     </div>
     <div class="flex">
-      <Icon icon-name="birthDay" :size="16" color="#5d5d5d" />
+      <Icon icon-name="birthDay" :size="16" color="#7db5b5" />
       <p>{{ age }}歳</p>
     </div>
     <div class="flex">
-      <Icon icon-name="building" :size="16" color="#5d5d5d" />
+      <Icon icon-name="building" :size="16" color="#7db5b5" />
       <p>慶應義塾大学 / forStartups</p>
     </div>
   </Card>
@@ -39,12 +39,14 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="scss">
+@import '~/assets/scss/variables.scss';
 .about__card {
   border-radius: 20px;
   margin-bottom: 20px;
   margin-top: 20px;
   .title {
     margin-bottom: 8px;
+    color: $primary;
   }
   .flex {
     display: flex;

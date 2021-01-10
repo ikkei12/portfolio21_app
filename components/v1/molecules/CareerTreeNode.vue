@@ -1,7 +1,7 @@
 <template>
   <div class="node">
     <div class="node__inner">
-      <Dot :size="18" class="node-dot" color="grey" />
+      <Dot :size="18" class="node-dot" color="#7db5b5" />
       <p class="date">{{ node.date }}</p>
       <p class="title">{{ node.title }}</p>
     </div>
