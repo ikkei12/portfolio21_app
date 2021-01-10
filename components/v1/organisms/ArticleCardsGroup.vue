@@ -15,7 +15,7 @@ import ArticleCard from '@/components/v1/molecules/ArticleCard.vue'
 export default defineComponent({
   props: {
     articles: {
-      type: Array as PropType<ArticleCard[]>,
+      type: Array as PropType<Article[]>,
     },
   },
   components: {

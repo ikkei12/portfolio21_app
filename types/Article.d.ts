@@ -1,4 +1,4 @@
-type ArticleCard = {
+type Article = {
   thumbnail: string
   title: string
   createdDate: string

@@ -4,7 +4,7 @@
       <ArticleCategoriesList :categories="categories" />
     </div>
     <div class="article-page__inner">
-      <Title title="最新の記事" color="#AEDADA" />
+      <Title :title="`${title ? title : '最新'}の記事`" color="#AEDADA" />
       <ArticleCardsGroup :articles="articles" />
     </div>
   </div>
@@ -19,20 +19,15 @@ export default defineComponent({
   components: { ArticleCardsGroup, Title, ArticleCategoriesList },
   props: {
     articles: {
-      type: Array as PropType<ArticleCard[]>,
+      type: Array as PropType<Article[]>,
     },
     categories: {
       type: Array as PropType<ArticleCategoryItem[]>,
     },
+    title: {
+      type: String,
+    },
   },
-  // const computedArticles = computed(() => {
-  //   if (!props.articles) return []
-  //   if (!currentCategoryQuery) return props.articles
-  //   return props.articles.filter((article) => {
-  //     if (!article.categories) return false
-  //     return article.categories.includes(currentCategoryQuery)
-  //   })
-  // })
 })
 </script>
 <style lang="scss" scoped>

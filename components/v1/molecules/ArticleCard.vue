@@ -28,7 +28,7 @@ import { defineComponent, PropType } from '@vue/composition-api'
 export default defineComponent({
   props: {
     article: {
-      type: Object as PropType<ArticleCard>,
+      type: Object as PropType<Article>,
     },
   },
 })
