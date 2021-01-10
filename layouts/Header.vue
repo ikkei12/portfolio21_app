@@ -22,15 +22,15 @@ export default defineComponent({
       //   path: '/',
       // },
       {
-        title: 'PROFILE ',
+        title: 'Profile',
         path: '/profile',
       },
       {
-        title: 'PRODUCT',
+        title: 'Product',
         path: '/products',
       },
       {
-        title: 'ARTICLE',
+        title: 'Article',
         path: '/articles',
       },
     ])
@@ -47,13 +47,16 @@ export default defineComponent({
   display: flex;
   align-items: center;
   height: 60px;
-  padding-right: 32px;
-  z-index: 5;
+  padding-right: 45px;
+  z-index: 6;
   .link {
-    margin-right: 16px;
+    margin-right: 30px;
     text-decoration: none;
+    &:last-child {
+      margin-right: 0;
+    }
     .link__text {
-      font-weight: 600;
+      font-weight: 400;
       color: #006666;
     }
   }

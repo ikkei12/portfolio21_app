@@ -25,6 +25,14 @@ export default defineComponent({
       type: Array as PropType<ArticleCategoryItem[]>,
     },
   },
+  // const computedArticles = computed(() => {
+  //   if (!props.articles) return []
+  //   if (!currentCategoryQuery) return props.articles
+  //   return props.articles.filter((article) => {
+  //     if (!article.categories) return false
+  //     return article.categories.includes(currentCategoryQuery)
+  //   })
+  // })
 })
 </script>
 <style lang="scss" scoped>
@@ -32,6 +40,8 @@ export default defineComponent({
   padding-top: 120px;
   display: flex;
   width: 100%;
+  height: 100%;
+  min-height: 100vh;
   justify-content: center;
   position: relative;
   .article-page__inner {
@@ -39,6 +49,7 @@ export default defineComponent({
   }
   .categories-list__wrapper {
     position: absolute;
+    z-index: 5;
     right: 0;
     top: 0;
     width: 18%;

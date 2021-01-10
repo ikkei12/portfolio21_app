@@ -20,7 +20,6 @@ export default defineComponent({
     const articles = await $content('articles')
       .sortBy('createdDate', 'asc')
       .fetch()
-    // const categories = await $content('articles').only(['categories']).fetch()
     const categoryTitles: Array<String> = []
     const categories: ArticleCategoryItem[] = []
     articles.forEach((article: IContentDocument) => {
@@ -31,7 +30,7 @@ export default defineComponent({
             categories.push({
               title: category,
               count: 1,
-              url: `/articles?caetgory=${category}`,
+              url: `/articles/categories/${category}`,
             })
           } else {
             const index = categoryTitles.indexOf(category)
@@ -40,6 +39,7 @@ export default defineComponent({
         })
       }
     })
+
     return { articles, categories }
   },
 })

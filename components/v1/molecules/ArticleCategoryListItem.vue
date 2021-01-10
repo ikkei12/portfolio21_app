@@ -1,11 +1,11 @@
 <template>
-  <nuxt-link :to="category.url" class="category-item__link {">
+  <a :href="category.url" class="category-item__link {">
     <div class="category-item">
       <p class="category-item__title">
         {{ category.title }} ({{ category.count }})
       </p>
     </div>
-  </nuxt-link>
+  </a>
 </template>
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
