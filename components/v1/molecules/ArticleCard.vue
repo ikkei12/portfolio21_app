@@ -35,9 +35,16 @@ export default defineComponent({
 </script>
 <style scoped lang="scss">
 article {
-  width: 300px;
   padding: 0 2%;
   margin-top: 50px;
+  width: calc(100% / 3);
+
+  @media (max-width: 1100px) {
+    width: calc(100% / 2);
+  }
+  @media (max-width: 500px) {
+    width: calc(100% / 1);
+  }
   &:hover {
     .card__inner {
       .title {

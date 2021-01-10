@@ -60,3 +60,22 @@ html {
   }
   
 
+  $pc: 1041px; // PC
+  $tab: 1040px; // タブレット
+  $sp: 40px;  // スマホ
+  
+  @mixin pc {
+    @media (min-width: ($pc)) {
+      @content;
+    }
+  }
+  @mixin tab {
+    @media (max-width: ($tab)) {
+      @content;
+    }
+  }
+  @mixin sp {
+    @media (max-width: ($sp)) {
+      @content;
+    }
+  }

@@ -41,7 +41,7 @@ export default defineComponent({
   justify-content: center;
   position: relative;
   .article-page__inner {
-    width: 940px;
+    width: 70%;
     margin-bottom: 200px;
   }
   .categories-list__wrapper {

@@ -1,10 +1,12 @@
 <template>
   <div class="article-card__group">
-    <ArticleCard
-      v-for="(article, i) in articles"
-      :key="`article${i}`"
-      :article="article"
-    />
+    <div class="inner">
+      <ArticleCard
+        v-for="(article, i) in articles"
+        :key="`article${i}`"
+        :article="article"
+      />
+    </div>
   </div>
 </template>
 
@@ -26,7 +28,12 @@ export default defineComponent({
 <style scoped lang="scss">
 .article-card__group {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
+  .inner {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
 </style>
