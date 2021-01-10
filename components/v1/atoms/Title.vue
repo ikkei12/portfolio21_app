@@ -24,7 +24,7 @@ export default defineComponent({
   padding: 8px 0;
   font-weight: 100;
   position: sticky;
-  top: 0;
+  top: 60px;
   background: $body_bg;
   .title {
     font-size: 1.8rem;

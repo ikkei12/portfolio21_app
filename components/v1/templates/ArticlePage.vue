@@ -51,7 +51,7 @@ export default defineComponent({
     top: 0;
     width: 18%;
     height: 100%;
-    background: white;
+    background: #fefefe;
   }
 }
 </style>

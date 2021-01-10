@@ -24,7 +24,6 @@
 import { defineComponent, PropType, ref } from '@vue/composition-api'
 import ProductsListItem from '@/components/v1/molecules/ProductsListItem.vue'
 import ProductsListThumbnail from '@/components/v1/atoms/ProductsListThumbnail.vue'
-import productStore from '@/store/products.ts'
 
 export default defineComponent({
   components: {

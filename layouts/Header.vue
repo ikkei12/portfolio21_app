@@ -58,6 +58,10 @@ export default defineComponent({
   height: 60px;
   padding-right: 45px;
   z-index: 6;
+  background: white;
+  width: 100%;
+  box-shadow: 0 0px 10px rgba(89, 89, 89, 0.072);
+  justify-content: flex-end;
   .link {
     margin-right: 30px;
     text-decoration: none;
