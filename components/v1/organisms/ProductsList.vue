@@ -48,9 +48,6 @@ export default defineComponent({
       currentProduct,
     }
   },
-  async asyncData() {
-    const store = await productStore()
-  },
 })
 </script>
 <style scoped lang="scss">

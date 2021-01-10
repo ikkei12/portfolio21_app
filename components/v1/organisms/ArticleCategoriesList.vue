@@ -1,6 +1,9 @@
 <template>
   <div class="categories-list">
-    <h3 class="categoryies-list__title">カテゴリー</h3>
+    <nuxt-link to="/articles" class="list-item__link">
+      <h3>記事一覧</h3></nuxt-link
+    >
+    <h4 class="categoryies-list__title">カテゴリー</h4>
     <ArticleCategoryListItem
       v-for="(category, i) in categories"
       :key="`category-${i}`"
@@ -29,7 +32,18 @@ export default defineComponent({
   padding-top: 160px;
   .categoryies-list__title {
     padding: 1vh;
+    padding-bottom: 0.5vh;
     color: #034646;
+  }
+  .list-item__link {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    h3 {
+      padding: 1vh;
+      font-weight: bold;
+      color: #034646;
+    }
   }
 }
 </style>

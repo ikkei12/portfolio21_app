@@ -1,14 +1,16 @@
 <template>
   <div class="profile-page">
-    <div class="profile-page__inner --info">
-      <ProfileInformationCard class="profile-page__card" />
-    </div>
     <div class="profile-page__inner">
-      <ProfileAboutCard class="profile-page__card" />
-      <ProfileCareerCard
-        class="profile-page__card"
-        :career-nodes="careerNodes"
-      />
+      <div class="card__wrapper --info">
+        <ProfileInformationCard class="profile-page__card" />
+      </div>
+      <div class="card__wrapper">
+        <ProfileAboutCard class="profile-page__card" />
+        <ProfileCareerCard
+          class="profile-page__card"
+          :career-nodes="careerNodes"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -34,22 +36,28 @@ export default defineComponent({
 <style scoped lang="scss">
 .profile-page {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
+  height: 100vh;
   .profile-page__inner {
-    width: 50%;
+    width: 75%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-    height: 100%;
     justify-content: center;
-    &.--info {
-      position: fixed;
-      left: 0;
-    }
-    .profile-page__card {
-      width: 90%;
+
+    .card__wrapper {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: center;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .profile-page__card {
+        width: 90%;
+      }
     }
   }
 }

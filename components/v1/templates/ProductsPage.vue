@@ -24,6 +24,6 @@ export default defineComponent({
   padding: 0 3rem 0;
   height: 100vh;
   overflow: hidden;
-  max-width: 1280px;
+  max-width: 1480px;
 }
 </style>

@@ -35,7 +35,7 @@ export default defineComponent({
 </script>
 <style scoped lang="scss">
 article {
-  width: calc(100% / 3);
+  width: 300px;
   padding: 0 2%;
   margin-top: 50px;
   &:hover {
