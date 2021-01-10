@@ -22,6 +22,11 @@ export default defineComponent({
 .category-item__link {
   text-decoration: none;
   color: #006666;
+  &:hover {
+    .category-item {
+      background: #00a6a618;
+    }
+  }
   .category-item {
     padding: 1vh 1vw;
     border-bottom: 1px solid #efefef;

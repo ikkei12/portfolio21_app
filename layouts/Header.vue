@@ -7,6 +7,7 @@
       class="link"
     >
       <p class="link__text">{{ item.title }}</p>
+      <div class="link__border"></div>
     </nuxt-link>
   </header>
 </template>
@@ -40,6 +41,14 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="scss">
+@keyframes slideIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .header {
   position: fixed;
   top: 0;
@@ -58,6 +67,17 @@ export default defineComponent({
     .link__text {
       font-weight: 400;
       color: #006666;
+    }
+    .link__border {
+      padding-top: 1px;
+      height: 2px;
+    }
+    &:hover {
+      .link__border {
+        height: 0;
+        border-bottom: 2px solid #006666;
+        animation: slideIn 0.5s;
+      }
     }
   }
 }
