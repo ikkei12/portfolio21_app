@@ -41,7 +41,8 @@ export default defineComponent({
   justify-content: center;
   position: relative;
   .article-page__inner {
-    max-width: 940px;
+    width: 940px;
+    margin-bottom: 200px;
   }
   .categories-list__wrapper {
     position: absolute;
