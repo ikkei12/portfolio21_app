@@ -78,7 +78,13 @@ export default defineComponent({
       }
       .card__wrapper {
         width: 100%;
+        height: auto;
         overflow-y: unset;
+        padding-top: 120px;
+        &.--info {
+          height: auto;
+          position: unset;
+        }
       }
     }
   }

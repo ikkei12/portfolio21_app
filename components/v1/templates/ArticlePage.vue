@@ -55,7 +55,7 @@ export default defineComponent({
   justify-content: center;
   position: relative;
   .article-page__inner {
-    width: 70%;
+    width: 75%;
     margin-bottom: 200px;
   }
 
