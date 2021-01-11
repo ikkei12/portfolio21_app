@@ -28,4 +28,9 @@ export default defineComponent({
     font-size: 1.8rem;
   }
 }
+@include sp {
+  .title__wrapper {
+    padding: 18px 0;
+  }
+}
 </style>
