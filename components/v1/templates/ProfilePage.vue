@@ -46,6 +46,7 @@ export default defineComponent({
 
     .card__wrapper {
       width: 50%;
+      padding-top: 60px;
       display: flex;
       flex-direction: column;
       align-items: center;

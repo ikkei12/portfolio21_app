@@ -19,7 +19,7 @@
     <a
       href="https://qiita.com/ikkei12"
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener noreferrer"npm run 
       class="link"
     >
       <img src="~/assets/images/logo/qiita.png" class="icon" alt="icon" />
