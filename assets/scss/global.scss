@@ -1,5 +1,6 @@
-// Variables
-@import 'variables.scss';
+// // Variables
+// @import 'variables.scss';
+// @import "utilities.scss";
 
 html {
     font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -57,25 +58,4 @@ html {
   .button--grey:hover {
     color: #fff;
     background-color: #35495e;
-  }
-  
-
-  $pc: 1041px; // PC
-  $tab: 1040px; // タブレット
-  $sp: 40px;  // スマホ
-  
-  @mixin pc {
-    @media (min-width: ($pc)) {
-      @content;
-    }
-  }
-  @mixin tab {
-    @media (max-width: ($tab)) {
-      @content;
-    }
-  }
-  @mixin sp {
-    @media (max-width: ($sp)) {
-      @content;
-    }
   }
