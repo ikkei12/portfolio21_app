@@ -26,7 +26,9 @@ export default defineComponent({
   },
   setup(_props, _context) {
     const age = computed(() => {
-      return calculcateCurrentAge('1998-03-11 00:00:00')
+      const res = calculcateCurrentAge('1998-03-11 00:00:00')
+      if (res) return res
+      else return 23
     })
 
     const calculcateCurrentAge = (birthDay: string | number | Date) => {
