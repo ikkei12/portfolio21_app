@@ -38,7 +38,6 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100vh;
   .profile-page__inner {
     width: 75%;
     display: flex;
@@ -46,13 +45,18 @@ export default defineComponent({
 
     .card__wrapper {
       width: 50%;
-      padding-top: 60px;
+      padding: 60px 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       height: 100%;
       justify-content: center;
       overflow-y: scroll;
+      &.--info {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+      }
       &::-webkit-scrollbar {
         display: none;
       }
