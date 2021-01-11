@@ -86,12 +86,20 @@ export default defineComponent({
     .thumbnail__wrapper {
       width: 100%;
       height: unset;
-      top: 210px;
+      z-index: 6;
+      top: 60px;
+      .thumbnail {
+        bottom: unset;
+        margin: unset;
+        padding-top: 20px;
+        background: $body_bg;
+      }
     }
     .list-items__wrapper {
       width: 100%;
       margin-left: 0;
-      padding-top: 330px;
+      display: block;
+      padding-top: 340px;
     }
   }
 }

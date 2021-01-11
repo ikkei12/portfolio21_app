@@ -74,7 +74,7 @@ export default defineComponent({
     }
     .list-item__text {
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       color: rgb(210, 210, 210);
     }
     .list-item__created-date {
