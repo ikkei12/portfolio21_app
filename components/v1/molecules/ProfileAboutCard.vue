@@ -39,7 +39,6 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="scss">
-@import '~/assets/scss/variables.scss';
 .about__card {
   border-radius: 20px;
   margin-bottom: 20px;

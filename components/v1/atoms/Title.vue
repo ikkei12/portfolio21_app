@@ -18,8 +18,6 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
-@import '~/assets/scss/variables.scss';
-
 .title__wrapper {
   padding: 8px 0;
   font-weight: 100;

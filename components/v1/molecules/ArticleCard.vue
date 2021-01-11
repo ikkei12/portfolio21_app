@@ -39,10 +39,10 @@ article {
   margin-top: 50px;
   width: calc(100% / 3);
 
-  @media (max-width: 1100px) {
+  @include tab {
     width: calc(100% / 2);
   }
-  @media (max-width: 500px) {
+  @include sp {
     width: calc(100% / 1);
   }
   &:hover {
