@@ -47,15 +47,17 @@ export default defineComponent({
       border-radius: 20px;
     }
     .name-ja {
-      font-size: 3.3vw;
+      font-size: 2.5rem;
       font-weight: 100;
       margin-top: 4vh;
+      white-space: nowrap;
     }
     .name-en {
-      font-size: 2.3vw;
+      font-size: 1.8rem;
       font-weight: 100;
       letter-spacing: 0.15vw;
       margin-bottom: 4vh;
+      white-space: nowrap;
     }
     .link {
       height: 30px;
