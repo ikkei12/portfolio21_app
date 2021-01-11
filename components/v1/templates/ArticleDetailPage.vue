@@ -89,5 +89,33 @@ export default defineComponent({
     border-radius: 10px;
     margin-bottom: 80px;
   }
+  @include sp {
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin-bottom: 20px;
+    }
+    p {
+      line-height: 1.9;
+      margin-bottom: 10px;
+    }
+  }
+}
+@include sp {
+  .article-detail {
+    .article-detail__inner {
+      width: 95%;
+      .article-detail__content {
+        padding: 10px 16px;
+      }
+    }
+    .contents-table {
+      display: none;
+    }
+    .reading-time__card {
+      display: none;
+    }
+  }
 }
 </style>

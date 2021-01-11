@@ -1,6 +1,6 @@
 <template>
-  <article>
-    <nuxt-link :to="'/articles/' + article.slug" class="article-card">
+  <article class="article-card">
+    <nuxt-link :to="'/articles/' + article.slug" class="article-card__inner">
       <img :src="article.thumbnail" class="thumbnail" />
       <div class="card__inner">
         <div class="card__upper">
@@ -34,7 +34,7 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="scss">
-article {
+.article-card {
   padding: 0 2%;
   margin-top: 50px;
   width: calc(100% / 3);
@@ -53,7 +53,7 @@ article {
     }
   }
 
-  .article-card {
+  .article-card__inner {
     margin-bottom: 5vh;
     text-decoration: none;
 
