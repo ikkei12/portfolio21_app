@@ -70,8 +70,8 @@ export default defineComponent({
   }
   .open-menu__button {
     display: none;
-    position: absolute;
-    right: 10px;
+    position: fixed;
+    right: 16px;
     top: 80px;
     z-index: 6;
     background: $primary;
