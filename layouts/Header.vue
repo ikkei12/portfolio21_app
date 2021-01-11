@@ -85,4 +85,12 @@ export default defineComponent({
     }
   }
 }
+@include sp {
+  .header {
+    padding-right: 16px;
+    .link {
+      margin-right: 12px;
+    }
+  }
+}
 </style>

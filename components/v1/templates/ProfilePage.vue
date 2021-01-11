@@ -62,4 +62,21 @@ export default defineComponent({
     }
   }
 }
+@include sp {
+  .profile-page {
+    .profile-page__inner {
+      width: 95%;
+      display: block;
+      :nth-child(2) {
+        &.card__wrapper {
+          padding-top: 0px;
+        }
+      }
+      .card__wrapper {
+        width: 100%;
+        overflow-y: unset;
+      }
+    }
+  }
+}
 </style>
