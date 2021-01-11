@@ -65,7 +65,7 @@ export default defineComponent({
     align-items: center;
     padding: 3vh 2vw;
     cursor: pointer;
-    border-bottom: 2px solid rgb(241, 241, 241);
+    border-bottom: 2px solid $secondary__thin;
     position: relative;
     .list-item__index {
       font-size: 1rem;
@@ -87,6 +87,9 @@ export default defineComponent({
   }
   &.--active {
     background: #0066660b;
+    .list-item {
+      border-bottom: 2px solid $secondary;
+    }
     .list-item__index {
       color: black;
     }

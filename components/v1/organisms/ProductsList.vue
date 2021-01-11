@@ -54,16 +54,18 @@ export default defineComponent({
   height: 100%;
   display: flex;
   align-items: center;
+  position: relative;
   .thumbnail__wrapper {
     width: 45%;
     height: 100%;
     position: absolute;
     z-index: 0;
+    left: 0;
   }
   .list-items__wrapper {
-    width: 60%;
-    padding: 0 0 0 1rem;
-    margin-left: 40vw;
+    width: 80%;
+    padding: 0 0 0 60px;
+    margin-left: 40%;
     height: 100%;
     overflow-y: scroll;
     z-index: 2;
@@ -76,6 +78,20 @@ export default defineComponent({
     }
     &::-webkit-scrollbar-thumb {
       background-color: rgba(212, 212, 212, 0.5);
+    }
+  }
+}
+@include sp {
+  .list__wrapper {
+    .thumbnail__wrapper {
+      width: 100%;
+      height: unset;
+      top: 210px;
+    }
+    .list-items__wrapper {
+      width: 100%;
+      margin-left: 0;
+      padding-top: 330px;
     }
   }
 }

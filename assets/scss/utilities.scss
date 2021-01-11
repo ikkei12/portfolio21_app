@@ -1,6 +1,13 @@
+$pc-lg: 1300px;
 $pc: 1041px; // PC
 $tab: 1040px; // タブレット
 $sp: 500px;  // スマホ
+
+@mixin pc-lg {
+  @media (min-width: ($pc-lg)) {
+    @content;
+  }
+}
 
 @mixin pc {
   @media (min-width: ($pc)) {
