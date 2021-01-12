@@ -1,0 +1,26 @@
+{
+  "title": "英単語クイズゲーム",
+  "productionPeriod": "１週間",
+  "url": "https://translation-game.vercel.app",
+  "createdDate": "2020/10/05",
+  "contents": [
+    {
+      "description": "英単語の定義が英語で出題されるのでその単語を答えるゲームです\nスコアが算出されるのでランキングで競う事ができます",
+      "image": {
+        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/translation-game4.png"
+      }
+    },
+    {
+      "description": "スコアは正答率、時間やヒントを使うかどうかによって変動します\n問題はOxford Dictionaries APIを使って単語を取得してDBへ保存しています",
+      "image": {
+        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/translation-game5.png"
+      }
+    },
+    {
+      "description": "構成はNuxt.js × Go × MySQL\nフロントはvercel、バックエンドはherokuでホスティングしています\nスマホではPWAにも対応しています",
+      "image": {
+        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/translation-game6.png"
+      }
+    }
+  ]
+}

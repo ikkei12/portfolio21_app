@@ -1,0 +1,26 @@
+{
+  "title": "新着の古着を平均価格と比べてお得な商品かをSlackに通知してくれるアプリ",
+  "productionPeriod": "１週間",
+  "url": "",
+  "createdDate": "2019/12/01",
+  "contents": [
+    {
+      "description": "オンライン古着サイトを自動で定期的にスクレイピングし、集まったデータをブランドごとに分類、平均価格や商品の情報が確認できます",
+      "image": {
+        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/scraping1.png"
+      }
+    },
+    {
+      "description": "DynamoDBのStreamトリガーを利用して、DBへ書き込みがあったタイミングで、その商品の情報と、商品が割安か割高かをslackへ通知します",
+      "image": {
+        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/scraping2.png"
+      }
+    },
+    {
+      "description": "フロントはNuxt.js、Lambda(Python)でスクレイピングをしてdynamoDBへ書き込み\nAPI Gatewayを使ってLambdaをAPI化、CloudWatchでスクレイピングの定期実行をしています",
+      "image": {
+        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/scraping4.png"
+      }
+    }
+  ]
+}
