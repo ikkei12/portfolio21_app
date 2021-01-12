@@ -19,7 +19,6 @@ export default defineComponent({
     const products = await $content('products')
       .sortBy('createdDate', 'desc')
       .fetch()
-    console.log(products)
     return { products }
   },
 })

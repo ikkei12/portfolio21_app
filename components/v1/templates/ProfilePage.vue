@@ -38,6 +38,7 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   width: 100%;
+
   .profile-page__inner {
     width: 75%;
     display: flex;

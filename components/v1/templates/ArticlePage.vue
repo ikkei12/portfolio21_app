@@ -73,7 +73,7 @@ export default defineComponent({
     display: none;
     position: fixed;
     right: 16px;
-    top: 80px;
+    top: 70px;
     z-index: 6;
     background: $primary;
     border: 0;
