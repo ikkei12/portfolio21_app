@@ -39,18 +39,19 @@ export default defineComponent({
   margin-top: 30px;
   .thumbnail-pagination__item {
     margin-right: 3%;
+    height: 50px;
+    background: $secondary;
     cursor: pointer;
+    filter: opacity(0.4);
+    padding: 5px 8px;
+    border-radius: 5px;
     .thumbnail-pagination__image {
-      width: 130px;
+      height: 100%;
       object-fit: cover;
-      border-radius: 8px;
-      filter: opacity(0.4);
     }
     &.--active {
-      .thumbnail-pagination__image {
-        border: 2px solid $primary;
-        filter: opacity(1);
-      }
+      filter: opacity(1);
+      border: 2px solid $primary;
     }
   }
 }

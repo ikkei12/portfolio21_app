@@ -3,8 +3,7 @@
     <div class="product-detail__inner">
       <div class="upper">
         <h1 class="title">
-          {{ product.title }} {{ product.title }}{{ product.title }}
-          ポートフォリオです ポートフォリオです ポートフォリオです
+          {{ product.title }}
         </h1>
         <p class="created-date">{{ product.createdDate }}</p>
       </div>
@@ -19,11 +18,7 @@
             :key="'slide' + i"
           >
             <div class="swiper-slide__inner">
-              <img
-                :src="content.image.url"
-                style="width: 100%"
-                class="swiper-slide__img"
-              />
+              <img :src="content.image.url" class="swiper-slide__img" />
             </div>
           </swiper-slide>
         </swiper>
@@ -46,7 +41,7 @@
         >
           {{ content.description }}
         </p>
-        <div class="product-url__wrapper">
+        <div v-if="product.url" class="product-url__wrapper">
           <p>サイトのURL:</p>
           <a
             :href="product.url"
@@ -55,6 +50,19 @@
             class="product-url"
           >
             <p>{{ product.url }}</p>
+          </a>
+        </div>
+        <div v-if="product.github_url" class="product-url__wrapper">
+          <div class="icon__wrapper">
+            <img src="@/assets/images/logo/github.png" />
+          </div>
+          <a
+            :href="product.github_url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="product-url"
+          >
+            <p>{{ product.github_url }}</p>
           </a>
         </div>
       </div>
@@ -115,11 +123,10 @@ export default defineComponent({
     width: 80%;
     min-height: 100vh;
     margin: 40px 0;
-    padding: 60px 4%;
+    padding: 60px 15%;
     .upper {
       display: flex;
       flex-direction: column;
-      padding: 0 4%;
       margin-bottom: 30px;
       .title {
       }
@@ -130,18 +137,26 @@ export default defineComponent({
     }
   }
   .carousel__wrapper {
-    padding: 0 15%;
+    padding: 0 0%;
+
     .swiper-slide__inner {
-      background: #fafafa;
+      background: $secondary;
       border-radius: 8px;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 3% 5%;
+      height: 500px;
+
+      .swiper-slide__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
   .descriptions-group {
-    padding: 0 20%;
+    padding: 0 10%;
     margin-top: 5%;
     p {
       font-size: 20px;
@@ -154,6 +169,15 @@ export default defineComponent({
       display: flex;
       margin-top: 2%;
       align-items: center;
+      .icon__wrapper {
+        display: flex;
+        align-items: center;
+        height: 22px;
+        img {
+          height: 100%;
+          margin-right: 3px;
+        }
+      }
       .product-url {
         font-weight: bold;
         color: $primary;
