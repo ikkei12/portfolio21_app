@@ -11,7 +11,7 @@
       }
     },
     {
-      "description": "Vue/Vuex + Firebase(Authentication/Firestore/Storage) + Electron\nワイヤーフレーム設計でAdobeXDを使っています\n本来はデスクトップアプリですが公開用としてfirebaseのhostingで公開しています\nデスクトップアプリのダウンロードは以下参照\nhttps://drive.google.com/file/d/13YfheQjrDCS7LNu2gtIkrk6E4a_QsNdn/view?usp=sharing",
+      "description": "Vue/Vuex + Firebase(Authentication/Firestore/Storage) + Electron\nワイヤーフレーム設計でAdobeXDを使っています\n本来はデスクトップアプリですが公開用としてfirebaseのhostingで公開しています",
       "image": {
         "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/papyrus2.png"
       }

@@ -33,7 +33,9 @@
         />
       </div>
       <div class="descriptions-group">
-        <p>作成日: {{ product.createdDate }}</p>
+        <p class="descriptions-group__created-date">
+          作成日: {{ product.createdDate }}
+        </p>
         <p
           v-for="(content, i) in product.contents"
           :key="`desc-${i}`"
@@ -129,6 +131,7 @@ export default defineComponent({
       flex-direction: column;
       margin-bottom: 30px;
       .title {
+        margin-top: 16px;
       }
       .created-date {
         color: grey;
@@ -146,7 +149,6 @@ export default defineComponent({
       justify-content: center;
       align-items: center;
       padding: 3% 5%;
-      height: 500px;
 
       .swiper-slide__img {
         width: 100%;
@@ -194,6 +196,32 @@ export default defineComponent({
   }
   100% {
     opacity: 1;
+  }
+}
+@include tab {
+  .product-detail__page {
+    .product-detail__inner {
+      padding: 0;
+    }
+  }
+}
+@include sp {
+  .product-detail__page {
+    .descriptions-group {
+      padding: 0 5%;
+      margin-top: 0;
+      .descriptions-group__created-date {
+        margin-top: 10px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .swiper-slide__inner {
+      padding: 6% 8% !important;
+      height: unset !important;
+    }
   }
 }
 </style>

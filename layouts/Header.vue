@@ -23,8 +23,8 @@ export default defineComponent({
       //   path: '/',
       // },
       {
-        title: 'Profile',
-        path: '/profile',
+        title: 'Home',
+        path: '/',
       },
       {
         title: 'Product',

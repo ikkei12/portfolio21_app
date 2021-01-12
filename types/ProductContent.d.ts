@@ -4,7 +4,7 @@ declare type Image = {
 declare type ProductContent = {
   productId: number
   order: number
-  description string
+  description: string
   image: Image
   createdAt: string
   updatedAt: string
