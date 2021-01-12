@@ -22,6 +22,7 @@
     "@types/swiper": "^5.4.1",
     "@vue/composition-api": "^1.0.0-beta.22",
     "core-js": "^3.6.5",
+    "lottie-web": "^5.7.5",
     "nuxt": "^2.14.6",
     "prism-themes": "^1.5.0",
     "reading-time": "^1.2.1",

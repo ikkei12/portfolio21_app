@@ -67,7 +67,7 @@ export default defineComponent({
     }
   }
 }
-@include sp {
+@include tab {
   .profile-page {
     .profile-page__inner {
       width: 95%;
