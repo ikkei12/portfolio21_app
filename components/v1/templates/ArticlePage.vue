@@ -51,11 +51,12 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  padding-right: 10%;
+  padding-right: 18%;
   justify-content: center;
   position: relative;
   .article-page__inner {
-    width: 75%;
+    width: 90%;
+    padding: 0 2% 0 7%;
     margin-bottom: 200px;
   }
 
@@ -84,6 +85,7 @@ export default defineComponent({
     outline: none;
   }
 }
+
 @include sp {
   .article-page {
     padding-right: 0;
