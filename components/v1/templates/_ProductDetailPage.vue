@@ -65,11 +65,11 @@ export default defineComponent({
       centeredSlides: true,
     }
     const contentLength = computed(() => {
-      return props.product?.productContents?.length
+      return props.product?.contents?.length
     })
     const productContents = computed(() => {
       if (!props.product) return
-      return props.product.productContents
+      return props.product.contents
     })
 
     const slideNext = () => {

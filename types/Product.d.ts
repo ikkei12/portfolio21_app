@@ -4,7 +4,7 @@ declare type Product = {
   productionPeriod?: string
   url?: string
   createdDate?: string
-  productContents?: ProductContent[]
+  contents?: ProductContent[]
   createdAt?: string
   updatedAt?: string
   revisedAt?: string

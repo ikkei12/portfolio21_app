@@ -6,6 +6,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
 import ProductsList from '@/components/v1/organisms/ProductsList.vue'
+import { IContentDocument } from '@nuxt/content/types/content'
 export default defineComponent({
   name: 'ProductsPage',
   components: {
@@ -13,7 +14,7 @@ export default defineComponent({
   },
   props: {
     products: {
-      type: Array as PropType<Product[]>,
+      type: Array as PropType<IContentDocument[]>,
       required: true,
     },
   },

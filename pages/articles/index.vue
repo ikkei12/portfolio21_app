@@ -18,7 +18,7 @@ export default defineComponent({
   },
   async asyncData({ $content }: Context) {
     const articles = await $content('articles')
-      .sortBy('createdDate', 'asc')
+      .sortBy('createdDate', 'desc')
       .fetch()
     const categoryTitles: Array<String> = []
     const categories: ArticleCategoryItem[] = []

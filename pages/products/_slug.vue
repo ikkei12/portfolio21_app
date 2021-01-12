@@ -1,6 +1,6 @@
 <template>
   <ProductsProvider>
-    <ProductDetailPage :product="product" />
+    <ProductDetailPage :product="res[0]" />
   </ProductsProvider>
 </template>
 <script lang="ts">
@@ -10,18 +10,11 @@ export default defineComponent({
   components: {
     ProductDetailPage,
   },
-  async asyncData({ $axios, params }) {
-    const path = `/products/${params.id}`
-    const product = await $axios
-      .get(path)
-      .then((res) => {
-        return res.data
-      })
-      .catch((e) => {
-        console.error(e)
-      })
+  async asyncData({ $content, params }) {
+    const slug = params.slug
+    const res = await $content('products').where({ slug }).limit(1).fetch()
 
-    return { product }
+    return { res }
   },
 })
 </script>

@@ -3,10 +3,8 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType, ref } from '@vue/composition-api'
+import { defineComponent, PropType } from '@vue/composition-api'
 import Pagination from '@/components/v1/molecules/Pagination.vue'
-import SwiperClass from 'swiper'
-import { SwiperDOM } from '~/types/Swiper'
 export default defineComponent({
   components: { Pagination },
   props: {
@@ -14,52 +12,6 @@ export default defineComponent({
       type: Object as PropType<Product>,
       require: true,
     },
-  },
-  setup(props, _context) {
-    const swiperRef = ref<SwiperDOM>()
-    const activeIndex = ref<number>(1)
-    const swiperOptions = {
-      slidesPerView: 1.4,
-      spaceBetween: 70,
-      slideToClickedSlide: true,
-      centeredSlides: true,
-    }
-    const contentLength = computed(() => {
-      return props.product?.productContents?.length
-    })
-    const productContents = computed(() => {
-      if (!props.product) return
-      return props.product.productContents
-    })
-
-    const slideNext = () => {
-      swiperRef.value!.$swiper.slideNext()
-    }
-    const slidePrev = () => {
-      swiperRef.value!.$swiper.slidePrev()
-    }
-    const changeSlideIndex = (num: number | undefined) => {
-      if (!num) return
-      activeIndex.value = num
-    }
-    const onClickPaginationDot = (num: number) => {
-      swiperRef.value!.$swiper.slideTo(num - 1)
-      changeSlideIndex(num)
-    }
-    const onSlideChange = (e: SwiperClass) => {
-      changeSlideIndex(e.activeIndex + 1)
-    }
-    return {
-      productContents,
-      activeIndex,
-      contentLength,
-      slideNext,
-      slidePrev,
-      swiperRef,
-      swiperOptions,
-      onClickPaginationDot,
-      onSlideChange,
-    }
   },
 })
 </script>
@@ -80,39 +32,6 @@ export default defineComponent({
   }
   100% {
     opacity: 1;
-  }
-}
-.swiper-container {
-  .swiper-slide {
-    opacity: 0.4;
-    width: 500px;
-    &-active {
-      opacity: 1;
-    }
-    &-next,
-    &-prev {
-      cursor: pointer;
-    }
-  }
-}
-.swiper-button-prev {
-  &.--disabled {
-    display: none;
-  }
-}
-.swiper-button-next {
-  &.--disabled {
-    display: none;
-  }
-}
-.description {
-  opacity: 0;
-  filter: blur(4px);
-  position: absolute;
-  &.--active {
-    transition: 1s;
-    opacity: 1;
-    filter: blur(0);
   }
 }
 </style>

@@ -3,7 +3,7 @@
   "productionPeriod": "1ヶ月",
   "url": "https://portfolio-e24fb.web.app",
   "createdDate": "2019/05/01",
-  "productContents": [
+  "contents": [
     {
       "description:": "HTML/CSS/JSを学習開始してから初めて作った、フォトギャラリーを兼ねたポートフォリオサイトです",
       "image": {

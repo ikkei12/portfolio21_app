@@ -1,7 +1,7 @@
 <template>
   <nuxt-link
     class="list-item__link"
-    :to="'/products/' + product.id"
+    :to="'/products/' + product.slug"
     :class="{ '--active': active }"
   >
     <div class="list-item" @mouseover="onMouseOver">
