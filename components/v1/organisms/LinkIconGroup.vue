@@ -30,11 +30,14 @@
 .link__group {
   height: 30px;
   display: flex;
-  width: 50%;
-  justify-content: space-around;
-
+  width: 100%;
+  justify-content: center;
+  &:nth-child(3) {
+    margin-right: 0;
+  }
   .link {
     height: 100%;
+    margin-right: 12px;
     img {
       height: 100%;
       border-radius: 50%;

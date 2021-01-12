@@ -39,7 +39,7 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   .inner {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,6 +70,15 @@ export default defineComponent({
         height: 100%;
         border-radius: 50%;
         margin-right: 8px;
+      }
+    }
+  }
+}
+@include sp {
+  .info__card {
+    .inner {
+      .link {
+        margin-top: 2vh;
       }
     }
   }

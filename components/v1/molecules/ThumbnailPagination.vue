@@ -37,6 +37,10 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .thumbnail-pagination__item {
     margin-right: 3%;
     height: 50px;

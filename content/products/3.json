@@ -19,7 +19,7 @@
     {
       "description": "フロントはNuxt.js、Lambda(Python)でスクレイピングをしてdynamoDBへ書き込み\nAPI Gatewayを使ってLambdaをAPI化、CloudWatchでスクレイピングの定期実行をしています",
       "image": {
-        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/scraping4.png"
+        "url": "https://simages.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/scraping4.jpg"
       }
     }
   ]
