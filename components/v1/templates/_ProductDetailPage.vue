@@ -1,5 +1,45 @@
 <template>
-  <div class="product-detail__page"></div>
+  <div class="product-detail__page">
+    <div class="swiper__wrapper">
+      <swiper
+        ref="swiperRef"
+        :options="swiperOptions"
+        @slideChange="onSlideChange"
+      >
+        <swiper-slide
+          v-for="(productContent, i) in productContents"
+          :key="'slide' + i"
+        >
+          <div>
+            <img :src="productContent.image.url" style="width: 100%" />
+          </div>
+        </swiper-slide>
+      </swiper>
+      <Pagination
+        :active-index="activeIndex"
+        :length="contentLength"
+        @onClickPaginationDot="onClickPaginationDot"
+      />
+      <div
+        class="swiper-button-prev"
+        :class="{ '--disabled': activeIndex === 1 }"
+        @click="slidePrev"
+      />
+      <div
+        class="swiper-button-next"
+        :class="{ '--disabled': activeIndex === contentLength }"
+        @click="slideNext"
+      />
+    </div>
+    <p
+      v-for="(productContent, i) in productContents"
+      :key="'slide' + i"
+      class="description"
+      :class="{ '--active': activeIndex - 1 == i }"
+    >
+      {{ productContent.description }}
+    </p>
+  </div>
 </template>
 
 <script lang="ts">
