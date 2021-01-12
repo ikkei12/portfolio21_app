@@ -20,6 +20,7 @@ import {
 import lottie from 'lottie-web'
 import animationData from '@/assets/images/lottie/coffee.json'
 import Header from './Header.vue'
+
 export default defineComponent({
   components: {
     Header,
@@ -31,22 +32,27 @@ export default defineComponent({
     const containerRef = ref()
     onMounted(() => {
       lottie.loadAnimation({
-        container: lottieRef.value, // document.getElementbyId('lottie') などでも OK
+        container: lottieRef.value,
         renderer: 'svg',
         loop: true,
         autoplay: true,
         animationData,
       })
     })
-    timerID.value = setTimeout(() => {
-      if (overlayRef.value) {
-        overlayRef.value.style.display = 'none'
-      }
-      if (containerRef.value) {
-        containerRef.value.style.overflow = 'unset'
-        containerRef.value.style.height = 'unset'
-      }
-    }, 1500)
+    if (process.client) {
+      window.addEventListener('load', () => {
+        if (overlayRef.value) {
+          overlayRef.value.style.display = 'none'
+        }
+        if (containerRef.value) {
+          containerRef.value.style.overflow = 'unset'
+          containerRef.value.style.height = 'unset'
+        }
+      })
+    }
+    // timerID.value = setTimeout(() => {
+
+    // }, 1500)
     onUnmounted(() => {
       clearTimeout(timerID.value)
     })
