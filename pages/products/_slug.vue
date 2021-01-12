@@ -12,7 +12,7 @@ export default defineComponent({
   },
   async asyncData({ $content, params }) {
     const slug = params.slug
-    const res = await $content('products').where({ slug }).limit(1).fetch()
+    const res = await $content('products').where({ slug }).fetch()
 
     return { res }
   },
