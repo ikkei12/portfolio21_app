@@ -41,18 +41,17 @@ export default defineComponent({
     })
     if (process.client) {
       window.addEventListener('load', () => {
-        if (overlayRef.value) {
-          overlayRef.value.style.display = 'none'
-        }
-        if (containerRef.value) {
-          containerRef.value.style.overflow = 'unset'
-          containerRef.value.style.height = 'unset'
-        }
+        timerID.value = setTimeout(() => {
+          if (overlayRef.value) {
+            overlayRef.value.classList.add('--loaded')
+          }
+          if (containerRef.value) {
+            containerRef.value.classList.add('--loaded')
+          }
+        }, 1500)
       })
     }
-    // timerID.value = setTimeout(() => {
 
-    // }, 1500)
     onUnmounted(() => {
       clearTimeout(timerID.value)
     })
@@ -69,6 +68,10 @@ export default defineComponent({
   position: relative;
   height: 100vh;
   overflow: hidden;
+  &.--loaded {
+    overflow: unset;
+    height: unset;
+  }
   .overlay {
     position: absolute;
     top: 0;
@@ -80,6 +83,9 @@ export default defineComponent({
     justify-content: center;
     align-items: center;
     z-index: 7;
+    &.--loaded {
+      display: none;
+    }
     .overlay__inner {
       width: 15%;
     }
