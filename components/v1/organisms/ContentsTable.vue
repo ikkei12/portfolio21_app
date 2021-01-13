@@ -4,7 +4,7 @@
       <h4>目次</h4>
       <ul ref="linkGroupRef">
         <li
-          v-for="link of article.toc"
+          v-for="link of toc"
           :key="link.id"
           :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
         >
@@ -33,7 +33,7 @@ export default defineComponent({
   components: {
     Card,
   },
-  setup(_props, _context) {
+  setup(props, _context) {
     const linkGroupRef = ref<HTMLElement>()
     const changeActiveLink = (clickedLink: HTMLElement) => {
       if (!linkGroupRef.value) return
@@ -46,7 +46,8 @@ export default defineComponent({
         }
       }
     }
-    return { linkGroupRef, changeActiveLink }
+    const toc = props.article?.toc ? props.article?.toc : []
+    return { linkGroupRef, changeActiveLink, toc }
   },
 })
 </script>

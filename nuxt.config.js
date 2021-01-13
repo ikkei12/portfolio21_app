@@ -35,6 +35,7 @@ export default {
         content:
           'https://storage.googleapis.com/portfolio21-56e7e.appspot.com/profile/avatar.jpg',
       },
+      { name: 'twitter:title', content: "1keiuu's portfolio" },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@1keiuu' },
     ],

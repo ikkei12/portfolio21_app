@@ -8,7 +8,7 @@
     </div>
 
     <ContentsTable :article="article" />
-    <ReadingTimeCard :reading-time="article.readingTime" />
+    <ReadingTimeCard :reading-time="readingTime" />
   </div>
 </template>
 <script lang="ts">
@@ -39,7 +39,10 @@ export default defineComponent({
         return { text: category, color }
       })
     })
-    return { chips }
+    const readingTime = props.article?.readingTime
+      ? props.article?.readingTime
+      : ''
+    return { chips, readingTime }
   },
 })
 </script>
