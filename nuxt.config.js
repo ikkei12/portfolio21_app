@@ -32,7 +32,8 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: `${process.env.STORAGE_URL}/profile/avatar.jpg`,
+        content:
+          'https://storage.googleapis.com/portfolio21-56e7e.appspot.com/profile/avatar.jpg',
       },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@1keiuu' },
@@ -92,6 +93,7 @@ export default {
   dotenv: {
     filename: envPath,
   },
+  // NOTE: Firebase Hostingではenvが設定できない(?)のでfunctions等を利用する必要がある
   env: {
     SITE_URL: process.env.SITE_URL,
     STORAGE_URL: process.env.STORAGE_URL,

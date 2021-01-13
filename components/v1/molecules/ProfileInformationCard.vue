@@ -2,7 +2,7 @@
   <div class="info__card">
     <div class="inner">
       <img
-        :src="storageURL + '/profile/avatar.jpg'"
+        src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/profile/avatar.jpg"
         alt="Profile
       image"
         class="profile-image"
@@ -30,10 +30,6 @@ export default defineComponent({
   components: {
     Card,
     LinkIconGroup,
-  },
-  setup() {
-    const storageURL = process.env.STORAGE_URL
-    return { storageURL }
   },
 })
 </script>
