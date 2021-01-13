@@ -29,8 +29,7 @@ JPHACKS(ジャパンハックス)は、学生を対象にした日本最大規�
 ## 開発したもの
 画像分析で忘れ物を防ぐアプリ「Laff」を開発しました。
 
-https://github.com/ikkei12/B_2009
-
+<ogp-card url="https://miro.com"></ogp-card>
 
 https://www.youtube.com/watch?v=mVvbSJA8qvQ&feature=youtu.be 
 
