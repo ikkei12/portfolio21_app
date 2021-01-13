@@ -1,6 +1,7 @@
 type Article = {
   thumbnail: string
   title: string
+  slug: string
   createdDate: string
   categories: string[]
 }

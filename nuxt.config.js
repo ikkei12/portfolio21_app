@@ -1,3 +1,5 @@
+const envPath = 'config/.env'
+require('dotenv').config({ path: envPath })
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -6,11 +8,34 @@ export default {
   },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'portfolio21',
+    title: "1keiuu's portfolio",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: "Ikkei Harashima's Portfolio",
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: "1keiuu's portfolio",
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'サイトのURL' },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: "Ikkei Harashima's portfolio 2021",
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: `${process.env.STORAGE_URL}/profile/avatar.jpg`,
+      },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:site', content: '@1keiuu' },
     ],
     htmlAttrs: { lang: 'ja' },
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -63,6 +88,13 @@ export default {
   dayjs: {
     locales: ['en', 'ja'],
     defaultLocale: 'ja',
+  },
+  dotenv: {
+    filename: envPath,
+  },
+  env: {
+    SITE_URL: process.env.SITE_URL,
+    STORAGE_URL: process.env.STORAGE_URL,
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},

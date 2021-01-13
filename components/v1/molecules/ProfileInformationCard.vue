@@ -2,8 +2,9 @@
   <div class="info__card">
     <div class="inner">
       <img
-        src="~/assets/images/profile.jpg"
-        alt="Profile image"
+        :src="storageURL + '/profile/avatar.jpg'"
+        alt="Profile
+      image"
         class="profile-image"
       />
       <h3 class="name-ja">原島 一桂</h3>
@@ -29,6 +30,10 @@ export default defineComponent({
   components: {
     Card,
     LinkIconGroup,
+  },
+  setup() {
+    const storageURL = process.env.STORAGE_URL
+    return { storageURL }
   },
 })
 </script>

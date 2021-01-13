@@ -15,5 +15,30 @@ export default defineComponent({
       .fetch()
     return { article, prev, next }
   },
+  head() {
+    return {
+      title: (this.article as Article).title,
+      meta: [
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: "1keiuu's Blog",
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `${process.env.SITE_URL}/articles/${
+            (this.article as Article).slug
+          }`,
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/translation/3.png',
+        },
+      ],
+    }
+  },
 })
 </script>
