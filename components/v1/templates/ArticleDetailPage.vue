@@ -105,7 +105,7 @@ export default defineComponent({
     }
   }
 }
-@include sp {
+@include tab {
   .article-detail {
     .article-detail__inner {
       width: 95%;

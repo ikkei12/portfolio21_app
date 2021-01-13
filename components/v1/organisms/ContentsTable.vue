@@ -6,7 +6,8 @@
         <li
           v-for="link of toc"
           :key="link.id"
-          :class="{ toc2: link.depth === 2, toc3: link.depth === 3 }"
+          :class="{ '--disabled': link.depth !== 2 }"
+          class="link-item"
         >
           <NuxtLink
             v-scroll-to="{
@@ -55,7 +56,7 @@ export default defineComponent({
 .contents-table {
   position: fixed;
   right: 50px;
-  top: 120px;
+  top: 180px;
   width: 15%;
   h4 {
     font-size: 14px;
@@ -66,6 +67,9 @@ export default defineComponent({
     li {
       list-style: circle;
       margin-bottom: 3px;
+      &.--disabled {
+        display: none;
+      }
       a {
         color: grey;
         text-decoration: none;

@@ -26,7 +26,7 @@ export default defineComponent({
 .reading-time__card {
   position: fixed;
   right: 50px;
-  top: 300px;
+  top: 80px;
   width: 15%;
   h4 {
     font-size: 12px;

@@ -104,7 +104,9 @@ export default {
   hooks: {
     'content:file:beforeInsert': (document) => {
       if (document.extension === '.md') {
-        const { time } = require('reading-time')(document.text)
+        const { time } = require('reading-time')(document.text, {
+          wordsPerMinute: 500,
+        })
 
         document.readingTime = time
       }
