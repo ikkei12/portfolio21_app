@@ -3,8 +3,7 @@
     <div class="inner">
       <img
         src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/profile/avatar.jpg"
-        alt="Profile
-      image"
+        alt="Profile image"
         class="profile-image"
       />
       <h3 class="name-ja">原島 一桂</h3>
@@ -80,6 +79,9 @@ export default defineComponent({
     .inner {
       .link {
         margin-top: 2vh;
+      }
+      .profile-image {
+        width: 50%;
       }
     }
   }
