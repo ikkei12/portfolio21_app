@@ -79,7 +79,7 @@ export default defineComponent({
     &:hover {
       .link__border {
         height: 0;
-        border-bottom: 1px solid #006666;
+        border-bottom: 2px solid #006666;
         animation: slideIn 0.5s;
       }
     }

@@ -7,7 +7,7 @@
     {
       "description": "JPHACKS2020というハッカソンに向けて作成。\nGoogle Cloud Vision APIの画像認識を使って忘れ物があるか教えてくれます。\n自分は主にフロントエンドを担当し、React Nativeでクロスプラットフォーム対応のモバイルアプリを作成しました。",
       "image": {
-        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/ce5dc1dc-c445-4052-8802-c5149faee086.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/laff/1.png"
       }
     }
   ]

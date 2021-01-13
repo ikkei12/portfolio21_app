@@ -7,19 +7,19 @@
     {
       "description": "管理、更新しやすいポートフォリオを意識して作成しました\nホーム画面ではthree.jsを使用しています",
       "image": {
-        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/1.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio20/1.png"
       }
     },
     {
       "description": "Githubへのcontributionや今までの成果物を確認できます\n今後は撮影した写真のフォトギャラリーや管理画面の作成、アニメーションの充実を含めたUIの改善を進めていきたいです",
       "image": {
-        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/2.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio20/2.png"
       }
     },
     {
       "description": "フロントはReact×TypeScript、APIとしてGo言語(Gin)、インフラはEC2/S3\nアプリをパブリックサブネット、データベースをプライベートサブネットに配置\nローカルではDockerComposeを使用しています",
       "image": {
-        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/7.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio20/3.png"
       }
     }
   ]

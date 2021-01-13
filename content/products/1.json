@@ -8,21 +8,21 @@
       "title": "About the Product",
       "description": "HTML/CSS/JSを学習開始してから初めて作った、フォトギャラリーを兼ねたポートフォリオサイトです",
       "image": {
-        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-12-28%2018.13.31.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio19/1.png"
       }
     },
     {
       "title": "Skills",
       "description": "使用したスキルはHTML,CSS,JavaScript,Sass \r\n ワイヤーフレーム設計でAdobeXD、サイトのホスティングはFirebaseのHostingを使用しました",
       "image": {
-        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/portfolio2.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio19/2.png"
       }
     },
     {
       "title": "Photo gallery",
       "description": "スライダーにはSlick,フォトギャラリーにはLightBoxといったJavaScriptライブラリを使用しました",
       "image": {
-        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/portfolio3.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio19/3.png"
       }
     }
   ]

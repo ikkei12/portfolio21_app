@@ -14,4 +14,4 @@
     </div>
 </div>
 
-<img src="" class="thumbnail">
+<img src="" class="thumbnail" alt="thumbnail">

@@ -7,7 +7,11 @@
       :class="{ '--active': activeIndex == i }"
       @click="onPaginationClick(i)"
     >
-      <img :src="thumbnail" class="thumbnail-pagination__image" />
+      <img
+        :src="thumbnail"
+        class="thumbnail-pagination__image"
+        alt="product thumbnail"
+      />
     </div>
   </div>
 </template>

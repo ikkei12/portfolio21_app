@@ -7,25 +7,25 @@
     {
       "description": "フリーランスの方の紹介で開発したタイピングゲームの管理画面です\n主にfirebase周りを担当して、アカウント管理やスコアランキングの実装、管理画面の作成をしました\nフロントエンドにはVue/Vuetifyを使用",
       "image": {
-        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/keyboard1.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/keyboard/1.png"
       }
     },
     {
       "description": "アカウント情報の確認、新規作成、編集、削除ができます\nアカウントには有効期限が設定されていて、期限間近のアカウントはまとめて表示されます",
       "image": {
-        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/keyboard2.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/keyboard/2.png"
       }
     },
     {
       "description": "バックアップの取得とバックアップを使ったデータの復元ができます\nCloud Functionsを使って、firestoreのデータを1日1回CSVにまとめ、cloud storageに保存しています",
       "image": {
-        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/keyboard3.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/keyboard/3.png"
       }
     },
     {
       "description": "CSVによるアカウントの一括作成ができます\n運用側の要望と照らし合わせて、利便性を考えた実装を進めていきました",
       "image": {
-        "url": "https://images.microcms-assets.io/protected/ap-northeast-1:69be3577-0462-42f0-97b7-7aa76ec9c2d0/service/portfolio21/media/keyboard4.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/keyboard/4.png"
       }
     }
   ]

@@ -1,6 +1,6 @@
 ---
     title: タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
-    thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/translation-game7.png
+    thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/translation/3.png
     createdDate: "2020-03-11"
     categories: [初心者, 初めて]
     twitter: 1keiuu
@@ -16,7 +16,7 @@
 </div>
 </div>
 
-<img src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/translation-game7.png" class="thumbnail">
+<img src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/translation/3.png" class="thumbnail" alt="thumbnail" >
 
 
 

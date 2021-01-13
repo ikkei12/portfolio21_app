@@ -11,7 +11,11 @@
           :key="'slide' + i"
         >
           <div>
-            <img :src="productContent.image.url" style="width: 100%" />
+            <img
+              :src="productContent.image.url"
+              style="width: 100%"
+              alt="content image"
+            />
           </div>
         </swiper-slide>
       </swiper>

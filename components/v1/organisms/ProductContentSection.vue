@@ -1,7 +1,7 @@
 <template>
   <div class="product-content__section">
     <div class="thumbnail__wrapper">
-      <img class="thumbnail" :src="content.image.url" />
+      <img class="thumbnail" :src="content.image.url" alt="thumbnail" />
     </div>
     <div class="inner">
       <div class="content-title__wrapper">

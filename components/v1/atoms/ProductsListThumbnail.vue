@@ -1,6 +1,6 @@
 <template>
   <div class="thumbnail" :class="{ '--active': active }">
-    <img :src="url" />
+    <img :src="url" alt="thumbnail" />
     <div />
   </div>
 </template>
