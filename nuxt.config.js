@@ -55,6 +55,7 @@ export default {
     '@/plugins/axios',
     '@/plugins/vue-awesome-swiper',
     '@/plugins/vue-scrollto',
+    '@/plugins/firebase',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -102,7 +103,7 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
   hooks: {
-    'content:file:beforeInsert': (document) => {
+    ']content:file:beforeInsert': (document) => {
       if (document.extension === '.md') {
         const { time } = require('reading-time')(document.text, {
           wordsPerMinute: 500,
