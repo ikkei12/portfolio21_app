@@ -165,11 +165,10 @@ export default defineComponent({
     padding: 0 10%;
     margin-top: 5%;
     p {
-      font-size: 20px;
+      font-size: 16px;
     }
     .description {
       white-space: pre-line;
-      margin-bottom: 2%;
     }
     .product-url__wrapper {
       display: flex;

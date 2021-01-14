@@ -21,7 +21,7 @@ export default defineComponent({
   props: {
     url: { type: String },
   },
-  setup(props) {
+  setup(props, context) {
     const url = props.url
     const ogp = reactive<{
       title: string | null
@@ -33,28 +33,46 @@ export default defineComponent({
       image: '',
     })
     if (!url) return
-    fetch(url)
-      .then((res) => res.text())
-      .then((text) => {
-        const el = new DOMParser().parseFromString(text, 'text/html')
-        const headEls = el.head.children
-        console.log(el.head)
-        Array.from(headEls).map((v) => {
-          const prop = v.getAttribute('property')
-          if (!prop) return
-          switch (prop) {
-            case 'og:image':
-              ogp.image = v.getAttribute('content')
-              break
-            case 'og:title':
-              ogp.title = v.getAttribute('content')
-              break
-            case 'og:description':
-              ogp.description = v.getAttribute('content')
-              break
-          }
-        })
+    context.root.$axios
+      .post(
+        'http://localhost:5001/portfolio21-56e7e/us-central1/helloWorld',
+        { url },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      )
+      .then((res) => {
+        ogp.image = res.data.ogp.image
+        ogp.description = res.data.ogp.desc
+        ogp.title = res.data.ogp.title
+
+        // console.log(JSON.parse(res.data.ogp))
       })
+      .catch((e) => console.log(e.response))
+    // fetch(url)
+    //   .then((res) => res.text())
+    //   .then((text) => {
+    //     const el = new DOMParser().parseFromString(text, 'text/html')
+    //     const headEls = el.head.children
+    //     console.log(el.head)
+    //     Array.from(headEls).map((v) => {
+    //       const prop = v.getAttribute('property')
+    //       if (!prop) return
+    //       switch (prop) {
+    //         case 'og:image':
+    //           ogp.image = v.getAttribute('content')
+    //           break
+    //         case 'og:title':
+    //           ogp.title = v.getAttribute('content')
+    //           break
+    //         case 'og:description':
+    //           ogp.description = v.getAttribute('content')
+    //           break
+    //       }
+    //     })
+    //   })
     return { ogp }
   },
 })
@@ -65,21 +83,52 @@ export default defineComponent({
   color: #333;
   display: block;
   margin: 60px 0;
+  &:hover {
+    box-shadow: 0 0 20px rgba(173, 173, 173, 0.285);
+  }
   .ogp-card {
     display: flex;
     height: 150px;
     border: 1px solid #efefef;
     border-radius: 3px;
+
     .image {
       height: 150px;
       width: 150px;
       object-fit: cover;
+      margin-bottom: 0;
     }
     .ogp-card__inner {
+      height: 100%;
       padding: 8px 12px;
+      overflow: hidden;
+      .ogp-card__title {
+        line-height: initial;
+        margin-bottom: 10px;
+      }
       .ogp-card__description {
-        line-height: 1.2;
+        font-size: 13px;
+        line-height: 1.1;
         color: grey;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+@include tab {
+  .ogp-card__link {
+    .ogp-card {
+      display: table;
+      .image {
+        width: 100%;
+      }
+      .ogp-card__inner {
+        .ogp-card__title {
+          font-size: 13px;
+        }
+        .ogp-card__description {
+          font-size: 11px;
+        }
       }
     }
   }

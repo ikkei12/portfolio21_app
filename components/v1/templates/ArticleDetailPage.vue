@@ -88,8 +88,10 @@ export default defineComponent({
     }
   }
   .thumbnail {
-    width: 100%;
     border-radius: 10px;
+  }
+  img {
+    width: 100%;
     margin-bottom: 80px;
   }
   @include sp {
