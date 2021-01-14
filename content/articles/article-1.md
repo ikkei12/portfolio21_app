@@ -5,7 +5,7 @@
     categories: [初心者, 初めて]
     twitter: 1keiuu
 ---
-# タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
+# 学生エンジニアが初めてハッカソンに参加してみたら学びが多かった話
 
 <div class="info">
 <chip-group :chips="[{text:'初心者', color:'grey'},{text:'初めて', color:'grey'}]"></chip-group>
@@ -28,12 +28,10 @@ JPHACKS(ジャパンハックス)は、学生を対象にした日本最大規�
 
 ## 開発したもの
 画像分析で忘れ物を防ぐアプリ「Laff」を開発しました。
-
-<ogp-card url="https://miro.com"></ogp-card>
-
-https://www.youtube.com/watch?v=mVvbSJA8qvQ&feature=youtu.be 
+<ogp-card url="https://github.com/ikkei12/B_2009"></ogp-card>
 
 紹介動画です(ギリギリで作ったので動画のクオリティはお察しください。。。)
+<ogp-card url="https://www.youtube.com/watch?v=mVvbSJA8qvQ&feature=youtu.be"></ogp-card>
 
 「忙しい朝に忘れ物チェックをする時間が無い！」という問題を解決する為に開発しました。
 あらかじめ持ち物を登録しておく事で、出かける日の朝には写真を一枚撮るだけで忘れ物を教えてくれます。
@@ -46,7 +44,7 @@ https://www.youtube.com/watch?v=mVvbSJA8qvQ&feature=youtu.be
 
 画像分析にはGoogle Cloud Vision APIを使いました。
 
-https://cloud.google.com/vision/?hl=ja&utm_source=google&utm_medium=cpc&utm_campaign=japac-JP-all-ja-dr-bkws-all-all-trial-e-dr-1009137&utm_content=text-ad-none-none-DEV_c-CRE_285865410190-ADGP_Hybrid%20%7C%20AW%20SEM%20%7C%20BKWS%20~%20T1%20%7C%20EXA%20%7C%20ML%20%7C%20M%3A1%20%7C%20JP%20%7C%20ja%20%7C%20Vision%20%7C%20General%20%7C%20en-KWID_43700016101235136-kwd-203288731207&userloc_20636-network_g&utm_term=KW_google%20cloud%20vision%20api&gclid=Cj0KCQiA-rj9BRCAARIsANB_4ACexv_wiNt0klWyag8JTJb7wrWhkvgbOozp3sP5ogmyhH_GMaVa0U4aAjCvEALw_wcB
+<ogp-card url="https://cloud.google.com/vision/?hl=ja"></ogp-card>
 
 Google Cloud Vision APIを使えばこのように写真に写っている物を分析して、その名前(ラベル)を返してくれます。 
 画像分析のAPIから帰ってくるラベルは英語1単語なので、その類義語をAPIから取得し、翻訳して返す事で分析の精度を高めました。
@@ -70,7 +68,7 @@ Google Cloud Vision APIを使えばこのように写真に写っている物を
 学校などの都合もあり全員で集まれなかったので、アイデア出しもwebミーティングで行いました。　　アイデア出しにはmiroというサービスを使いました。便利でしたがフル活用出来たとは思えないし、進め方があまり良くなかったかなと思います。
 アイデア出しにおいてツールはもちろん大事なのですが、それ以上にファシリテーター的な役割がチームにいると重宝されるなと感じました (そんなエンジニアになりたい。。。)
 　
-https://miro.com/
+<ogp-card url="https://miro.com"></ogp-card>
 
 
 ### 正しく恐れ、正しく急ぐ

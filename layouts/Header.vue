@@ -58,7 +58,7 @@ export default defineComponent({
   height: 60px;
   padding-right: 45px;
   z-index: 6;
-  background: white;
+  background: $secondary;
   width: 100%;
   box-shadow: 0 0px 10px rgba(89, 89, 89, 0.072);
   justify-content: flex-end;
@@ -69,8 +69,9 @@ export default defineComponent({
       margin-right: 0;
     }
     .link__text {
-      font-weight: 400;
+      font-weight: 500;
       color: #006666;
+      color: #fff;
     }
     .link__border {
       padding-top: 1px;
@@ -79,7 +80,7 @@ export default defineComponent({
     &:hover {
       .link__border {
         height: 0;
-        border-bottom: 2px solid #006666;
+        border-bottom: 2px solid #fff;
         animation: slideIn 0.5s;
       }
     }
