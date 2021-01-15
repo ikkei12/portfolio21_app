@@ -35,7 +35,7 @@ export default defineComponent({
     if (!url) return
     context.root.$axios
       .post(
-        'http://localhost:5001/portfolio21-56e7e/us-central1/helloWorld',
+        'https://asia-northeast1-portfolio21-56e7e.cloudfunctions.net/getOgpInfo',
         { url },
         {
           headers: {
@@ -47,32 +47,8 @@ export default defineComponent({
         ogp.image = res.data.ogp.image
         ogp.description = res.data.ogp.desc
         ogp.title = res.data.ogp.title
-
-        // console.log(JSON.parse(res.data.ogp))
       })
-      .catch((e) => console.log(e.response))
-    // fetch(url)
-    //   .then((res) => res.text())
-    //   .then((text) => {
-    //     const el = new DOMParser().parseFromString(text, 'text/html')
-    //     const headEls = el.head.children
-    //     console.log(el.head)
-    //     Array.from(headEls).map((v) => {
-    //       const prop = v.getAttribute('property')
-    //       if (!prop) return
-    //       switch (prop) {
-    //         case 'og:image':
-    //           ogp.image = v.getAttribute('content')
-    //           break
-    //         case 'og:title':
-    //           ogp.title = v.getAttribute('content')
-    //           break
-    //         case 'og:description':
-    //           ogp.description = v.getAttribute('content')
-    //           break
-    //       }
-    //     })
-    //   })
+      .catch((e) => console.error(e))
     return { ogp }
   },
 })
