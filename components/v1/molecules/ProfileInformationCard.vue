@@ -1,20 +1,24 @@
 <template>
   <div class="info__card">
     <div class="inner">
-      <img
-        src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/profile/avatar.jpg"
-        alt="Profile image"
-        class="profile-image"
-      />
+      <div class="profile-image__wrapper">
+        <img
+          src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/profile/avatar.jpg"
+          alt="Profile image"
+          class="profile-image"
+        />
+      </div>
       <h3 class="name-ja">原島 一桂</h3>
       <p class="name-en">Harashima Ikkei</p>
       <LinkIconGroup />
       <a href="mailto:ikkei12.inw@gmail.com" class="link">
-        <img
-          src="~/assets/images/logo/email.png"
-          class="icon"
-          alt="email icon"
-        />
+        <div class="icon__wrapper">
+          <img
+            src="~/assets/images/logo/email.png"
+            class="icon"
+            alt="email icon"
+          />
+        </div>
         <p>ikkei12.inw@gmail.com</p>
       </a>
     </div>
@@ -43,8 +47,15 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     align-items: center;
-    .profile-image {
-      border-radius: 20px;
+    .profile-image__wrapper {
+      width: 240px;
+      height: 260px;
+      .profile-image {
+        border-radius: 20px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
     .name-ja {
       font-size: 2.5rem;
@@ -60,16 +71,23 @@ export default defineComponent({
       white-space: nowrap;
     }
     .link {
-      height: 30px;
       display: flex;
       text-decoration: none;
       color: black;
       align-items: center;
       margin-top: 4vh;
-      .icon {
-        height: 100%;
-        border-radius: 50%;
-        margin-right: 8px;
+      .icon__wrapper {
+        height: 30px;
+        width: 30px;
+        display: block;
+        .icon {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+      p {
+        margin-left: 8px;
       }
     }
   }
@@ -80,7 +98,7 @@ export default defineComponent({
       .link {
         margin-top: 2vh;
       }
-      .profile-image {
+      .profile-image__wrapper {
         width: 50%;
       }
     }

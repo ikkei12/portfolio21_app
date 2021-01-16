@@ -36,10 +36,13 @@
     margin-right: 0;
   }
   .link {
-    height: 100%;
-    margin-right: 12px;
+    margin-right: 16px;
+    height: 30px;
+    width: 30px;
+    display: block;
     img {
       height: 100%;
+      width: 100%;
       border-radius: 50%;
     }
   }
