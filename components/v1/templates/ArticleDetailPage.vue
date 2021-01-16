@@ -12,7 +12,12 @@
   </div>
 </template>
 <script lang="ts">
-import { computed, defineComponent, PropType } from '@vue/composition-api'
+import {
+  computed,
+  defineComponent,
+  PropType,
+  onMounted,
+} from '@vue/composition-api'
 import { IContentDocument } from '@nuxt/content/types/content'
 import ContentPagination from '@/components/v1/organisms/ContentPagination.vue'
 import ContentsTable from '@/components/v1/organisms/ContentsTable.vue'
@@ -42,6 +47,13 @@ export default defineComponent({
     const readingTime = props.article?.readingTime
       ? props.article?.readingTime
       : 0
+
+    onMounted(() => {
+      const readingTimeSp = document.getElementById('readingTimeSp')
+      if (!readingTimeSp) return
+      readingTimeSp.textContent = Math.round(readingTime / 1000) + 'min'
+    })
+
     return { chips, readingTime }
   },
 })
@@ -72,21 +84,28 @@ export default defineComponent({
     margin-bottom: 10px;
   }
   .info {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 40px;
-
-    .created-date {
+    .info__inner {
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      p {
-        margin-left: 8px;
-        margin-bottom: 0;
-        color: grey;
+      justify-content: space-between;
+      .created-date {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        p {
+          margin-left: 8px;
+          margin-bottom: 0;
+          color: grey;
+        }
       }
     }
   }
+  .reading-time {
+    &.--sp {
+      display: none;
+    }
+  }
+
   .thumbnail {
     border-radius: 10px;
   }
@@ -104,6 +123,25 @@ export default defineComponent({
     p {
       line-height: 1.9;
       margin-bottom: 10px;
+    }
+    img {
+      margin-bottom: 40px;
+    }
+
+    .info {
+      margin-bottom: 20px;
+      .reading-time {
+        justify-content: flex-end;
+        &.--sp {
+          display: flex;
+          align-items: center;
+          p {
+            margin-left: 4px;
+            margin-bottom: 0;
+            color: #333;
+          }
+        }
+      }
     }
   }
 }

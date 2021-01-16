@@ -8,14 +8,18 @@
 # 学生エンジニアが初めてハッカソンに参加してみたら学びが多かった話
 
 <div class="info">
-<chip-group :chips="[{text:'初心者', color:'grey'},{text:'初めて', color:'grey'}]"></chip-group>
-
-<div class="created-date">
-<Icon iconName="calendar"></Icon>
-<p>2020-11-25</p>
+    <div class="info__inner">
+        <chip-group :chips="[{text:'初心者', color:'grey'},{text:'初めて', color:'grey'}]"></chip-group>
+        <div class="created-date">
+            <Icon iconName="calendar"></Icon>
+            <p>2020-11-25</p>
+        </div>
+    </div>
+    <div class="reading-time --sp">
+        <Icon  iconName="clock"></Icon>
+        <p id="readingTimeSp"></p>
+    </div>
 </div>
-</div>
-
 <img src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/laff/1.png" class="thumbnail" alt="thumbnail" >
 
 ## はじめに
@@ -53,7 +57,7 @@ Google Cloud Vision APIを使えばこのように写真に写っている物を
 
 <br>
 
-## 学んだ事 (要改善)
+## 学んだ事
 
 ### 斬新かつ実用的なアイデアを考える難しさ
 ハッカソン慣れしていないチームにとって一番難しい部分はここだと思います。
