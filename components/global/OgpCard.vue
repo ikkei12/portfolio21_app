@@ -30,9 +30,9 @@ export default defineComponent({
       description: string | null
       image: string | null
     }>({
-      title: '',
-      description: '',
-      image: '',
+      title: 'OGP',
+      description: 'fetching data... \n Please wait for a while.',
+      image: '/lazy_thin.png',
     })
 
     onMounted(() => {
@@ -70,6 +70,7 @@ export default defineComponent({
     color: #333;
     display: block;
     margin: 60px 0;
+    width: 100%;
     &:hover {
       box-shadow: 0 0 20px rgba(173, 173, 173, 0.285);
     }
