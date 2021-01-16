@@ -75,6 +75,12 @@ export default {
     '@nuxt/content',
     '@nuxtjs/dayjs',
     '@nuxtjs/style-resources',
+    [
+      'nuxt-lazy-load',
+      {
+        defaultImage: '/lazy_thin.png',
+      },
+    ],
   ],
   styleResources: {
     scss: ['@/assets/scss/utilities.scss', '@/assets/scss/variables.scss'],

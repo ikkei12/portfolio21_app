@@ -7,7 +7,7 @@
       class="ogp-card__link"
     >
       <div class="ogp-card">
-        <img :src="ogp.image" class="image" />
+        <img v-lazy-load :src="ogp.image" class="image" alt="ogp thumbnail" />
         <div class="ogp-card__inner">
           <h3 class="ogp-card__title">{{ ogp.title }}</h3>
           <p class="ogp-card__description">{{ ogp.description }}</p>
@@ -23,6 +23,7 @@ export default defineComponent({
   props: {
     url: { type: String },
   },
+  // TODO: SSG(asyncData)にしたいができていないので都度取得している
   setup(props, context) {
     const ogp = reactive<{
       title: string | null
