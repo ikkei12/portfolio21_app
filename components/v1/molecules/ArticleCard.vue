@@ -5,7 +5,7 @@
       <div class="card__inner">
         <div class="card__upper">
           <p class="createdAt">{{ article.createdDate }}</p>
-          <div class="reading-time__wrapper">
+          <div v-if="article.readingTime" class="reading-time__wrapper">
             <Icon iconname="clock" :size="14" />
             <p class="reading-time">
               {{ Math.round(article.readingTime / 1000) }}min

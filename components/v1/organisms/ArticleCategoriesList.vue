@@ -37,6 +37,9 @@ export default defineComponent({
     position: sticky;
     top: 60px;
     overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     .categoryies-list__title {
       padding: 1vh;
       padding-bottom: 0.5vh;

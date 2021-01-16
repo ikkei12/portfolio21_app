@@ -41,7 +41,7 @@ export default defineComponent({
     })
     const readingTime = props.article?.readingTime
       ? props.article?.readingTime
-      : ''
+      : 0
     return { chips, readingTime }
   },
 })
