@@ -14,8 +14,8 @@
         </div>
         <h4 class="title">
           {{
-            article.title.length > 27
-              ? `${article.title.substring(0, 27)}…`
+            article.title.length > 33
+              ? `${article.title.substring(0, 33)}…`
               : article.title
           }}
         </h4>
@@ -59,6 +59,7 @@ export default defineComponent({
 
     .thumbnail {
       width: 100%;
+      min-height: 140px;
       box-shadow: 0 0px 20px rgba(89, 89, 89, 0.072);
       display: block;
       border-top-left-radius: 10px;
