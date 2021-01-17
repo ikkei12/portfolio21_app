@@ -93,9 +93,14 @@ export default defineComponent({
     .info__inner {
       display: flex;
       justify-content: space-between;
+      position: relative;
       .chip__group {
         display: flex;
+        flex-wrap: wrap;
         margin-bottom: 8px;
+        .chip {
+          margin-bottom: 3px;
+        }
       }
       .created-date {
         display: flex;
@@ -135,6 +140,10 @@ export default defineComponent({
     }
     img {
       margin-bottom: 40px;
+    }
+    .created-date {
+      position: absolute;
+      top: 100%;
     }
 
     .info {
