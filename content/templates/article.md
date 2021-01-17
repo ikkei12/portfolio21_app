@@ -3,7 +3,8 @@
     description: 説明
     thumbnail: サムネイル
     createdDate: "日付"
-    categories: ['カテゴリ']
+    categories: 
+        - カテゴリ
     twitter: 1keiuu
 ---
 # タイトル
