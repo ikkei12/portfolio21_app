@@ -64,10 +64,6 @@ export default defineComponent({
           name: 'twitter:description',
           content: (this.ogpInfo as OGP).description,
         },
-        {
-          property: 'twitter:image',
-          content: (this.ogpInfo as OGP).image,
-        },
       ],
     }
   },
