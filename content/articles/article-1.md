@@ -23,12 +23,14 @@
 <img src="https://storage.cloud.google.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1" class="thumbnail" alt="thumbnail" >
 
 ## はじめに
-JAMStack()
+JAMStack(?)
 (気づけば毎年ポートフォリオを作っていてこれで三つ目です。。)
 
-<OgpCard :url="https://portfolio21-56e7e.web.app/products/1"></OgpCard>
+過去のポートフォリオはこちら
+<OgpCard url="https://portfolio21-56e7e.web.app/products/1"></OgpCard>
 
-<OgpCard :url="https://portfolio21-56e7e.web.app/products/5"></OgpCard>
+<OgpCard url="https://portfolio21-56e7e.web.app/products/5"></OgpCard>
+
 
 ## 使用した技術
 FW: Nuxt.js

@@ -36,7 +36,7 @@ export default defineComponent({
         {
           hid: 'og:image',
           property: 'og:image',
-          content: (this.res as IContentDocument)[0].thumbnail,
+          content: (this.res as IContentDocument)[0].contents[0].image.url,
         },
       ],
     }
