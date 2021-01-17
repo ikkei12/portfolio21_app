@@ -10,7 +10,10 @@
 
 <div class="info">
     <div class="info__inner">
-        <chip-group :chips="[{text:'ハッカソン', color:'grey'},{text:'React Native', color:'grey'}]"></chip-group>
+        <div class="chip__group">
+            <chip chip="ハッカソン"></chip>
+            <chip chip="React Native"></chip>
+        </div>
         <div class="created-date">
             <Icon iconName="calendar"></Icon>
             <p>2021-01-17</p>

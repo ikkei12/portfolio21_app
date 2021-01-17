@@ -93,6 +93,10 @@ export default defineComponent({
     .info__inner {
       display: flex;
       justify-content: space-between;
+      .chip__group {
+        display: flex;
+        margin-bottom: 8px;
+      }
       .created-date {
         display: flex;
         align-items: center;

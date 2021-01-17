@@ -10,7 +10,11 @@
 
 <div class="info">
     <div class="info__inner">
-        <ChipGroup :chips="[{text:'Nuxt', color:'grey'},{text:'firebase', color:'grey'},{text:'成果物', color:'grey'}]"></ChipGroup>
+        <div class="chip__group">
+            <chip chip="Nuxt"></chip>
+            <chip chip="firebase"></chip>
+            <chip chip="成果物"></chip>
+        </div>
         <div class="created-date">
             <Icon iconName="calendar"></Icon>
             <p>2021-01-17</p>
