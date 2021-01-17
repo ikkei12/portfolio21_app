@@ -79,9 +79,13 @@ export default defineComponent({
   h4 {
     margin-bottom: 10px;
   }
+  a {
+    text-decoration: none;
+    font-weight: bold;
+  }
   p {
     line-height: 1.9;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
     margin-bottom: 30px;
   }
   .info {

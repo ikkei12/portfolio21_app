@@ -1,5 +1,6 @@
 ---
     title: タイトル
+    description: 説明
     thumbnail: サムネイル
     createdDate: "日付"
     categories: ['カテゴリ']
