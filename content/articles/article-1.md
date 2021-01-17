@@ -14,9 +14,7 @@
 <div class="info">
     <div class="info__inner">
         <div class="chip__group">
-            <chip chip="Nuxt"></chip>
-            <chip chip="firebase"></chip>
-            <chip chip="成果物"></chip>
+            <chip-group :chips="categories"></chip-group>
         </div>
         <div class="created-date">
             <Icon iconName="calendar"></Icon>

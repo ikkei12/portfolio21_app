@@ -21,7 +21,6 @@ import {
 import { IContentDocument } from '@nuxt/content/types/content'
 import ContentPagination from '@/components/v1/organisms/ContentPagination.vue'
 import ContentsTable from '@/components/v1/organisms/ContentsTable.vue'
-import ChipGroup from '@/components/v1/molecules/ChipGroup.vue'
 import ReadingTimeCard from '@/components/v1/molecules/ReadingTimeCard.vue'
 
 export default defineComponent({
@@ -34,7 +33,6 @@ export default defineComponent({
   components: {
     ContentPagination,
     ContentsTable,
-    ChipGroup,
     ReadingTimeCard,
   },
   setup(props) {
@@ -95,14 +93,6 @@ export default defineComponent({
       display: flex;
       justify-content: space-between;
       position: relative;
-      .chip__group {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 8px;
-        .chip {
-          margin-bottom: 3px;
-        }
-      }
       .created-date {
         display: flex;
         align-items: center;
