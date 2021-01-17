@@ -98,9 +98,6 @@ export default defineComponent({
       .link {
         margin-top: 2vh;
       }
-      .profile-image__wrapper {
-        width: 50%;
-      }
     }
   }
 }
