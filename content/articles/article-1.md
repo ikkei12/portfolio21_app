@@ -1,6 +1,7 @@
 ---
     title: JAMSTACKなポートフォリオを作成しました
     thumbnail: https://storage.cloud.google.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1
+    description: パフォーマンスと管理しやすさを考えて、ポートフォリオをJAMSTACKで作り直しました。
     createdDate: "2021-01-17"
     categories: ['Nuxt','firebase','成果物']
     twitter: 1keiuu
@@ -51,3 +52,6 @@ CI/CD: Github Actions
 ## 工夫した所
 ・記事内でogpを表示する為の実装が必要だったのでurlからogp情報を取得するAPIをcloud functionsで作成しました。
 以前まで無料だったCloud functionsもnode v10より有料（従量課金）との事、、
+
+参考にした記事
+[絶対にお金を払いたくない精神での動的OGP生成は辛い ](https://blog.ojisan.io/dynamic-ogp)

@@ -1,5 +1,6 @@
 ---
     title: 学生エンジニアが初めてハッカソンに参加してみたら学びが多かった話
+    description: 初めてのハッカソン(JPHACKS)に出たのその感想をまとめました。
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/laff/1.png
     createdDate: "2021-01-17"
     categories: [ハッカソン, React Native]

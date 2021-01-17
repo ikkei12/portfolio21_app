@@ -30,10 +30,10 @@ export default defineComponent({
           name: '@1keiuu',
         }
       )
-      .then((res) => {
-        ogpInfo.image = res.data.url
-        ogpInfo.description = fixedArticle.description
-        ogpInfo.title = fixedArticle.title
+      .then(async (res) => {
+        ogpInfo.image = await res.data.url
+        ogpInfo.description = await fixedArticle.description
+        ogpInfo.title = await fixedArticle.title
       })
       .catch((e) => console.error(e))
     return { article, prev, next, ogpInfo }
