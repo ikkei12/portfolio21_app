@@ -21,10 +21,5 @@ export default defineComponent({
 .chip__group {
   display: flex;
   margin-bottom: 8px;
-  &:nth-child(n) {
-    .chip {
-      margin-right: 8px;
-    }
-  }
 }
 </style>

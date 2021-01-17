@@ -28,18 +28,16 @@ JAMStack(?)
 
 過去のポートフォリオはこちら
 <OgpCard url="https://portfolio21-56e7e.web.app/products/1"></OgpCard>
-
 <OgpCard url="https://portfolio21-56e7e.web.app/products/5"></OgpCard>
 
-
 ## 使用した技術
-FW: Nuxt.js
-コンテンツ管理: nuxt/content , google storage
-ホスティング: firebase hosting
-その他API: firebase functions
-CI/CD: Github Actions
+FW: Nuxt.js  
+コンテンツ管理: nuxt/content , Cloud Storage  
+ホスティング: firebase hosting  
+その他API: Cloud Functions  
+CI/CD: Github Actions  
 
-動機
+## なぜ作ろうと思ったか
 
 ・去年作ったポートフォリオのパフォーマンスが悪い（React/Go/AWSの勉強の為に作ってた為）
 ・↑は管理画面を作ってないのでコンテンツの更新が面倒

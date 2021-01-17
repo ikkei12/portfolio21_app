@@ -9,7 +9,7 @@
 
 <div class="info">
     <div class="info__inner">
-        <chip-group chips="[{text:'初心者', color:'grey'},{text:'初めて', color:'grey'}]"></chip-group>
+        <chip-group :chips="[{text:'ハッカソン', color:'grey'},{text:'React Native', color:'grey'}]"></chip-group>
         <div class="created-date">
             <Icon iconName="calendar"></Icon>
             <p>2021-01-17</p>
@@ -24,10 +24,11 @@
 
 ## はじめに
 先日JPHACKS2020でハッカソンデビューしたら、色んな学びがあったのでまとめようと思いました。
-JPHACKSとは
-JPHACKS(ジャパンハックス)は、学生を対象にした日本最大規模のハックイベントで、2014年より全国の複数都市で開催されています。 今年は全国を6ブロックに分けオンラインで開催されます。
+ 
+**JPHACKSとは**  
+JPHACKS(ジャパンハックス)は、学生を対象にした日本最大規模のハックイベントで、2014年より全国の複数都市で開催されています。 今年は全国を6ブロックに分けオンラインで開催されます。  
 引用: JPHACKS
-今年はオンライン開催で、全国から約78チーム程が参加したようです。
+今年はオンライン開催で、全国から約78チーム程が参加したようです。  
 <br>
 
 ## 開発したもの
@@ -37,7 +38,7 @@ JPHACKS(ジャパンハックス)は、学生を対象にした日本最大規�
 紹介動画です(ギリギリで作ったので動画のクオリティはお察しください。。。)
 <ogp-card url="https://www.youtube.com/watch?v=mVvbSJA8qvQ&feature=youtu.be"></ogp-card>
 
-「忙しい朝に忘れ物チェックをする時間が無い！」という問題を解決する為に開発しました。
+「忙しい朝に忘れ物チェックをする時間が無い！」という問題を解決する為に開発しました。  
 あらかじめ持ち物を登録しておく事で、出かける日の朝には写真を一枚撮るだけで忘れ物を教えてくれます。
 <br>
 
@@ -51,7 +52,8 @@ JPHACKS(ジャパンハックス)は、学生を対象にした日本最大規�
 <ogp-card url="https://cloud.google.com/vision/?hl=ja"></ogp-card>
 
 Google Cloud Vision APIを使えばこのように写真に写っている物を分析して、その名前(ラベル)を返してくれます。 
-画像分析のAPIから帰ってくるラベルは英語1単語なので、その類義語をAPIから取得し、翻訳して返す事で分析の精度を高めました。
+画像分析のAPIから帰ってくるラベルは英語1単語なので、その類義語をAPIから取得し、翻訳して返す事で分析の精度を高めました。  
+<br/>
 
 <img src="https://huntr-assets.s3.amazonaws.com/users/103088073/9ea87c6a-92b3-4b4c-bc94-bff71190c269">
 
