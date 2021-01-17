@@ -3,7 +3,10 @@
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1
     description: パフォーマンスと管理しやすさを考えて、ポートフォリオをJAMSTACKで作り直しました。
     createdDate: "2021-01-17"
-    categories: ['Nuxt','firebase','成果物']
+    categories: 
+        - Nuxt
+        - firebase
+        - 成果物
     twitter: 1keiuu
 ---
 # JAMSTACKなポートフォリオを作成しました
@@ -45,7 +48,7 @@ JAMStack(?)なポートフォリオが出来上がりました(当サイト)
 
 <br/>
 
-## なぜ作ろうと思ったか
+## 作った理由
 
 **① 去年作ったポートフォリオのパフォーマンスが悪い**  
 
