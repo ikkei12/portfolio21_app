@@ -9,7 +9,7 @@
 
 <div class="info">
     <div class="info__inner">
-        <chip-group :chips="[{text:'初心者', color:'grey'},{text:'初めて', color:'grey'}]"></chip-group>
+        <chip-group chips="[{text:'初心者', color:'grey'},{text:'初めて', color:'grey'}]"></chip-group>
         <div class="created-date">
             <Icon iconName="calendar"></Icon>
             <p>2021-01-17</p>
