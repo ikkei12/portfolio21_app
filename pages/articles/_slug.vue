@@ -13,8 +13,10 @@ export default defineComponent({
     const [prev, next]: any = await $content('articles')
       .surround(params.slug)
       .fetch()
+    // FIX: typeがカオス
+    const fixedArticle = (article as unknown) as Article
     const ogpInfo: OGP = {
-      title: ((article as unknown) as Article).title,
+      title: fixedArticle.title,
       description: "1keiuu's Blog",
       url: 'https://portfolio21-56e7e.web.app/articles',
       image: '',
@@ -23,16 +25,15 @@ export default defineComponent({
       .post(
         'http://localhost:5001/portfolio21-56e7e/us-central1/createOgpImageAndSave',
         {
-          title: ((article as unknown) as Article).title,
-          slug: ((article as unknown) as Article).slug,
+          title: fixedArticle.title,
+          slug: fixedArticle.slug,
           name: '@1keiuu',
         }
       )
       .then((res) => {
-        console.log(res.data)
-        // ogpInfo.image = res.data.ogp.image
-        // ogpInfo.description = res.data.ogp.description
-        // ogpInfo.title = res.data.ogp.title
+        ogpInfo.image = res.data.url
+        ogpInfo.description = fixedArticle.description
+        ogpInfo.title = fixedArticle.title
       })
       .catch((e) => console.error(e))
     return { article, prev, next, ogpInfo }
