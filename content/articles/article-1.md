@@ -1,6 +1,6 @@
 ---
     title: JAMSTACKなポートフォリオを作成しました
-    thumbnail: https://storage.cloud.google.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1
+    thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1
     description: パフォーマンスと管理しやすさを考えて、ポートフォリオをJAMSTACKで作り直しました。
     createdDate: "2021-01-17"
     categories: ['Nuxt','firebase','成果物']
@@ -10,7 +10,7 @@
 
 <div class="info">
     <div class="info__inner">
-        <chip-group :chips="[{text:'Nuxt', color:'grey'},{text:'firebase', color:'grey'},{text:'成果物', color:'grey'}]"></chip-group>
+        <ChipGroup :chips="[{text:'Nuxt', color:'grey'},{text:'firebase', color:'grey'},{text:'成果物', color:'grey'}]"></ChipGroup>
         <div class="created-date">
             <Icon iconName="calendar"></Icon>
             <p>2021-01-17</p>
@@ -21,7 +21,7 @@
         <p id="readingTimeSp"></p>
     </div>
 </div>
-<img src="https://storage.cloud.google.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1" class="thumbnail" alt="thumbnail" >
+<img src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1" class="thumbnail" alt="thumbnail" >
 
 ## はじめに
 JAMStack(?)なポートフォリオが出来上がりました(当サイト)  
