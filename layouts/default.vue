@@ -25,7 +25,6 @@ export default defineComponent({
   components: {
     Header,
   },
-  // setup() {
   // const overlayRef = ref()
   // const timerID = ref()
   // const lottieRef = ref()

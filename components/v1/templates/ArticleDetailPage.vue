@@ -81,7 +81,8 @@ export default defineComponent({
   }
   p {
     line-height: 1.9;
-    margin-bottom: 10px;
+    letter-spacing: 2.5px;
+    margin-bottom: 30px;
   }
   .info {
     margin-bottom: 40px;
