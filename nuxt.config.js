@@ -29,7 +29,7 @@ export default {
       {
         property: 'og:image',
         content:
-          'https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1',
+          'https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/base.png?authuser=1',
       },
       { name: 'twitter:title', content: "1keiuu's portfolio" },
       {

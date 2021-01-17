@@ -23,7 +23,7 @@ export default defineComponent({
     }
     await $axios
       .post(
-        'http://localhost:5001/portfolio21-56e7e/us-central1/createOgpImageAndSave',
+        'https://us-central1-portfolio21-56e7e.cloudfunctions.net/createOgpImageAndSave',
         {
           title: fixedArticle.title,
           slug: fixedArticle.slug,
