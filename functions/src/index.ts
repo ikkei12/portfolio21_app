@@ -70,16 +70,64 @@ export const createOgpImageAndSave = functions.https.onRequest(
         const baseImagePath = `${
           functions.config().cloud_storage.path
         }/ogp/base.png`
+
         const W = 1200
         const H = 630
-        console.log(title)
-        console.log(name)
         const canvas = createCanvas(W, H)
         const ctx = canvas.getContext('2d')
-
         // 背景画像の描画
         const baseImage = await loadImage(baseImagePath)
         ctx.drawImage(baseImage, 0, 0, W, H)
+        const fontSize = 46
+        const isAlphabetOrNumber = (str: string) => {
+          const ratz = /[a-z]/
+          const rAtZ = /[A-Z]/
+          const r0t9 = /[0-9]/
+          return ratz.test(str) || rAtZ.test(str) || r0t9.test(str)
+        }
+        const splitText = (text: string): Array<string> => {
+          const titleLines = ['']
+          let i = 0
+          let letterCount = 0
+          const countPerLine = 18
+          text.split('').forEach((letter) => {
+            if (isAlphabetOrNumber(letter)) {
+              if (letterCount + 0.5 > countPerLine) {
+                titleLines[i + 1] = letter
+                letterCount = 0
+                i += 1
+                return
+              } else {
+                titleLines[i] += letter
+              }
+              letterCount += 0.5
+            } else {
+              if (letterCount + 1 > countPerLine) {
+                titleLines[i + 1] = letter
+                letterCount = 0
+                i += 1
+                return
+              } else {
+                titleLines[i] += letter
+              }
+              letterCount += 1
+            }
+          })
+          return titleLines
+        }
+        const lines = splitText(title)
+        ctx.font = `bold ${fontSize}px Helvetica`
+        ctx.fillStyle = 'white'
+        lines.forEach((line, i) => {
+          ctx.fillText(
+            line,
+            (W - ctx.measureText(line).width) / 2,
+            i === 0
+              ? (H + fontSize / 2) / 2 + i * fontSize - 30
+              : (H + fontSize / 2) / 2 + i * fontSize - 10
+          )
+        })
+        ctx.fillText(name, (W - ctx.measureText(name).width) / 2, H - 50)
 
         return canvas.toBuffer()
       }
@@ -102,8 +150,12 @@ export const createOgpImageAndSave = functions.https.onRequest(
 
       const body = request.body
       const image = await createOgp(body.title, body.name)
-      const result = await upload(image, body.slug)
-      response.send({ result })
+      await upload(image, body.slug)
+      response.send({
+        url: `${functions.config().cloud_storage.path}/ogp/files/${
+          body.slug
+        }.png?authuser=1`,
+      })
     })
   }
 )
