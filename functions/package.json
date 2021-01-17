@@ -14,10 +14,12 @@
   },
   "main": "lib/index.js",
   "dependencies": {
+    "canvas": "^2.6.1",
     "cheerio": "^1.0.0-rc.5",
     "dotenv": "^8.2.0",
-    "firebase-admin": "^9.2.0",
+    "firebase-admin": "^9.4.2",
     "firebase-functions": "^3.11.0",
+    "fs": "0.0.1-security",
     "ogp-parser": "^0.5.4",
     "request": "^2.88.2",
     "request-promise": "^4.2.6"

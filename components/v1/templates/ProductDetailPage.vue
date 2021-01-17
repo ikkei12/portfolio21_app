@@ -82,7 +82,7 @@ import Pagination from '@/components/v1/molecules/Pagination.vue'
 import Title from '@/components/v1/atoms/Title.vue'
 import ThumbnailPagination from '@/components/v1/molecules/ThumbnailPagination.vue'
 import SwiperClass from 'swiper'
-import { SwiperDOM } from '~/types/Swiper'
+import { SwiperDOM } from '~/@types/Swiper'
 export default defineComponent({
   components: { Pagination, Title, ThumbnailPagination },
   props: {

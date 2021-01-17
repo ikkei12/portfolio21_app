@@ -3,6 +3,7 @@ import * as functions from 'firebase-functions'
 import * as admin from 'firebase-admin'
 import { createCanvas, loadImage } from 'canvas'
 const cors = require('cors')({ origin: true })
+admin.initializeApp()
 
 const notifySlack = (message: String) => {
   const { IncomingWebhook } = require('@slack/webhook')
@@ -61,9 +62,13 @@ export const getOgpInfo = functions
 export const createOgpImageAndSave = functions.https.onRequest(
   (request, response) => {
     return cors(request, response, async () => {
+      response.set('Access-Control-Allow-Origin', '*')
+      response.set('Access-Control-Allow-Methods', 'POST')
+      response.set('Access-Control-Allow-Headers', 'Content-Type')
+
       const createOgp = async (title: string, name: string) => {
         const baseImagePath = `${
-          functions.config().cloud_storsge.path
+          functions.config().cloud_storage.path
         }/ogp/base.png`
         const W = 1200
         const H = 630
@@ -81,39 +86,24 @@ export const createOgpImageAndSave = functions.https.onRequest(
 
       const upload = async (image: Buffer, slug: string): Promise<void> => {
         const loaclTargetPath = `/tmp/target.png`
-        const localBasePath = '/tmp/base.png'
-        const targetPath = `${
-          functions.config().cloud_storsge.path
-        }/ogp/files/${slug}.png`
+        const targetPath = `ogp/files/${slug}.png`
 
-        // （Syncはやめといた方が良いよ）
         fs.writeFileSync(loaclTargetPath, image)
 
         // Storageにアップロード
         await admin
           .storage()
-          .bucket(functions.config().cloud_storsge.bucket)
+          .bucket(functions.config().cloud_storage.bucket)
           .upload(loaclTargetPath, { destination: targetPath })
 
         // tmpファイルの削除
-        fs.unlinkSync(localBasePath)
         fs.unlinkSync(loaclTargetPath)
       }
 
-      response.set('Access-Control-Allow-Origin', '*')
-
-      if (request.method === 'OPTIONS') {
-        // Send response to OPTIONS requests
-        response.set('Access-Control-Allow-Methods', 'GET')
-        response.set('Access-Control-Allow-Headers', 'Content-Type')
-        response.set('Access-Control-Max-Age', '3600')
-        response.status(204).send('')
-      } else {
-        const body = request.body
-        const image = await createOgp(body.title, body.name)
-        await upload(image, body.slug)
-        response.send('ok')
-      }
+      const body = request.body
+      const image = await createOgp(body.title, body.name)
+      const result = await upload(image, body.slug)
+      response.send({ result })
     })
   }
 )
