@@ -88,8 +88,8 @@ JAMStack(?)なポートフォリオが出来上がりました(当サイト)
 　そこで、Github Actions × Firebase Hostingを使ってCI/CDを構築しました。  
 　この組み合わせは設定もめちゃくちゃ楽なので、短い期間での個人開発ではかなり使えると思います。    
 
-　以前Qiitaの記事にしました。  
-[NuxtアプリをSSGでビルドしてCI/CDをお手軽に設定する【GitHub Actions × Firebase Hosting】](https://qiita.com/ikkei12/items/0f0c2d95bdd3b54d6bac)
+以前Qiitaの記事にしました。  
+<OgpCard url="https://qiita.com/ikkei12/items/0f0c2d95bdd3b54d6bac"></OgpCard>
 　
 
 <br/>

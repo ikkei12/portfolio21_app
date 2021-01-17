@@ -13,24 +13,20 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'description',
         name: 'description',
         content: "Ikkei Harashima's Portfolio",
       },
       {
-        hid: 'og:site_name',
         property: 'og:site_name',
         content: "1keiuu's portfolio",
       },
-      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'サイトのURL' },
       {
-        hid: 'og:description',
         property: 'og:description',
         content: "Ikkei Harashima's portfolio 2021",
       },
       {
-        hid: 'og:image',
         property: 'og:image',
         content:
           'https://storage.cloud.google.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1',
