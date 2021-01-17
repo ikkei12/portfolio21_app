@@ -93,6 +93,11 @@ export default defineComponent({
       display: flex;
       justify-content: space-between;
       position: relative;
+      .chip__group {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+      }
       .created-date {
         display: flex;
         align-items: center;
