@@ -13,7 +13,13 @@ export default defineComponent({
     const [prev, next]: any = await $content('articles')
       .surround(params.slug)
       .fetch()
-    return { article, prev, next }
+    const ogpInfo: OGP = {
+      title: (this.article as Article).title,
+      description: "1keiuu's Blog",
+      url: 'https://portfolio21-56e7e.web.app/articles',
+      image: '',
+    }
+    return { article, prev, next, ogpInfo }
   },
   head() {
     return {
@@ -22,7 +28,7 @@ export default defineComponent({
         {
           hid: 'og:description',
           property: 'og:description',
-          content: "1keiuu's Blog",
+          content: (this.ogpInfo as OGP).description,
         },
         {
           hid: 'og:url',
@@ -34,8 +40,7 @@ export default defineComponent({
         {
           hid: 'og:image',
           property: 'og:image',
-          content:
-            'https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/translation/3.png',
+          content: (this.ogpInfo as OGP).image,
         },
       ],
     }

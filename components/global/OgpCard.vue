@@ -49,7 +49,6 @@ export default defineComponent({
           }
         )
         .then((res) => {
-          console.log(res)
           ogp.image = res.data.ogp.image
           ogp.description = res.data.ogp.description
           ogp.title = res.data.ogp.title
