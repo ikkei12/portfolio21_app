@@ -6,26 +6,30 @@
       :to="item.path"
       class="link"
     >
-      <p class="link__text">
+      <p class="link__text" :class="{ '--active': currentPath == item.name }">
         {{ item.title }}
       </p>
-      <div class="link__border"></div>
+      <div
+        class="link__border"
+        :class="{ '--active': currentPath == item.name }"
+      ></div>
     </nuxt-link>
   </header>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from '@vue/composition-api'
+import { defineComponent, reactive, ref } from '@vue/composition-api'
 
 export default defineComponent({
-  setup() {
+  setup(_props, context) {
+    const currentPath = ref('')
     const headerItems: Array<{
       name: string
       title: string
       path: string
     }> = reactive([
       {
-        name: 'home',
+        name: '',
         title: 'Home',
         path: '/',
       },
@@ -40,7 +44,17 @@ export default defineComponent({
         path: '/articles',
       },
     ])
-    return { headerItems }
+    const getCurrentPath = () => {
+      const path = context.root.$route.path.split('/')
+      currentPath.value = path[1]
+    }
+    // ページ遷移ごとに呼び出される処理
+    context.root.$router.afterEach(() => {
+      getCurrentPath()
+    })
+
+    getCurrentPath()
+    return { currentPath, headerItems }
   },
 })
 </script>
@@ -61,31 +75,29 @@ export default defineComponent({
   .link {
     margin-right: 30px;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &:last-child {
       margin-right: 0;
     }
     .link__text {
       font-weight: 500;
       color: #fff;
+      &.--active {
+        padding-bottom: 3px;
+        color: #006666;
+        font-weight: bold;
+      }
     }
     .link__border {
       padding-top: 1px;
       height: 2px;
       width: 20%;
-    }
-  }
-  .nuxt-link-active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .link__text {
-      padding-bottom: 3px;
-      color: #006666;
-      font-weight: bold;
-    }
-    .link__border {
-      height: 0;
-      border-bottom: 3px solid #006666;
+      &.--active {
+        height: 0;
+        border-bottom: 3px solid #006666;
+      }
     }
   }
 }
