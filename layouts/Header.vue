@@ -6,7 +6,9 @@
       :to="item.path"
       class="link"
     >
-      <p class="link__text">{{ item.title }}</p>
+      <p class="link__text">
+        {{ item.title }}
+      </p>
       <div class="link__border"></div>
     </nuxt-link>
   </header>
@@ -17,38 +19,32 @@ import { defineComponent, reactive } from '@vue/composition-api'
 
 export default defineComponent({
   setup() {
-    const headerItems: Array<{ title: string; path: string }> = reactive([
-      // {
-      //   title: 'HOME',
-      //   path: '/',
-      // },
+    const headerItems: Array<{
+      name: string
+      title: string
+      path: string
+    }> = reactive([
       {
+        name: 'home',
         title: 'Home',
         path: '/',
       },
       {
+        name: 'products',
         title: 'Product',
         path: '/products',
       },
       {
+        name: 'articles',
         title: 'Article',
         path: '/articles',
       },
     ])
-
     return { headerItems }
   },
 })
 </script>
 <style scoped lang="scss">
-@keyframes slideIn {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
 .header {
   position: fixed;
   top: 0;
@@ -70,19 +66,26 @@ export default defineComponent({
     }
     .link__text {
       font-weight: 500;
-      color: #006666;
       color: #fff;
     }
     .link__border {
       padding-top: 1px;
       height: 2px;
+      width: 20%;
     }
-    &:hover {
-      .link__border {
-        height: 0;
-        border-bottom: 2px solid #fff;
-        animation: slideIn 0.5s;
-      }
+  }
+  .nuxt-link-exact-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .link__text {
+      padding-bottom: 3px;
+      color: #006666;
+      font-weight: bold;
+    }
+    .link__border {
+      height: 0;
+      border-bottom: 3px solid #006666;
     }
   }
 }
