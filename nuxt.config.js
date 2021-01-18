@@ -33,7 +33,7 @@ export default {
         hid: 'og:image',
         name: 'og:image',
         content:
-          'https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/base.png?authuser=1',
+          'https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/thumb.png?authuser=1',
       },
       {
         hid: 'twitter:title',
