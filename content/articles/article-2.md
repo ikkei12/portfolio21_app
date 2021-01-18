@@ -11,7 +11,7 @@
         - https://github.com/ikkei12/B_2009
         - https://www.youtube.com/watch?v=mVvbSJA8qvQ&feature=youtu.be
         - https://cloud.google.com/vision/?hl=ja
-        - https://cloud.google.com/vision/?hl=ja
+        - https://miro.com/
     ogps: 
         - {title:"",description:"",image:""}
 ---
