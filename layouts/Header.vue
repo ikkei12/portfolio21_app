@@ -74,7 +74,7 @@ export default defineComponent({
       width: 20%;
     }
   }
-  .nuxt-link-exact-active {
+  .nuxt-link-active {
     display: flex;
     flex-direction: column;
     align-items: center;
