@@ -8,7 +8,7 @@ import { Context } from '@nuxt/types'
 import ArticleDetailPage from '@/components/v1/templates/ArticleDetailPage.vue'
 export default defineComponent({
   components: { ArticleDetailPage },
-  async asyncData({ params, $content, $axios }: Context) {
+  async asyncData({ params, $content, $axios, app }: Context) {
     const article = await $content('articles', params.slug).fetch()
     const [prev, next]: any = await $content('articles')
       .surround(params.slug)

@@ -121,6 +121,14 @@ export default {
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+  generate: {
+    async routes() {
+      const { $content } = require('@nuxt/content')
+      const files = await $content().only(['path']).fetch()
+
+      return files.map((file) => (file.path === '/index' ? '/' : file.path))
+    },
+  },
   hooks: {
     'content:file:beforeInsert': (document) => {
       if (document.extension === '.md') {
@@ -129,6 +137,35 @@ export default {
         })
 
         document.readingTime = time
+        if (!document.ogpURLs) return
+        for (let i = 0; i < document.ogpURLs.length; i++) {
+          const url = document.ogpURLs[i]
+          const ogp = {
+            title: 'OGP',
+            description: 'fetching data... \n Please wait for a while.',
+            image: '/lazy_thin.png',
+          }
+          const axios = require('axios')
+          if (!url) return
+          axios
+            .post(
+              'https://asia-northeast1-portfolio21-56e7e.cloudfunctions.net/getOgpInfo',
+              { url },
+              {
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+              }
+            )
+            .then((res) => {
+              ogp.image = res.data.ogp.image
+              ogp.description = res.data.ogp.description
+              ogp.title = res.data.ogp.title
+              ogp.url = url
+            })
+            .catch((e) => console.error(e))
+          document.ogps[i] = ogp
+        }
       }
     },
   },

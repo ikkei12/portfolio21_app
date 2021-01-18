@@ -36,7 +36,6 @@ export default defineComponent({
     ReadingTimeCard,
   },
   setup(props) {
-    console.log(props)
     const chips = computed(() => {
       const color = 'grey'
       return props.article?.categories.map((category: string) => {

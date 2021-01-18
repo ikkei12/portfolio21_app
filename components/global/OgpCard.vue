@@ -1,61 +1,34 @@
 <template>
   <div class="ogp-card__wrapper">
     <a
-      :href="url"
+      :class="{ '--disabled': !ogps[ogpindex].url }"
+      :href="ogps[ogpindex].url"
       target="_blank"
       rel="noopener noreferrer"
       class="ogp-card__link"
     >
       <div class="ogp-card">
-        <img v-lazy-load :src="ogp.image" class="image" alt="ogp thumbnail" />
+        <img
+          v-lazy-load
+          :src="ogps[ogpindex].image"
+          class="image"
+          alt="ogp thumbnail"
+        />
         <div class="ogp-card__inner">
-          <h3 class="ogp-card__title">{{ ogp.title }}</h3>
-          <p class="ogp-card__description">{{ ogp.description }}</p>
+          <h3 class="ogp-card__title">{{ ogps[ogpindex].title }}</h3>
+          <p class="ogp-card__description">{{ ogps[ogpindex].description }}</p>
         </div>
       </div>
     </a>
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, onMounted, reactive } from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
   props: {
-    url: { type: String },
-  },
-  // TODO: SSG(asyncData)にしたいができていないので都度取得している
-  setup(props, context) {
-    const ogp = reactive<{
-      title: string | null
-      description: string | null
-      image: string | null
-    }>({
-      title: 'OGP',
-      description: 'fetching data... \n Please wait for a while.',
-      image: '/lazy_thin.png',
-    })
-
-    onMounted(() => {
-      const url = props.url
-      if (!url) return
-      context.root.$axios
-        .post(
-          'https://asia-northeast1-portfolio21-56e7e.cloudfunctions.net/getOgpInfo',
-          { url },
-          {
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          }
-        )
-        .then((res) => {
-          ogp.image = res.data.ogp.image
-          ogp.description = res.data.ogp.description
-          ogp.title = res.data.ogp.title
-        })
-        .catch((e) => console.error(e))
-    })
-    return { ogp }
+    ogpindex: { type: Number },
+    ogps: { type: Array },
   },
 })
 </script>
@@ -70,6 +43,9 @@ export default defineComponent({
     display: block;
     margin: 60px 0;
     width: 100%;
+    &.--disabled {
+      pointer-events: none;
+    }
     &:hover {
       box-shadow: 0 0 20px rgba(173, 173, 173, 0.285);
     }

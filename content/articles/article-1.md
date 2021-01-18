@@ -8,6 +8,12 @@
         - firebase
         - 成果物
     twitter: 1keiuu
+    ogpURLs: 
+        - https://portfolio21-56e7e.web.app/products/1
+        - https://portfolio21-56e7e.web.app/products/5
+        - https://qiita.com/ikkei12/items/0f0c2d95bdd3b54d6bac
+    ogps: 
+        - {title:"",description:"",image:""}
 ---
 # JAMSTACKなポートフォリオを作成しました
 
@@ -36,8 +42,8 @@ JAMStack(?)なポートフォリオが出来上がりました(当サイト)
 今回はサーバーレスで管理のし易さとパフォーマンスを意識したものになりました。
 
 過去のポートフォリオはこちら
-<OgpCard url="https://portfolio21-56e7e.web.app/products/1"></OgpCard>
-<OgpCard url="https://portfolio21-56e7e.web.app/products/5"></OgpCard>
+<OgpCard :ogpindex="0" :ogps="ogps"></OgpCard>
+<OgpCard :ogpindex="1" :ogps="ogps"></OgpCard>
 
 ## 使用した技術
 **FW:** Nuxt.js  
@@ -96,7 +102,7 @@ JAMStack(?)なポートフォリオが出来上がりました(当サイト)
 　この組み合わせは設定もめちゃくちゃ楽なので、短い期間での個人開発ではかなり使えると思います。    
 
 以前Qiitaの記事にしました。  
-<OgpCard url="https://qiita.com/ikkei12/items/0f0c2d95bdd3b54d6bac"></OgpCard>
+<OgpCard :ogpindex="2" :ogps="ogps"></OgpCard>
 　
 
 <br/>

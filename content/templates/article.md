@@ -6,6 +6,11 @@
     categories: 
         - カテゴリ
     twitter: 1keiuu
+    ogpURLs: 
+        - 
+    ogps: 
+        - {title:"", description:"", image:""}
+
 ---
 # タイトル
 
