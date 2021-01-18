@@ -1,7 +1,7 @@
 ---
-    title: JAMSTACKなポートフォリオを作成しました
+    title: Jamstackなポートフォリオを作成しました
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1
-    description: パフォーマンスと管理しやすさを考えて、ポートフォリオをJAMSTACKで作り直しました。
+    description: パフォーマンスと管理しやすさを考えて、ポートフォリオをJamstackで作り直しました。
     createdDate: "2021-01-17"
     categories: 
         - Nuxt
@@ -15,7 +15,7 @@
     ogps: 
         - {title:"",description:"",image:""}
 ---
-# JAMSTACKなポートフォリオを作成しました
+# Jamstackなポートフォリオを作成しました
 
 <div class="info">
     <div class="info__inner">
@@ -37,7 +37,7 @@
 <img src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1" class="thumbnail" alt="thumbnail" >
 
 ## はじめに
-JAMStack(?)なポートフォリオが出来上がりました(当サイト)  
+Jamstackなポートフォリオが出来上がりました(当サイト)  
 気づけば毎年ポートフォリオを作っていてこれで3つ目です。。  
 今回はサーバーレスで管理のし易さとパフォーマンスを意識したものになりました。
 
@@ -61,7 +61,7 @@ JAMStack(?)なポートフォリオが出来上がりました(当サイト)
 　React/Go/AWSの勉強を目的とするあまり、ポートフォリオサイトとしての役割を考えずに作ってしまいました。  
 　結果的に費用もUXも最低な魔物が生み出されてしまいました。。。
 　特にthree.jsの部分はSPで見るとsafariが落ちるくらい重く、やっつけで作ったせいかチューニングも面倒になって放置状態。  
-　これに反省して、「JAMStackでパフォーマンス最高なで管理し易いサイトに作り直そう！」と決心しました。  
+　これに反省して、「Jamstackでパフォーマンス最高なで管理し易いサイトに作り直そう！」と決心しました。  
   
 **② 去年作ったポートフォリオは管理画面を作ってないのでコンテンツの更新が面倒**  
 
@@ -70,7 +70,7 @@ JAMStack(?)なポートフォリオが出来上がりました(当サイト)
 
 **③ nuxt/contentを使ってみたくなった** 
 
-はじめはmicroCMSでJAMStackを目指して作成していたのですが、たまたま聞いていた[UIT INSIDE](https://uit-inside.linecorp.com/)のポッドキャストでnuxt/contentを知り、コンテンツの管理がめちゃくちゃ便利そうで使ってみたくなりました。  
+はじめはmicroCMSでJamstackを目指して作成していたのですが、たまたま聞いていた[UIT INSIDE](https://uit-inside.linecorp.com/)のポッドキャストでnuxt/contentを知り、コンテンツの管理がめちゃくちゃ便利そうで使ってみたくなりました。  
 しかもマークダウンで簡単にブログが作れる、、、！
 
 ②の失敗を踏まえても、Githubで管理したjson,マークダウンだけでコンテンツの管理ができるのだから、個人開発のポートフォリオに最適だと思いました。
@@ -93,7 +93,10 @@ JAMStack(?)なポートフォリオが出来上がりました(当サイト)
 
 ### 記事内で表示するOGP情報の取得  
 　Nuxt/Contentで書かれた記事内で外部ページのOGPを表示する為の実装が必要だったので、URLからOGP情報を取得するAPIをCloud Functionsで作成しました。  
-　ただ、ここはページ表示の度に都度取得しているので、純粋なJAMStackっと言えるのか？と言う気持ち。。
+　~~ただ、ここはページ表示の度に都度取得しているので、純粋なJamstackっと言えるのか？と言う気持ち。。~~  
+  
+  **1/18更新: OGP情報の取得をビルド時に変更した為改善されました！**
+  
 <br/>  
 
 ### CI／CDを設定して記事ページの自動更新  
