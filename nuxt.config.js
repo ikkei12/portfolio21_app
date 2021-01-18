@@ -130,7 +130,7 @@ export default {
     },
   },
   hooks: {
-    'content:file:beforeInsert': (document) => {
+    'content:file:beforeInsert': async (document) => {
       if (document.extension === '.md') {
         const { time } = require('reading-time')(document.text, {
           wordsPerMinute: 700,
@@ -147,7 +147,7 @@ export default {
           }
           const axios = require('axios')
           if (!url) return
-          axios
+          await axios
             .post(
               'https://asia-northeast1-portfolio21-56e7e.cloudfunctions.net/getOgpInfo',
               { url },

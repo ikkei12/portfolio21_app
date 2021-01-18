@@ -22,7 +22,7 @@ jobs:
         run: npm ci
       # - name: Run test
       #   run: npm test
-      - run: CMS_API_KEY=${{ secrets.CMS_API_KEY }} npm run generate
+      - run: npm run generate
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
