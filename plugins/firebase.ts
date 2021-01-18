@@ -1,4 +1,5 @@
 import firebase from 'firebase'
+import 'firebase/analytics'
 
 if (!firebase.apps.length) {
   firebase.initializeApp({
@@ -10,9 +11,6 @@ if (!firebase.apps.length) {
     appId: '1:515187296876:web:6dc12de78358be1c81a649',
     measurementId: 'G-JGPW8TVGZP',
   })
-  if (process.env.NODE_ENV === 'production') {
-    firebase.analytics()
-  }
 }
 
 export default firebase
