@@ -7,6 +7,13 @@
         - ハッカソン
         - React Native
     twitter: 1keiuu
+    ogpURLs: 
+        - https://github.com/ikkei12/B_2009
+        - https://www.youtube.com/watch?v=mVvbSJA8qvQ&feature=youtu.be
+        - https://cloud.google.com/vision/?hl=ja
+        - https://cloud.google.com/vision/?hl=ja
+    ogps: 
+        - {title:"",description:"",image:""}
 ---
 # 学生エンジニアが初めてハッカソンに参加してみたら学びが多かった話
 
@@ -39,10 +46,10 @@ JPHACKS(ジャパンハックス)は、学生を対象にした日本最大規�
 
 ## 開発したもの
 画像分析で忘れ物を防ぐアプリ「Laff」を開発しました。
-<ogp-card url="https://github.com/ikkei12/B_2009"></ogp-card>
+<OgpCard :ogpindex="0" :ogps="ogps"></OgpCard>
 
 紹介動画です(ギリギリで作ったので動画のクオリティはお察しください。。。)
-<ogp-card url="https://www.youtube.com/watch?v=mVvbSJA8qvQ&feature=youtu.be"></ogp-card>
+<OgpCard :ogpindex="1" :ogps="ogps"></OgpCard>
 
 「忙しい朝に忘れ物チェックをする時間が無い！」という問題を解決する為に開発しました。  
 あらかじめ持ち物を登録しておく事で、出かける日の朝には写真を一枚撮るだけで忘れ物を教えてくれます。
@@ -55,7 +62,7 @@ JPHACKS(ジャパンハックス)は、学生を対象にした日本最大規�
 
 画像分析にはGoogle Cloud Vision APIを使いました。
 
-<ogp-card url="https://cloud.google.com/vision/?hl=ja"></ogp-card>
+<OgpCard :ogpindex="2" :ogps="ogps"></OgpCard>
 
 Google Cloud Vision APIを使えばこのように写真に写っている物を分析して、その名前(ラベル)を返してくれます。 
 画像分析のAPIから帰ってくるラベルは英語1単語なので、その類義語をAPIから取得し、翻訳して返す事で分析の精度を高めました。  
@@ -80,7 +87,7 @@ Google Cloud Vision APIを使えばこのように写真に写っている物を
 学校などの都合もあり全員で集まれなかったので、アイデア出しもwebミーティングで行いました。　　アイデア出しにはmiroというサービスを使いました。便利でしたがフル活用出来たとは思えないし、進め方があまり良くなかったかなと思います。
 アイデア出しにおいてツールはもちろん大事なのですが、それ以上にファシリテーター的な役割がチームにいると重宝されるなと感じました (そんなエンジニアになりたい。。。)
 　
-<ogp-card url="https://miro.com"></ogp-card>
+<OgpCard :ogpindex="3" :ogps="ogps"></OgpCard>
 
 
 ### 正しく恐れ、正しく急ぐ
