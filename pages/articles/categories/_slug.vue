@@ -1,6 +1,10 @@
 <template>
   <ArticlesProvider>
-    <ArticlePage :articles="articles" :categories="categories" :title="title" />
+    <ArticlePage
+      :articles="filteredArticles"
+      :categories="categories"
+      :title="title"
+    />
   </ArticlesProvider>
 </template>
 
@@ -17,13 +21,22 @@ export default defineComponent({
     ArticlesProvider,
   },
   async asyncData({ params, $content }: Context) {
-    const articles = await $content('articles')
-      .sortBy('createdDate', 'asc')
-      .fetch()
     const categories: Category[] = []
     const categoryIds: Number[] = []
     const categoriesJson = await $content('categories').fetch()
     let title = ''
+    const articles = await $content('articles')
+      .sortBy('createdDate', 'asc')
+      .fetch()
+    const targetCategory = categoriesJson?.categories.find(
+      (category: Category) => {
+        return category.slug === params.slug
+      }
+    )
+    const filteredArticles = articles.filter((article: Article) => {
+      if (!article.categories) return false
+      return article.category_ids.includes(targetCategory.id)
+    })
 
     articles.forEach((article: IContentDocument) => {
       if (article.category_ids) {
@@ -48,7 +61,7 @@ export default defineComponent({
       })
     })
 
-    return { articles, categories, title }
+    return { filteredArticles, categories, title }
   },
 })
 </script>

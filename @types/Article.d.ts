@@ -6,6 +6,8 @@ declare type Article = {
   slug: string
   createdDate: string
   categories: string[]
+  // eslint-disable-next-line camelcase
+  category_ids: Number[]
 }
 
 declare type ArticleCategoryItem = {
