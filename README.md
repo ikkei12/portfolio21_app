@@ -1,4 +1,4 @@
-# ⭐️ Nuxt.js Jamstack Portfolio
+# ⭐️ Nuxt.js × Jamstack Portfolio
 
 ### https://1k-cove.com
 
