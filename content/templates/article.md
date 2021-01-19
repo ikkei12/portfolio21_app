@@ -3,8 +3,8 @@
     description: 説明
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-3.png?authuser=1
     createdDate: "日付"
-    categories: 
-        - カテゴリ
+    category_ids: 
+        - 0
     twitter: 1keiuu
     ogpURLs: 
         - 
@@ -15,9 +15,7 @@
 
 <div class="info">
     <div class="info__inner">
-        <div class="chip__group">
-            <chip chip="カテゴリ"></chip>
-        </div>            
+        <chip-group :chips="categories"></chip-group>                 
         <div class="created-date">
             <Icon iconName="calendar"></Icon>
             <p>日付</p>
