@@ -132,11 +132,26 @@ export default {
   hooks: {
     'content:file:beforeInsert': async (document) => {
       if (document.extension === '.md') {
+        // reading timeの設定
         const { time } = require('reading-time')(document.text, {
           wordsPerMinute: 700,
         })
-
         document.readingTime = time
+
+        // categoryの取得
+        const fs = require('fs')
+        const categoriesJsonData = JSON.parse(
+          fs.readFileSync('content/categories.json', 'utf8')
+        ).categories
+        const categories = []
+        document.category_ids.forEach((categoryId) => {
+          const res = categoriesJsonData.find((category) => {
+            return category.id === categoryId
+          })
+          categories.push(res)
+        })
+        document.categories = categories
+
         // ogpデータの取得、設定
         if (!document.ogpURLs) return
         for (let i = 0; i < document.ogpURLs.length; i++) {

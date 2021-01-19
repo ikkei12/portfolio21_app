@@ -22,27 +22,27 @@ export default defineComponent({
       if (!article.categories) return false
       return article.categories.includes(params.slug)
     })
-
+    const categories: Category[] = []
+    const categoryIds: Number[] = []
+    const categoriesJson = await $content('categories').fetch()
     const title = params.slug
 
-    const categoryTitles: Array<String> = []
-    const categories: ArticleCategoryItem[] = []
     res.forEach((article: IContentDocument) => {
-      if (article.categories) {
-        article.categories.forEach((category: string) => {
-          if (!categoryTitles.includes(category)) {
-            categoryTitles.push(category)
-            categories.push({
-              title: category,
-              count: 1,
-              url: `/articles/categories/${category}`,
-            })
-          } else {
-            const index = categoryTitles.indexOf(category)
-            categories[index].count += 1
-          }
+      if (article.category_ids) {
+        article.category_ids.forEach((categoryId: Number) => {
+          categoryIds.push(categoryId)
         })
       }
+    })
+    categoriesJson?.categories?.forEach((category: Category) => {
+      const count = categoryIds.filter((categoryId: Number) => {
+        return category.id === categoryId
+      }).length
+      categories.push({
+        title: category.title,
+        count,
+        url: `/articles/categories/${category.slug}`,
+      })
     })
 
     return { articles, categories, title }

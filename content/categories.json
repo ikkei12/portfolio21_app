@@ -3,27 +3,33 @@
   "categories": [
     {
       "id": 1,
-      "title": "Nuxt"
+      "title": "Nuxt",
+      "slug": "nuxt"
     },
     {
       "id": 2,
-      "title": "firebase"
+      "title": "firebase",
+      "slug": "firebase"
     },
     {
       "id": 3,
-      "title": "React Native"
+      "title": "React Native",
+      "slug": "react_native"
     },
     {
       "id": 51,
-      "title": "キャリア"
+      "title": "キャリア",
+      "slug": "career"
     },
     {
       "id": 52,
-      "title": "成果物"
+      "title": "成果物",
+      "slug": "products"
     },
     {
       "id": 53,
-      "title": "ハッカソン"
+      "title": "ハッカソン",
+      "slug": "hackathon"
     }
   ]
 }
