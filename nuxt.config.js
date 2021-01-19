@@ -137,6 +137,7 @@ export default {
         })
 
         document.readingTime = time
+        // ogpデータの取得、設定
         if (!document.ogpURLs) return
         for (let i = 0; i < document.ogpURLs.length; i++) {
           const url = document.ogpURLs[i]
