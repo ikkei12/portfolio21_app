@@ -36,9 +36,6 @@ export default defineComponent({
       },
     },
   },
-  setup(p) {
-    console.log(p)
-  },
 })
 </script>
 <style scoped lang="scss">
