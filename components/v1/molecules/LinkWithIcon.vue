@@ -17,12 +17,15 @@ export default defineComponent({
   props: {
     imgSrc: {
       type: String,
+      default: '',
     },
     text: {
       type: String,
+      default: '',
     },
     link: {
       type: String,
+      default: '',
     },
   },
 })
