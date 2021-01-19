@@ -1,20 +1,9 @@
-# app
+# ⭐️ Nuxt.js × Jamstack Portfolio
 
-## Build Setup
+### https://1k-cove.com
 
-```bash
-# install dependencies
-$ npm install
+Ikkei Harashima's portfolio 2021
+  
+<br/>
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+**summarized in https://1k-cove.com/articles/article-1**
