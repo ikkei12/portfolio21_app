@@ -21,7 +21,7 @@ declare type ArticleCategoryItem = {
 }
 
 declare type Category = {
-  id?: Number
+  id?: number
   title: string
   slug?: string
   count?: Number

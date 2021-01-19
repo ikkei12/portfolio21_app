@@ -13,6 +13,12 @@ import { Context } from '@nuxt/types'
 import ArticlePage from '@/components/v1/templates/ArticlePage.vue'
 import { defineComponent } from '@vue/composition-api'
 import ArticlesProvider from '@/components/v1/providers/ArticlesProvider.vue'
+import {
+  Article,
+  ArticleContent,
+  Category,
+  CategoryContent,
+} from '~/@types/Article'
 
 export default defineComponent({
   components: {
@@ -22,43 +28,46 @@ export default defineComponent({
   async asyncData({ params, $content }: Context) {
     const categories: Category[] = []
     const categoryIds: Number[] = []
-    const categoriesJson: CategoryContent = await $content('categories').fetch()
+    const categoriesJson = await $content('categories').fetch()
     let title = ''
     const articles = await $content('articles')
       .sortBy('createdDate', 'asc')
       .fetch()
-    const targetCategory = categoriesJson?.categories.find(
+    const targetCategory = (categoriesJson as CategoryContent)?.categories.find(
       (category: Category) => {
         return category.slug === params.slug
       }
     )
     const filteredArticles = articles.filter((article: Article) => {
-      if (!article.categories) return false
-      return article.category_ids.includes(targetCategory.id)
+      let id = 0
+      if (targetCategory?.id) {
+        id = targetCategory?.id
+      }
+      return article.category_ids.includes(id)
     })
 
-    articles.forEach((article: ArticleContent) => {
-      if (article.category_ids) {
-        article.category_ids.forEach((categoryId: Number) => {
-          categoryIds.push(categoryId)
+    articles
+      .forEach((article: ArticleContent) => {
+        if (article.category_ids) {
+          article.category_ids.forEach((categoryId: Number) => {
+            categoryIds.push(categoryId)
+          })
+        }
+      })(categoriesJson as CategoryContent)
+      ?.categories?.forEach((category: Category) => {
+        const count = categoryIds.filter((categoryId: Number) => {
+          return category.id === categoryId
+        }).length
+        if (count === 0) return
+        if (params.slug === category.slug) {
+          title = category.title
+        }
+        categories.push({
+          title: category.title,
+          count,
+          url: `/articles/categories/${category.slug}`,
         })
-      }
-    })
-
-    categoriesJson?.categories?.forEach((category: Category) => {
-      const count = categoryIds.filter((categoryId: Number) => {
-        return category.id === categoryId
-      }).length
-      if (count === 0) return
-      if (params.slug === category.slug) {
-        title = category.title
-      }
-      categories.push({
-        title: category.title,
-        count,
-        url: `/articles/categories/${category.slug}`,
       })
-    })
 
     return { filteredArticles, categories, title }
   },

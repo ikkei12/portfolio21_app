@@ -9,7 +9,7 @@ import { Context } from '@nuxt/types'
 import ArticlePage from '@/components/v1/templates/ArticlePage.vue'
 import { defineComponent } from '@vue/composition-api'
 import ArticlesProvider from '@/components/v1/providers/ArticlesProvider.vue'
-import { IContentDocument } from '@nuxt/content/types/content'
+import { Article, Category, CategoryContent } from '~/@types/Article'
 
 export default defineComponent({
   components: {
@@ -25,28 +25,28 @@ export default defineComponent({
     const categoriesJson = await $content('categories').fetch()
     let title = ''
 
-    articles.forEach((article: IContentDocument) => {
-      if (article.category_ids) {
-        article.category_ids.forEach((categoryId: Number) => {
-          categoryIds.push(categoryId)
+    articles
+      .forEach((article: Article) => {
+        if (article.category_ids) {
+          article.category_ids.forEach((categoryId: Number) => {
+            categoryIds.push(categoryId)
+          })
+        }
+      })(categoriesJson as CategoryContent)
+      ?.categories?.forEach((category: Category) => {
+        const count = categoryIds.filter((categoryId: Number) => {
+          return category.id === categoryId
+        }).length
+        if (count === 0) return
+        if (params.slug === category.slug) {
+          title = category.title
+        }
+        categories.push({
+          title: category.title,
+          count,
+          url: `/articles/categories/${category.slug}`,
         })
-      }
-    })
-
-    categoriesJson?.categories?.forEach((category: Category) => {
-      const count = categoryIds.filter((categoryId: Number) => {
-        return category.id === categoryId
-      }).length
-      if (count === 0) return
-      if (params.slug === category.slug) {
-        title = category.title
-      }
-      categories.push({
-        title: category.title,
-        count,
-        url: `/articles/categories/${category.slug}`,
       })
-    })
 
     return { articles, categories, title }
   },
