@@ -1,1 +1,28 @@
-{}
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "キャリア"
+    },
+    {
+      "id": 2,
+      "title": "成果物"
+    },
+    {
+      "id": 3,
+      "title": "ハッカソン"
+    },
+    {
+      "id": 4,
+      "title": "Nuxt"
+    },
+    {
+      "id": 5,
+      "title": "firebase"
+    },
+    {
+      "id": 6,
+      "title": "React Native"
+    }
+  ]
+}
