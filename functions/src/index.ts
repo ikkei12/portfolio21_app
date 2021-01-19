@@ -2,7 +2,6 @@ import * as fs from 'fs'
 import * as functions from 'firebase-functions'
 import * as admin from 'firebase-admin'
 import { createCanvas, loadImage } from 'canvas'
-import { Request, Response } from 'firebase-functions'
 const cors = require('cors')({ origin: true })
 admin.initializeApp()
 
@@ -18,7 +17,7 @@ const notifySlack = (message: String) => {
 
 export const getOgpInfo = functions
   .region('asia-northeast1')
-  .https.onRequest((req, res) => {
+  .https.onRequest((req: any, res: any) => {
     return cors(req, res, async () => {
       res.set('Access-Control-Allow-Origin', '*')
       res.set('Access-Control-Allow-Methods', 'POST')
@@ -60,7 +59,7 @@ export const getOgpInfo = functions
  * @param questionId questionID
  */
 export const createOgpImageAndSave = functions.https.onRequest(
-  (request: Request, response: Response) => {
+  (request: any, response: any) => {
     return cors(request, response, async () => {
       response.set('Access-Control-Allow-Origin', '*')
       response.set('Access-Control-Allow-Methods', 'POST')
