@@ -25,15 +25,15 @@ import ReadingTimeCard from '@/components/v1/molecules/ReadingTimeCard.vue'
 
 export default defineComponent({
   name: 'ChipGroup',
-  props: {
-    article: { type: Object as PropType<IContentDocument> },
-    prev: { type: Object as PropType<IContentDocument> },
-    next: { type: Object as PropType<IContentDocument> },
-  },
   components: {
     ContentPagination,
     ContentsTable,
     ReadingTimeCard,
+  },
+  props: {
+    article: { type: Object as PropType<IContentDocument> },
+    prev: { type: Object as PropType<IContentDocument> },
+    next: { type: Object as PropType<IContentDocument> },
   },
   setup(props) {
     const chips = computed(() => {

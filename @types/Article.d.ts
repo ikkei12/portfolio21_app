@@ -1,4 +1,5 @@
 type Article = {
+  id: Number
   thumbnail: string
   title: string
   description: string
