@@ -27,7 +27,6 @@ export const getOgpInfo = functions
       const cheerio = require('cheerio')
       const request = require('request')
       const url = req.body.url
-      console.log(url)
 
       await request(url, (e: any, _res: any, html: any) => {
         if (e) {
