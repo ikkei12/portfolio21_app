@@ -1,3 +1,5 @@
+import { IContentDocument } from '@nuxt/content/types/content'
+
 declare type Article = {
   id: Number
   thumbnail: string
@@ -9,6 +11,8 @@ declare type Article = {
   // eslint-disable-next-line camelcase
   category_ids: Number[]
 }
+
+declare type ArticleContent = IContentDocument & {}
 
 declare type ArticleCategoryItem = {
   title: string
@@ -22,4 +26,8 @@ declare type Category = {
   slug?: string
   count?: Number
   url?: string
+}
+
+declare type CategoryContent = IContentDocument & {
+  categories: Category[]
 }

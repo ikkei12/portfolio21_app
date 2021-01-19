@@ -13,7 +13,6 @@ import { Context } from '@nuxt/types'
 import ArticlePage from '@/components/v1/templates/ArticlePage.vue'
 import { defineComponent } from '@vue/composition-api'
 import ArticlesProvider from '@/components/v1/providers/ArticlesProvider.vue'
-import { IContentDocument } from '@nuxt/content/types/content'
 
 export default defineComponent({
   components: {
@@ -23,7 +22,7 @@ export default defineComponent({
   async asyncData({ params, $content }: Context) {
     const categories: Category[] = []
     const categoryIds: Number[] = []
-    const categoriesJson = await $content('categories').fetch()
+    const categoriesJson: CategoryContent = await $content('categories').fetch()
     let title = ''
     const articles = await $content('articles')
       .sortBy('createdDate', 'asc')
@@ -38,7 +37,7 @@ export default defineComponent({
       return article.category_ids.includes(targetCategory.id)
     })
 
-    articles.forEach((article: IContentDocument) => {
+    articles.forEach((article: ArticleContent) => {
       if (article.category_ids) {
         article.category_ids.forEach((categoryId: Number) => {
           categoryIds.push(categoryId)
