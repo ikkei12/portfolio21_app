@@ -22,31 +22,31 @@ export default defineComponent({
       .fetch()
     const categories: Category[] = []
     const categoryIds: Number[] = []
-    const categoriesJson = await $content('categories').fetch()
+    const categoriesJson = (await $content(
+      'categories'
+    ).fetch()) as CategoryContent
     let title = ''
-
-    articles
-      .forEach((article: Article) => {
-        if (article.category_ids) {
-          article.category_ids.forEach((categoryId: Number) => {
-            categoryIds.push(categoryId)
-          })
-        }
-      })(categoriesJson as CategoryContent)
-      ?.categories?.forEach((category: Category) => {
-        const count = categoryIds.filter((categoryId: Number) => {
-          return category.id === categoryId
-        }).length
-        if (count === 0) return
-        if (params.slug === category.slug) {
-          title = category.title
-        }
-        categories.push({
-          title: category.title,
-          count,
-          url: `/articles/categories/${category.slug}`,
+    articles.forEach((article: Article) => {
+      if (article.category_ids) {
+        article.category_ids.forEach((categoryId: Number) => {
+          categoryIds.push(categoryId)
         })
+      }
+    })
+    categoriesJson.categories?.forEach((category: Category) => {
+      const count = categoryIds.filter((categoryId: Number) => {
+        return category.id === categoryId
+      }).length
+      if (count === 0) return
+      if (params.slug === category.slug) {
+        title = category.title
+      }
+      categories.push({
+        title: category.title,
+        count,
+        url: `/articles/categories/${category.slug}`,
       })
+    })
 
     return { articles, categories, title }
   },

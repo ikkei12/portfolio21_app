@@ -28,12 +28,14 @@ export default defineComponent({
   async asyncData({ params, $content }: Context) {
     const categories: Category[] = []
     const categoryIds: Number[] = []
-    const categoriesJson = await $content('categories').fetch()
+    const categoriesJson = (await $content(
+      'categories'
+    ).fetch()) as CategoryContent
     let title = ''
     const articles = await $content('articles')
       .sortBy('createdDate', 'asc')
       .fetch()
-    const targetCategory = (categoriesJson as CategoryContent)?.categories.find(
+    const targetCategory = categoriesJson?.categories.find(
       (category: Category) => {
         return category.slug === params.slug
       }
@@ -46,28 +48,27 @@ export default defineComponent({
       return article.category_ids.includes(id)
     })
 
-    articles
-      .forEach((article: ArticleContent) => {
-        if (article.category_ids) {
-          article.category_ids.forEach((categoryId: Number) => {
-            categoryIds.push(categoryId)
-          })
-        }
-      })(categoriesJson as CategoryContent)
-      ?.categories?.forEach((category: Category) => {
-        const count = categoryIds.filter((categoryId: Number) => {
-          return category.id === categoryId
-        }).length
-        if (count === 0) return
-        if (params.slug === category.slug) {
-          title = category.title
-        }
-        categories.push({
-          title: category.title,
-          count,
-          url: `/articles/categories/${category.slug}`,
+    articles.forEach((article: ArticleContent) => {
+      if (article.category_ids) {
+        article.category_ids.forEach((categoryId: Number) => {
+          categoryIds.push(categoryId)
         })
+      }
+    })
+    categoriesJson?.categories?.forEach((category: Category) => {
+      const count = categoryIds.filter((categoryId: Number) => {
+        return category.id === categoryId
+      }).length
+      if (count === 0) return
+      if (params.slug === category.slug) {
+        title = category.title
+      }
+      categories.push({
+        title: category.title,
+        count,
+        url: `/articles/categories/${category.slug}`,
       })
+    })
 
     return { filteredArticles, categories, title }
   },
