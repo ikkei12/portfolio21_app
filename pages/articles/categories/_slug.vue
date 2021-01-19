@@ -34,10 +34,12 @@ export default defineComponent({
         })
       }
     })
+
     categoriesJson?.categories?.forEach((category: Category) => {
       const count = categoryIds.filter((categoryId: Number) => {
         return category.id === categoryId
       }).length
+      if (count === 0) return
       if (params.slug === category.slug) {
         title = category.title
       }

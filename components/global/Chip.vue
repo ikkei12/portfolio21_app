@@ -1,7 +1,7 @@
 <template>
-  <nuxt-link :to="'/articles/categories/' + chip" class="chip__link">
+  <nuxt-link :to="'/articles/categories/' + slug" class="chip__link">
     <div class="chip" :style="`border:1px solid grey`">
-      <p class="chip__text" :style="`color:grey`">{{ chip }}</p>
+      <p class="chip__text" :style="`color:grey`">{{ title }}</p>
     </div>
   </nuxt-link>
 </template>
@@ -10,8 +10,13 @@ import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
   props: {
-    chip: {
+    title: {
       type: String,
+      default: '',
+    },
+    slug: {
+      type: String,
+      default: '',
     },
   },
 })

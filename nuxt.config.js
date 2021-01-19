@@ -144,6 +144,7 @@ export default {
           fs.readFileSync('content/categories.json', 'utf8')
         ).categories
         const categories = []
+        if (!document.category_ids) return
         document.category_ids.forEach((categoryId) => {
           const res = categoriesJsonData.find((category) => {
             return category.id === categoryId

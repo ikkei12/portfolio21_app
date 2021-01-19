@@ -28,7 +28,7 @@ export default defineComponent({
           if (!categoryTitles.includes(category)) {
             categoryTitles.push(category)
             categories.push({
-              title: category,
+              title: category.title,
               count: 1,
               url: `/articles/categories/${category}`,
             })

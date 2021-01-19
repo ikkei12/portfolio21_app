@@ -36,6 +36,7 @@ export default defineComponent({
     next: { type: Object as PropType<IContentDocument> },
   },
   setup(props) {
+    console.log(props.article)
     const chips = computed(() => {
       const color = 'grey'
       return props.article?.categories.map((category: string) => {
