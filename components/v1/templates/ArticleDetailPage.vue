@@ -12,12 +12,7 @@
   </div>
 </template>
 <script lang="ts">
-import {
-  computed,
-  defineComponent,
-  PropType,
-  onMounted,
-} from '@vue/composition-api'
+import { defineComponent, PropType, onMounted } from '@vue/composition-api'
 import { IContentDocument } from '@nuxt/content/types/content'
 import ContentPagination from '@/components/v1/organisms/ContentPagination.vue'
 import ContentsTable from '@/components/v1/organisms/ContentsTable.vue'
@@ -36,12 +31,6 @@ export default defineComponent({
     next: { type: Object as PropType<IContentDocument> },
   },
   setup(props) {
-    const chips = computed(() => {
-      const color = 'grey'
-      return props.article?.categories.map((category: string) => {
-        return { text: category, color }
-      })
-    })
     const readingTime = props.article?.readingTime
       ? props.article?.readingTime
       : 0
@@ -52,7 +41,7 @@ export default defineComponent({
       readingTimeSp.textContent = Math.round(readingTime / 1000) + 'min'
     })
 
-    return { chips, readingTime }
+    return { readingTime }
   },
 })
 </script>
@@ -92,11 +81,6 @@ export default defineComponent({
       display: flex;
       justify-content: space-between;
       position: relative;
-      .chip__group {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 8px;
-      }
       .created-date {
         display: flex;
         align-items: center;

@@ -1,11 +1,11 @@
 <template>
   <div class="chip__group">
-    <Chip
+    <chip
       v-for="(chip, i) in chips"
       :key="`chip${i}`"
       :title="chip.title"
       :slug="chip.slug"
-    />
+    ></chip>
   </div>
 </template>
 <script lang="ts">
@@ -18,6 +18,9 @@ export default defineComponent({
   props: {
     chips: {
       type: Array,
+      default: () => {
+        return []
+      },
     },
   },
 })
