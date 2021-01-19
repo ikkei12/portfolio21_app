@@ -1,28 +1,29 @@
 {
+  "//$comment//": "技術スタックを先に表示する為にjsonでも上に技術・言語を持ってくる",
   "categories": [
     {
       "id": 1,
-      "title": "キャリア"
-    },
-    {
-      "id": 2,
-      "title": "成果物"
-    },
-    {
-      "id": 3,
-      "title": "ハッカソン"
-    },
-    {
-      "id": 4,
       "title": "Nuxt"
     },
     {
-      "id": 5,
+      "id": 2,
       "title": "firebase"
     },
     {
-      "id": 6,
+      "id": 3,
       "title": "React Native"
+    },
+    {
+      "id": 51,
+      "title": "キャリア"
+    },
+    {
+      "id": 52,
+      "title": "成果物"
+    },
+    {
+      "id": 53,
+      "title": "ハッカソン"
     }
   ]
 }

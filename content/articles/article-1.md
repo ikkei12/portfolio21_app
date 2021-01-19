@@ -1,12 +1,13 @@
 ---
+    id: 1
     title: Jamstackなポートフォリオを作成しました
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1
     description: パフォーマンスと管理しやすさを考えて、ポートフォリオをJamstackで作り直しました。
     createdDate: "2021-01-17"
-    categories: 
-        - Nuxt
-        - firebase
-        - 成果物
+    category_ids: 
+        - 1
+        - 2
+        - 52
     twitter: 1keiuu
     ogpURLs: 
         - https://portfolio21-56e7e.web.app/products/1
