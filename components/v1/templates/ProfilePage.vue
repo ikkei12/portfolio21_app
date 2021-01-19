@@ -21,15 +21,16 @@ import ProfileAboutCard from '@/components/v1/molecules/ProfileAboutCard.vue'
 import ProfileCareerCard from '@/components/v1/molecules/ProfileCareerCard.vue'
 
 export default defineComponent({
-  props: {
-    careerNodes: {
-      type: Array as PropType<CareerNode[]>,
-    },
-  },
   components: {
     ProfileInformationCard,
     ProfileAboutCard,
     ProfileCareerCard,
+  },
+  props: {
+    careerNodes: {
+      type: Array as PropType<CareerNode[]>,
+      default: [],
+    },
   },
 })
 </script>
