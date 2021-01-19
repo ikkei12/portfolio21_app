@@ -6,9 +6,18 @@
 import { defineComponent } from '@vue/composition-api'
 import { Context } from '@nuxt/types'
 import ArticleDetailPage from '@/components/v1/templates/ArticleDetailPage.vue'
+import { Article } from '~/@types/Article'
+
+declare type OGP = {
+  title: string
+  description: string
+  url: string
+  image: string
+}
+
 export default defineComponent({
   components: { ArticleDetailPage },
-  async asyncData({ params, $content, $axios, app }: Context) {
+  async asyncData({ params, $content, $axios }: Context) {
     const article = await $content('articles', params.slug).fetch()
     const [prev, next]: any = await $content('articles')
       .surround(params.slug)
