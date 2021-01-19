@@ -5,7 +5,10 @@
         <ProfileInformationCard class="profile-page__card" />
       </div>
       <div class="card__wrapper">
-        <ProfileAboutCard class="profile-page__card" />
+        <ProfileAboutCard
+          class="profile-page__card"
+          :personal-info="personalInfo"
+        />
         <ProfileCareerCard
           class="profile-page__card"
           :career-nodes="careerNodes"
@@ -30,6 +33,16 @@ export default defineComponent({
     careerNodes: {
       type: Array as PropType<CareerNode[]>,
       default: [],
+    },
+    personalInfo: {
+      type: Object as PropType<PersonalInformation>,
+      default: () => {
+        return {
+          liveIn: '',
+          age: 0,
+          organisation: '',
+        }
+      },
     },
   },
 })

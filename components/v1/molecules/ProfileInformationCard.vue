@@ -26,12 +26,10 @@
 </template>
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
-import Card from '@/components/v1/molecules/Card.vue'
 import LinkIconGroup from '@/components/v1/organisms/LinkIconGroup.vue'
 
 export default defineComponent({
   components: {
-    Card,
     LinkIconGroup,
   },
 })

@@ -3,20 +3,20 @@
     <h2 class="title">About</h2>
     <div class="flex">
       <Icon icon-name="house" :size="16" color="#7db5b5" />
-      <p>Tokyo</p>
+      <p>{{ personalInfo.liveIn }}</p>
     </div>
     <div class="flex">
       <Icon icon-name="birthDay" :size="16" color="#7db5b5" />
-      <p>{{ age }}歳</p>
+      <p>{{ personalInfo.age }}歳</p>
     </div>
     <div class="flex">
       <Icon icon-name="building" :size="16" color="#7db5b5" />
-      <p>慶應義塾大学 / forStartups</p>
+      <p>{{ personalInfo.organisation }}</p>
     </div>
   </Card>
 </template>
 <script lang="ts">
-import { computed, defineComponent } from '@vue/composition-api'
+import { defineComponent, PropType } from '@vue/composition-api'
 import Card from '@/components/v1/molecules/Card.vue'
 import Icon from '@/components/v1/atoms/Icon.vue'
 export default defineComponent({
@@ -24,19 +24,20 @@ export default defineComponent({
     Card,
     Icon,
   },
-  setup(_props, _context) {
-    const age = computed(() => {
-      const res = calculcateCurrentAge('1998-03-11 00:00:00')
-      if (res) return res
-      else return 23
-    })
-
-    const calculcateCurrentAge = (birthDay: string | number | Date) => {
-      const diff = new Date(+Date.now() - +new Date(birthDay))
-      return diff.getUTCFullYear() - 1970
-    }
-
-    return { age }
+  props: {
+    personalInfo: {
+      type: Object as PropType<PersonalInformation>,
+      default: () => {
+        return {
+          liveIn: '',
+          age: 0,
+          organisation: '',
+        }
+      },
+    },
+  },
+  setup(p) {
+    console.log(p)
   },
 })
 </script>
