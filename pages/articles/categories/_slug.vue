@@ -25,7 +25,7 @@ export default defineComponent({
     const categories: Category[] = []
     const categoryIds: Number[] = []
     const categoriesJson = await $content('categories').fetch()
-    const title = params.slug
+    let title = ''
 
     res.forEach((article: IContentDocument) => {
       if (article.category_ids) {
@@ -38,6 +38,9 @@ export default defineComponent({
       const count = categoryIds.filter((categoryId: Number) => {
         return category.id === categoryId
       }).length
+      if (params.slug === category.slug) {
+        title = category.title
+      }
       categories.push({
         title: category.title,
         count,
