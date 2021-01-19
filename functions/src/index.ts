@@ -2,6 +2,7 @@ import * as fs from 'fs'
 import * as functions from 'firebase-functions'
 import * as admin from 'firebase-admin'
 import { createCanvas, loadImage } from 'canvas'
+import { Request, Response } from 'firebase-functions'
 const cors = require('cors')({ origin: true })
 admin.initializeApp()
 
@@ -59,7 +60,7 @@ export const getOgpInfo = functions
  * @param questionId questionID
  */
 export const createOgpImageAndSave = functions.https.onRequest(
-  (request, response) => {
+  (request: Request, response: Response) => {
     return cors(request, response, async () => {
       response.set('Access-Control-Allow-Origin', '*')
       response.set('Access-Control-Allow-Methods', 'POST')
