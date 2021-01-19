@@ -20,7 +20,7 @@
 
 <div class="info">
     <div class="info__inner">
-        <Chipgroup :chips="categories"></Chipgroup>
+        <categorychips :chips="categories"></categorychips>
         <div class="created-date">
             <Icon iconName="calendar"></Icon>
             <p>2021-01-17</p>
