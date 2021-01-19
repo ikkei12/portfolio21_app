@@ -9,11 +9,13 @@
 </template>
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
+import { ArticleCategoryItem } from '~/@types/Article'
 
 export default defineComponent({
   props: {
     category: {
       type: Object as PropType<ArticleCategoryItem>,
+      default: {},
     },
   },
 })

@@ -25,10 +25,12 @@
 </template>
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
+import { Article } from '~/@types/Article'
 export default defineComponent({
   props: {
     article: {
       type: Object as PropType<Article>,
+      default: {},
     },
   },
 })

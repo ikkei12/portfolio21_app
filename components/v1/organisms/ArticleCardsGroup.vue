@@ -13,15 +13,17 @@
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
 import ArticleCard from '@/components/v1/molecules/ArticleCard.vue'
+import { Article } from '~/@types/Article'
 
 export default defineComponent({
+  components: {
+    ArticleCard,
+  },
   props: {
     articles: {
       type: Array as PropType<Article[]>,
+      default: [],
     },
-  },
-  components: {
-    ArticleCard,
   },
 })
 </script>

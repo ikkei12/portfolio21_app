@@ -21,17 +21,21 @@ import ArticleCardsGroup from '@/components/v1/organisms/ArticleCardsGroup.vue'
 import Title from '@/components/v1/atoms/Title.vue'
 import ArticleCategoriesList from '@/components/v1/organisms/ArticleCategoriesList.vue'
 import Icon from '@/components/v1/atoms/Icon.vue'
+import { Article, ArticleCategoryItem } from '~/@types/Article'
 export default defineComponent({
   components: { ArticleCardsGroup, Title, ArticleCategoriesList, Icon },
   props: {
     articles: {
       type: Array as PropType<Article[]>,
+      default: [],
     },
     categories: {
       type: Array as PropType<ArticleCategoryItem[]>,
+      default: [],
     },
     title: {
       type: String,
+      default: '',
     },
   },
   setup() {
