@@ -1,6 +1,6 @@
 <template>
   <ArticlesProvider>
-    <ArticlePage :articles="articles" :categories="categories" />
+    <ArticlePage :articles="articles" :categories="categories" :title="title" />
   </ArticlesProvider>
 </template>
 
@@ -16,31 +16,39 @@ export default defineComponent({
     ArticlePage,
     ArticlesProvider,
   },
-  async asyncData({ $content }: Context) {
+  async asyncData({ params, $content }: Context) {
     const articles = await $content('articles')
       .sortBy('createdDate', 'desc')
       .fetch()
-    const categoryTitles: Array<String> = []
-    const categories: ArticleCategoryItem[] = []
+    const categories: Category[] = []
+    const categoryIds: Number[] = []
+    const categoriesJson = await $content('categories').fetch()
+    let title = ''
+
     articles.forEach((article: IContentDocument) => {
-      if (article.categories) {
-        article.categories.forEach((category: string) => {
-          if (!categoryTitles.includes(category)) {
-            categoryTitles.push(category)
-            categories.push({
-              title: category.title,
-              count: 1,
-              url: `/articles/categories/${category}`,
-            })
-          } else {
-            const index = categoryTitles.indexOf(category)
-            categories[index].count += 1
-          }
+      if (article.category_ids) {
+        article.category_ids.forEach((categoryId: Number) => {
+          categoryIds.push(categoryId)
         })
       }
     })
 
-    return { articles, categories }
+    categoriesJson?.categories?.forEach((category: Category) => {
+      const count = categoryIds.filter((categoryId: Number) => {
+        return category.id === categoryId
+      }).length
+      if (count === 0) return
+      if (params.slug === category.slug) {
+        title = category.title
+      }
+      categories.push({
+        title: category.title,
+        count,
+        url: `/articles/categories/${category.slug}`,
+      })
+    })
+
+    return { articles, categories, title }
   },
 })
 </script>

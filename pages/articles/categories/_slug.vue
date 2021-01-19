@@ -17,17 +17,15 @@ export default defineComponent({
     ArticlesProvider,
   },
   async asyncData({ params, $content }: Context) {
-    const res = await $content('articles').sortBy('createdDate', 'asc').fetch()
-    const articles = res.filter((article: Article) => {
-      if (!article.categories) return false
-      return article.categories.includes(params.slug)
-    })
+    const articles = await $content('articles')
+      .sortBy('createdDate', 'asc')
+      .fetch()
     const categories: Category[] = []
     const categoryIds: Number[] = []
     const categoriesJson = await $content('categories').fetch()
     let title = ''
 
-    res.forEach((article: IContentDocument) => {
+    articles.forEach((article: IContentDocument) => {
       if (article.category_ids) {
         article.category_ids.forEach((categoryId: Number) => {
           categoryIds.push(categoryId)
