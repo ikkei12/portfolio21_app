@@ -1,12 +1,16 @@
 <template>
   <div class="article-page">
-    <button class="open-menu__button" @click="setSpActive">
-      <Icon color="white" icon-name="menu" />
+    <button v-if="!isActive" class="open-menu__button" @click="openDrawer">
+      <Icon color="white" icon-name="loupe" />
     </button>
     <div
+      v-click-outside="closeDrawer"
       class="categories-list__wrapper"
-      :class="{ '--sp-active': isSpActive }"
+      :class="{ '--active': isActive }"
     >
+      <button v-if="isActive" class="open-menu__button" @click="closeDrawer">
+        <Icon color="white" icon-name="cross" />
+      </button>
       <ArticleCategoriesList :categories="categories" />
     </div>
     <div class="article-page__inner">
@@ -39,12 +43,15 @@ export default defineComponent({
     },
   },
   setup() {
-    const isSpActive = ref(false)
-    const setSpActive = () => {
-      isSpActive.value = !isSpActive.value
+    const isActive = ref(false)
+    const openDrawer = () => {
+      isActive.value = true
+    }
+    const closeDrawer = () => {
+      isActive.value = false
     }
 
-    return { isSpActive, setSpActive }
+    return { isActive, openDrawer, closeDrawer }
   },
 })
 </script>
@@ -65,16 +72,20 @@ export default defineComponent({
   }
 
   .categories-list__wrapper {
+    width: 0;
+    transition: 0.2s;
     position: absolute;
     z-index: 5;
     right: 0;
     top: 0;
-    width: 18%;
     height: 100%;
     background: #fefefe;
+    &.--active {
+      width: 20%;
+      transition: 0.4s;
+    }
   }
   .open-menu__button {
-    display: none;
     position: fixed;
     right: 16px;
     top: 70px;
@@ -87,10 +98,11 @@ export default defineComponent({
     justify-content: center;
     align-items: center;
     outline: none;
+    cursor: pointer;
   }
 }
 
-@include sp {
+@include pc {
   .article-page {
     padding-right: 0;
     .open-menu__button {
@@ -98,14 +110,6 @@ export default defineComponent({
     }
     .article-page__inner {
       width: 95%;
-    }
-    .categories-list__wrapper {
-      width: 0;
-      transition: 0.5s;
-      &.--sp-active {
-        width: 100%;
-        transition: 0.8s;
-      }
     }
   }
 }

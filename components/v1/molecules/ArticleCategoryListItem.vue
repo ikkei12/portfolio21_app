@@ -30,8 +30,11 @@ export default defineComponent({
     }
   }
   .category-item {
-    padding: 1vh 1vw;
-    border-bottom: 1px solid #efefef;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    border-bottom: 1px solid #0066660f;
     overflow-x: scroll;
     white-space: nowrap;
     &::-webkit-scrollbar {
