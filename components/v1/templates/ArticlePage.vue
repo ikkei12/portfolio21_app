@@ -3,6 +3,7 @@
     <button v-show="!isActive" class="menu__button --open" @click="openDrawer">
       <Icon color="white" icon-name="loupe" />
     </button>
+    <QiitaCardsGroup :qiita-articles="qiitaArticles" />
     <div
       v-click-outside="closeDrawer"
       class="categories-list__wrapper"
@@ -25,9 +26,16 @@ import ArticleCardsGroup from '@/components/v1/organisms/ArticleCardsGroup.vue'
 import Title from '@/components/v1/atoms/Title.vue'
 import ArticleCategoriesList from '@/components/v1/organisms/ArticleCategoriesList.vue'
 import Icon from '@/components/v1/atoms/Icon.vue'
+import QiitaCardsGroup from '@/components/v1/organisms/QiitaCardsGroup.vue'
 import { Article, ArticleCategoryItem } from '~/@types/Article'
 export default defineComponent({
-  components: { ArticleCardsGroup, Title, ArticleCategoriesList, Icon },
+  components: {
+    ArticleCardsGroup,
+    Title,
+    ArticleCategoriesList,
+    Icon,
+    QiitaCardsGroup,
+  },
   props: {
     articles: {
       type: Array as PropType<Article[]>,
