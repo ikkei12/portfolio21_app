@@ -4,3 +4,7 @@ declare type OGP = {
   url: string
   image: string
 }
+
+declare type QiitaArticle = OGP & {
+  likesCount: number
+}
