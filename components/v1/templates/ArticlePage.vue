@@ -45,11 +45,9 @@ export default defineComponent({
   setup() {
     const isActive = ref(false)
     const openDrawer = () => {
-      console.log('open')
       isActive.value = true
     }
     const closeDrawer = (e: Event) => {
-      console.log(isActive.value)
       if (!isActive.value && (e.target as HTMLElement).closest('.menu__button'))
         return
       isActive.value = false
