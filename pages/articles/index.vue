@@ -86,7 +86,7 @@ export default defineComponent({
         // 既存DBに保存されているURLだった場合
         const data: QiitaArticle | undefined = qiitaArticleRecords.find(
           (record) => {
-            return (record.url = qiita.url)
+            return record.id === qiita.id
           }
         )
         if (data) return qiitaArticlesArray.push(data)
@@ -111,7 +111,7 @@ export default defineComponent({
               return tag.name
             }),
             // OGP情報取得functionsから取得した値
-            title: res.data.ogp.title,
+            title: qiita.title,
             description: res.data.ogp.description,
             image: res.data.ogp.image,
             isShow: true,

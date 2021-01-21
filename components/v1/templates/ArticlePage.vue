@@ -3,7 +3,6 @@
     <button v-show="!isActive" class="menu__button --open" @click="openDrawer">
       <Icon color="white" icon-name="loupe" />
     </button>
-    <QiitaCardsGroup :qiita-articles="qiitaArticles" />
     <div
       v-click-outside="closeDrawer"
       class="categories-list__wrapper"
@@ -15,6 +14,7 @@
       <ArticleCategoriesList :categories="categories" />
     </div>
     <div class="article-page__inner">
+      <QiitaCardsGroup :qiita-articles="qiitaArticles" />
       <Title :title="`${title ? title : '最新'}の記事`" color="#AEDADA" />
       <ArticleCardsGroup :articles="articles" />
     </div>
@@ -72,7 +72,8 @@ export default defineComponent({
 <style lang="scss" scoped>
 .article-page {
   padding-top: 120px;
-  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 95%;
   height: 100%;
   min-height: 100vh;
