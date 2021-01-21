@@ -63,10 +63,9 @@ export default defineComponent({
 .article-page {
   padding-top: 120px;
   display: flex;
-  width: 100%;
+  width: 95%;
   height: 100%;
   min-height: 100vh;
-  padding-right: 18%;
   justify-content: center;
   position: relative;
   .article-page__inner {
