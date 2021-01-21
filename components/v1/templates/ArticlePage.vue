@@ -1,6 +1,6 @@
 <template>
   <div class="article-page">
-    <button v-if="!isActive" class="open-menu__button" @click="openDrawer">
+    <button v-show="!isActive" class="menu__button --open" @click="openDrawer">
       <Icon color="white" icon-name="loupe" />
     </button>
     <div
@@ -8,7 +8,7 @@
       class="categories-list__wrapper"
       :class="{ '--active': isActive }"
     >
-      <button v-if="isActive" class="open-menu__button" @click="closeDrawer">
+      <button class="menu__button --close" @click="closeDrawer">
         <Icon color="white" icon-name="cross" />
       </button>
       <ArticleCategoriesList :categories="categories" />
@@ -45,9 +45,13 @@ export default defineComponent({
   setup() {
     const isActive = ref(false)
     const openDrawer = () => {
+      console.log('open')
       isActive.value = true
     }
-    const closeDrawer = () => {
+    const closeDrawer = (e: Event) => {
+      console.log(isActive.value)
+      if (!isActive.value && (e.target as HTMLElement).closest('.menu__button'))
+        return
       isActive.value = false
     }
 
@@ -73,7 +77,7 @@ export default defineComponent({
 
   .categories-list__wrapper {
     width: 0;
-    transition: 0.2s;
+    transition: 0.4s;
     position: absolute;
     z-index: 5;
     right: 0;
@@ -85,16 +89,17 @@ export default defineComponent({
       transition: 0.4s;
     }
   }
-  .open-menu__button {
+  .menu__button {
     position: fixed;
-    right: 16px;
-    top: 70px;
+    display: flex;
+    right: 30px;
+    top: 90px;
     z-index: 6;
     background: $primary;
     border: 0;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     justify-content: center;
     align-items: center;
     outline: none;
@@ -102,11 +107,25 @@ export default defineComponent({
   }
 }
 
-@include pc {
+@include sp {
   .article-page {
     padding-right: 0;
-    .open-menu__button {
-      display: flex;
+    .menu__button {
+      right: 12px;
+      top: 70px;
+      width: 50px;
+      height: 50px;
+    }
+    .categories-list__wrapper {
+      .menu__button {
+        right: 12px;
+        top: 70px;
+        width: 50px;
+        height: 50px;
+      }
+      &.--active {
+        width: 100%;
+      }
     }
     .article-page__inner {
       width: 95%;
