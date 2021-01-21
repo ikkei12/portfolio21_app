@@ -63,9 +63,11 @@ export default defineComponent({
           await qiitaArticleRecords.push(doc.data() as QiitaArticle)
         })
       })
-    const existURLs = await qiitaArticleRecords.map((ogp: QiitaArticle) => {
-      return ogp.url
-    })
+    const existArticlesIDs = await qiitaArticleRecords.map(
+      (ogp: QiitaArticle) => {
+        return ogp.id
+      }
+    )
     const latestQiitaArticles = await $axios
       .get('https://qiita.com/api/v2/authenticated_user/items', {
         headers: {
@@ -78,9 +80,17 @@ export default defineComponent({
       .catch((e) => {
         console.log(e)
       })
-    const qiitaArticlesArray = reactive([])
+    const qiitaArticlesArray = reactive<QiitaArticle[]>([])
     latestQiitaArticles.forEach((qiita: QiitaArticleResponse) => {
-      if (existURLs.includes(qiita.url)) return
+      if (existArticlesIDs.includes(qiita.id)) {
+        // 既存DBに保存されているURLだった場合
+        const data: QiitaArticle | undefined = qiitaArticleRecords.find(
+          (record) => {
+            return (record.url = qiita.url)
+          }
+        )
+        if (data) return qiitaArticlesArray.push(data)
+      }
       $axios
         .post(
           'https://asia-northeast1-portfolio21-56e7e.cloudfunctions.net/getOgpInfo',
