@@ -58,23 +58,23 @@ export default defineComponent({
           await qiitaArticleRecords.push(doc.data() as QiitaArticle)
         })
       })
-    const existURLs = qiitaArticleRecords.map((ogp: QiitaArticle) => {
+    const existURLs = await qiitaArticleRecords.map((ogp: QiitaArticle) => {
       return ogp.url
     })
-    const latestOgps = await $axios
+    const latestQiitaArticles = await $axios
       .get('https://qiita.com/api/v2/authenticated_user/items', {
         headers: {
           Authorization: `Bearer ${process.env.QIITA_API_KEY}`,
         },
       })
-      .then((res) => {
-        return res.data
+      .then(async (res) => {
+        console.log(res)
+        return await res.data
       })
       .catch((e) => {
         console.log(e)
       })
-    const qiitaArticle: qiitaArticle = {}
-    latestOgps.forEach((qiita: QiitaArticle) => {
+    latestQiitaArticles.forEach((qiita: QiitaArticleResponse) => {
       if (existURLs.includes(qiita.url)) return
       $axios
         .post(
@@ -86,16 +86,28 @@ export default defineComponent({
             },
           }
         )
-        .then((res) => {
-          qiitaArticle.image = res.data.ogp.image
-          qiitaArticle.description = res.data.ogp.description
-          qiitaArticle.title = res.data.ogp.title
-          qiitaArticle.url = qiita.url
+        .then(async (res) => {
+          await firebase
+            .firestore()
+            .collection('qiita_articles')
+            .doc()
+            .set({
+              // qiitaAPIから取得した値
+              id: qiita.id,
+              url: qiita.url,
+              likesCount: qiita.likes_count,
+              tags: qiita.tags.map((tag: { name: string }) => {
+                return tag.name
+              }),
+              // OGP情報取得functionsから取得した値
+              title: res.data.ogp.title,
+              description: res.data.ogp.description,
+              image: res.data.ogp.image,
+              isShow: true,
+            })
         })
         .catch((e) => console.error(e))
     })
-
-    console.log(qiitaArticleRecords)
 
     return { articles, categories, title }
   },
