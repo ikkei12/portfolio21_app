@@ -69,6 +69,7 @@ export default {
     '@/plugins/vue-awesome-swiper',
     '@/plugins/vue-scrollto',
     '@/plugins/firebase',
+    '@/plugins/v-click-outside.ts',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
