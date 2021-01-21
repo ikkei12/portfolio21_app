@@ -1,13 +1,18 @@
 <template>
   <ArticlesProvider>
-    <ArticlePage :articles="articles" :categories="categories" :title="title" />
+    <ArticlePage
+      :articles="articles"
+      :categories="categories"
+      :title="title"
+      :qiita-articles="qiitaArticlesArray"
+    />
   </ArticlesProvider>
 </template>
 
 <script lang="ts">
 import { Context } from '@nuxt/types'
 import ArticlePage from '@/components/v1/templates/ArticlePage.vue'
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent, reactive } from '@vue/composition-api'
 import ArticlesProvider from '@/components/v1/providers/ArticlesProvider.vue'
 import firebase from 'firebase'
 import { Article, Category, CategoryContent } from '~/@types/Article'
@@ -68,12 +73,12 @@ export default defineComponent({
         },
       })
       .then(async (res) => {
-        console.log(res)
         return await res.data
       })
       .catch((e) => {
         console.log(e)
       })
+    const qiitaArticlesArray = reactive([])
     latestQiitaArticles.forEach((qiita: QiitaArticleResponse) => {
       if (existURLs.includes(qiita.url)) return
       $axios
@@ -87,29 +92,31 @@ export default defineComponent({
           }
         )
         .then(async (res) => {
+          const qiitaArticle = {
+            // qiitaAPIから取得した値
+            id: qiita.id,
+            url: qiita.url,
+            likesCount: qiita.likes_count,
+            tags: qiita.tags.map((tag: { name: string }) => {
+              return tag.name
+            }),
+            // OGP情報取得functionsから取得した値
+            title: res.data.ogp.title,
+            description: res.data.ogp.description,
+            image: res.data.ogp.image,
+            isShow: true,
+          }
           await firebase
             .firestore()
             .collection('qiita_articles')
             .doc()
-            .set({
-              // qiitaAPIから取得した値
-              id: qiita.id,
-              url: qiita.url,
-              likesCount: qiita.likes_count,
-              tags: qiita.tags.map((tag: { name: string }) => {
-                return tag.name
-              }),
-              // OGP情報取得functionsから取得した値
-              title: res.data.ogp.title,
-              description: res.data.ogp.description,
-              image: res.data.ogp.image,
-              isShow: true,
-            })
+            .set(qiitaArticle)
+          qiitaArticlesArray.push(qiitaArticle)
         })
         .catch((e) => console.error(e))
     })
 
-    return { articles, categories, title }
+    return { articles, categories, title, qiitaArticlesArray }
   },
 })
 </script>

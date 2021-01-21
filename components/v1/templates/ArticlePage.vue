@@ -41,6 +41,10 @@ export default defineComponent({
       type: String,
       default: '',
     },
+    qiitaArticles: {
+      type: Array as PropType<QiitaArticle[]>,
+      default: [],
+    },
   },
   setup() {
     const isActive = ref(false)
