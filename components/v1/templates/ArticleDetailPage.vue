@@ -71,8 +71,8 @@ export default defineComponent({
     font-weight: bold;
   }
   p {
-    line-height: 1.9;
-    letter-spacing: 2px;
+    font-size: 18px;
+    line-height: 36px;
     margin-bottom: 30px;
   }
   .info {
@@ -114,7 +114,8 @@ export default defineComponent({
       margin-bottom: 20px;
     }
     p {
-      line-height: 1.9;
+      font-size: 16px;
+      line-height: 30px;
       margin-bottom: 10px;
     }
     img {
