@@ -92,3 +92,5 @@ sw.*
 .firebase
 
 .runtimeconfig.json
+
+.env

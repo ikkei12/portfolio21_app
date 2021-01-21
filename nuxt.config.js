@@ -119,6 +119,7 @@ export default {
   env: {
     SITE_URL: process.env.SITE_URL,
     STORAGE_URL: process.env.STORAGE_URL,
+    QIITA_API_KEY: process.env.QIITA_API_KEY,
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
