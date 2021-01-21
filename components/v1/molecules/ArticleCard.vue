@@ -40,7 +40,6 @@ export default defineComponent({
   padding: 0 2%;
   margin-top: 50px;
   width: calc(100% / 3);
-
   @include tab {
     width: calc(100% / 2);
   }
@@ -52,6 +51,10 @@ export default defineComponent({
       .title {
         color: rgba(0, 0, 0, 0.737);
       }
+    }
+    .thumbnail {
+      filter: opacity(0.7);
+      transition: 0.4s;
     }
   }
 
