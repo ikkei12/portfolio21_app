@@ -20,3 +20,10 @@ export default defineComponent({
   },
 })
 </script>
+<style scoped lang="scss">
+.qiita-cards__group {
+  width: 100%;
+  overflow-x: scroll;
+  display: inline-flex;
+}
+</style>
