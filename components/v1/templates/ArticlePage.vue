@@ -86,12 +86,12 @@ export default defineComponent({
   padding-top: 120px;
   flex-direction: column;
   align-items: center;
-  width: 95%;
   height: 100%;
   min-height: 100vh;
   justify-content: center;
+  position: relative;
   .article-page__inner {
-    width: 90%;
+    width: 85%;
     padding: 0 2% 0 7%;
     margin-bottom: 200px;
   }

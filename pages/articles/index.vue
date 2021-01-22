@@ -70,7 +70,7 @@ export default defineComponent({
     // NOTE: データが既にDBに存在しているものについてもpostしている
     const createQiitaRecordToDB = () => {
       articlesFromQiitaAPI.forEach(
-        (latestQiitaArticle: QiitaArticleResponse) => {
+        (latestQiitaArticle: QiitaArticleAPIResponse) => {
           $axios
             .post(
               'https://asia-northeast1-portfolio21-56e7e.cloudfunctions.net/getOgpInfo',
@@ -125,7 +125,7 @@ export default defineComponent({
       .limit(6)
       .get()
       .then(async (querySnapshot) => {
-        await querySnapshot.forEach(async (doc, i) => {
+        await querySnapshot.forEach(async (doc: any) => {
           await qiitaArticlesArray.push(doc.data() as QiitaArticle)
         })
       })

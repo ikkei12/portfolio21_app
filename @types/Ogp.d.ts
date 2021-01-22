@@ -6,6 +6,10 @@ declare type OGP = {
 }
 
 declare type QiitaArticleAPIResponse = {
+  id: string
+  url: string
+  title: string
+  tags: { name: string }[]
   // eslint-disable-next-line camelcase
   likes_count?: number
 }
