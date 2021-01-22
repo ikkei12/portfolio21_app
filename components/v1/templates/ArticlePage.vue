@@ -12,13 +12,13 @@
       class="categories-list__wrapper"
       :class="{ '--active': isActive }"
     >
-      <button
+      <!-- <button
         v-show="isActive"
         class="menu__button --close"
         @click="closeDrawer"
       >
         <Icon color="white" icon-name="cross" />
-      </button>
+      </button> -->
       <ArticleCategoriesList :categories="categories" />
     </div>
     <div class="article-page__inner">
@@ -101,6 +101,7 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   height: 100%;
+  width: 100%;
   min-height: 100vh;
   justify-content: center;
   position: relative;
