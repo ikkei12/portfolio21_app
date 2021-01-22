@@ -33,6 +33,12 @@ export default defineComponent({
   padding: 0 2%;
   width: calc(100% / 3);
   margin-top: 50px;
+  @include tab {
+    width: calc(100% / 2);
+  }
+  @include sp {
+    width: calc(100% / 1);
+  }
   &:hover {
     .thumbnail {
       filter: opacity(0.7);
@@ -50,8 +56,8 @@ export default defineComponent({
     }
     .inner {
       min-height: 100px;
-      padding: 8px;
-      padding-bottom: 30px;
+      padding: 20px 12px;
+      padding-bottom: 35px;
       position: relative;
       p {
         font-size: 14px;
@@ -61,8 +67,8 @@ export default defineComponent({
         align-items: center;
         margin-top: 4px;
         position: absolute;
-        left: 8px;
-        bottom: 8px;
+        left: 12px;
+        bottom: 12px;
         .likes-count__text {
           margin-left: 5px;
         }

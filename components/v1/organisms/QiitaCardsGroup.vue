@@ -25,6 +25,6 @@ export default defineComponent({
   width: 90%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 </style>
