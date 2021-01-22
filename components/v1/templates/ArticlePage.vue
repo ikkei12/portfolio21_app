@@ -21,6 +21,9 @@
       <section class="qiita__section">
         <Title title="Qiita" color="#AEDADA" />
         <QiitaCardsGroup :qiita-articles="qiitaArticles" />
+        <a href="https://qiita.com/ikkei12" class="qiita-user__link">
+          <p>Qiitaの記事をもっと見る</p>
+        </a>
       </section>
     </div>
   </div>
@@ -89,12 +92,28 @@ export default defineComponent({
     padding: 0 2% 0 7%;
     margin-bottom: 200px;
   }
+  .article__section {
+    margin-bottom: 80px;
+  }
+  .qiita__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .qiita-user__link {
+      font-weight: bold;
+      color: $primary;
+      position: absolute;
+      bottom: -50px;
+      right: 50px;
+    }
+  }
 
   .categories-list__wrapper {
     width: 0;
     transition: 0.4s;
     position: absolute;
-    z-index: 5;
+    z-index: 6;
     right: 0;
     top: 0;
     height: 100%;

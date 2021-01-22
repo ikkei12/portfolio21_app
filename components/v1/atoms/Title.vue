@@ -20,6 +20,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .title__wrapper {
   padding: 8px 0 8px 16px;
+  width: 100%;
   font-weight: 100;
   position: sticky;
   top: 60px;

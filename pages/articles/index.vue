@@ -113,6 +113,7 @@ export default defineComponent({
     await firebase
       .firestore()
       .collection('qiita_articles')
+      .where('isShow', '==', true)
       .limit(6)
       .get()
       .then(async (querySnapshot) => {
