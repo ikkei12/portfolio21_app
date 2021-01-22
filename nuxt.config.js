@@ -70,6 +70,7 @@ export default {
     '@/plugins/vue-scrollto',
     '@/plugins/firebase',
     '@/plugins/v-click-outside.ts',
+    '@/plugins/dayjs.ts',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

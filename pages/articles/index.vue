@@ -87,6 +87,7 @@ export default defineComponent({
                 id: latestQiitaArticle.id,
                 url: latestQiitaArticle.url,
                 likesCount: latestQiitaArticle.likes_count,
+                createdAt: latestQiitaArticle.created_at,
                 tags: latestQiitaArticle.tags.map((tag: { name: string }) => {
                   return tag.name
                 }),
@@ -104,7 +105,6 @@ export default defineComponent({
                   .update(qiitaArticle)
               } catch (e) {
                 const target = Object.assign({ isActive: true }, qiitaArticle)
-                console.log(target)
                 await firebase
                   .firestore()
                   .collection('qiita_articles')

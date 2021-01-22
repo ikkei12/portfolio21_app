@@ -3,17 +3,20 @@
     <div class="qiita-card">
       <img :src="qiita.image" class="thumbnail" width="300" />
       <div class="inner">
-        <p>{{ qiita.title }}</p>
-        <div class="likes-count__wrapper">
-          <Icon icon-name="heart" color="#FF846B" :size="16" />
-          <p class="likes-count__text">{{ qiita.likesCount }}</p>
+        <div class="upper">
+          <p class="created-at">{{ createdAt }}</p>
+          <div class="likes-count__wrapper">
+            <Icon icon-name="heart" color="#FF846B" :size="16" />
+            <p class="likes-count__text">{{ qiita.likesCount }}</p>
+          </div>
         </div>
+        <p class="title">{{ qiita.title }}</p>
       </div>
     </div>
   </a>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from '@vue/composition-api'
+import { computed, defineComponent, PropType } from '@vue/composition-api'
 import Icon from '@/components/v1/atoms/Icon.vue'
 export default defineComponent({
   components: { Icon },
@@ -22,6 +25,15 @@ export default defineComponent({
       type: Object as PropType<QiitaArticle>,
       default: {},
     },
+  },
+  setup(props, context) {
+    const createdAt = computed(() => {
+      return context.root.context
+        .$dayjs(props.qiita.createdAt)
+        .format('YYYY-MM-DD')
+    })
+
+    return { createdAt }
   },
 })
 </script>
@@ -56,19 +68,24 @@ export default defineComponent({
     }
     .inner {
       min-height: 100px;
-      padding: 40px 12px 16px;
+      padding: 25px;
       position: relative;
-      p {
+      .title {
         font-size: 14px;
       }
-      .likes-count__wrapper {
+      .upper {
         display: flex;
-        align-items: center;
-        position: absolute;
-        right: 12px;
-        top: 12px;
-        .likes-count__text {
-          margin-left: 5px;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        .created-at {
+          color: grey;
+        }
+        .likes-count__wrapper {
+          display: flex;
+          align-items: center;
+          .likes-count__text {
+            margin-left: 5px;
+          }
         }
       }
     }
