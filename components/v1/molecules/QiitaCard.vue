@@ -31,7 +31,12 @@ export default defineComponent({
   color: black;
   display: block;
   margin: 0 2%;
-
+  &:hover {
+    .thumbnail {
+      filter: opacity(0.7);
+      transition: 0.4s;
+    }
+  }
   .qiita-card {
     background: white;
     width: 300px;

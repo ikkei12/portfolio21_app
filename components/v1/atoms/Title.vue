@@ -24,6 +24,7 @@ export default defineComponent({
   position: sticky;
   top: 60px;
   background: $body_bg;
+  z-index: 10;
   .title {
     font-size: 1.8rem;
   }

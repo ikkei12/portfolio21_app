@@ -53,22 +53,7 @@ export default defineComponent({
       })
     })
 
-    const qiitaArticleRecords: QiitaArticle[] = []
-    await firebase
-      .firestore()
-      .collection('qiita_articles')
-      .get()
-      .then(async (querySnapshot) => {
-        await querySnapshot.forEach(async (doc) => {
-          await qiitaArticleRecords.push(doc.data() as QiitaArticle)
-        })
-      })
-    const existArticlesIDs = await qiitaArticleRecords.map(
-      (ogp: QiitaArticle) => {
-        return ogp.id
-      }
-    )
-    const latestQiitaArticles = await $axios
+    const articlesFromQiitaAPI = await $axios
       .get('https://qiita.com/api/v2/authenticated_user/items', {
         headers: {
           Authorization: `Bearer ${process.env.QIITA_API_KEY}`,
@@ -81,50 +66,60 @@ export default defineComponent({
         console.log(e)
       })
     const qiitaArticlesArray = reactive<QiitaArticle[]>([])
-    latestQiitaArticles.forEach((qiita: QiitaArticleResponse) => {
-      if (existArticlesIDs.includes(qiita.id)) {
-        // 既存DBに保存されているURLだった場合
-        const data: QiitaArticle | undefined = qiitaArticleRecords.find(
-          (record) => {
-            return record.id === qiita.id
-          }
-        )
-        if (data) return qiitaArticlesArray.push(data)
-      }
-      $axios
-        .post(
-          'https://asia-northeast1-portfolio21-56e7e.cloudfunctions.net/getOgpInfo',
-          { url: qiita.url },
-          {
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          }
-        )
-        .then(async (res) => {
-          const qiitaArticle = {
-            // qiitaAPIから取得した値
-            id: qiita.id,
-            url: qiita.url,
-            likesCount: qiita.likes_count,
-            tags: qiita.tags.map((tag: { name: string }) => {
-              return tag.name
-            }),
-            // OGP情報取得functionsから取得した値
-            title: qiita.title,
-            description: res.data.ogp.description,
-            image: res.data.ogp.image,
-            isShow: true,
-          }
-          await firebase
-            .firestore()
-            .collection('qiita_articles')
-            .doc()
-            .set(qiitaArticle)
-          qiitaArticlesArray.push(qiitaArticle)
+
+    // NOTE: データが既にDBに存在しているものについてもpostしている
+    const createQiitaRecordToDB = () => {
+      articlesFromQiitaAPI.forEach(
+        (latestQiitaArticle: QiitaArticleResponse) => {
+          $axios
+            .post(
+              'https://asia-northeast1-portfolio21-56e7e.cloudfunctions.net/getOgpInfo',
+              { url: latestQiitaArticle.url },
+              {
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+              }
+            )
+            .then(async (res) => {
+              const qiitaArticle = {
+                // qiitaAPIから取得した値
+                id: latestQiitaArticle.id,
+                url: latestQiitaArticle.url,
+                likesCount: latestQiitaArticle.likes_count,
+                tags: latestQiitaArticle.tags.map((tag: { name: string }) => {
+                  return tag.name
+                }),
+                // OGP情報取得functionsから取得した値
+                title: latestQiitaArticle.title,
+                description: res.data.ogp.description,
+                image: res.data.ogp.image,
+                isShow: true,
+              }
+
+              // NOTE: データのあるものは上書きされる
+              await firebase
+                .firestore()
+                .collection('qiita_articles')
+                .doc(qiitaArticle.id)
+                .set(qiitaArticle)
+            })
+            .catch((e) => console.error(e))
+        }
+      )
+    }
+    createQiitaRecordToDB()
+
+    await firebase
+      .firestore()
+      .collection('qiita_articles')
+      .limit(6)
+      .get()
+      .then(async (querySnapshot) => {
+        await querySnapshot.forEach(async (doc, i) => {
+          await qiitaArticlesArray.push(doc.data() as QiitaArticle)
         })
-        .catch((e) => console.error(e))
-    })
+      })
 
     return { articles, categories, title, qiitaArticlesArray }
   },
