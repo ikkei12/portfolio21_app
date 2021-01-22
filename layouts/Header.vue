@@ -67,7 +67,7 @@ export default defineComponent({
   align-items: center;
   height: 60px;
   padding-right: 45px;
-  z-index: 6;
+  z-index: 10;
   background: $secondary;
   width: 100%;
   box-shadow: 0 0px 10px rgba(89, 89, 89, 0.072);

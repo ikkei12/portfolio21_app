@@ -8,7 +8,11 @@
       class="categories-list__wrapper"
       :class="{ '--active': isActive }"
     >
-      <button class="menu__button --close" @click="closeDrawer">
+      <button
+        v-show="isActive"
+        class="menu__button --close"
+        @click="closeDrawer"
+      >
         <Icon color="white" icon-name="cross" />
       </button>
       <ArticleCategoriesList :categories="categories" />
@@ -86,7 +90,6 @@ export default defineComponent({
   height: 100%;
   min-height: 100vh;
   justify-content: center;
-  position: relative;
   .article-page__inner {
     width: 90%;
     padding: 0 2% 0 7%;
