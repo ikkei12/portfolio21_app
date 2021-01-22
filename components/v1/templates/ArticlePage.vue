@@ -1,6 +1,10 @@
 <template>
   <div class="article-page">
-    <button v-show="!isActive" class="menu__button --open" @click="openDrawer">
+    <button
+      v-show="!isActive"
+      class="menu__button --open open-menu__button"
+      @click="openDrawer"
+    >
       <Icon color="white" icon-name="loupe" />
     </button>
     <div
@@ -22,7 +26,7 @@
         <Title :title="`${title ? title : '最新'}の記事`" color="#AEDADA" />
         <ArticleCardsGroup :articles="articles" />
       </section>
-      <section class="qiita__section">
+      <section v-if="pageType !== 'categories'" class="qiita__section">
         <Title title="Qiita" color="#AEDADA" />
         <QiitaCardsGroup :qiita-articles="qiitaArticles" />
         <a href="https://qiita.com/ikkei12" class="qiita-user__link">
@@ -63,7 +67,13 @@ export default defineComponent({
     },
     qiitaArticles: {
       type: Array as PropType<QiitaArticle[]>,
-      default: [],
+      default: () => {
+        return []
+      },
+    },
+    pageType: {
+      type: String,
+      default: '',
     },
   },
   setup() {
@@ -72,8 +82,12 @@ export default defineComponent({
       isActive.value = true
     }
     const closeDrawer = (e: Event) => {
-      if (!isActive.value && (e.target as HTMLElement).closest('.menu__button'))
+      if (
+        isActive.value &&
+        (e.target as HTMLElement).closest('.open-menu__button')
+      )
         return
+
       isActive.value = false
     }
 

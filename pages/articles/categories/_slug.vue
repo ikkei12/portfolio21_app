@@ -4,6 +4,7 @@
       :articles="filteredArticles"
       :categories="categories"
       :title="title"
+      page-type="categories"
     />
   </ArticlesProvider>
 </template>
