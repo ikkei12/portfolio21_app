@@ -14,8 +14,8 @@
         </div>
         <h4 class="title">
           {{
-            article.title.length > 33
-              ? `${article.title.substring(0, 33)}…`
+            article.title.length > 29
+              ? `${article.title.substring(0, 29)}…`
               : article.title
           }}
         </h4>

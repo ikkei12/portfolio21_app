@@ -68,8 +68,8 @@ export default defineComponent({
     const qiitaArticlesArray = reactive<QiitaArticle[]>([])
 
     // NOTE: データが既にDBに存在しているものについてもpostしている
-    const createQiitaRecordToDB = () => {
-      articlesFromQiitaAPI.forEach(
+    const createQiitaRecordToDB = async () => {
+      await articlesFromQiitaAPI.forEach(
         (latestQiitaArticle: QiitaArticleAPIResponse) => {
           $axios
             .post(

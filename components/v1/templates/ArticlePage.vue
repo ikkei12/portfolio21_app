@@ -91,8 +91,8 @@ export default defineComponent({
   justify-content: center;
   position: relative;
   .article-page__inner {
-    width: 85%;
-    padding: 0 2% 0 7%;
+    width: 100%;
+    padding: 0 10%;
     margin-bottom: 200px;
   }
   .article__section {
