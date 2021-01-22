@@ -30,7 +30,9 @@ export default defineComponent({
   text-decoration: none;
   color: black;
   display: block;
-  margin: 0 2%;
+  padding: 0 2%;
+  width: calc(100% / 3);
+  margin-top: 50px;
   &:hover {
     .thumbnail {
       filter: opacity(0.7);
@@ -39,8 +41,8 @@ export default defineComponent({
   }
   .qiita-card {
     background: white;
-    width: 300px;
     border-radius: 8px;
+    width: 100%;
     .thumbnail {
       width: 100%;
       border-top-left-radius: 8px;

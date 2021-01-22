@@ -19,12 +19,12 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .title__wrapper {
-  padding: 8px 0;
+  padding: 8px 0 8px 16px;
   font-weight: 100;
   position: sticky;
   top: 60px;
   background: $body_bg;
-  z-index: 10;
+  z-index: 5;
   .title {
     font-size: 1.8rem;
   }

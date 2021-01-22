@@ -23,7 +23,8 @@ export default defineComponent({
 <style scoped lang="scss">
 .qiita-cards__group {
   width: 90%;
-  overflow-x: scroll;
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 </style>
