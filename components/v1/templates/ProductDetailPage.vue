@@ -37,9 +37,6 @@
         />
       </div>
       <div class="descriptions-group">
-        <p class="descriptions-group__created-date">
-          作成日: {{ product.createdDate }}
-        </p>
         <p
           v-for="(content, i) in product.contents"
           :key="`desc-${i}`"
@@ -162,13 +159,13 @@ export default defineComponent({
     }
   }
   .descriptions-group {
-    padding: 0 10%;
     margin-top: 5%;
     p {
-      font-size: 16px;
+      font-size: 18px;
     }
     .description {
       white-space: pre-line;
+      line-height: 30px;
     }
     .product-url__wrapper {
       display: flex;

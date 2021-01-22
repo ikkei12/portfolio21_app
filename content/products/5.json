@@ -5,19 +5,19 @@
   "createdDate": "2020/09/09",
   "contents": [
     {
-      "description": "React/Go/AWSの勉強を兼ねて作成しました\nホーム画面ではthree.jsを使用しています",
+      "description": "React/Go/AWSの勉強を兼ねて作成しました。ホーム画面ではthree.jsを使用しています。",
       "image": {
         "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio20/1.png"
       }
     },
     {
-      "description": "Githubへのcontributionや今までの成果物を確認できます\n今後は撮影した写真のフォトギャラリーや管理画面の作成、アニメーションの充実を含めたUIの改善を進めていきたいです",
+      "description": "Githubへのcontributionや今までの成果物を確認できます。\n今後は撮影した写真のフォトギャラリーや管理画面の作成、アニメーションの充実を含めたUIの改善を進めていきたいです。",
       "image": {
         "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio20/2.png"
       }
     },
     {
-      "description": "フロントはReact×TypeScript、APIとしてGo言語(Gin)、インフラはEC2/S3\nアプリをパブリックサブネット、データベースをプライベートサブネットに配置\nローカルではDockerComposeを使用しています",
+      "description": "フロントはReact×TypeScript、APIとしてGo言語(Gin)、インフラはEC2/S3。\nアプリをパブリックサブネット、データベースをプライベートサブネットに配置。\nローカルではDockerComposeを使用しています。",
       "image": {
         "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio20/3.png"
       }
