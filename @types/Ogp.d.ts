@@ -13,6 +13,6 @@ declare type QiitaArticleAPIResponse = {
 declare type QiitaArticle = OGP & {
   id?: string
   likesCount?: number
-  isShow: boolean
+  isActive: boolean
   tags?: string[]
 }

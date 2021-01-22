@@ -94,15 +94,23 @@ export default defineComponent({
                 title: latestQiitaArticle.title,
                 description: res.data.ogp.description,
                 image: res.data.ogp.image,
-                isShow: true,
               }
 
-              // NOTE: データのあるものは上書きされる
-              await firebase
-                .firestore()
-                .collection('qiita_articles')
-                .doc(qiitaArticle.id)
-                .set(qiitaArticle)
+              try {
+                await firebase
+                  .firestore()
+                  .collection('qiita_articles')
+                  .doc(qiitaArticle.id)
+                  .update(qiitaArticle)
+              } catch (e) {
+                const target = Object.assign({ isActive: true }, qiitaArticle)
+                console.log(target)
+                await firebase
+                  .firestore()
+                  .collection('qiita_articles')
+                  .doc(qiitaArticle.id)
+                  .set(target)
+              }
             })
             .catch((e) => console.error(e))
         }
@@ -113,7 +121,7 @@ export default defineComponent({
     await firebase
       .firestore()
       .collection('qiita_articles')
-      .where('isShow', '==', true)
+      .where('isActive', '==', true)
       .limit(6)
       .get()
       .then(async (querySnapshot) => {

@@ -1,11 +1,11 @@
 <template>
-  <a v-if="qiita.isShow" :href="qiita.url" class="qiita-card__link">
+  <a v-if="qiita.isActive" :href="qiita.url" class="qiita-card__link">
     <div class="qiita-card">
       <img :src="qiita.image" class="thumbnail" width="300" />
       <div class="inner">
         <p>{{ qiita.title }}</p>
         <div class="likes-count__wrapper">
-          <Icon icon-name="heart" color="#FF846B" size="16" />
+          <Icon icon-name="heart" color="#FF846B" :size="16" />
           <p class="likes-count__text">{{ qiita.likesCount }}</p>
         </div>
       </div>
