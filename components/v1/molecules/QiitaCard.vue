@@ -5,7 +5,7 @@
       <div class="inner">
         <p>{{ qiita.title }}</p>
         <div class="likes-count__wrapper">
-          <Icon icon-name="heart" color="#FF846B" />
+          <Icon icon-name="heart" color="#FF846B" size="16" />
           <p class="likes-count__text">{{ qiita.likesCount }}</p>
         </div>
       </div>
@@ -49,8 +49,10 @@ export default defineComponent({
       border-top-right-radius: 8px;
     }
     .inner {
-      height: 100px;
+      min-height: 100px;
       padding: 8px;
+      padding-bottom: 30px;
+      position: relative;
       p {
         font-size: 14px;
       }
@@ -58,6 +60,9 @@ export default defineComponent({
         display: flex;
         align-items: center;
         margin-top: 4px;
+        position: absolute;
+        left: 8px;
+        bottom: 8px;
         .likes-count__text {
           margin-left: 5px;
         }
