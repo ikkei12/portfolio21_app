@@ -56,8 +56,7 @@ export default defineComponent({
     }
     .inner {
       min-height: 100px;
-      padding: 20px 12px;
-      padding-bottom: 35px;
+      padding: 40px 12px 16px;
       position: relative;
       p {
         font-size: 14px;
@@ -65,10 +64,9 @@ export default defineComponent({
       .likes-count__wrapper {
         display: flex;
         align-items: center;
-        margin-top: 4px;
         position: absolute;
-        left: 12px;
-        bottom: 12px;
+        right: 12px;
+        top: 12px;
         .likes-count__text {
           margin-left: 5px;
         }
