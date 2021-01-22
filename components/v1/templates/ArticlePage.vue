@@ -14,9 +14,14 @@
       <ArticleCategoriesList :categories="categories" />
     </div>
     <div class="article-page__inner">
-      <QiitaCardsGroup :qiita-articles="qiitaArticles" />
-      <Title :title="`${title ? title : '最新'}の記事`" color="#AEDADA" />
-      <ArticleCardsGroup :articles="articles" />
+      <section class="article__section">
+        <Title :title="`${title ? title : '最新'}の記事`" color="#AEDADA" />
+        <ArticleCardsGroup :articles="articles" />
+      </section>
+      <section class="qiita__section">
+        <Title title="Qiita" color="#AEDADA" />
+        <QiitaCardsGroup :qiita-articles="qiitaArticles" />
+      </section>
     </div>
   </div>
 </template>

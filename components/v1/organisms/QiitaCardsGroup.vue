@@ -22,7 +22,7 @@ export default defineComponent({
 </script>
 <style scoped lang="scss">
 .qiita-cards__group {
-  width: 100%;
+  width: 90%;
   overflow-x: scroll;
   display: inline-flex;
 }
