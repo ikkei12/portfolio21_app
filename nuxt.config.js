@@ -111,7 +111,6 @@ export default {
   dayjs: {
     locales: ['en', 'ja'],
     defaultLocale: 'ja',
-    defaultTimeZone: 'Asia/Tokyo',
   },
   dotenv: {
     filename: envPath,

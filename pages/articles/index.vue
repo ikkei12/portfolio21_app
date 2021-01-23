@@ -63,7 +63,7 @@ export default defineComponent({
         return await res.data
       })
       .catch((e) => {
-        console.log(e)
+        console.error(e)
       })
     const qiitaArticlesArray = reactive<QiitaArticle[]>([])
 
