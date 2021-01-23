@@ -31,6 +31,7 @@
       "@nuxt/content",
       "@nuxtjs/axios",
       "@types/swiper",
+      "@nuxtjs/dayjs"
     ]
   },
   "exclude": [

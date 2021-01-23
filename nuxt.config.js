@@ -70,7 +70,6 @@ export default {
     '@/plugins/vue-scrollto',
     '@/plugins/firebase',
     '@/plugins/v-click-outside.ts',
-    '@/plugins/dayjs.ts',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -112,6 +111,7 @@ export default {
   dayjs: {
     locales: ['en', 'ja'],
     defaultLocale: 'ja',
+    defaultTimeZone: 'Asia/Tokyo',
   },
   dotenv: {
     filename: envPath,

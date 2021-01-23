@@ -27,10 +27,9 @@ export default defineComponent({
     },
   },
   setup(props, context) {
+    console.log(context)
     const createdAt = computed(() => {
-      return context.root.context
-        .$dayjs(props.qiita.createdAt)
-        .format('YYYY-MM-DD')
+      return context.root.$dayjs(props.qiita.createdAt).format('YYYY-MM-DD')
     })
 
     return { createdAt }
