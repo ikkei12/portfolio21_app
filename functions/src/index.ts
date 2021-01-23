@@ -77,7 +77,7 @@ export const createOgpImageAndSave = functions.https.onRequest(
         // 背景画像の描画
         const baseImage = await loadImage(baseImagePath)
         ctx.drawImage(baseImage, 0, 0, W, H)
-        const fontSize = 46
+        const fontSize = 50
         const isAlphabetOrNumber = (str: string) => {
           const ratz = /[a-z]/
           const rAtZ = /[A-Z]/

@@ -41,7 +41,6 @@ export default defineComponent({
     text-decoration: none;
     color: #333;
     display: block;
-    margin: 60px 0;
     width: 100%;
     &.--disabled {
       pointer-events: none;
