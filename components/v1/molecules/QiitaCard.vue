@@ -1,5 +1,11 @@
 <template>
-  <a v-if="qiita.isActive" :href="qiita.url" class="qiita-card__link">
+  <a
+    v-if="qiita.isActive"
+    :href="qiita.url"
+    class="qiita-card__link"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <div class="qiita-card">
       <img :src="qiita.image" class="thumbnail" width="300" />
       <div class="inner">
