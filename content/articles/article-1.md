@@ -38,9 +38,12 @@ Jamstackなポートフォリオが出来上がりました(当サイト)
 気づけば毎年ポートフォリオを作っていてこれで3つ目です。。  
 今回はサーバーレスで管理のし易さとパフォーマンスを意識したものになりました。
 
-過去のポートフォリオはこちら
-<OgpCard :ogpindex="0" :ogps="ogps"></OgpCard>
+過去のポートフォリオはこちら  
+
+<OgpCard :ogpindex="0" :ogps="ogps"></OgpCard>  
+<br/>
 <OgpCard :ogpindex="1" :ogps="ogps"></OgpCard>
+<br/>
 
 ## 使用した技術
 **FW:** Nuxt.js  
@@ -102,8 +105,10 @@ Jamstackなポートフォリオが出来上がりました(当サイト)
 　この組み合わせは設定もめちゃくちゃ楽なので、短い期間での個人開発ではかなり使えると思います。    
 
 以前Qiitaの記事にしました。  
+
 <OgpCard :ogpindex="2" :ogps="ogps"></OgpCard>
-　
+<br/>
+
 
 <br/>
 
