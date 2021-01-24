@@ -11,6 +11,9 @@
     ogps: 
         - {title:"", description:"", image:""}
 ---
+<!-- ogpURLsとindexを合わせる
+<OgpCard :ogpindex="0" :ogps="ogps"></OgpCard> -->
+
 # タイトル
 
 <div class="info">

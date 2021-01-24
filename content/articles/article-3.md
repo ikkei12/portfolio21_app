@@ -1,0 +1,136 @@
+---
+    id: 3
+    title: 2021年にやりたい事
+    description: 2021年にやりたい事を書きました。年末に振り返る用。
+    thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-3.png?authuser=1
+    createdDate: "2021-01-24"
+    category_ids: 
+        - 51
+    twitter: 1keiuu
+    ogpURLs: 
+        - https://speakerdeck.com/twada/write-code-every-day
+        - https://www.amazon.co.jp/%E4%BD%93%E7%B3%BB%E7%9A%84%E3%81%AB%E5%AD%A6%E3%81%B6-%E5%AE%89%E5%85%A8%E3%81%AAWeb%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9-%E8%84%86%E5%BC%B1%E6%80%A7%E3%81%8C%E7%94%9F%E3%81%BE%E3%82%8C%E3%82%8B%E5%8E%9F%E7%90%86%E3%81%A8%E5%AF%BE%E7%AD%96%E3%81%AE%E5%AE%9F%E8%B7%B5-%E5%BE%B3%E4%B8%B8-%E6%B5%A9/dp/4797361190
+        - https://recursionist.io/
+        - https://github.com/nuxt/content
+    ogps: 
+        - {title:"", description:"", image:""}
+---
+# 2021年にやりたい事
+
+<div class="info">
+    <div class="info__inner">
+        <categorychips :chips="categories"></categorychips>
+        <div class="created-date">
+            <Icon iconName="calendar"></Icon>
+            <p>2021-01-24</p>
+        </div>
+    </div>
+    <div class="reading-time --sp">
+        <Icon  iconName="clock"></Icon>
+        <p id="readingTimeSp"></p>
+    </div>
+</div>
+
+<img src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-3.png?authuser=1" class="thumbnail" alt="thumbnail" >
+
+## はじめに
+３週間遅れだけど、少しだけ落ち着いたので今年やりたい事を書いていこうと思います。  
+自分で年末に振り返る用です。
+
+今年は何かの言語、FWに固執するんじゃなくてエンジニアとしての総合的な力をつけたいですね。  
+もちろんモダンフロントエンドはある程度追っていきたいけど、業務で直接的には関わる事が少ない所とかを就職する前に勉強しておきたい。  
+
+<br/>
+
+## 今年やりたい事  
+<br/>
+
+### 毎日コードをかく (Write Code Every Day)  
+
+Write Code Every Dayについては「テスト駆動開発」で有名な[@t_wada](https://twitter.com/t_wada?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)さんが分かりやすく纏めてくれています。
+
+<OgpCard :ogpindex="0" :ogps="ogps"></OgpCard>  
+<br/>
+
+jQuerryの作者、John Resigは「バックグラウンド処理」の効果が得られたと言っています。
+
+> 散歩中、シャワー中、常にコードのことをバックグラウンド で考えるようになり、良いアイデアが浮かぶようになった
+
+この状態になれたら最強ですね、、、
+
+
+### LeetCodeの問題を1日1問解く  
+
+Write Code Every Dayと合わせて進めていきたい所。  
+日頃から思ってる事だし就活を通じて痛感したけど、やっぱりアルゴリズム系のコーディングが弱いなと感じました。  
+
+LeetCodeにした理由は、Discussion出来る場があって色んな解法を知れるのと、少しは英語の読解力向上に繋がるかなと思ったからです。  
+
+ここら辺もGithubの草みたいに記録が確認できる仕組みがあればいいなあ。  
+
+<br/>
+
+### 技術書を1ヶ月に一冊以上読む  
+
+去年末から書いてばっかりだからインプットを増やしていきたい。  
+取り敢えずwebセキュリティのやつ読む。  
+
+<OgpCard :ogpindex="1" :ogps="ogps"></OgpCard>
+<br/>
+
+あとは就職してからだとなかなか勉強する時間が取れなさそうだから、よりコンピュータサイエンス色の強い本(?)を読んでいきたい。  
+「プログラムはなぜ動くのか」とか。  
+
+<br/>
+
+### コンピュータサイエンスの基礎を勉強する
+
+実務ですぐには役に立たないけど、長い目で見たエンジニア生活に影響してくるような知識を勉強していきたい。  
+一個前で書いたような技術書はもちろん読む。  
+
+加えてRecursionとかやっていきたい。  
+
+<OgpCard :ogpindex="2" :ogps="ogps"></OgpCard>
+<br/>
+
+<br/>  
+  
+  
+## 努力目標  
+
+絶対にやってやるっていう気持ちでやると空回りしそうなんで、良いタイミングがきたらやるやつ。
+
+### OSSにコミットする  
+  コミットするまではいかなくてもコードを読む機会は増やしていきたい。  
+まずはJS製のライブラリとかですかね。  
+nuxt/contentはこのブログでも使ってるし規模も丁度良さそう。
+
+<OgpCard :ogpindex="3" :ogps="ogps"></OgpCard>
+<br/>  
+
+### アウトプットを増やす  
+
+勉強会とか、ブログとか。  
+ただ自分の場合はアウトプット意識しすぎて時間かけすぎる所があるから気楽にやる。  
+もしくは期限を設けるとか工夫が必要だなと去年感じました。  
+あくまでインプットとコード書くのが前提で。  
+
+## その他生活面  
+
+<br/>  
+
+### 運動する  
+コロナ禍で全身の筋力が衰えまくっているのを実感している今日この頃。  
+長年始めたいと言っているキックボクシングを今年こそは、、、  
+
+### 貯金をする  
+来年から社会人にもなるし、そろそろ株を買いたいと言うのもある。  
+働くぞ、、、！  
+
+## まとめ
+色々書いたけど年末には短期的な目標は変わってるだろうし、出来るだけ期間を分けて見直していきたい。  
+1ヶ月に1回設定した目標が達成できているかの確認、3ヶ月に1回目標の見直し的な。  
+
+何より2021年最大の目標はPS5を買う事。  
+以上。
+
