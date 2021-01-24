@@ -147,7 +147,7 @@ export default defineComponent({
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 3% 5%;
+      padding: 5% 5%;
 
       .swiper-slide__img {
         width: 100%;

@@ -73,8 +73,6 @@ export default defineComponent({
     padding: 5rem 0;
     &::-webkit-scrollbar {
       display: none;
-      // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
-      // width: 8px;
     }
     &::-webkit-scrollbar-thumb {
       background-color: rgba(212, 212, 212, 0.5);

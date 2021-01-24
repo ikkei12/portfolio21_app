@@ -10,13 +10,15 @@
       <div class="ogp-card">
         <img
           v-lazy-load
-          :src="ogps[ogpindex].image"
+          :src="ogps[ogpindex].image ? ogps[ogpindex].image : '/lazy_thin.png'"
           class="image"
           alt="ogp thumbnail"
         />
         <div class="ogp-card__inner">
           <h3 class="ogp-card__title">{{ ogps[ogpindex].title }}</h3>
-          <p class="ogp-card__description">{{ ogps[ogpindex].description }}</p>
+          <p v-show="ogps[ogpindex].description" class="ogp-card__description">
+            {{ ogps[ogpindex].description }}
+          </p>
         </div>
       </div>
     </a>

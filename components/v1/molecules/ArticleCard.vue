@@ -1,11 +1,7 @@
 <template>
   <article class="article-card">
     <nuxt-link :to="'/articles/' + article.slug" class="article-card__inner">
-      <img
-        :src="article.thumbnail ? article.thumbnail : '/lazy_thin.png'"
-        class="thumbnail"
-        alt="thumbnail"
-      />
+      <img :src="article.thumbnail" class="thumbnail" alt="thumbnail" />
       <div class="card__inner">
         <div class="card__upper">
           <p class="createdAt">{{ article.createdDate }}</p>
