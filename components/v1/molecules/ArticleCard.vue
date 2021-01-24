@@ -2,12 +2,6 @@
   <article class="article-card">
     <nuxt-link :to="'/articles/' + article.slug" class="article-card__inner">
       <img :src="article.thumbnail" class="thumbnail" alt="thumbnail" />
-      <img
-        src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1"
-        class="thumbnail"
-        alt="thumbnail"
-      />
-
       <div class="card__inner">
         <div class="card__upper">
           <p class="createdAt">{{ article.createdDate }}</p>
