@@ -8,41 +8,39 @@
     </div>
 
     <ContentsTable :article="article" />
-    <ReadingTimeCard :reading-time="readingTime" />
+    <!-- <ReadingTimeCard :reading-time="readingTime" /> -->
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, PropType, onMounted } from '@vue/composition-api'
+import { defineComponent, PropType } from '@vue/composition-api'
 import { IContentDocument } from '@nuxt/content/types/content'
 import ContentPagination from '@/components/v1/organisms/ContentPagination.vue'
 import ContentsTable from '@/components/v1/organisms/ContentsTable.vue'
-import ReadingTimeCard from '@/components/v1/molecules/ReadingTimeCard.vue'
 
 export default defineComponent({
   name: 'ChipGroup',
   components: {
     ContentPagination,
     ContentsTable,
-    ReadingTimeCard,
   },
   props: {
     article: { type: Object as PropType<IContentDocument> },
     prev: { type: Object as PropType<IContentDocument> },
     next: { type: Object as PropType<IContentDocument> },
   },
-  setup(props) {
-    const readingTime = props.article?.readingTime
-      ? props.article?.readingTime
-      : 0
+  // setup(props) {
+  //   const readingTime = props.article?.readingTime
+  //     ? props.article?.readingTime
+  //     : 0
 
-    onMounted(() => {
-      const readingTimeSp = document.getElementById('readingTimeSp')
-      if (!readingTimeSp) return
-      readingTimeSp.textContent = Math.round(readingTime / 1000) + 'min'
-    })
+  //   onMounted(() => {
+  //     const readingTimeSp = document.getElementById('readingTimeSp')
+  //     if (!readingTimeSp) return
+  //     readingTimeSp.textContent = Math.round(readingTime / 1000) + 'min'
+  //   })
 
-    return { readingTime }
-  },
+  //   return { readingTime }
+  // },
 })
 </script>
 <style scoped lang="scss">
