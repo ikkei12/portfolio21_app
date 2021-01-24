@@ -1,7 +1,7 @@
 ---
     id: 3
-    title: 2021年にやりたい事
-    description: 2021年にやりたい事を書きました。年末に振り返る用。
+    title: 2021年にやる事
+    description: 2021年にやる事を書きました。年末に振り返る用。
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-3.png?authuser=1
     createdDate: "2021-01-24"
     category_ids: 
@@ -15,7 +15,7 @@
     ogps: 
         - {title:"", description:"", image:""}
 ---
-# 2021年にやりたい事
+# 2021年にやる事
 
 <div class="info">
     <div class="info__inner">
