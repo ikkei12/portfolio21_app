@@ -8,7 +8,7 @@
     </div>
 
     <ContentsTable :article="article" />
-    <!-- <ReadingTimeCard :reading-time="readingTime" /> -->
+    <ReadingTimeCard :reading-time="readingTime" />
   </div>
 </template>
 <script lang="ts">
