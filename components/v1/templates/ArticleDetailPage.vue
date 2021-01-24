@@ -106,6 +106,13 @@ export default defineComponent({
     width: 100%;
     margin-bottom: 80px;
   }
+  blockquote {
+    padding: 10px;
+    p {
+      border-left: 3px solid lightgrey;
+      padding-left: 12px;
+    }
+  }
   @include sp {
     h1,
     h2,
@@ -125,22 +132,6 @@ export default defineComponent({
       position: absolute;
       top: 100%;
     }
-
-    .info {
-      margin-bottom: 20px;
-      .reading-time {
-        justify-content: flex-end;
-        &.--sp {
-          display: flex;
-          align-items: center;
-          p {
-            margin-left: 4px;
-            margin-bottom: 0;
-            color: #333;
-          }
-        }
-      }
-    }
   }
 }
 @include tab {
@@ -156,6 +147,27 @@ export default defineComponent({
     }
     .reading-time__card {
       display: none;
+    }
+  }
+  ::v-deep .nuxt-content {
+    .info {
+      margin-bottom: 20px;
+      .reading-time {
+        justify-content: flex-end;
+        &.--sp {
+          display: flex;
+          align-items: center;
+          p {
+            margin-left: 4px;
+            margin-bottom: 0;
+            color: #333;
+          }
+        }
+      }
+    }
+    .created-date {
+      position: absolute;
+      top: 100%;
     }
   }
 }
