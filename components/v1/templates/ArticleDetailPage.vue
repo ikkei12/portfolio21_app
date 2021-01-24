@@ -12,7 +12,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from '@vue/composition-api'
+import { defineComponent, PropType, onMounted } from '@vue/composition-api'
 import { IContentDocument } from '@nuxt/content/types/content'
 import ContentPagination from '@/components/v1/organisms/ContentPagination.vue'
 import ContentsTable from '@/components/v1/organisms/ContentsTable.vue'
@@ -28,19 +28,19 @@ export default defineComponent({
     prev: { type: Object as PropType<IContentDocument> },
     next: { type: Object as PropType<IContentDocument> },
   },
-  // setup(props) {
-  //   const readingTime = props.article?.readingTime
-  //     ? props.article?.readingTime
-  //     : 0
+  setup(props) {
+    const readingTime = props.article?.readingTime
+      ? props.article?.readingTime
+      : 0
 
-  //   onMounted(() => {
-  //     const readingTimeSp = document.getElementById('readingTimeSp')
-  //     if (!readingTimeSp) return
-  //     readingTimeSp.textContent = Math.round(readingTime / 1000) + 'min'
-  //   })
+    onMounted(() => {
+      const readingTimeSp = document.getElementById('readingTimeSp')
+      if (!readingTimeSp) return
+      readingTimeSp.textContent = Math.round(readingTime / 1000) + 'min'
+    })
 
-  //   return { readingTime }
-  // },
+    return { readingTime }
+  },
 })
 </script>
 <style scoped lang="scss">
