@@ -117,7 +117,7 @@ export default {
   },
   // NOTE: Firebase Hostingではenvが設定できない(?)のでfunctions等を利用する必要がある
   env: {
-    SITE_URL: process.env.SITE_URL,
+    SITE_URL: 'https://1k-cove.com',
     STORAGE_URL: process.env.STORAGE_URL,
     QIITA_API_KEY: process.env.QIITA_API_KEY,
   },
