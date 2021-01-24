@@ -89,27 +89,31 @@ export const createOgpImageAndSave = functions.https.onRequest(
           let i = 0
           let letterCount = 0
           const countPerLine = 18
+          // NOTE: 1文字で何カウント使うかどうか。減らした分だけ一行に多く詰め込める。
+          const alphabetOrNumberLetterSize = 1
+          const japaneseLetterSize = 1
+
           text.split('').forEach((letter) => {
             if (isAlphabetOrNumber(letter)) {
-              if (letterCount + 0.5 > countPerLine) {
-                titleLines[i + 1] = letter
+              if (letterCount + alphabetOrNumberLetterSize > countPerLine) {
+                titleLines[i + alphabetOrNumberLetterSize] = letter
                 letterCount = 0
-                i += 1
+                i += alphabetOrNumberLetterSize
                 return
               } else {
                 titleLines[i] += letter
               }
-              letterCount += 0.5
+              letterCount += alphabetOrNumberLetterSize
             } else {
-              if (letterCount + 1 > countPerLine) {
-                titleLines[i + 1] = letter
+              if (letterCount + japaneseLetterSize > countPerLine) {
+                titleLines[i + japaneseLetterSize] = letter
                 letterCount = 0
-                i += 1
+                i += japaneseLetterSize
                 return
               } else {
                 titleLines[i] += letter
               }
-              letterCount += 1
+              letterCount += japaneseLetterSize
             }
           })
           return titleLines
