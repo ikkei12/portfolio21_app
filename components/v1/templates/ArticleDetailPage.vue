@@ -2,7 +2,7 @@
   <div class="article-detail">
     <div class="article-detail__inner">
       <div class="article-detail__content">
-        <!-- <nuxt-content :document="article" /> -->
+        <nuxt-content :document="article" />
       </div>
       <ContentPagination :next="next" :prev="prev" />
     </div>
