@@ -10,6 +10,7 @@
           class="link-item"
         >
           <NuxtLink
+            v-if="link.depth == 2"
             v-scroll-to="{
               el: `#${link.text}`,
               onStart: changeActiveLink,
@@ -17,6 +18,7 @@
             to="#"
             >{{ link.text }}</NuxtLink
           >
+          <p v-else>{{ `・${link.text}` }}</p>
         </li>
       </ul>
     </Card>
@@ -67,18 +69,24 @@ export default defineComponent({
     li {
       list-style: circle;
       margin-bottom: 3px;
-      &.--disabled {
-        display: none;
-      }
+      font-weight: bold;
+      color: grey;
+      font-size: 12px;
       a {
-        color: grey;
         text-decoration: none;
-        font-size: 12px;
+        color: grey;
+      }
+      &.--disabled {
+        list-style-type: none;
+        font-weight: unset;
+        a {
+          cursor: text;
+        }
       }
       a {
         &.--active {
           font-weight: bold;
-          color: #333;
+          color: $primary;
         }
       }
     }
