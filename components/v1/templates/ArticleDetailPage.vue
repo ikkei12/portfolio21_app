@@ -111,6 +111,11 @@ export default defineComponent({
       padding-left: 12px;
     }
   }
+  .sns-link__group {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
   @include sp {
     h1,
     h2,
@@ -155,6 +160,7 @@ export default defineComponent({
         &.--sp {
           display: flex;
           align-items: center;
+          margin-bottom: 8px;
           p {
             margin-left: 4px;
             margin-bottom: 0;
