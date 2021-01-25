@@ -1,10 +1,10 @@
 <template>
   <div class="profile-page">
     <div class="profile-page__inner">
-      <div class="card__wrapper --info">
+      <section class="top-view__wrapper">
         <ProfileInformationCard class="profile-page__card" />
-      </div>
-      <div class="card__wrapper">
+      </section>
+      <section class="second-view__wrapper">
         <ProfileAboutCard
           class="profile-page__card"
           :personal-info="personalInfo"
@@ -13,7 +13,7 @@
           class="profile-page__card"
           :career-nodes="careerNodes"
         />
-      </div>
+      </section>
     </div>
   </div>
 </template>
@@ -52,31 +52,27 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   width: 100%;
-
+  overflow: hidden;
   .profile-page__inner {
     width: 75%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-
-    .card__wrapper {
-      width: 50%;
-      padding: 60px 0;
+    align-items: center;
+    .top-view__wrapper {
+      height: 100vh;
+      width: 100%;
+      padding-top: 60px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      height: 100%;
-      justify-content: center;
-      overflow-y: scroll;
-      &.--info {
-        position: sticky;
-        top: 0;
-        height: 100vh;
-      }
-      &::-webkit-scrollbar {
-        display: none;
-      }
+    }
+    .second-view__wrapper {
+      width: 100%;
+      height: 100vh;
+      align-items: center;
+      display: flex;
       .profile-page__card {
-        width: 90%;
+        width: 50%;
       }
     }
   }
@@ -84,21 +80,18 @@ export default defineComponent({
 @include tab {
   .profile-page {
     .profile-page__inner {
-      width: 95%;
+      width: 100%;
       display: block;
-      :nth-child(2) {
-        &.card__wrapper {
-          padding-top: 0px;
-        }
-      }
-      .card__wrapper {
-        width: 100%;
-        height: auto;
-        overflow-y: unset;
-        padding-top: 120px;
-        &.--info {
-          height: auto;
-          position: unset;
+      padding: 0 12px;
+
+      .second-view__wrapper {
+        flex-direction: column;
+        justify-content: flex-start;
+        .profile-page__card {
+          width: 95%;
+          height: unset;
+          padding: 0;
+          margin-bottom: 50px;
         }
       }
     }

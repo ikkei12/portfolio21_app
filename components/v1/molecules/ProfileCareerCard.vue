@@ -25,11 +25,12 @@ export default defineComponent({
 </script>
 <style scoped lang="scss">
 .career__card {
-  border-radius: 20px;
+  border-radius: 8px;
+  height: 50%;
   .card__inner {
     padding-bottom: 10px;
+    overflow-y: hidden;
     .title {
-      margin-bottom: 8px;
       color: $primary;
     }
   }

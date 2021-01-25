@@ -1,17 +1,24 @@
 <template>
   <Card class="about__card">
-    <h2 class="title">About</h2>
+    <h2 class="title">About Me</h2>
     <div class="flex">
-      <Icon icon-name="house" :size="16" color="#7db5b5" />
-      <p>{{ personalInfo.liveIn }}</p>
+      <Icon icon-name="houseFill" :size="20" color="#333" />
+      <p>
+        live in <strong>{{ personalInfo.liveIn }}</strong>
+      </p>
     </div>
     <div class="flex">
-      <Icon icon-name="birthDay" :size="16" color="#7db5b5" />
-      <p>{{ personalInfo.age }}歳</p>
+      <Icon icon-name="birthDayFill" :size="20" color="#333" />
+      <p>
+        born in <strong>1998.03.11 ({{ personalInfo.age }} y.o)</strong>
+      </p>
     </div>
     <div class="flex">
-      <Icon icon-name="building" :size="16" color="#7db5b5" />
-      <p>{{ personalInfo.organisation }}</p>
+      <Icon icon-name="buildingFill" :size="20" color="#333" />
+      <p>
+        student of <strong>{{ personalInfo.university }} </strong>and member of
+        <strong>{{ personalInfo.organisation }}</strong>
+      </p>
     </div>
   </Card>
 </template>
@@ -41,16 +48,15 @@ export default defineComponent({
 <style scoped lang="scss">
 .about__card {
   border-radius: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  height: 50%;
   .title {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     color: $primary;
   }
   .flex {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     p {
       margin-left: 8px;
     }
