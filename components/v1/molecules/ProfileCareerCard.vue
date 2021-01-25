@@ -26,6 +26,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .career__card {
   border-radius: 8px;
+  height: 50%;
   .card__inner {
     padding-bottom: 10px;
     overflow-y: hidden;

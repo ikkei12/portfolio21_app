@@ -67,8 +67,9 @@ export default defineComponent({
       align-items: center;
     }
     .second-view__wrapper {
-      height: 100vh;
       width: 100%;
+      height: 100vh;
+      align-items: center;
       display: flex;
       .profile-page__card {
         width: 50%;
