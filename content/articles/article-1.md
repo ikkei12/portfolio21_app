@@ -50,7 +50,7 @@ Jamstackなポートフォリオが出来上がりました(当サイト)
 <br/>
 
 ## 使用した技術
-**FW:** Nuxt.js  
+**FW:** Nuxt.js (TypeScript/composition-api)
 **コンテンツ管理:** Nuxt/content , Cloud Storage  
 **ホスティング:** Firebase hosting  
 **その他API:** Cloud Functions  
