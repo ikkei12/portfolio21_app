@@ -87,6 +87,7 @@ export default defineComponent({
       .second-view__wrapper {
         flex-direction: column;
         justify-content: flex-start;
+        height: unset;
         .profile-page__card {
           width: 95%;
           height: unset;

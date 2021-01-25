@@ -8,8 +8,8 @@
           class="profile-image"
         />
       </div>
-      <h3 class="name-ja">Harashima Ikkei</h3>
-      <p class="name-en">原島 一桂</p>
+      <h3 class="name-en">Harashima Ikkei</h3>
+      <p class="name-ja">原島 一桂</p>
       <h3 class="title">Welcome to My Portfolio</h3>
 
       <LinkIconGroup />
@@ -59,13 +59,13 @@ export default defineComponent({
         object-fit: cover;
       }
     }
-    .name-ja {
+    .name-en {
       font-size: 2.5rem;
       font-weight: 500;
       letter-spacing: 0.15vw;
       white-space: nowrap;
     }
-    .name-en {
+    .name-ja {
       font-size: 20px;
       font-weight: 400;
       white-space: nowrap;
@@ -109,6 +109,7 @@ export default defineComponent({
 }
 @include sp {
   .info__card {
+    height: unset;
     .inner {
       .link {
         margin-top: 2vh;
