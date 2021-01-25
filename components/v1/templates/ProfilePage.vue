@@ -3,12 +3,12 @@
     <div class="profile-page__inner">
       <div class="card__wrapper --info">
         <ProfileInformationCard class="profile-page__card" />
-      </div>
-      <div class="card__wrapper">
         <ProfileAboutCard
           class="profile-page__card"
           :personal-info="personalInfo"
         />
+      </div>
+      <div class="card__wrapper">
         <ProfileCareerCard
           class="profile-page__card"
           :career-nodes="careerNodes"
@@ -52,7 +52,7 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   width: 100%;
-
+  overflow: hidden;
   .profile-page__inner {
     width: 75%;
     display: flex;
@@ -66,7 +66,6 @@ export default defineComponent({
       align-items: center;
       height: 100%;
       justify-content: center;
-      overflow-y: scroll;
       &.--info {
         position: sticky;
         top: 0;

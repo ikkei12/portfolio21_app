@@ -1,13 +1,15 @@
 <template>
   <div class="career-tree">
     <span class="node-dor__line"></span>
-    <CareerTreeNode
-      v-for="(node, i) in careerNodes"
-      :key="`node${i}`"
-      :node="node"
-      class="career-tree__node"
-      :class="{ '--w-desc': node.description }"
-    />
+    <div class="career-tree__inner">
+      <CareerTreeNode
+        v-for="(node, i) in careerNodes"
+        :key="`node${i}`"
+        :node="node"
+        class="career-tree__node"
+        :class="{ '--w-desc': node.description }"
+      />
+    </div>
   </div>
 </template>
 <script lang="ts">
@@ -28,7 +30,9 @@ export default defineComponent({
 <style lang="scss" scoped>
 .career-tree {
   position: relative;
-
+  padding: 15px 0;
+  height: 60vh;
+  overflow-y: scroll;
   .node-dor__line {
     border: 1px solid rgb(207, 207, 207);
     width: 1px;
