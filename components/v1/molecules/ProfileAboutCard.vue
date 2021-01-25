@@ -2,19 +2,19 @@
   <Card class="about__card">
     <h2 class="title">About Me</h2>
     <div class="flex">
-      <Icon icon-name="house" :size="16" color="#7db5b5" />
+      <Icon icon-name="houseFill" :size="20" color="#333" />
       <p>
         live in <strong>{{ personalInfo.liveIn }}</strong>
       </p>
     </div>
     <div class="flex">
-      <Icon icon-name="birthDay" :size="16" color="#7db5b5" />
+      <Icon icon-name="birthDayFill" :size="20" color="#333" />
       <p>
         born in <strong>1998.03.11 ({{ personalInfo.age }} y.o)</strong>
       </p>
     </div>
     <div class="flex">
-      <Icon icon-name="building" :size="16" color="#7db5b5" />
+      <Icon icon-name="buildingFill" :size="20" color="#333" />
       <p>
         student of <strong>{{ personalInfo.university }} </strong>and member of
         <strong>{{ personalInfo.organisation }}</strong>
@@ -49,7 +49,6 @@ export default defineComponent({
 .about__card {
   border-radius: 20px;
   margin-bottom: 30px;
-  margin-top: 20px;
   .title {
     margin-bottom: 16px;
     color: $primary;

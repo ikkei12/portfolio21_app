@@ -74,7 +74,7 @@
     <div
       v-else-if="iconName == 'buildingFill'"
       class="icon"
-      :style="`fill:${color}`"
+      :style="`fill:${color}; width:${size - 2}px; height:${size - 2}px`"
     >
       <svg
         id="Capa_1"
