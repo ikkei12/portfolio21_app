@@ -83,7 +83,10 @@ export default defineComponent({
       width: 100%;
       display: block;
       padding: 0 12px;
-
+      .top-view__wrapper {
+        height: unset;
+        margin: 100px 0;
+      }
       .second-view__wrapper {
         flex-direction: column;
         justify-content: flex-start;
