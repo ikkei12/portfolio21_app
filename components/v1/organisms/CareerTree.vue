@@ -1,6 +1,6 @@
 <template>
   <div class="career-tree">
-    <span class="node-dor__line"></span>
+    <span class="node-dot__line"></span>
     <div class="career-tree__inner">
       <CareerTreeNode
         v-for="(node, i) in careerNodes"
@@ -30,14 +30,13 @@ export default defineComponent({
 <style lang="scss" scoped>
 .career-tree {
   position: relative;
-  padding: 15px 0;
-  .node-dor__line {
+  .node-dot__line {
     border: 1px solid rgb(207, 207, 207);
     width: 1px;
     height: 100%;
     position: absolute;
     left: 8px;
-    top: 8px;
+    top: 40px;
   }
 }
 </style>

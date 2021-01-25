@@ -34,10 +34,14 @@ export default defineComponent({
     .date {
       margin: 0 14px;
       font-size: 14px;
+      font-weight: bold;
+      color: #565656;
     }
     .title {
       font-size: 15px;
       margin-left: 12px;
+      font-weight: bold;
+      letter-spacing: 0.8px;
     }
   }
   .description__wrapper {

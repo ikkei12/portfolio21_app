@@ -30,7 +30,6 @@ export default defineComponent({
     padding-bottom: 10px;
     overflow-y: hidden;
     .title {
-      margin-bottom: 8px;
       color: $primary;
     }
   }
