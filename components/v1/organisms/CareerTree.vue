@@ -31,8 +31,6 @@ export default defineComponent({
 .career-tree {
   position: relative;
   padding: 15px 0;
-  height: 60vh;
-  overflow-y: scroll;
   .node-dor__line {
     border: 1px solid rgb(207, 207, 207);
     width: 1px;

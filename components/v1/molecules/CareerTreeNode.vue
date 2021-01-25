@@ -32,12 +32,12 @@ export default defineComponent({
     display: flex;
     align-items: center;
     .date {
-      margin: 0 8px;
+      margin: 0 14px;
       font-size: 14px;
     }
     .title {
       font-size: 15px;
-      margin-left: 8px;
+      margin-left: 12px;
     }
   }
   .description__wrapper {

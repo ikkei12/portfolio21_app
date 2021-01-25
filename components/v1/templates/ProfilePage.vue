@@ -67,28 +67,12 @@ export default defineComponent({
       align-items: center;
     }
     .second-view__wrapper {
-      width: 50%;
+      width: 100%;
+      display: flex;
+      .profile-page__card {
+        width: 50%;
+      }
     }
-    // .card__wrapper {
-    //   width: 50%;
-    //   padding: 60px 0;
-    //   display: flex;
-    //   flex-direction: column;
-    //   align-items: center;
-    //   height: 100%;
-    //   justify-content: center;
-    //   &.--info {
-    //     position: sticky;
-    //     top: 0;
-    //     height: 100vh;
-    //   }
-    //   &::-webkit-scrollbar {
-    //     display: none;
-    //   }
-    //   .profile-page__card {
-    //     width: 90%;
-    //   }
-    // }
   }
 }
 @include tab {
