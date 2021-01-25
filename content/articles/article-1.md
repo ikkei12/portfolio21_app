@@ -44,9 +44,9 @@ Jamstackなポートフォリオが出来上がりました(当サイト)
 
 過去のポートフォリオはこちら  
 
-<OgpCard :ogpindex="0" :ogps="ogps"></OgpCard>  
+<ogp-card :ogpindex="0" :ogps="ogps"></ogp-card>  
 <br/>
-<OgpCard :ogpindex="1" :ogps="ogps"></OgpCard>
+<ogp-card :ogpindex="1" :ogps="ogps"></ogp-card>
 <br/>
 
 ## 使用した技術
@@ -110,7 +110,7 @@ Jamstackなポートフォリオが出来上がりました(当サイト)
 
 以前Qiitaの記事にしました。  
 
-<OgpCard :ogpindex="2" :ogps="ogps"></OgpCard>
+<ogp-card :ogpindex="2" :ogps="ogps"></ogp-card>
 <br/>
 
 

@@ -48,13 +48,13 @@ JPHACKS(ジャパンハックス)は、学生を対象にした日本最大規�
 ## 開発したもの
 画像分析で忘れ物を防ぐアプリ「Laff」を開発しました。  
 
-<OgpCard :ogpindex="0" :ogps="ogps"></OgpCard>
+<ogp-card :ogpindex="0" :ogps="ogps"></ogp-card>
 <br/>
 <br/>
 
 紹介動画です(ギリギリで作ったので動画のクオリティはお察しください。。。)  
 
-<OgpCard :ogpindex="1" :ogps="ogps"></OgpCard>
+<ogp-card :ogpindex="1" :ogps="ogps"></ogp-card>
 <br/>
 <br/>
 
@@ -70,7 +70,7 @@ JPHACKS(ジャパンハックス)は、学生を対象にした日本最大規�
 画像分析にはGoogle Cloud Vision APIを使いました。
 
 <br/>
-<OgpCard :ogpindex="2" :ogps="ogps"></OgpCard>
+<ogp-card :ogpindex="2" :ogps="ogps"></ogp-card>
 <br/>
 Google Cloud Vision APIを使えばこのように写真に写っている物を分析して、その名前(ラベル)を返してくれます。 
 画像分析のAPIから帰ってくるラベルは英語1単語なので、その類義語をAPIから取得し、翻訳して返す事で分析の精度を高めました。  
@@ -95,7 +95,7 @@ Google Cloud Vision APIを使えばこのように写真に写っている物を
 学校などの都合もあり全員で集まれなかったので、アイデア出しもwebミーティングで行いました。　　アイデア出しにはmiroというサービスを使いました。便利でしたがフル活用出来たとは思えないし、進め方があまり良くなかったかなと思います。
 アイデア出しにおいてツールはもちろん大事なのですが、それ以上にファシリテーター的な役割がチームにいると重宝されるなと感じました (そんなエンジニアになりたい。。。)  
 <br/>　
-<OgpCard :ogpindex="3" :ogps="ogps"></OgpCard>
+<ogp-card :ogpindex="3" :ogps="ogps"></ogp-card>
 <br/>
 <br/>
 

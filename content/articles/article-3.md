@@ -52,7 +52,7 @@
 
 Write Code Every Dayについては「テスト駆動開発」で有名な[@t_wada](https://twitter.com/t_wada?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)さんが分かりやすく纏めてくれています。
 
-<OgpCard :ogpindex="0" :ogps="ogps"></OgpCard>  
+<ogp-card :ogpindex="0" :ogps="ogps"></ogp-card>  
 <br/>
 
 jQuerryの作者、John Resigは「バックグラウンド処理」の効果が得られたと言っています。
@@ -81,7 +81,7 @@ LeetCodeにした理由は、Discussion出来る場があって色んな解法�
 取り敢えずwebセキュリティのやつ読む。  
 <br/>
 
-<OgpCard :ogpindex="1" :ogps="ogps"></OgpCard>
+<ogp-card :ogpindex="1" :ogps="ogps"></ogp-card>
 <br/>
 <br/>
 
@@ -97,7 +97,7 @@ LeetCodeにした理由は、Discussion出来る場があって色んな解法�
 
 取り敢えずRecursionはやっていきたいな。  
 
-<OgpCard :ogpindex="2" :ogps="ogps"></OgpCard>  
+<ogp-card :ogpindex="2" :ogps="ogps"></ogp-card>  
 <br/>
 <br/>  
   
@@ -112,7 +112,7 @@ nuxt/contentはこのブログでも使ってるし規模も丁度良さそう�
 コミットしなくてもまずはコードを読む機会は増やしていきたい。  
 
 <br/>  
-<OgpCard :ogpindex="3" :ogps="ogps"></OgpCard>
+<ogp-card :ogpindex="3" :ogps="ogps"></ogp-card>
 <br/>  
 
 ### アウトプットを増やす  
