@@ -33,10 +33,10 @@ export default defineComponent({
   .node-dot__line {
     border: 1px solid rgb(207, 207, 207);
     width: 1px;
-    height: 100%;
+    height: 90%;
     position: absolute;
     left: 8px;
-    top: 40px;
+    top: 30px;
   }
 }
 </style>
