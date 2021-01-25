@@ -40,7 +40,7 @@ export default defineComponent({
 </script>
 <style scoped lang="scss">
 .info__card {
-  height: 70%;
+  height: 60%;
   border-radius: 20px;
   display: flex;
   justify-content: center;

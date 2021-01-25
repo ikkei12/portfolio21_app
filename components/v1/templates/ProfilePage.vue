@@ -1,10 +1,10 @@
 <template>
   <div class="profile-page">
     <div class="profile-page__inner">
-      <div class="card__wrapper --info">
+      <div class="top-view__wrapper">
         <ProfileInformationCard class="profile-page__card" />
       </div>
-      <div class="card__wrapper">
+      <div class="second-view__wrapper">
         <ProfileAboutCard
           class="profile-page__card"
           :personal-info="personalInfo"
@@ -56,28 +56,39 @@ export default defineComponent({
   .profile-page__inner {
     width: 75%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-
-    .card__wrapper {
-      width: 50%;
-      padding: 60px 0;
+    align-items: center;
+    .top-view__wrapper {
+      height: 100vh;
+      width: 100%;
+      padding-top: 60px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      height: 100%;
-      justify-content: center;
-      &.--info {
-        position: sticky;
-        top: 0;
-        height: 100vh;
-      }
-      &::-webkit-scrollbar {
-        display: none;
-      }
-      .profile-page__card {
-        width: 90%;
-      }
     }
+    .second-view__wrapper {
+      width: 50%;
+    }
+    // .card__wrapper {
+    //   width: 50%;
+    //   padding: 60px 0;
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    //   height: 100%;
+    //   justify-content: center;
+    //   &.--info {
+    //     position: sticky;
+    //     top: 0;
+    //     height: 100vh;
+    //   }
+    //   &::-webkit-scrollbar {
+    //     display: none;
+    //   }
+    //   .profile-page__card {
+    //     width: 90%;
+    //   }
+    // }
   }
 }
 @include tab {
