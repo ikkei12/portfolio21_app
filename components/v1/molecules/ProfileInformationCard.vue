@@ -79,7 +79,7 @@ export default defineComponent({
     .link {
       text-decoration: none;
       color: black;
-      margin-top: 4vh;
+      margin-top: 40px;
       .link__inner {
         background: #c62828;
         display: flex;

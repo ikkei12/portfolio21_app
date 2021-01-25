@@ -29,7 +29,6 @@ export default defineComponent({
   height: 50%;
   .card__inner {
     padding-bottom: 10px;
-    overflow-y: hidden;
     .title {
       color: $primary;
     }
