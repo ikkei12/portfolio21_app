@@ -31,7 +31,7 @@
   height: 30px;
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   &:nth-child(3) {
     margin-right: 0;
   }

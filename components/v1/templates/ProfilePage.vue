@@ -3,12 +3,12 @@
     <div class="profile-page__inner">
       <div class="card__wrapper --info">
         <ProfileInformationCard class="profile-page__card" />
+      </div>
+      <div class="card__wrapper">
         <ProfileAboutCard
           class="profile-page__card"
           :personal-info="personalInfo"
         />
-      </div>
-      <div class="card__wrapper">
         <ProfileCareerCard
           class="profile-page__card"
           :career-nodes="careerNodes"
