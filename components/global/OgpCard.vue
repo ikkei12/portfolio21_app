@@ -39,17 +39,21 @@ export default defineComponent({
   width: 100%;
   display: flex;
   justify-content: center;
+
   .ogp-card__link {
     text-decoration: none;
     color: #333;
     display: block;
     width: 100%;
+
     &.--disabled {
       pointer-events: none;
     }
+
     &:hover {
       box-shadow: 0 0 20px rgba(173, 173, 173, 0.285);
     }
+
     .ogp-card {
       display: flex;
       height: 150px;
@@ -62,14 +66,17 @@ export default defineComponent({
         object-fit: cover;
         margin-bottom: 0;
       }
+
       .ogp-card__inner {
         height: 100%;
         padding: 8px 12px;
         overflow: hidden;
+
         .ogp-card__title {
           line-height: initial;
           margin-bottom: 10px;
         }
+
         .ogp-card__description {
           font-size: 13px;
           line-height: 1.1;
@@ -80,23 +87,28 @@ export default defineComponent({
     }
   }
 }
+
 @include tab {
   .ogp-card__wrapper {
     .ogp-card__link {
       width: 60%;
+
       .ogp-card {
         display: table;
         width: 100%;
+
         .image {
           height: 200px;
           width: 100%;
           border-top-right-radius: 5px;
           border-top-left-radius: 5px;
         }
+
         .ogp-card__inner {
           .ogp-card__title {
             font-size: 13px;
           }
+
           .ogp-card__description {
             font-size: 11px;
           }
@@ -105,6 +117,7 @@ export default defineComponent({
     }
   }
 }
+
 @include sp {
   .ogp-card__wrapper {
     .ogp-card__link {

@@ -40,18 +40,22 @@ export default defineComponent({
   padding: 0 2%;
   margin-top: 50px;
   width: calc(100% / 3);
+
   @include tab {
     width: calc(100% / 2);
   }
+
   @include sp {
     width: calc(100% / 1);
   }
+
   &:hover {
     .card__inner {
       .title {
         color: rgba(0, 0, 0, 0.737);
       }
     }
+
     .thumbnail {
       filter: opacity(0.7);
       transition: 0.4s;
@@ -65,15 +69,16 @@ export default defineComponent({
     .thumbnail {
       width: 100%;
       min-height: 140px;
-      box-shadow: 0 0px 20px rgba(89, 89, 89, 0.072);
+      box-shadow: 0 0 20px rgba(89, 89, 89, 0.072);
       display: block;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
     }
+
     .card__inner {
       padding: 25px 25px;
       min-height: 140px;
-      box-shadow: 0 0px 20px rgba(89, 89, 89, 0.072);
+      box-shadow: 0 0 20px rgba(89, 89, 89, 0.072);
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       background: white;
@@ -88,9 +93,11 @@ export default defineComponent({
           font-size: 14px;
           color: grey;
         }
+
         .reading-time__wrapper {
           display: flex;
           align-items: center;
+
           .reading-time {
             margin-left: 3px;
             font-size: 14px;
@@ -98,6 +105,7 @@ export default defineComponent({
           }
         }
       }
+
       .title {
         color: black;
       }

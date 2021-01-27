@@ -42,6 +42,7 @@ export default defineComponent({
   left: 0;
   bottom: 10px;
   z-index: 3;
+
   .pagination__dot {
     border-radius: 50%;
     border: 1px solid rgb(191, 191, 191);
@@ -49,6 +50,7 @@ export default defineComponent({
     height: 15px;
     margin-right: 8px;
     cursor: pointer;
+
     &.--active {
       background: rgb(212, 212, 212);
     }

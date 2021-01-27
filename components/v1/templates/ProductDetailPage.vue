@@ -120,24 +120,29 @@ export default defineComponent({
   width: 100%;
   display: flex;
   justify-content: center;
+
   .product-detail__inner {
     width: 80%;
     min-height: 100vh;
     margin: 40px 0;
     padding: 60px 15%;
+
     .upper {
       display: flex;
       flex-direction: column;
       margin-bottom: 30px;
+
       .title {
         margin-top: 16px;
       }
+
       .created-date {
         color: grey;
         margin-top: 8px;
       }
     }
   }
+
   .carousel__wrapper {
     padding: 0 0%;
 
@@ -156,28 +161,35 @@ export default defineComponent({
       }
     }
   }
+
   .descriptions-group {
     margin-top: 5%;
+
     p {
       font-size: 18px;
     }
+
     .description {
       white-space: pre-line;
       line-height: 30px;
     }
+
     .product-url__wrapper {
       display: flex;
       margin-top: 2%;
       align-items: center;
+
       .icon__wrapper {
         display: flex;
         align-items: center;
         height: 22px;
+
         img {
           height: 100%;
           margin-right: 3px;
         }
       }
+
       .product-url {
         font-weight: bold;
         color: $primary;
@@ -188,14 +200,17 @@ export default defineComponent({
     }
   }
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 @include tab {
   .product-detail__page {
     .product-detail__inner {
@@ -203,14 +218,17 @@ export default defineComponent({
     }
   }
 }
+
 @include sp {
   .product-detail__page {
     .descriptions-group {
       padding: 0 5%;
       margin-top: 0;
+
       .descriptions-group__created-date {
         margin-top: 10px;
       }
+
       p {
         font-size: 14px;
       }

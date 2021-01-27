@@ -32,23 +32,28 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   padding-top: 160px;
-  box-shadow: 0 0px 10px rgba(89, 89, 89, 0.032);
+  box-shadow: 0 0 10px rgba(89, 89, 89, 0.032);
+
   .categories-list__inner {
     position: sticky;
     top: 60px;
     overflow-y: scroll;
+
     &::-webkit-scrollbar {
       display: none;
     }
+
     .categoryies-list__title {
       padding: 1vh;
       padding-bottom: 0.5vh;
       color: #034646;
     }
+
     .list-item__link {
       text-decoration: none;
       display: inline-block;
       width: 100%;
+
       h3 {
         padding: 1vh;
         font-weight: bold;

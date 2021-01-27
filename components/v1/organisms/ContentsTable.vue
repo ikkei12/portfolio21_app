@@ -60,29 +60,36 @@ export default defineComponent({
   right: 50px;
   top: 180px;
   width: 15%;
+
   h4 {
     font-size: 14px;
     margin-bottom: 4px;
   }
+
   ul {
     padding-left: 30px;
+
     li {
       list-style: circle;
       margin-bottom: 3px;
       font-weight: bold;
       color: grey;
       font-size: 12px;
+
       a {
         text-decoration: none;
         color: grey;
       }
+
       &.--disabled {
         list-style-type: none;
         font-weight: unset;
+
         a {
           cursor: text;
         }
       }
+
       a {
         &.--active {
           font-weight: bold;

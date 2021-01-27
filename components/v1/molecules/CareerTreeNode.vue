@@ -28,15 +28,18 @@ export default defineComponent({
 <style lang="scss" scoped>
 .node {
   padding: 16px 0;
+
   .node__inner {
     display: flex;
     align-items: center;
+
     .date {
       margin: 0 14px;
       font-size: 14px;
       font-weight: bold;
       color: #565656;
     }
+
     .title {
       font-size: 15px;
       margin-left: 12px;
@@ -44,10 +47,12 @@ export default defineComponent({
       letter-spacing: 0.8px;
     }
   }
+
   .description__wrapper {
     height: 18px;
     padding-left: 126px;
     display: inline-block;
+
     .description {
       color: #7b7b7b;
     }

@@ -42,9 +42,11 @@ export default defineComponent({
   justify-content: center;
   margin-top: 30px;
   overflow-x: scroll;
+
   &::-webkit-scrollbar {
     display: none;
   }
+
   .thumbnail-pagination__item {
     margin-right: 3%;
     height: 50px;
@@ -53,10 +55,12 @@ export default defineComponent({
     filter: opacity(0.4);
     padding: 5px 8px;
     border-radius: 5px;
+
     .thumbnail-pagination__image {
       height: 100%;
       object-fit: cover;
     }
+
     &.--active {
       filter: opacity(1);
       border: 2px solid $primary;

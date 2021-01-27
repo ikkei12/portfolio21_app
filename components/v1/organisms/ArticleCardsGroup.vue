@@ -31,6 +31,7 @@ export default defineComponent({
 .article-card__group {
   display: flex;
   justify-content: center;
+
   .inner {
     width: 90%;
     display: flex;

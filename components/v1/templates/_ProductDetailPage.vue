@@ -13,7 +13,7 @@
           <div>
             <img
               :src="productContent.image.url"
-              style="width: 100%"
+              style="width: 100%;"
               alt="content image"
             />
           </div>
@@ -114,45 +114,55 @@ export default defineComponent({
   width: 100%;
   position: relative;
   animation: fadeIn 2s;
+
   .swiper__wrapper {
     position: relative;
   }
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 .swiper-container {
   .swiper-slide {
     opacity: 0.4;
     width: 500px;
+
     &-active {
       opacity: 1;
     }
+
     &-next,
     &-prev {
       cursor: pointer;
     }
   }
 }
+
 .swiper-button-prev {
   &.--disabled {
     display: none;
   }
 }
+
 .swiper-button-next {
   &.--disabled {
     display: none;
   }
 }
+
 .description {
   opacity: 0;
   filter: blur(4px);
   position: absolute;
+
   &.--active {
     transition: 1s;
     opacity: 1;

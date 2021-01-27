@@ -38,20 +38,25 @@ export default defineComponent({
   display: flex;
   align-items: center;
   flex-direction: column;
+
   .thumbnail__wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
+
     .thumbnail {
       width: 90%;
     }
   }
+
   .inner {
     width: 60%;
     padding: 80px 0;
+
     .content-title__wrapper {
       margin: 30px 0 15px;
     }
+
     .description__wrapper {
       .description {
       }

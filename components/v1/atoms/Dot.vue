@@ -26,6 +26,7 @@ export default defineComponent({
 .dot {
   border-radius: 50%;
   position: relative;
+
   .dot__core {
     border-radius: 50%;
     position: absolute;
@@ -33,6 +34,7 @@ export default defineComponent({
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
   .dot__outline {
     background: white;
     border-radius: 50%;

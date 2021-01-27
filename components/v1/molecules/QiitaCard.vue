@@ -49,44 +49,55 @@ export default defineComponent({
   padding: 0 2%;
   width: calc(100% / 3);
   margin-top: 50px;
+
   @include tab {
     width: calc(100% / 2);
   }
+
   @include sp {
     width: calc(100% / 1);
   }
+
   &:hover {
     .thumbnail {
       filter: opacity(0.7);
       transition: 0.4s;
     }
   }
+
   .qiita-card {
     background: white;
     border-radius: 8px;
     width: 100%;
+
     .thumbnail {
       width: 100%;
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
     }
+
     .inner {
       min-height: 100px;
       padding: 25px;
       position: relative;
+
       .title {
         font-size: 14px;
       }
+
       .upper {
         display: flex;
         justify-content: space-between;
         margin-bottom: 5px;
+
         .created-at {
           color: grey;
         }
+
         .likes-count__wrapper {
           display: flex;
           align-items: center;
+
           .likes-count__text {
             margin-left: 5px;
           }

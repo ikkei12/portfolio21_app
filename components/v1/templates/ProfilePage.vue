@@ -104,18 +104,21 @@ export default defineComponent({
   justify-content: center;
   width: 100%;
   overflow: hidden;
+
   .profile-page__inner {
     width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .top-view__wrapper {
       height: 100vh;
       width: 100%;
       padding-top: 60px;
       display: flex;
       align-items: center;
+
       .scroll-button__wrapper {
         position: absolute;
         bottom: 100px;
@@ -124,6 +127,7 @@ export default defineComponent({
         margin: auto;
         display: flex;
         justify-content: center;
+
         .scroll-button {
           display: inline-block;
           background: #fff;
@@ -135,12 +139,14 @@ export default defineComponent({
           outline: 0;
           cursor: pointer;
         }
+
         .scroll-button.ripple {
           position: relative;
           display: flex;
           justify-content: center;
           align-items: center;
         }
+
         .scroll-button.ripple::before {
           content: '';
           position: absolute;
@@ -154,27 +160,32 @@ export default defineComponent({
           -webkit-animation: ripple 4s cubic-bezier(0.3, 0, 0.1, 0) infinite;
           animation: ripple 4s cubic-bezier(0.3, 0, 0.1, 0) infinite;
         }
+
         @keyframes ripple {
           0% {
             -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
             opacity: 0;
           }
+
           30% {
             -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
             opacity: 0.5;
           }
+
           50% {
             -webkit-transform: scale(1.6, 1.6);
             transform: scale(1.6, 1.6);
             opacity: 0;
           }
+
           90% {
             -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
             opacity: 0.5;
           }
+
           100% {
             -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
@@ -183,32 +194,38 @@ export default defineComponent({
         }
       }
     }
+
     .second-view__wrapper {
       width: 100%;
       height: 100vh;
       align-items: center;
       display: flex;
+
       .profile-page__card {
         width: 50%;
       }
     }
   }
 }
+
 @include tab {
   .profile-page {
     .profile-page__inner {
       width: 100%;
       display: block;
       padding: 0 12px;
+
       .top-view__wrapper {
         height: unset;
         align-items: flex-start;
         padding: 80px 0 60px;
       }
+
       .second-view__wrapper {
         height: unset;
         flex-direction: column;
         justify-content: flex-start;
+
         .profile-page__card {
           width: 95%;
           height: unset;

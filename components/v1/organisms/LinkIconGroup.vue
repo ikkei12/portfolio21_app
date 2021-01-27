@@ -32,14 +32,17 @@
   display: flex;
   width: 100%;
   justify-content: flex-start;
+
   &:nth-child(3) {
     margin-right: 0;
   }
+
   .link {
     margin-right: 16px;
     height: 30px;
     width: 30px;
     display: block;
+
     img {
       height: 100%;
       width: 100%;

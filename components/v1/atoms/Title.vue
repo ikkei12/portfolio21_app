@@ -26,10 +26,12 @@ export default defineComponent({
   top: 60px;
   background: $body_bg;
   z-index: 5;
+
   .title {
     font-size: 1.8rem;
   }
 }
+
 @include sp {
   .title__wrapper {
     padding: 18px 0;

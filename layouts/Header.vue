@@ -70,40 +70,48 @@ export default defineComponent({
   z-index: 10;
   background: $secondary;
   width: 100%;
-  box-shadow: 0 0px 10px rgba(89, 89, 89, 0.072);
+  box-shadow: 0 0 10px rgba(89, 89, 89, 0.072);
   justify-content: flex-end;
+
   .link {
     margin-right: 30px;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+
     &:last-child {
       margin-right: 0;
     }
+
     .link__text {
       font-weight: 500;
       color: #fff;
+
       &.--active {
         padding-bottom: 3px;
-        color: #006666;
+        color: #066;
         font-weight: bold;
       }
     }
+
     .link__border {
       padding-top: 1px;
       height: 2px;
       width: 20%;
+
       &.--active {
         height: 0;
-        border-bottom: 3px solid #006666;
+        border-bottom: 3px solid #066;
       }
     }
   }
 }
+
 @include sp {
   .header {
     padding-right: 16px;
+
     .link {
       margin-right: 12px;
     }

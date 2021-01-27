@@ -26,9 +26,11 @@ export default defineComponent({
   bottom: 0;
   margin: auto;
   height: fit-content;
+
   img {
     width: 100%;
   }
+
   &.--active {
     opacity: 1;
     transition: 0.8s;
@@ -36,10 +38,12 @@ export default defineComponent({
     animation-duration: 0.8s;
   }
 }
+
 @keyframes fadeIn {
   0% {
     transform: translateY(100px);
   }
+
   100% {
     transform: translateY(0);
   }

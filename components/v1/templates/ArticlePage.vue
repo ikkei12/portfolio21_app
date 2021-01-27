@@ -105,19 +105,23 @@ export default defineComponent({
   min-height: 100vh;
   justify-content: center;
   position: relative;
+
   .article-page__inner {
     width: 100%;
     padding: 0 10%;
     margin-bottom: 200px;
   }
+
   .article__section {
     margin-bottom: 80px;
   }
+
   .qiita__section {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+
     .qiita-user__link {
       font-weight: bold;
       color: $primary;
@@ -136,11 +140,13 @@ export default defineComponent({
     top: 0;
     height: 100%;
     background: #fefefe;
+
     &.--active {
       width: 20%;
       transition: 0.4s;
     }
   }
+
   .menu__button {
     position: fixed;
     display: flex;
@@ -162,12 +168,14 @@ export default defineComponent({
 @include sp {
   .article-page {
     padding-right: 0;
+
     .menu__button {
       right: 12px;
       top: 70px;
       width: 50px;
       height: 50px;
     }
+
     .categories-list__wrapper {
       .menu__button {
         right: 12px;
@@ -175,10 +183,12 @@ export default defineComponent({
         width: 50px;
         height: 50px;
       }
+
       &.--active {
         width: 100%;
       }
     }
+
     .article-page__inner {
       width: 95%;
     }

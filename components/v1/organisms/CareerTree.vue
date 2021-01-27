@@ -30,6 +30,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .career-tree {
   position: relative;
+
   .node-dot__line {
     border: 1px solid rgb(207, 207, 207);
     width: 1px;

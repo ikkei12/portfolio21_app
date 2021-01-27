@@ -33,28 +33,34 @@ export default defineComponent({
 <style scoped lang="scss">
 .pagination {
   margin: 50px 0;
+
   .pagination__inner {
     .link__wrapper {
       width: 100%;
       margin-bottom: 80px;
+
       .link__desc {
         margin-bottom: 10px;
       }
     }
   }
 }
+
 .article-card {
   display: none;
 }
+
 @include sp {
   .pagination {
     .pagination__inner {
       .link__wrapper {
         margin-bottom: 30px;
+
         .pagination-link {
           display: none;
         }
       }
+
       .article-card {
         display: block;
         margin-top: 10px;

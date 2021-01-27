@@ -48,8 +48,10 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   margin-top: 80px;
+
   .article-detail__inner {
     width: 60%;
+
     .article-detail__content {
       background: white;
       padding: 5vh 100px 5vw;
@@ -64,25 +66,31 @@ export default defineComponent({
   h4 {
     margin-bottom: 10px;
   }
+
   a {
     text-decoration: none;
     font-weight: bold;
   }
+
   p {
     font-size: 18px;
     line-height: 36px;
     margin-bottom: 30px;
   }
+
   .info {
     margin-bottom: 40px;
+
     .info__inner {
       display: flex;
       justify-content: space-between;
       position: relative;
+
       .created-date {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+
         p {
           margin-left: 8px;
           margin-bottom: 0;
@@ -91,6 +99,7 @@ export default defineComponent({
       }
     }
   }
+
   .reading-time {
     &.--sp {
       display: none;
@@ -100,22 +109,27 @@ export default defineComponent({
   .thumbnail {
     border-radius: 10px;
   }
+
   img {
     width: 100%;
     margin-bottom: 80px;
   }
+
   blockquote {
     padding: 10px;
+
     p {
       border-left: 3px solid lightgrey;
       padding-left: 12px;
     }
   }
+
   .sns-link__group {
     display: flex;
     justify-content: flex-end;
     margin-top: 8px;
   }
+
   @include sp {
     h1,
     h2,
@@ -123,44 +137,55 @@ export default defineComponent({
     h4 {
       margin-bottom: 20px;
     }
+
     p {
       font-size: 16px;
       line-height: 30px;
       margin-bottom: 10px;
     }
+
     img {
       margin-bottom: 40px;
     }
+
     .created-date {
       position: absolute;
       top: 100%;
     }
   }
 }
+
 @include tab {
   .article-detail {
     .article-detail__inner {
       width: 95%;
+
       .article-detail__content {
         padding: 10px 16px;
       }
     }
+
     .contents-table {
       display: none;
     }
+
     .reading-time__card {
       display: none;
     }
   }
+
   ::v-deep .nuxt-content {
     .info {
       margin-bottom: 20px;
+
       .reading-time {
         justify-content: flex-end;
+
         &.--sp {
           display: flex;
           align-items: center;
           margin-bottom: 8px;
+
           p {
             margin-left: 4px;
             margin-bottom: 0;
@@ -169,6 +194,7 @@ export default defineComponent({
         }
       }
     }
+
     .created-date {
       position: absolute;
       top: 100%;

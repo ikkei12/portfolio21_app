@@ -52,6 +52,7 @@ export default defineComponent({
 .icon__wrapper {
   height: 18px;
   width: 18px;
+
   .icon {
     svg {
       width: 100%;

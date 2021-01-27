@@ -29,12 +29,15 @@ export default defineComponent({
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
   }
+
   .inner {
     padding: 25px 15px;
+
     .title {
       color: black;
       font-weight: bold;
     }
+
     .created-at {
       color: grey;
       font-size: 13px;

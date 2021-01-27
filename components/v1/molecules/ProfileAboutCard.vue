@@ -49,14 +49,17 @@ export default defineComponent({
 .about__card {
   border-radius: 20px;
   height: 50%;
+
   .title {
     margin-bottom: 16px;
     color: $primary;
   }
+
   .flex {
     display: flex;
     align-items: center;
     margin-bottom: 12px;
+
     p {
       margin-left: 8px;
     }

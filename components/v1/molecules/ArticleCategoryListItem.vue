@@ -23,12 +23,14 @@ export default defineComponent({
 <style lang="scss" scoped>
 .category-item__link {
   text-decoration: none;
-  color: #006666;
+  color: #066;
+
   &:hover {
     .category-item {
       background: #00a6a618;
     }
   }
+
   .category-item {
     height: 44px;
     display: flex;
@@ -37,6 +39,7 @@ export default defineComponent({
     border-bottom: 1px solid #0066660f;
     overflow-x: scroll;
     white-space: nowrap;
+
     &::-webkit-scrollbar {
       display: none;
     }

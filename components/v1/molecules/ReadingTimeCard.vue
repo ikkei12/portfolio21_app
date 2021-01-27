@@ -28,14 +28,17 @@ export default defineComponent({
   right: 50px;
   top: 80px;
   width: 15%;
+
   h4 {
     font-size: 12px;
     font-weight: 100;
     margin-bottom: 7px;
   }
+
   .reading-time__inner {
     display: flex;
     align-items: center;
+
     .reading-time {
       margin-left: 4px;
       font-weight: bold;

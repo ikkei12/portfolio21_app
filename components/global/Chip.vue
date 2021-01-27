@@ -27,12 +27,14 @@ export default defineComponent({
   text-decoration: none;
   margin-right: 8px;
   margin-bottom: 3px;
+
   .chip {
     display: flex;
     align-items: center;
     border-radius: 30px;
     padding: 5px 20px;
     height: 30px;
+
     .chip__text {
       font-size: 10px;
       font-weight: bold;

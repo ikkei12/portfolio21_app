@@ -27,8 +27,10 @@ export default defineComponent({
 .career__card {
   border-radius: 8px;
   height: 50%;
+
   .card__inner {
     padding-bottom: 10px;
+
     .title {
       color: $primary;
     }

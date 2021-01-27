@@ -60,6 +60,7 @@ export default defineComponent({
   display: inline-block;
   width: 100%;
   margin-top: 2vh;
+
   .list-item {
     display: flex;
     align-items: center;
@@ -67,16 +68,19 @@ export default defineComponent({
     cursor: pointer;
     border-bottom: 2px solid $secondary__thin;
     position: relative;
+
     .list-item__index {
       font-size: 1rem;
       margin-right: 3vw;
       color: rgb(210, 210, 210);
     }
+
     .list-item__text {
       font-weight: bold;
       font-size: 1.8rem;
       color: rgb(210, 210, 210);
     }
+
     .list-item__created-date {
       color: rgb(121, 121, 121);
       position: absolute;
@@ -85,17 +89,22 @@ export default defineComponent({
       opacity: 0;
     }
   }
+
   &.--active {
     background: #0066660b;
+
     .list-item {
       border-bottom: 2px solid $secondary;
     }
+
     .list-item__index {
       color: black;
     }
+
     .list-item__text {
       color: black;
     }
+
     .list-item__created-date {
       opacity: 1;
     }
