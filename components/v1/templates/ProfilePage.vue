@@ -202,7 +202,8 @@ export default defineComponent({
       padding: 0 12px;
       .top-view__wrapper {
         height: unset;
-        margin: 100px 0;
+        align-items: flex-start;
+        padding: 80px 0 60px;
       }
       .second-view__wrapper {
         height: unset;
