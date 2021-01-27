@@ -3,7 +3,7 @@
     <div class="profile-page__inner">
       <section class="top-view__wrapper">
         <ProfileInformationCard class="profile-page__card" />
-        <div class="scroll-button__wrapper">
+        <div v-if="isPC" class="scroll-button__wrapper">
           <button v-scroll-to="'#second-view'" class="scroll-button ripple">
             <Icon icon-name="arrowDown" color="#3b8070" />
           </button>
@@ -28,6 +28,7 @@ import {
   onMounted,
   onUnmounted,
   PropType,
+  ref,
 } from '@vue/composition-api'
 import ProfileInformationCard from '@/components/v1/molecules/ProfileInformationCard.vue'
 import ProfileAboutCard from '@/components/v1/molecules/ProfileAboutCard.vue'
@@ -67,7 +68,7 @@ export default defineComponent({
         const scrollTop =
           window.pageYOffset || document.documentElement.scrollTop
         const currentPos = scrollTop
-        if (currentPos > startPos) {
+        if (currentPos > startPos - 100) {
           scrollTo({
             top: window.innerHeight + 60,
             left: 0,
@@ -83,12 +84,17 @@ export default defineComponent({
         startPos = currentPos
       }, 500)
     }
+    const isPC = ref(false)
     onMounted(() => {
+      isPC.value = screen.width > 700
+      if (!isPC.value) return
       window.addEventListener('scroll', handleScroll)
     })
     onUnmounted(() => {
+      if (!isPC.value) return
       window.removeEventListener('scroll', handleScroll, true)
     })
+    return { isPC }
   },
 })
 </script>
