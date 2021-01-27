@@ -52,6 +52,7 @@ export default defineComponent({
     height: 18px;
     padding-left: 126px;
     display: inline-block;
+
     .description {
       color: #7b7b7b;
     }
