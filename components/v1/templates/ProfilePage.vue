@@ -3,8 +3,9 @@
     <div class="profile-page__inner">
       <section class="top-view__wrapper">
         <ProfileInformationCard class="profile-page__card" />
+        <button v-scroll-to="'#second-view'">scroll</button>
       </section>
-      <section class="second-view__wrapper">
+      <section id="second-view" class="second-view__wrapper">
         <ProfileAboutCard
           class="profile-page__card"
           :personal-info="personalInfo"
@@ -18,7 +19,13 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from '@vue/composition-api'
+import {
+  defineComponent,
+  onMounted,
+  onUnmounted,
+  PropType,
+  ref,
+} from '@vue/composition-api'
 import ProfileInformationCard from '@/components/v1/molecules/ProfileInformationCard.vue'
 import ProfileAboutCard from '@/components/v1/molecules/ProfileAboutCard.vue'
 import ProfileCareerCard from '@/components/v1/molecules/ProfileCareerCard.vue'
@@ -44,6 +51,40 @@ export default defineComponent({
         }
       },
     },
+  },
+  setup() {
+    let startPos = 0
+    // eslint-disable-next-line no-undef
+    let timeoutId: NodeJS.Timeout
+    const handleScroll = () => {
+      clearTimeout(timeoutId)
+      // NOTE: timerを使う事でスクロール"終了時"にメソッドを呼べる
+      timeoutId = setTimeout(function () {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop
+        const currentPos = scrollTop
+        if (currentPos > startPos) {
+          scrollTo({
+            top: window.innerHeight + 60,
+            left: 0,
+            behavior: 'smooth',
+          })
+        } else {
+          scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+          })
+        }
+        startPos = currentPos
+      }, 500)
+    }
+    onMounted(() => {
+      window.addEventListener('scroll', handleScroll)
+    })
+    onUnmounted(() => {
+      window.removeEventListener('scroll', handleScroll, true)
+    })
   },
 })
 </script>
