@@ -80,6 +80,7 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/composition-api',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -131,6 +132,7 @@ export default {
 
       return files.map((file) => (file.path === '/index' ? '/' : file.path))
     },
+    interval: 2000,
   },
   hooks: {
     'content:file:beforeInsert': async (document) => {
