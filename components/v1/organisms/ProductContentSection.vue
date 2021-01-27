@@ -56,11 +56,6 @@ export default defineComponent({
     .content-title__wrapper {
       margin: 30px 0 15px;
     }
-
-    .description__wrapper {
-      .description {
-      }
-    }
   }
 }
 </style>

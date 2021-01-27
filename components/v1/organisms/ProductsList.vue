@@ -66,13 +66,12 @@ export default defineComponent({
 
   .list-items__wrapper {
     width: 80%;
-    padding: 0 0 0 60px;
+    padding: 5rem 0 5rem 60px;
     margin-left: 40%;
     height: 100%;
     overflow-y: scroll;
     z-index: 2;
     padding-right: 10px;
-    padding: 5rem 0;
 
     &::-webkit-scrollbar {
       display: none;

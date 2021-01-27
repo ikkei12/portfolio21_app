@@ -25,12 +25,6 @@ export default defineComponent({
   text-decoration: none;
   color: #066;
 
-  &:hover {
-    .category-item {
-      background: #00a6a618;
-    }
-  }
-
   .category-item {
     height: 44px;
     display: flex;
@@ -42,6 +36,12 @@ export default defineComponent({
 
     &::-webkit-scrollbar {
       display: none;
+    }
+  }
+
+  &:hover {
+    .category-item {
+      background: #00a6a618;
     }
   }
 }

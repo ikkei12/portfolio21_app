@@ -78,6 +78,15 @@ export default defineComponent({
     margin-bottom: 30px;
   }
 
+  blockquote {
+    padding: 10px;
+
+    p {
+      border-left: 3px solid lightgrey;
+      padding-left: 12px;
+    }
+  }
+
   .info {
     margin-bottom: 40px;
 
@@ -113,15 +122,6 @@ export default defineComponent({
   img {
     width: 100%;
     margin-bottom: 80px;
-  }
-
-  blockquote {
-    padding: 10px;
-
-    p {
-      border-left: 3px solid lightgrey;
-      padding-left: 12px;
-    }
   }
 
   .sns-link__group {

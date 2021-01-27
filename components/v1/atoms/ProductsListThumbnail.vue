@@ -19,7 +19,6 @@ export default defineComponent({
 <style scoped lang="scss">
 .thumbnail {
   width: 100%;
-  height: 100%;
   opacity: 0;
   position: absolute;
   top: 0;

@@ -79,6 +79,11 @@ export default defineComponent({
       a {
         text-decoration: none;
         color: grey;
+
+        &.--active {
+          font-weight: bold;
+          color: $primary;
+        }
       }
 
       &.--disabled {
@@ -87,13 +92,6 @@ export default defineComponent({
 
         a {
           cursor: text;
-        }
-      }
-
-      a {
-        &.--active {
-          font-weight: bold;
-          color: $primary;
         }
       }
     }
