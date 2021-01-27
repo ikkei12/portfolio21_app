@@ -3,7 +3,11 @@
     <div class="profile-page__inner">
       <section class="top-view__wrapper">
         <ProfileInformationCard class="profile-page__card" />
-        <button v-scroll-to="'#second-view'">scroll</button>
+        <div class="scroll-button__wrapper">
+          <button v-scroll-to="'#second-view'" class="scroll-button ripple">
+            <Icon icon-name="arrowDown" color="#3b8070" />
+          </button>
+        </div>
       </section>
       <section id="second-view" class="second-view__wrapper">
         <ProfileAboutCard
@@ -24,17 +28,17 @@ import {
   onMounted,
   onUnmounted,
   PropType,
-  ref,
 } from '@vue/composition-api'
 import ProfileInformationCard from '@/components/v1/molecules/ProfileInformationCard.vue'
 import ProfileAboutCard from '@/components/v1/molecules/ProfileAboutCard.vue'
 import ProfileCareerCard from '@/components/v1/molecules/ProfileCareerCard.vue'
-
+import Icon from '@/components/v1/atoms/Icon.vue'
 export default defineComponent({
   components: {
     ProfileInformationCard,
     ProfileAboutCard,
     ProfileCareerCard,
+    Icon,
   },
   props: {
     careerNodes: {
@@ -106,6 +110,72 @@ export default defineComponent({
       padding-top: 60px;
       display: flex;
       align-items: center;
+      .scroll-button__wrapper {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        .scroll-button {
+          display: inline-block;
+          background: #fff;
+          font-size: 14px;
+          border: 2px #3b8070 solid;
+          width: 46px;
+          height: 46px;
+          border-radius: 50%;
+          outline: 0;
+          cursor: pointer;
+        }
+        .scroll-button.ripple {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .scroll-button.ripple::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          z-index: -1;
+          background: #3b8070;
+          -webkit-animation: ripple 4s cubic-bezier(0.3, 0, 0.1, 0) infinite;
+          animation: ripple 4s cubic-bezier(0.3, 0, 0.1, 0) infinite;
+        }
+        @keyframes ripple {
+          0% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            opacity: 0;
+          }
+          30% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            opacity: 0.5;
+          }
+          50% {
+            -webkit-transform: scale(1.6, 1.6);
+            transform: scale(1.6, 1.6);
+            opacity: 0;
+          }
+          90% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            opacity: 0.5;
+          }
+          100% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            opacity: 0;
+          }
+        }
+      }
     }
     .second-view__wrapper {
       width: 100%;
