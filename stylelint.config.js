@@ -1,4 +1,6 @@
 module.exports = {
   extends: 'stylelint-config-standard-scss',
-  rules: {},
+  rules: {
+    'declaration-block-trailing-semicolon': 'always',
+  },
 }

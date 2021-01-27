@@ -120,7 +120,7 @@
         width="460.298px"
         height="460.297px"
         viewBox="0 0 460.298 460.297"
-        style="enable-background: new 0 0 460.298 460.297;"
+        style="enable-background: new 0 0 460.298 460.297"
         xml:space="preserve"
       >
         <g>
@@ -181,7 +181,7 @@
         x="0px"
         y="0px"
         viewBox="0 0 110.08 122.88"
-        style="enable-background: new 0 0 110.08 122.88;"
+        style="enable-background: new 0 0 110.08 122.88"
         xml:space="preserve"
       >
         <style type="text/css">
@@ -220,7 +220,7 @@
         x="0px"
         y="0px"
         viewBox="0 0 512.005 512.005"
-        style="enable-background: new 0 0 512.005 512.005;"
+        style="enable-background: new 0 0 512.005 512.005"
         xml:space="preserve"
       >
         <path
@@ -265,7 +265,7 @@
         width="284.929px"
         height="284.929px"
         viewBox="0 0 284.929 284.929"
-        style="enable-background: new 0 0 284.929 284.929;"
+        style="enable-background: new 0 0 284.929 284.929"
         xml:space="preserve"
       >
         <g>
