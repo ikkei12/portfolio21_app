@@ -68,5 +68,9 @@
     "stylelint-scss": "^3.18.0",
     "ts-jest": "^26.4.4",
     "vue-jest": "^3.0.7"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint",
+    "*.{css,scss,vue}": "stylelint"
   }
 }
