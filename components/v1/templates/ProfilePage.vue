@@ -172,15 +172,39 @@ export default defineComponent({
             opacity: 0;
           }
 
-          30% {
+          10% {
             -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
             opacity: 0.5;
           }
 
-          50% {
+          30% {
             -webkit-transform: scale(1.6, 1.6);
             transform: scale(1.6, 1.6);
+            opacity: 0;
+          }
+
+          31% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            opacity: 0;
+          }
+
+          50% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            opacity: 0.5;
+          }
+
+          70% {
+            -webkit-transform: scale(1.6, 1.6);
+            transform: scale(1.6, 1.6);
+            opacity: 0;
+          }
+
+          71% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
             opacity: 0;
           }
 
@@ -188,12 +212,6 @@ export default defineComponent({
             -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
             opacity: 0.5;
-          }
-
-          100% {
-            -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-            opacity: 0;
           }
         }
       }
