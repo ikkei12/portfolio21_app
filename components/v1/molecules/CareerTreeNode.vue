@@ -54,7 +54,7 @@ export default defineComponent({
     display: inline-block;
 
     .description {
-      color: #7b7b7b;
+      color: $grey;
     }
   }
 }

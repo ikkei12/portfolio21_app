@@ -7,7 +7,7 @@
     rel="noopener noreferrer"
   >
     <div class="qiita-card">
-      <img :src="qiita.image" class="thumbnail" width="300" />
+      <img :src="qiita.image" class="thumbnail" width="100%" height="auto" />
       <div class="inner">
         <div class="upper">
           <p class="created-at">{{ createdAt }}</p>

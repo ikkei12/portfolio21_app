@@ -4,7 +4,11 @@
       <section class="top-view__wrapper">
         <ProfileInformationCard class="profile-page__card" />
         <div v-if="isPC" class="scroll-button__wrapper">
-          <button v-scroll-to="'#second-view'" class="scroll-button ripple">
+          <button
+            v-scroll-to="'#second-view'"
+            class="scroll-button ripple"
+            aria-label="Scroll"
+          >
             <Icon icon-name="arrowDown" color="#3b8070" />
           </button>
         </div>
@@ -86,7 +90,7 @@ export default defineComponent({
     }
     const isPC = ref(false)
     onMounted(() => {
-      isPC.value = screen.width > 700
+      isPC.value = screen.width > 1040
       if (!isPC.value) return
       window.addEventListener('scroll', handleScroll)
     })
@@ -168,15 +172,39 @@ export default defineComponent({
             opacity: 0;
           }
 
-          30% {
+          10% {
             -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
             opacity: 0.5;
           }
 
-          50% {
+          30% {
             -webkit-transform: scale(1.6, 1.6);
             transform: scale(1.6, 1.6);
+            opacity: 0;
+          }
+
+          31% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            opacity: 0;
+          }
+
+          50% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            opacity: 0.5;
+          }
+
+          70% {
+            -webkit-transform: scale(1.6, 1.6);
+            transform: scale(1.6, 1.6);
+            opacity: 0;
+          }
+
+          71% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
             opacity: 0;
           }
 
@@ -184,12 +212,6 @@ export default defineComponent({
             -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
             opacity: 0.5;
-          }
-
-          100% {
-            -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-            opacity: 0;
           }
         }
       }

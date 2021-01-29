@@ -1,7 +1,13 @@
 <template>
   <article class="article-card">
     <nuxt-link :to="'/articles/' + article.slug" class="article-card__inner">
-      <img :src="article.thumbnail" class="thumbnail" alt="thumbnail" />
+      <img
+        :src="article.thumbnail"
+        class="thumbnail"
+        alt="thumbnail"
+        width="100%"
+        height="auto"
+      />
       <div class="card__inner">
         <div class="card__upper">
           <p class="createdAt">{{ article.createdDate }}</p>

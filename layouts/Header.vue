@@ -90,7 +90,7 @@ export default defineComponent({
 
       &.--active {
         padding-bottom: 3px;
-        color: #066;
+        color: $primary;
         font-weight: bold;
       }
     }
@@ -102,7 +102,7 @@ export default defineComponent({
 
       &.--active {
         height: 0;
-        border-bottom: 3px solid #066;
+        border-bottom: 3px solid $primary;
       }
     }
   }

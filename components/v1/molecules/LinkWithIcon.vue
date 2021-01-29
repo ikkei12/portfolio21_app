@@ -6,7 +6,7 @@
     alt="icon"
     class="link"
   >
-    <img :src="img" class="icon" alt="icon" />
+    <img :src="img" class="icon" alt="icon" width="100px" height="100px" />
     <p v-if="text">{{ text }}</p>
   </a>
 </template>

@@ -6,7 +6,13 @@
       rel="noopener noreferrer"
       class="link"
     >
-      <img src="~/assets/images/logo/github.png" class="icon" alt="icon" />
+      <img
+        src="~/assets/images/logo/github.png"
+        class="icon"
+        alt="icon"
+        height="100px"
+        width="100px"
+      />
     </a>
     <a
       href="https://twitter.com/1keiuu"
@@ -14,7 +20,13 @@
       rel="noopener noreferrer"
       class="link"
     >
-      <img src="~/assets/images/logo/twitter.png" class="icon" alt="icon" />
+      <img
+        src="~/assets/images/logo/twitter.png"
+        class="icon"
+        alt="icon"
+        height="100px"
+        width="100px"
+      />
     </a>
     <a
       href="https://qiita.com/ikkei12"
@@ -22,7 +34,13 @@
       rel="noopener noreferrer"
       class="link"
     >
-      <img src="~/assets/images/logo/qiita.png" class="icon" alt="icon" />
+      <img
+        src="~/assets/images/logo/qiita.png"
+        class="icon"
+        alt="icon"
+        height="100px"
+        width="100px"
+      />
     </a>
   </div>
 </template>

@@ -120,7 +120,6 @@ export default defineComponent({
   }
 
   img {
-    width: 100%;
     margin-bottom: 80px;
   }
 

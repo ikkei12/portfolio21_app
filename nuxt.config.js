@@ -55,7 +55,21 @@ export default {
     htmlAttrs: { lang: 'ja' },
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://1k-cove.com',
+    // 除外するpath
+    exclude: [],
+    // ルートを設定
+    routes: ['/'],
+  },
+  robots: {
+    UserAgent: '*',
+    // クローリングしないパス
+    Disallow: '/',
+    // sitemap.xmlのURL
+    Sitemap: 'https://1k-cove.com/sitemap.xml',
+  },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     { src: '~/assets/scss/global.scss', lang: 'scss' },
@@ -80,6 +94,7 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/composition-api',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -96,6 +111,8 @@ export default {
         defaultImage: '/lazy_thin.png',
       },
     ],
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
   ],
   styleResources: {
     scss: ['@/assets/scss/utilities.scss', '@/assets/scss/variables.scss'],
@@ -131,6 +148,7 @@ export default {
 
       return files.map((file) => (file.path === '/index' ? '/' : file.path))
     },
+    interval: 2000,
   },
   hooks: {
     'content:file:beforeInsert': async (document) => {

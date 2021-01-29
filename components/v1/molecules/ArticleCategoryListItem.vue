@@ -23,14 +23,14 @@ export default defineComponent({
 <style lang="scss" scoped>
 .category-item__link {
   text-decoration: none;
-  color: #066;
+  color: $primary;
 
   .category-item {
     height: 44px;
     display: flex;
     align-items: center;
     padding-left: 12px;
-    border-bottom: 1px solid #0066660f;
+    border-bottom: 1px solid $primary;
     overflow-x: scroll;
     white-space: nowrap;
 
