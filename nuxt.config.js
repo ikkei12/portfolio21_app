@@ -63,6 +63,13 @@ export default {
     // ルートを設定
     routes: ['/'],
   },
+  robots: {
+    UserAgent: '*',
+    // クローリングしないパス
+    Disallow: '/',
+    // sitemap.xmlのURL
+    Sitemap: 'https://1k-cove.com/sitemap.xml',
+  },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     { src: '~/assets/scss/global.scss', lang: 'scss' },
@@ -105,6 +112,7 @@ export default {
       },
     ],
     '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
   ],
   styleResources: {
     scss: ['@/assets/scss/utilities.scss', '@/assets/scss/variables.scss'],
