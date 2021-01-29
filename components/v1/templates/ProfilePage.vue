@@ -4,7 +4,11 @@
       <section class="top-view__wrapper">
         <ProfileInformationCard class="profile-page__card" />
         <div v-if="isPC" class="scroll-button__wrapper">
-          <button v-scroll-to="'#second-view'" class="scroll-button ripple">
+          <button
+            v-scroll-to="'#second-view'"
+            class="scroll-button ripple"
+            aria-label="Scroll"
+          >
             <Icon icon-name="arrowDown" color="#3b8070" />
           </button>
         </div>
@@ -86,7 +90,7 @@ export default defineComponent({
     }
     const isPC = ref(false)
     onMounted(() => {
-      isPC.value = screen.width > 700
+      isPC.value = screen.width > 1040
       if (!isPC.value) return
       window.addEventListener('scroll', handleScroll)
     })
