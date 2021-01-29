@@ -27,13 +27,7 @@
   </div>
 </template>
 <script lang="ts">
-import {
-  defineComponent,
-  onMounted,
-  onUnmounted,
-  PropType,
-  ref,
-} from '@vue/composition-api'
+import { defineComponent, PropType } from '@vue/composition-api'
 import ProfileInformationCard from '@/components/v1/molecules/ProfileInformationCard.vue'
 import ProfileAboutCard from '@/components/v1/molecules/ProfileAboutCard.vue'
 import ProfileCareerCard from '@/components/v1/molecules/ProfileCareerCard.vue'
@@ -60,45 +54,10 @@ export default defineComponent({
         }
       },
     },
-  },
-  setup() {
-    let startPos = 0
-    // eslint-disable-next-line no-undef
-    let timeoutId: NodeJS.Timeout
-    const handleScroll = () => {
-      clearTimeout(timeoutId)
-      // NOTE: timerを使う事でスクロール"終了時"にメソッドを呼べる
-      timeoutId = setTimeout(function () {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop
-        const currentPos = scrollTop
-        if (currentPos > startPos - 100) {
-          scrollTo({
-            top: window.innerHeight + 60,
-            left: 0,
-            behavior: 'smooth',
-          })
-        } else {
-          scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth',
-          })
-        }
-        startPos = currentPos
-      }, 500)
-    }
-    const isPC = ref(false)
-    onMounted(() => {
-      isPC.value = screen.width > 1040
-      if (!isPC.value) return
-      window.addEventListener('scroll', handleScroll)
-    })
-    onUnmounted(() => {
-      if (!isPC.value) return
-      window.removeEventListener('scroll', handleScroll, true)
-    })
-    return { isPC }
+    isPC: {
+      type: Boolean,
+      default: false,
+    },
   },
 })
 </script>

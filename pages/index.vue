@@ -1,17 +1,66 @@
 <template>
   <div class="container">
-    <ProfilePage :career-nodes="careerNodes" :personal-info="personalInfo" />
+    <ProfilePage
+      :career-nodes="careerNodes"
+      :personal-info="personalInfo"
+      :is-p-c="isPC"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from '@vue/composition-api'
+import {
+  defineComponent,
+  computed,
+  ref,
+  onMounted,
+  onUnmounted,
+} from '@vue/composition-api'
 import ProfilePage from '@/components/v1/templates/ProfilePage.vue'
 import { IContentDocument } from '@nuxt/content/types/content'
 
 export default defineComponent({
   components: {
     ProfilePage,
+  },
+  setup() {
+    let startPos = 0
+    // eslint-disable-next-line no-undef
+    let timeoutId: NodeJS.Timeout
+    const handleScroll = () => {
+      clearTimeout(timeoutId)
+      // NOTE: timerを使う事でスクロール"終了時"にメソッドを呼べる
+      timeoutId = setTimeout(() => {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop
+        const currentPos = scrollTop
+        if (currentPos > startPos - 100) {
+          scrollTo({
+            top: window.innerHeight + 60,
+            left: 0,
+            behavior: 'smooth',
+          })
+        } else {
+          scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+          })
+        }
+        startPos = currentPos
+      }, 500)
+    }
+    const isPC = ref(false)
+    onMounted(() => {
+      isPC.value = screen.width > 1040
+      if (!isPC.value) return
+      window.addEventListener('scroll', handleScroll)
+    })
+    onUnmounted(() => {
+      if (!isPC.value) return
+      window.removeEventListener('scroll', handleScroll)
+    })
+    return { isPC }
   },
   async asyncData({ $content }) {
     const fetchData = await $content('profile').fetch()
