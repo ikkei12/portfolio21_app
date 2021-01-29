@@ -6,6 +6,8 @@
           src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/profile/avatar.jpg"
           alt="Profile image"
           class="profile-image"
+          width="230px"
+          height="230px"
         />
       </div>
       <h3 class="name-ja">Harashima Ikkei</h3>
@@ -20,6 +22,8 @@
               src="~/assets/images/logo/email.png"
               class="icon"
               alt="email icon"
+              height="100px"
+              width="100px"
             />
           </div>
           <p class="contact-msg">Contact Me</p>

@@ -13,6 +13,8 @@
           :src="ogps[ogpindex].image ? ogps[ogpindex].image : '/lazy_thin.png'"
           class="image"
           alt="ogp thumbnail"
+          height="200px"
+          width="200px"
         />
         <div class="ogp-card__inner">
           <h3 class="ogp-card__title">{{ ogps[ogpindex].title }}</h3>
