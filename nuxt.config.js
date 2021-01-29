@@ -55,7 +55,14 @@ export default {
     htmlAttrs: { lang: 'ja' },
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://1k-cove.com',
+    // 除外するpath
+    exclude: [],
+    // ルートを設定
+    routes: ['/'],
+  },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     { src: '~/assets/scss/global.scss', lang: 'scss' },
@@ -97,6 +104,7 @@ export default {
         defaultImage: '/lazy_thin.png',
       },
     ],
+    '@nuxtjs/sitemap',
   ],
   styleResources: {
     scss: ['@/assets/scss/utilities.scss', '@/assets/scss/variables.scss'],
