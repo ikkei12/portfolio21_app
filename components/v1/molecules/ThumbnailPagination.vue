@@ -9,6 +9,8 @@
     >
       <img
         :src="thumbnail"
+        height="100%"
+        width="auto"
         class="thumbnail-pagination__image"
         alt="product thumbnail"
       />

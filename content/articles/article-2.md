@@ -34,7 +34,7 @@
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-via="1keiuu" data-related="" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
 </div>
-<img src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/laff/1.png" class="thumbnail" alt="thumbnail" >
+<img width="100%" height="auto" src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/laff/1.png" class="thumbnail" alt="thumbnail" >
 
 ## はじめに
 先日JPHACKS2020でハッカソンデビューしたら、色んな学びがあったのでまとめようと思いました。
@@ -65,7 +65,7 @@ JPHACKS(ジャパンハックス)は、学生を対象にした日本最大規�
 ## 使用した技術
 フロントはReactNativeを使ってクロスプラットフォームのモバイルアプリ化、バックエンドにRuby on Rails、DBにPostgreSQLを使いました。
 
-<img src="https://huntr-assets.s3.amazonaws.com/users/103088073/3f4e99c5-1352-4f20-b3d9-d207f5358243">
+<img width="100%" height="auto" src="https://huntr-assets.s3.amazonaws.com/users/103088073/3f4e99c5-1352-4f20-b3d9-d207f5358243">
 
 画像分析にはGoogle Cloud Vision APIを使いました。
 
@@ -76,7 +76,7 @@ Google Cloud Vision APIを使えばこのように写真に写っている物を
 画像分析のAPIから帰ってくるラベルは英語1単語なので、その類義語をAPIから取得し、翻訳して返す事で分析の精度を高めました。  
 <br/>
 
-<img src="https://huntr-assets.s3.amazonaws.com/users/103088073/9ea87c6a-92b3-4b4c-bc94-bff71190c269">
+<img width="100%" height="auto" src="https://huntr-assets.s3.amazonaws.com/users/103088073/9ea87c6a-92b3-4b4c-bc94-bff71190c269">
 
 <br>
 

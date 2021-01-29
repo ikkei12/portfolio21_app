@@ -22,6 +22,8 @@
                 :src="content.image.url"
                 class="swiper-slide__img"
                 alt="content image"
+                width="100%"
+                height="100%"
               />
             </div>
           </swiper-slide>
@@ -57,7 +59,12 @@
         </div>
         <div v-if="product.github_url" class="product-url__wrapper">
           <div class="icon__wrapper">
-            <img src="@/assets/images/logo/github.png" alt="github icon" />
+            <img
+              src="@/assets/images/logo/github.png"
+              alt="github icon"
+              width="auto"
+              height="100%"
+            />
           </div>
           <a
             :href="product.github_url"

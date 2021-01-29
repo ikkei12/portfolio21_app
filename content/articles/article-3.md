@@ -34,7 +34,7 @@
     </div>
 </div>
 
-<img src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-3.png?authuser=1" class="thumbnail" alt="thumbnail" >
+<img width="100%" height="auto" src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-3.png?authuser=1" class="thumbnail" alt="thumbnail" >
 
 ## はじめに
 ３週間遅れだけど、少しだけ落ち着いたので今年やりたい事を書いていこうと思います。  

@@ -13,7 +13,8 @@
           <div>
             <img
               :src="productContent.image.url"
-              style="width: 100%;"
+              width="100%"
+              height="auto"
               alt="content image"
             />
           </div>

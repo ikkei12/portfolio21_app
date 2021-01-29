@@ -35,7 +35,8 @@
     </div>
 </div>
 
-<img src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1" class="thumbnail" alt="thumbnail" >
+<img width="100%" height="auto"
+ src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1" class="thumbnail" alt="thumbnail" >
 
 ## はじめに
 Jamstackなポートフォリオが出来上がりました(当サイト)  

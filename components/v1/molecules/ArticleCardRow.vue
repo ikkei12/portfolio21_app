@@ -1,6 +1,12 @@
 <template>
   <div class="card">
-    <img class="thumbnail" :src="content.thumbnail" alt="thumbnail" />
+    <img
+      class="thumbnail"
+      :src="content.thumbnail"
+      alt="thumbnail"
+      width="auto"
+      height="100%"
+    />
     <div class="inner">
       <p class="created-at">{{ content.createdDate }}</p>
       <p class="title">{{ content.title }}</p>
