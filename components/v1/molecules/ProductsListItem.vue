@@ -91,7 +91,7 @@ export default defineComponent({
   }
 
   &.--active {
-    background: $primary;
+    background: $primary__thin;
 
     .list-item {
       border-bottom: 2px solid $secondary;
