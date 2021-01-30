@@ -29,6 +29,7 @@ export default defineComponent({
   height: 100%;
   border-radius: 10px;
   background: #fff;
+  box-shadow: 0 0 20px rgba(89, 89, 89, 0.072);
 
   .thumbnail {
     height: 100%;
@@ -38,6 +39,7 @@ export default defineComponent({
 
   .inner {
     padding: 25px 15px;
+    width: 100%;
 
     .title {
       color: black;

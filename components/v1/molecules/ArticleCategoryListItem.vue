@@ -30,7 +30,7 @@ export default defineComponent({
     display: flex;
     align-items: center;
     padding-left: 12px;
-    border-bottom: 1px solid $primary;
+    border-bottom: 1px solid $primary__thin;
     overflow-x: scroll;
     white-space: nowrap;
 
