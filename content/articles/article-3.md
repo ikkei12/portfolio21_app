@@ -5,7 +5,8 @@
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-3.png?authuser=1
     createdDate: "2021-01-24"
     category_ids: 
-        - 51
+        - 51 
+        - 54
     twitter: 1keiuu
     ogpURLs: 
         - https://speakerdeck.com/twada/write-code-every-day

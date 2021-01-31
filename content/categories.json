@@ -30,6 +30,11 @@
       "id": 53,
       "title": "ハッカソン",
       "slug": "hackathon"
+    },
+    {
+      "id": 54,
+      "title": "振り返り",
+      "slug": "look_back"
     }
   ]
 }
