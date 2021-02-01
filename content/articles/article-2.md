@@ -2,7 +2,7 @@
     id: 2
     title: 学生エンジニアが初めてハッカソンに参加してみたら学びが多かった話 (JPHACKS2020)
     description: 初めてのハッカソン(JPHACKS2020)に出場したのでその感想をまとめました。
-    thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/laff/1.png
+    thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/laff/1.webp
     createdDate: "2021-01-17"
     category_ids: 
         - 3
@@ -34,7 +34,7 @@
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-via="1keiuu" data-related="" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
 </div>
-<img width="100%" height="auto" src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/laff/1.png" class="thumbnail" alt="thumbnail" >
+<img width="100%" height="auto" src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/laff/1.webp" class="thumbnail" alt="thumbnail" >
 
 ## はじめに
 先日JPHACKS2020でハッカソンデビューしたら、色んな学びがあったのでまとめようと思いました。
