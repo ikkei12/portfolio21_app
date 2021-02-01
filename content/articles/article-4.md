@@ -11,8 +11,6 @@
     ogps: 
         - {title:"", description:"", image:""}
 ---
-<!-- ogpURLsとindexを合わせる
-<OgpCard :ogpindex="0" :ogps="ogps"></OgpCard> -->
 
 # 2021年1月の振り返り
 
@@ -42,7 +40,7 @@
 まだ直す所はあるので開発はゆるく続けていこうと思います。  
 
 詳しい話はこちら
-<OgpCard :ogpindex="0" :ogps="ogps"></OgpCard>  
+<ogp-card :ogpindex="0" :ogps="ogps"></ogp-card>  
 <br/>  
 
 ### LeetCodeはじめた  

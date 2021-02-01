@@ -12,7 +12,7 @@
         - {title:"", description:"", image:""}
 ---
 <!-- ogpURLsとindexを合わせる
-<OgpCard :ogpindex="0" :ogps="ogps"></OgpCard> -->
+<ogp-card :ogpindex="0" :ogps="ogps"></ogp-card> -->
 
 # タイトル
 
