@@ -3,7 +3,7 @@
     <div class="inner">
       <div class="profile-image__wrapper">
         <img
-          src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/profile/avatar.jpg"
+          src="~/assets/images/profile.webp"
           alt="Profile image"
           class="profile-image"
           width="230px"
@@ -19,7 +19,7 @@
         <div class="link__inner">
           <div class="icon__wrapper">
             <img
-              src="~/assets/images/logo/email.png"
+              src="~/assets/images/logo/email.webp"
               class="icon"
               alt="email icon"
               height="100px"

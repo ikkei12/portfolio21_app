@@ -108,7 +108,7 @@ export default {
     [
       'nuxt-lazy-load',
       {
-        defaultImage: '/lazy.png',
+        defaultImage: '/lazy.webp',
       },
     ],
     '@nuxtjs/sitemap',
@@ -181,7 +181,7 @@ export default {
           const ogp = {
             title: 'OGP',
             description: 'fetching data... \n Please wait for a while.',
-            image: '/lazy.png',
+            image: '/lazy.webp',
           }
           const axios = require('axios')
           if (!url) return

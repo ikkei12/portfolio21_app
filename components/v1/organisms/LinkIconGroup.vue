@@ -7,7 +7,7 @@
       class="link"
     >
       <img
-        src="~/assets/images/logo/github.png"
+        src="~/assets/images/logo/github.webp"
         class="icon"
         alt="icon"
         height="100px"
@@ -21,7 +21,7 @@
       class="link"
     >
       <img
-        src="~/assets/images/logo/twitter.png"
+        src="~/assets/images/logo/twitter.webp"
         class="icon"
         alt="icon"
         height="100px"
@@ -35,7 +35,7 @@
       class="link"
     >
       <img
-        src="~/assets/images/logo/qiita.png"
+        src="~/assets/images/logo/qiita.webp"
         class="icon"
         alt="icon"
         height="100px"

@@ -10,7 +10,7 @@
       <div class="ogp-card">
         <img
           v-lazy-load
-          :src="ogps[ogpindex].image ? ogps[ogpindex].image : '/lazy.png'"
+          :src="ogps[ogpindex].image ? ogps[ogpindex].image : '/lazy.webp'"
           class="image"
           alt="ogp thumbnail"
           height="200px"
