@@ -7,19 +7,19 @@
     {
       "description": "英単語の定義が英語で出題されるのでその単語を答えるゲームです\nスコアが算出されるのでランキングで競う事ができます",
       "image": {
-        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/translation/1.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/translation/1.webp"
       }
     },
     {
       "description": "スコアは正答率、時間やヒントを使うかどうかによって変動します\n問題はOxford Dictionaries APIを使って単語を取得してDBへ保存しています",
       "image": {
-        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/translation/2.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/translation/2.webp"
       }
     },
     {
       "description": "構成はNuxt.js × Go × MySQL\nフロントはvercel、バックエンドはherokuでホスティングしています\nスマホではPWAにも対応しています",
       "image": {
-        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/translation/3.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/translation/3.webp"
       }
     }
   ]

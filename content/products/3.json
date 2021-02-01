@@ -7,19 +7,19 @@
     {
       "description": "オンライン古着サイトを自動で定期的にスクレイピングし、集まったデータをブランドごとに分類、平均価格や商品の情報が確認できます",
       "image": {
-        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/scraping/1.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/scraping/1.webp"
       }
     },
     {
       "description": "DynamoDBのStreamトリガーを利用して、DBへ書き込みがあったタイミングで、その商品の情報と、商品が割安か割高かをslackへ通知します",
       "image": {
-        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/scraping/2.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/scraping/2.webp"
       }
     },
     {
       "description": "フロントはNuxt.js、Lambda(Python)でスクレイピングをしてdynamoDBへ書き込み\nAPI Gatewayを使ってLambdaをAPI化、CloudWatchでスクレイピングの定期実行をしています",
       "image": {
-        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/scraping/3.jpg"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/scraping/3.webp"
       }
     }
   ]

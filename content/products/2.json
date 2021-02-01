@@ -7,25 +7,25 @@
     {
       "description": "普段AsanaやTrelloを使っていて「タスクをこなしている感」は感じていたが、そのタスクを「何の為にこなしているのか」までは意識出来ていないなと感じていた。「自分が今本当に取り組むべきタスクは何か」を可視化し、消化していくことで、ユーザーが設定した目標、その先のミッションステート(なりたい理想像)に最短で到達出来るようにします。",
       "image": {
-        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/papyrus/1.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/papyrus/1.webp"
       }
     },
     {
       "description": "Vue/Vuex + Firebase(Authentication/Firestore/Storage) + Electron\nワイヤーフレーム設計でAdobeXDを使っています\n本来はデスクトップアプリですが公開用としてfirebaseのhostingで公開しています",
       "image": {
-        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/papyrus/2.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/papyrus/2.webp"
       }
     },
     {
       "description": "ユーザーはタスクの追加時にいくつかの質問を答えます\nタスクは質問の答えに応じて重要度と緊急度を割り出し、「時間管理のマトリクス」に割り振られます\n。質問形式にしたのはなるべく自分の主観を排除して、「普段後回しにしがちではあるが自分にとって重要であるタスク」をあぶりだせるようにする為です",
       "image": {
-        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/papyrus/3.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/papyrus/3.webp"
       }
     },
     {
       "description": "デモアカウント\nアドレス: papyrusdev.demo@gmail.com\nパスワード: papyrus",
       "image": {
-        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/papyrus/4.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/papyrus/4.webp"
       }
     }
   ]

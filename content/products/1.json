@@ -8,21 +8,21 @@
       "title": "About the Product",
       "description": "HTML/CSS/JSを学習開始してから初めて作った、フォトギャラリーを兼ねたポートフォリオサイトです",
       "image": {
-        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio19/1.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio19/1.webp"
       }
     },
     {
       "title": "Skills",
       "description": "使用したスキルはHTML,CSS,JavaScript,Sass \r\n ワイヤーフレーム設計でAdobeXD、サイトのホスティングはFirebaseのHostingを使用しました",
       "image": {
-        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio19/2.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio19/2.webp"
       }
     },
     {
       "title": "Photo gallery",
       "description": "スライダーにはSlick,フォトギャラリーにはLightBoxといったJavaScriptライブラリを使用しました",
       "image": {
-        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio19/3.png"
+        "url": "https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/portfolio19/3.webp"
       }
     }
   ]
