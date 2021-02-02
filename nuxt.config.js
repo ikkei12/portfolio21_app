@@ -66,7 +66,7 @@ export default {
   robots: {
     UserAgent: '*',
     // クローリングしないパス
-    Disallow: '/',
+    Disallow: '',
     // sitemap.xmlのURL
     Sitemap: 'https://1k-cove.com/sitemap.xml',
   },
