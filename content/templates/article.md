@@ -19,7 +19,7 @@
 
 <div class="info">
     <div class="info__inner">
-        <chip-group :chips="categories"></chip-group>                 
+        <categorychips :chips="categories"></categorychips>
         <div class="created-date">
             <Icon iconName="calendar"></Icon>
             <p>日付</p>

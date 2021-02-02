@@ -16,7 +16,7 @@
 
 <div class="info">
     <div class="info__inner">
-        <chip-group :chips="categories"></chip-group>                 
+        <categorychips :chips="categories"></categorychips>
         <div class="created-date">
             <Icon iconName="calendar"></Icon>
             <p>2021-01-31</p>
@@ -75,7 +75,6 @@
 周5くらいで走りたいなあ    
 あとは揉みほぐしは定期的に通いたいのと、姿勢を正す。  
 サウナもいきたい！
-
 
 ## 2月にやる事  
 
