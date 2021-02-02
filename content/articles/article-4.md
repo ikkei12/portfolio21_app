@@ -1,4 +1,5 @@
 ---
+    id: 4
     title: 2021年1月の振り返り
     description: 2021年1月の振り返りです。
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-4.png?authuser=1
@@ -11,7 +12,6 @@
     ogps: 
         - {title:"", description:"", image:""}
 ---
-
 # 2021年1月の振り返り
 
 <div class="info">
@@ -30,6 +30,7 @@
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-via="1keiuu" data-related="" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
 </div>
+
 <img width="100%" height="auto" src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-4.png?authuser=1" class="thumbnail" alt="thumbnail" >
 
 ## 今月やった事  
@@ -40,6 +41,7 @@
 まだ直す所はあるので開発はゆるく続けていこうと思います。  
 
 詳しい話はこちら
+
 <ogp-card :ogpindex="0" :ogps="ogps"></ogp-card>  
 <br/>  
 
