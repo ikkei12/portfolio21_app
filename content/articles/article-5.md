@@ -1,6 +1,6 @@
 ---
     id: 5
-    title: フロントエンドのパフォーマンスチューニングを勉強したのでまとめた (LightHouse編)
+    title: パフォーマンスチューニングを勉強したのでまとめた (LightHouse編)
     description: WebSpeedHackathonOnlineVol.2に向けてパフォーマンスチューニングを勉強したときのメモ。LightHouse6を使用。
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-5.png?authuser=1
     createdDate: "2021-02-02"
@@ -15,7 +15,7 @@
 <!-- ogpURLsとindexを合わせる
 <ogp-card :ogpindex="0" :ogps="ogps"></ogp-card> -->
 
-# フロントエンドのパフォーマンスチューニングを勉強したのでまとめた (Lighthouse編)
+# パフォーマンスチューニングを勉強したのでまとめた (Lighthouse編)
 
 <div class="info">
     <div class="info__inner">

@@ -68,7 +68,7 @@ export default defineComponent({
   height: 60px;
   padding-right: 45px;
   z-index: 10;
-  background: $secondary;
+  background: $primary;
   width: 100%;
   box-shadow: 0 0 10px rgba(89, 89, 89, 0.072);
   justify-content: flex-end;
@@ -90,8 +90,7 @@ export default defineComponent({
 
       &.--active {
         padding-bottom: 3px;
-        color: $primary;
-        font-weight: bold;
+        color: #fff;
       }
     }
 
@@ -102,7 +101,7 @@ export default defineComponent({
 
       &.--active {
         height: 0;
-        border-bottom: 3px solid $primary;
+        border-bottom: 3px solid #fff;
       }
     }
   }
