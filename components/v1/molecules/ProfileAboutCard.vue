@@ -10,7 +10,7 @@
     <div class="flex">
       <Icon icon-name="birthDayFill" :size="20" color="#333" />
       <p>
-        born in <strong>1998.03.11 ({{ personalInfo.age }} y.o)</strong>
+        born on <strong>March 11, 1998 ({{ personalInfo.age }} y.o)</strong>
       </p>
     </div>
     <div class="flex">
