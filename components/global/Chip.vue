@@ -38,7 +38,7 @@ export default defineComponent({
     .chip__text {
       font-size: 10px;
       font-weight: bold;
-      margin-bottom: 0 !important;
+      margin: 0 !important;
     }
   }
 }

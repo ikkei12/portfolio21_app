@@ -7,6 +7,6 @@
 <style scoped>
 .card {
   background: white;
-  padding: 15px 20px;
+  padding: 15px 10px;
 }
 </style>

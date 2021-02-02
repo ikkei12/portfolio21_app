@@ -50,7 +50,7 @@ export default defineComponent({
   margin-top: 80px;
 
   .article-detail__inner {
-    width: 60%;
+    width: 70%;
 
     .article-detail__content {
       background: white;
@@ -82,15 +82,18 @@ export default defineComponent({
     font-size: 18px;
   }
 
+  li {
+    font-size: 18px;
+    margin-top: 12px;
+  }
+
   p {
     font-size: 18px;
     line-height: 36px;
-    margin-bottom: 30px;
+    margin: 30px 0;
   }
 
   blockquote {
-    padding: 10px;
-
     p {
       border-left: 3px solid lightgrey;
       padding-left: 12px;
@@ -99,6 +102,10 @@ export default defineComponent({
 
   .info {
     margin-bottom: 40px;
+
+    p {
+      margin: 0;
+    }
 
     .info__inner {
       display: flex;
@@ -112,7 +119,6 @@ export default defineComponent({
 
         p {
           margin-left: 8px;
-          margin-bottom: 0;
           color: grey;
         }
       }
