@@ -64,12 +64,22 @@ export default defineComponent({
   h2,
   h3,
   h4 {
+    margin-top: 20px;
     margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 19px;
   }
 
   a {
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
   }
 
   p {
@@ -141,6 +151,10 @@ export default defineComponent({
       font-size: 16px;
       line-height: 30px;
       margin-bottom: 10px;
+    }
+
+    a {
+      font-size: 16px;
     }
 
     img {
