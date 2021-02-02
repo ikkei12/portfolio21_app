@@ -119,16 +119,29 @@ export const createOgpImageAndSave = functions.https.onRequest(
           return titleLines
         }
         const lines = splitText(title)
-        ctx.font = `bold ${fontSize}px Helvetica`
+        ctx.font = `bold ${fontSize}px Noto Sans`
         ctx.fillStyle = 'white'
+        // NOTE: 文字の位置調整
         lines.forEach((line, i) => {
-          ctx.fillText(
-            line,
-            (W - ctx.measureText(line).width) / 2,
-            i === 0
-              ? (H + fontSize / 2) / 2 + i * fontSize - 30
-              : (H + fontSize / 2) / 2 + i * fontSize - 10
-          )
+          if (i === 0) {
+            ctx.fillText(
+              line,
+              (W - ctx.measureText(line).width) / 2,
+              (H + fontSize / 2) / 2 + i * fontSize - 30
+            )
+          } else if (i === 1) {
+            ctx.fillText(
+              line,
+              (W - ctx.measureText(line).width) / 2,
+              (H + fontSize / 2) / 2 + i * fontSize - 10
+            )
+          } else if (i === 2) {
+            ctx.fillText(
+              line,
+              (W - ctx.measureText(line).width) / 2,
+              (H + fontSize / 2) / 2 + i * fontSize + 10
+            )
+          }
         })
         ctx.fillText(name, (W - ctx.measureText(name).width) / 2, H - 50)
 

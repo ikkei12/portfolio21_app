@@ -1,6 +1,6 @@
 ---
-    id: 1
-    title: フロントエンドのパフォーマンスチューニングを勉強したのでまとめた (Lighthouse 6編)
+    id: 5
+    title: フロントエンドのパフォーマンスチューニングを勉強したのでまとめた (LightHouse編)
     description: WebSpeedHackathonOnlineVol.2に向けてパフォーマンスチューニングを勉強したときのメモ。LightHouse6を使用。
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-5.png?authuser=1
     createdDate: "2021-02-02"
@@ -33,13 +33,14 @@
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-via="1keiuu" data-related="" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
 </div>
-<img width="100%" height="auto" src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-3.png?authuser=1" class="thumbnail" alt="thumbnail" >
+<img width="100%" height="auto" src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-5.png?authuser=1" class="thumbnail" alt="thumbnail" >
 
 ## はじめに  
 
-Cyber Agentの[Web Speed Hackathon Vol.2](https://www.cyberagent.co.jp/careers/students/career_event/detail/id=25556)に参加するのでフロントのパフォーマンスチューニングを少し勉強した。(執筆時は未参加)  
-
-主に前回開催時の[問題とその解説](https://github.com/CyberAgentHack/web-speed-hackathon-online)を使った。  
+Cyber Agentの[Web Speed Hackathon Vol.2](https://www.cyberagent.co.jp/careers/students/career_event/detail/id=25556)に参加するのでフロントのパフォーマンスチューニングを少し勉強しました。(執筆時は未参加)  
+  
+今回はLight House v6の指標についてまとめました。  
+[web.dev](https://web.dev)の内容をなぞっていきます。  
 
 ## パフォーマンス測定の指標
 
@@ -219,3 +220,5 @@ cumulative(意:累計)
 
 - ブラウザ(LightHouse)でJSファイルを見てもchunkされた状態になっているので、webpackのビルドプロセスを把握する必要がありそう。  
 　参考: https://qiita.com/mizchi/items/418be9abee5f785696f0
+
+次回はwebpackの最適化とかをまとめていくつもりです。    
