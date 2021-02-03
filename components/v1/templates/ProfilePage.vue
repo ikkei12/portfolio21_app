@@ -5,9 +5,9 @@
         <ProfileInformationCard class="profile-page__card" />
         <div v-if="isPC" class="scroll-button__wrapper">
           <button
-            v-scroll-to="'#second-view'"
             class="scroll-button ripple"
             aria-label="Scroll"
+            @click="handleScrollButtonClick"
           >
             <Icon icon-name="arrowDown" color="#3b8070" />
           </button>
@@ -58,6 +58,12 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+  },
+  setup(_props, context) {
+    const handleScrollButtonClick = () => {
+      context.emit('onScrollButtonClick', 'down')
+    }
+    return { handleScrollButtonClick }
   },
 })
 </script>

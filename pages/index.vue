@@ -4,6 +4,7 @@
       :career-nodes="careerNodes"
       :personal-info="personalInfo"
       :is-p-c="isPC"
+      @onScrollButtonClick="scrollWindow"
     />
   </div>
 </template>
@@ -35,20 +36,33 @@ export default defineComponent({
           window.pageYOffset || document.documentElement.scrollTop
         const currentPos = scrollTop
         if (currentPos > startPos - 100) {
-          scrollTo({
-            top: window.innerHeight + 60,
-            left: 0,
-            behavior: 'smooth',
-          })
+          scrollDown()
         } else {
-          scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth',
-          })
+          scrollUp()
         }
         startPos = currentPos
       }, 500)
+    }
+    const scrollUp = () => {
+      scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      })
+    }
+    const scrollDown = () => {
+      scrollTo({
+        top: window.innerHeight,
+        left: 0,
+        behavior: 'smooth',
+      })
+    }
+    const scrollWindow = (direction: string) => {
+      if (direction === 'up') {
+        scrollUp()
+      } else {
+        scrollDown()
+      }
     }
     const isPC = ref(false)
     onMounted(() => {
@@ -60,7 +74,7 @@ export default defineComponent({
       if (!isPC.value) return
       window.removeEventListener('scroll', handleScroll)
     })
-    return { isPC }
+    return { isPC, scrollWindow }
   },
   async asyncData({ $content }) {
     const fetchData = await $content('profile').fetch()
