@@ -78,11 +78,20 @@ export const createOgpImageAndSave = functions.https.onRequest(
         const baseImage = await loadImage(baseImagePath)
         ctx.drawImage(baseImage, 0, 0, W, H)
         const fontSize = 50
-        const isAlphabetOrNumber = (str: string) => {
+        const isAlphabetOrNumberOrSymbol = (str: string) => {
+          // NOTE: is str Alphabet ?
           const ratz = /[a-z]/
           const rAtZ = /[A-Z]/
+          // NOTE: is str Number ?
           const r0t9 = /[0-9]/
-          return ratz.test(str) || rAtZ.test(str) || r0t9.test(str)
+          // NOTE: is str Symbol ?
+          const rSymbol = /[(){}!?<>""''/*+-=]/
+          return (
+            ratz.test(str) ||
+            rAtZ.test(str) ||
+            r0t9.test(str) ||
+            rSymbol.test(str)
+          )
         }
         const splitText = (text: string): Array<string> => {
           const titleLines = ['']
@@ -94,7 +103,7 @@ export const createOgpImageAndSave = functions.https.onRequest(
           const japaneseLetterSize = 1
 
           text.split('').forEach((letter) => {
-            if (isAlphabetOrNumber(letter)) {
+            if (isAlphabetOrNumberOrSymbol(letter)) {
               if (letterCount + alphabetOrNumberLetterSize > countPerLine) {
                 titleLines[i + alphabetOrNumberLetterSize] = letter
                 letterCount = 0
