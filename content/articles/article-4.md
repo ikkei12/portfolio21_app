@@ -1,5 +1,5 @@
 ---
-    id: 4
+    position: 4
     title: 2021年1月の振り返り
     description: 2021年1月の振り返りです。
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-4.png?authuser=1

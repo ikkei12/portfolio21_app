@@ -1,5 +1,5 @@
 ---
-    id: 2
+    position: 2
     title: 学生エンジニアが初めてハッカソンに参加してみたら学びが多かった話 (JPHACKS2020)
     description: 初めてのハッカソン(JPHACKS2020)に出場したのでその感想をまとめました。
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/products/laff/1.webp

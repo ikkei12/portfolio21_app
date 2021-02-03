@@ -1,5 +1,5 @@
 ---
-    id: 3
+    position: 3
     title: 2021年にやる事
     description: 2021年にやる事を書きました。年末に振り返る用。
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-3.png?authuser=1

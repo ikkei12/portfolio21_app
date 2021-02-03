@@ -1,5 +1,5 @@
 ---
-    id: 1
+    position: 1
     title: Jamstackなポートフォリオを作成しました
     thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1
     description: パフォーマンスと管理しやすさを考えて、ポートフォリオをJamstackで作り直しました。
