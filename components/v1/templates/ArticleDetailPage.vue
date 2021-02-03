@@ -94,9 +94,18 @@ export default defineComponent({
   }
 
   blockquote {
+    display: flex;
+    margin: 30px 0;
+
     p {
-      border-left: 3px solid lightgrey;
-      padding-left: 12px;
+      padding: 8px 12px;
+      background: #fafafa;
+      margin: 0;
+    }
+
+    &::before {
+      content: '';
+      border-left: 5px solid lightgrey;
     }
   }
 
