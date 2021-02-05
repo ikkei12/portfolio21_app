@@ -69,6 +69,7 @@ export default defineComponent({
     background: white;
     border-radius: 8px;
     width: 100%;
+    box-shadow: 0 0 20px rgba(89, 89, 89, 0.072);
 
     .thumbnail {
       width: 100%;
