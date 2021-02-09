@@ -1,15 +1,13 @@
 <template>
   <div class="pagination">
     <div class="pagination__inner">
-      <div v-if="next" class="link__wrapper">
-        <h3 class="link__desc">次の記事</h3>
-        <ContentPaginationLink :content="next" />
-        <ArticleCard :article="next" />
-      </div>
       <div v-if="prev" class="link__wrapper">
-        <h3 class="link__desc">前の記事</h3>
+        <h3 class="link__desc">次の記事</h3>
         <ContentPaginationLink :content="prev" />
-        <ArticleCard :article="prev" />
+      </div>
+      <div v-if="next" class="link__wrapper">
+        <h3 class="link__desc">前の記事</h3>
+        <ContentPaginationLink :content="next" />
       </div>
     </div>
   </div>
