@@ -157,8 +157,8 @@ export default {
         })
         document.readingTime = time
 
-        // categoryの取得
-        const { CategoryHook } = require('./nuxt_content/hooks/CategoryHook')
+        // categoryの取得、設定
+        const { CategoryHook } = require('./nuxt_content/hooks/categoryHook')
         const res = CategoryHook.getCategoryFromIds(document.category_ids)
         document.categories = res
 
@@ -168,6 +168,8 @@ export default {
           const responseOgp = OGPHook.getOGP(document.ogpURLs[i])
           document.ogps[i] = responseOgp
         }
+
+        console.log(document.body.children)
       }
     },
   },

@@ -10,6 +10,33 @@ export type ParsedHTMLElement = {
   rawAttrs: string
   parentNode: ParsedHTMLElement | ParsedTextNode
   classNames: string[]
+  id: string
   nodeType: number
   rawTagName: string
 }
+
+export type NuxtContentHTMLElement = {
+  type?: string
+  tag?: string
+  props?: any
+  children?: string
+}
+
+// <ref *1> HTMLElement {
+//   childNodes: [
+//     HTMLElement {
+//       childNodes: [Array],
+//       rawAttrs: 'class="info"',
+//       parentNode: [Circular *1],
+//       classNames: [Array],
+//       nodeType: 1,
+//       rawTagName: 'div'
+//     },
+//     TextNode { childNodes: [], rawText: '\n', nodeType: 3 }
+//   ],
+//   rawAttrs: '',
+//   parentNode: null,
+//   classNames: [],
+//   nodeType: 1,
+//   rawTagName: null
+// }

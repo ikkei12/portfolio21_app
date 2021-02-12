@@ -8,7 +8,7 @@ import { Context } from '@nuxt/types'
 import ArticleDetailPage from '@/components/v1/templates/ArticleDetailPage.vue'
 import { Article } from '~/@types/Article'
 
-declare type OGP = {
+export type OGP = {
   title: string
   description: string
   url: string
