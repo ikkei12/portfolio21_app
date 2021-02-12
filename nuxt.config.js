@@ -154,19 +154,9 @@ export default {
         document.readingTime = time
 
         // categoryの取得
-        const fs = require('fs')
-        const categoriesJsonData = JSON.parse(
-          fs.readFileSync('content/categories.json', 'utf8')
-        ).categories
-        const categories = []
-        if (!document.category_ids) return
-        document.category_ids.forEach((categoryId) => {
-          const res = categoriesJsonData.find((category) => {
-            return category.id === categoryId
-          })
-          categories.push(res)
-        })
-        document.categories = categories
+        const { Categories } = require('./nuxt_content/hooks/Category')
+        const res = Categories.getCategoryFromIds(document.category_ids)
+        document.categories = res
 
         // ogpデータの取得、設定
         if (!document.ogpURLs) return
