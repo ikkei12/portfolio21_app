@@ -1,11 +1,11 @@
-declare type OGP = {
+export type OGP = {
   title?: string
   description?: string
   url?: string
   image?: string
 }
 
-declare type QiitaArticleAPIResponse = {
+export type QiitaArticleAPIResponse = {
   id: string
   url: string
   title: string
@@ -16,7 +16,7 @@ declare type QiitaArticleAPIResponse = {
   created_at?: string
 }
 
-declare type QiitaArticle = OGP & {
+export type QiitaArticle = OGP & {
   id?: string
   likesCount?: number
   createdAt?: string

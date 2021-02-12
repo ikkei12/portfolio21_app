@@ -1,1 +1,1 @@
-declare module 'v-click-outside'
+export module 'v-click-outside'

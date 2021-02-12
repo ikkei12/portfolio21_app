@@ -2,7 +2,7 @@ type Image = {
   url: string
 }
 
-declare type ProductContent = {
+export type ProductContent = {
   productId: number
   order: number
   description: string
@@ -13,7 +13,7 @@ declare type ProductContent = {
   publishedAt: string
 }
 
-declare type Product = {
+export type Product = {
   id?: string
   title?: string
   productionPeriod?: string

@@ -1,10 +1,10 @@
-declare type PersonalInformation = {
+export type PersonalInformation = {
   liveIn: String
   age: Number
   organisation: String
 }
 
-declare type CareerNode = {
+export type CareerNode = {
   title?: String
   description?: String
   date?: String

@@ -1,1 +1,1 @@
-declare type Chip = { text: string; color: string }
+export type Chip = { text: string; color: string }
