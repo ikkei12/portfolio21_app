@@ -16,6 +16,7 @@ import { defineComponent, reactive } from '@vue/composition-api'
 import ArticlesProvider from '@/components/v1/providers/ArticlesProvider.vue'
 import firebase from 'firebase'
 import { Article, Category, CategoryContent } from '~/@types/Article'
+import { QiitaArticle, QiitaArticleAPIResponse } from '~/@types/Ogp'
 export default defineComponent({
   components: {
     ArticlePage,

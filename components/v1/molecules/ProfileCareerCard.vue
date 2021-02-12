@@ -10,6 +10,7 @@
 import { defineComponent, PropType } from '@vue/composition-api'
 import Card from '@/components/v1/molecules/Card.vue'
 import CareerTree from '@/components/v1/organisms/CareerTree.vue'
+import { CareerNode } from '~/@types/Home'
 
 export default defineComponent({
   props: {

@@ -13,6 +13,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, PropType, computed } from '@vue/composition-api'
+import { Product } from '~/@types/Product'
 
 export default defineComponent({
   props: {

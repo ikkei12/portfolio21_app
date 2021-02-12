@@ -26,6 +26,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
+import { ProductContent } from '~/@types/Product'
 
 export default defineComponent({
   props: {

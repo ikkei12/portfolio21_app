@@ -32,6 +32,7 @@ import ProfileInformationCard from '@/components/v1/molecules/ProfileInformation
 import ProfileAboutCard from '@/components/v1/molecules/ProfileAboutCard.vue'
 import ProfileCareerCard from '@/components/v1/molecules/ProfileCareerCard.vue'
 import Icon from '@/components/v1/atoms/Icon.vue'
+import { CareerNode, PersonalInformation } from '~/@types/Home'
 export default defineComponent({
   components: {
     ProfileInformationCard,

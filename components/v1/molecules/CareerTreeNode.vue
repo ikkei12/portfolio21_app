@@ -13,6 +13,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
 import Dot from '@/components/v1/atoms/Dot.vue'
+import { CareerNode } from '~/@types/Home'
 
 export default defineComponent({
   components: {

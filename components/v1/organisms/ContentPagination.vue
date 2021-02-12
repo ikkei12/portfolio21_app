@@ -16,7 +16,6 @@
 import { defineComponent, PropType } from '@vue/composition-api'
 import { IContentDocument } from '@nuxt/content/types/content'
 import ContentPaginationLink from '@/components/v1/molecules/ContentPaginationLink.vue'
-import ArticleCard from '@/components/v1/molecules/ArticleCard.vue'
 export default defineComponent({
   props: {
     prev: { type: Object as PropType<IContentDocument> },

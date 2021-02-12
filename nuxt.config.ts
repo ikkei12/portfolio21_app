@@ -1,4 +1,3 @@
-import { AxiosError, AxiosResponse } from 'axios'
 import { ArticleContent } from './@types/Article'
 
 const envPath = 'config/.env'

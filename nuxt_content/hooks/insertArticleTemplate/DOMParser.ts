@@ -1,6 +1,10 @@
 // export class DOMParser {
 
-import { NuxtContentHTMLElement, ParsedHTMLElement, ParsedTextNode } from '~/@types/DOMParser'
+import {
+  NuxtContentHTMLElement,
+  ParsedHTMLElement,
+  ParsedTextNode,
+} from '~/@types/DOMParser'
 
 // static parse() {
 const fs = require('fs')
@@ -18,17 +22,17 @@ root.childNodes.forEach((el: ParsedTextNode | ParsedHTMLElement) => {
       tag: el.rawTagName,
       props: {
         id: '',
-        className: []
-      }
+        className: [],
+      },
     }
 
     if (el.id) {
       node.props.id = el.id
     }
     if (el.classNames) {
-      el.classNames.forEach(class=> {
-        node.props.className.push(class)
-      })
+      // el.classNames.forEach(class=> {
+      //   node.props.className.push(class)
+      // })
     }
     array.push(node)
   } else if (el.nodeType === 3) {

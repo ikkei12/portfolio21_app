@@ -85,6 +85,7 @@ import { defineComponent, PropType, ref } from '@vue/composition-api'
 import ThumbnailPagination from '@/components/v1/molecules/ThumbnailPagination.vue'
 import SwiperClass from 'swiper'
 import { SwiperDOM } from '~/@types/Swiper'
+import { Product } from '~/@types/Product'
 export default defineComponent({
   components: { ThumbnailPagination },
   props: {

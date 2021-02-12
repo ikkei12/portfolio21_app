@@ -44,6 +44,7 @@ import ArticleCategoriesList from '@/components/v1/organisms/ArticleCategoriesLi
 import Icon from '@/components/v1/atoms/Icon.vue'
 import QiitaCardsGroup from '@/components/v1/organisms/QiitaCardsGroup.vue'
 import { Article, ArticleCategoryItem } from '~/@types/Article'
+import { QiitaArticle } from '~/@types/Ogp'
 export default defineComponent({
   components: {
     ArticleCardsGroup,

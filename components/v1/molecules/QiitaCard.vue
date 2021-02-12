@@ -24,6 +24,7 @@
 <script lang="ts">
 import { computed, defineComponent, PropType } from '@vue/composition-api'
 import Icon from '@/components/v1/atoms/Icon.vue'
+import { QiitaArticle } from '~/@types/Ogp'
 export default defineComponent({
   components: { Icon },
   props: {

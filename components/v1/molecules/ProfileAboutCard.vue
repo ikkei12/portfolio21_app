@@ -26,6 +26,7 @@
 import { defineComponent, PropType } from '@vue/composition-api'
 import Card from '@/components/v1/molecules/Card.vue'
 import Icon from '@/components/v1/atoms/Icon.vue'
+import { PersonalInformation } from '~/@types/Home'
 export default defineComponent({
   components: {
     Card,

@@ -15,6 +15,7 @@
 <script lang="ts">
 import CareerTreeNode from '@/components/v1/molecules/CareerTreeNode.vue'
 import { defineComponent, PropType } from '@vue/composition-api'
+import { CareerNode } from '~/@types/Home'
 
 export default defineComponent({
   props: {

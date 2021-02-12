@@ -10,6 +10,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
 import QiitaCard from '@/components/v1/molecules/QiitaCard.vue'
+import { QiitaArticle } from '~/@types/Ogp'
 export default defineComponent({
   components: { QiitaCard },
   props: {

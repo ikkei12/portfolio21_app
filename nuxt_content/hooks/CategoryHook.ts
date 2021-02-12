@@ -1,3 +1,5 @@
+import { Category } from '~/@types/Article'
+
 export class CategoryHook {
   static getCategoryFromIds(categoryIds: Number[]): Category[] {
     const fs = require('fs')
