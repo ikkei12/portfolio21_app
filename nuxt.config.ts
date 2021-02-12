@@ -158,7 +158,7 @@ export default {
         const path = require('path')
         // categoryの取得、設定
         const { CategoryHook } = require(path.resolve(
-          './nuxt_content/hooks/categoryHook'
+          '../nuxt_content/hooks/categoryHook'
         ))
         const res = CategoryHook.getCategoryFromIds(document.category_ids)
         document.categories = res
@@ -166,7 +166,7 @@ export default {
         // ogpデータの取得、設定
         for (let i = 0; i < document.ogpURLs.length; i++) {
           const { OGPHook } = require(path.resolve(
-            './nuxt_content/hooks/oGPHook'
+            '../nuxt_content/hooks/oGPHook'
           ))
           const responseOgp = OGPHook.getOGP(document.ogpURLs[i])
           document.ogps[i] = responseOgp
