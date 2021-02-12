@@ -1,4 +1,5 @@
 import { reactive } from '@vue/composition-api'
+import { Product } from '~/@types/Product'
 
 export default function ProductsStore() {
   const state = reactive({

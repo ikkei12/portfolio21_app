@@ -163,7 +163,7 @@ export default {
 
         // ogpデータの取得、設定
         for (let i = 0; i < document.ogpURLs.length; i++) {
-          const { OGPHook } = require('./nuxt_content/hooks/OGPHook')
+          const { OGPHook } = require('./nuxt_content/hooks/oGPHook')
           const responseOgp = OGPHook.getOGP(document.ogpURLs[i])
           document.ogps[i] = responseOgp
         }

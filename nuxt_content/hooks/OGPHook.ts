@@ -1,4 +1,5 @@
 import { AxiosError, AxiosResponse } from 'axios'
+import { OGP } from '~/@types/Ogp'
 
 export class OGPHook {
   static async getOGP(url: string) {
