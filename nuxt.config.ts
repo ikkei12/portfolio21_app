@@ -1,5 +1,9 @@
+import { AxiosError, AxiosResponse } from 'axios'
+import { ArticleContent } from './@types/Article'
+
 const envPath = 'config/.env'
 require('dotenv').config({ path: envPath })
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -145,7 +149,7 @@ export default {
     interval: 2000,
   },
   hooks: {
-    'content:file:beforeInsert': async (document) => {
+    'content:file:beforeInsert': (document: ArticleContent) => {
       if (document.extension === '.md') {
         // reading timeの設定
         const { time } = require('reading-time')(document.text, {
@@ -154,39 +158,15 @@ export default {
         document.readingTime = time
 
         // categoryの取得
-        const { Categories } = require('./nuxt_content/hooks/Category')
-        const res = Categories.getCategoryFromIds(document.category_ids)
+        const { CategoryHook } = require('./nuxt_content/hooks/CategoryHook')
+        const res = CategoryHook.getCategoryFromIds(document.category_ids)
         document.categories = res
 
         // ogpデータの取得、設定
-        if (!document.ogpURLs) return
         for (let i = 0; i < document.ogpURLs.length; i++) {
-          const url = document.ogpURLs[i]
-          const ogp = {
-            title: 'OGP',
-            description: 'fetching data... \n Please wait for a while.',
-            image: '/lazy.webp',
-          }
-          const axios = require('axios')
-          if (!url) return
-          await axios
-            .post(
-              'https://asia-northeast1-portfolio21-56e7e.cloudfunctions.net/getOgpInfo',
-              { url },
-              {
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-              }
-            )
-            .then((res) => {
-              ogp.image = res.data.ogp.image
-              ogp.description = res.data.ogp.description
-              ogp.title = res.data.ogp.title
-              ogp.url = url
-            })
-            .catch((e) => console.error(e))
-          document.ogps[i] = ogp
+          const { OGPHook } = require('./nuxt_content/hooks/OGPHook')
+          const responseOgp = OGPHook.getOGP(document.ogpURLs[i])
+          document.ogps[i] = responseOgp
         }
       }
     },

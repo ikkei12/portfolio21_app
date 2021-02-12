@@ -1,4 +1,4 @@
-export class Categories {
+export class CategoryHook {
   static getCategoryFromIds(categoryIds: Number[]): Category[] {
     const fs = require('fs')
     const categoriesJsonData = JSON.parse(
