@@ -1,4 +1,4 @@
 import Vue from 'vue'
-import vClickOutside from 'v-click-outside'
+const vClickOutside = require('v-click-outside')
 
 Vue.use(vClickOutside)
