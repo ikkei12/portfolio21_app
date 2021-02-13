@@ -148,7 +148,7 @@ export default {
     interval: 2000,
   },
   hooks: {
-    'content:file:beforeInsert': (document: ArticleContent) => {
+    'content:file:beforeInsert': async (document: ArticleContent) => {
       if (document.extension === '.md') {
         // reading timeの設定
         const { time } = require('reading-time')(document.text, {
@@ -170,7 +170,7 @@ export default {
             __dirname,
             './nuxt_content/hooks/OGPHook.ts'
           ))
-          const responseOgp = OGPHook.getOGP(document.ogpURLs[i])
+          const responseOgp = await OGPHook.getOGP(document.ogpURLs[i])
           document.ogps[i] = responseOgp
         }
       }

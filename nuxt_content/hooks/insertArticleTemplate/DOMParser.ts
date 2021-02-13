@@ -26,12 +26,11 @@ root.childNodes.forEach((el: ParsedTextNode | ParsedHTMLElement) => {
       },
     }
 
-    if (el.id) {
-      node.props.id = el.id
-    }
+    if (el.id) node.props.id = el.id
+
     if (el.classNames) {
-      // el.classNames.forEach(class=> {
-      //   node.props.className.push(class)
+      // el.classNames.forEach((class) => {
+      //     node.props.className.push(class)
       // })
     }
     array.push(node)
