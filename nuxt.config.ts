@@ -159,7 +159,7 @@ export default {
         // categoryの取得、設定
         const { CategoryHook } = require(path.resolve(
           __dirname,
-          './nuxt_content/hooks/categoryHook.ts'
+          './nuxt_content/hooks/CategoryHook.ts'
         ))
         const res = CategoryHook.getCategoryFromIds(document.category_ids)
         document.categories = res
