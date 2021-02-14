@@ -1,12 +1,13 @@
+<!-- NOTE: 対応できるattributesは `x = y` のみ。 -->
 <div id="info">
   <div class="info__inner">
-    <categorychips :chips="categories"></categorychips>
+    <!-- <categorychips></categorychips> -->
     <div class="created-date">
       <Icon iconName="calendar"></Icon>
       <p>2021-01-17</p>
     </div>
   </div>
-  <div class="reading-time --sp">
+  <div class="reading-time" class="--sp">
     <Icon iconName="clock"></Icon>
     <p id="readingTimeSp"></p>
   </div>
@@ -21,7 +22,7 @@
       >Tweet</a
     >
     <script
-      async
+      defer
       src="https://platform.twitter.com/widgets.js"
       charset="utf-8"
     ></script>
