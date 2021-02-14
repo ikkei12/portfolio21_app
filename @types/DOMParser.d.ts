@@ -19,7 +19,7 @@ export type NuxtContentHTMLElement = {
   type?: string
   tag?: string
   props?: any
-  children?: string
+  children?: NuxtContentHTMLElement[]
 }
 
 // <ref *1> HTMLElement {

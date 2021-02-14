@@ -173,6 +173,14 @@ export default {
           const responseOgp = await OGPHook.getOGP(document.ogpURLs[i])
           document.ogps[i] = responseOgp
         }
+
+        //
+        const { DOMParser } = require(path.resolve(
+          __dirname,
+          './nuxt_content/hooks/InsertArticleTemplate/DOMParser.js'
+        ))
+        document.body.children.unshift(DOMParser.parse())
+        // console.log(DOMParser.parse())
       }
     },
   },
