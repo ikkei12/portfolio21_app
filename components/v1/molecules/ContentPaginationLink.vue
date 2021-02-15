@@ -23,7 +23,13 @@ export default defineComponent({
 <style scoped lang="scss">
 .pagination-link {
   text-decoration: none;
-  height: 150px;
   display: block;
+}
+
+@include sp {
+  .pagination-link {
+    display: flex;
+    justify-content: center;
+  }
 }
 </style>

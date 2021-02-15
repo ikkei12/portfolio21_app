@@ -52,10 +52,6 @@ export default defineComponent({
     .pagination__inner {
       .link__wrapper {
         margin-bottom: 30px;
-
-        .pagination-link {
-          display: none;
-        }
       }
 
       .article-card {

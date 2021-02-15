@@ -4,8 +4,8 @@
       class="thumbnail"
       :src="content.thumbnail"
       alt="thumbnail"
-      width="auto"
-      height="100%"
+      width="300px"
+      height="150px"
     />
     <div class="inner">
       <p class="created-at">{{ content.createdDate }}</p>
@@ -50,6 +50,19 @@ export default defineComponent({
       color: grey;
       font-size: 13px;
       margin-bottom: 5px;
+    }
+  }
+}
+
+@include sp {
+  .card {
+    flex-direction: column;
+    width: 90%;
+
+    .thumbnail {
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0;
+      width: 100%;
     }
   }
 }
