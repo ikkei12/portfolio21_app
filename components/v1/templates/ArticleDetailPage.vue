@@ -140,8 +140,12 @@ export default defineComponent({
     }
   }
 
-  .thumbnail {
-    border-radius: 10px;
+  .thumbnail__wrapper {
+    .thumbnail {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
+    }
   }
 
   img {
