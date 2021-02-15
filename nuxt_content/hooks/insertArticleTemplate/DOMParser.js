@@ -3,7 +3,7 @@
 //   ParsedHTMLElement,
 //   ParsedTextNode,
 // } from '~/@types/DOMParser'
-export class DOMParser {
+class DOMParser {
   static parse() {
     const fs = require('fs')
     const path = require('path')
@@ -32,6 +32,7 @@ export class DOMParser {
         id: '',
         className: [],
       },
+      tag: 'div',
       children: [],
     }
     const test = (current, prev) => {
@@ -74,14 +75,29 @@ export class DOMParser {
           if (res.children.length === 0) {
             res.children.push(node)
           } else {
-            const a = res.children.find((childNode) => {
-              return childNode === prev
-            })
-            // console.log(current)
-            if (a) {
-              if (a.childNodes) a.childNodes.push(node)
+            const searchAndPush = (target) => {
+              if (target.children) {
+                target.children.forEach((t) => {
+                  if (t === prev) {
+                    return t
+                  } 
+                  return searchAndPush(t)
+                })
+              } else {
+                return {}
+              }
             }
-          }
+            // const a = res.children.find((childNode) => {
+            //   return childNode === prev
+            // })
+            // console.log(current)
+            const a = searchAndPush(res)
+            console.log(a)
+
+            if (a) {
+              a.children.push(node)
+            }
+          },0
           test(el, node)
 
           // if (el.id) node.props.id = el.id
@@ -118,6 +134,7 @@ export class DOMParser {
   }
 }
 
+DOMParser.parse()
 // // {
 // //     type: 'element',
 // //     tag: 'h1',

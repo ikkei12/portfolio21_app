@@ -174,13 +174,18 @@ export default {
           document.ogps[i] = responseOgp
         }
 
-        //
-        const { DOMParser } = require(path.resolve(
-          __dirname,
-          './nuxt_content/hooks/InsertArticleTemplate/DOMParser.js'
-        ))
-        document.body.children.unshift(DOMParser.parse())
-        // console.log(DOMParser.parse())
+        // templateの挿入
+        // const { DOMParser } = require(path.resolve(
+        //   __dirname,
+        //   './nuxt_content/hooks/InsertArticleTemplate/DOMParser.js'
+        // ))
+        // const v = DOMParser.parse()
+        // document.body.children.unshift(v)
+        // if (document.slug === 'article-1') console.log(document.body.children)
+
+        // v.children.each((a) => {
+        //   document.body.children.unshift(v.children)
+        // })
       }
     },
   },
