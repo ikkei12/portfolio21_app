@@ -34,7 +34,7 @@ export default defineComponent({
     ).fetch()) as CategoryContent
     let title = ''
     const articles = await $content('articles')
-      .sortBy('createdDate', 'asc')
+      .sortBy('createdDate', 'desc')
       .fetch()
     const targetCategory = categoriesJson?.categories.find(
       (category: Category) => {
