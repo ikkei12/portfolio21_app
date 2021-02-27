@@ -9,7 +9,7 @@
         - 53
     twitter: 1keiuu
     ogpURLs: 
-        - https://github.com/ikkei12/B_2009
+        - https://github.com/1keiuu/B_2009
         - https://www.youtube.com/watch?v=mVvbSJA8qvQ&feature=youtu.be
         - https://cloud.google.com/vision/?hl=ja
         - https://miro.com/

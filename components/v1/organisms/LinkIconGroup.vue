@@ -1,7 +1,7 @@
 <template>
   <div class="link__group">
     <a
-      href="https://github.com/ikkei12"
+      href="https://github.com/1keiuu"
       target="_blank"
       rel="noopener noreferrer"
       class="link"
