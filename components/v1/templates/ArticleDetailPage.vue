@@ -88,9 +88,20 @@ export default defineComponent({
   }
 
   p {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 36px;
     margin: 30px 0;
+  }
+
+  .img__wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+
+    img {
+      width: 85%;
+      border-radius: 10px;
+    }
   }
 
   blockquote {
@@ -145,11 +156,8 @@ export default defineComponent({
       border-radius: 10px;
       width: 100%;
       height: auto;
+      margin: 0;
     }
-  }
-
-  img {
-    margin-bottom: 80px;
   }
 
   .sns-link__group {
@@ -174,10 +182,6 @@ export default defineComponent({
 
     a {
       font-size: 16px;
-    }
-
-    img {
-      margin-bottom: 40px;
     }
 
     .created-date {

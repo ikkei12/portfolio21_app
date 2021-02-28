@@ -1,0 +1,102 @@
+---
+    position: 8
+    title: 2021年2月の振り返り
+    description: 2021年2月の振り返りです。フォースタでのインターンが終わって3月からは新しいインターンが始まります。
+    thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-8.jpg
+    createdDate: "2021-02-28"
+    category_ids: 
+        - 54
+    twitter: 1keiuu
+    ogpURLs: 
+        - https://www.habitify.me/
+        - https://beauty.hotpepper.jp/kr/slnH000419960/
+    ogps: 
+        - {title:"", description:"", image:""}
+---
+<!-- ogpURLsとindexを合わせる
+<ogp-card :ogpindex="0" :ogps="ogps"></ogp-card> -->
+
+# 2021年2月の振り返り
+
+<div class="info">
+    <div class="info__inner">
+        <categorychips :chips="categories"></categorychips>
+        <div class="created-date">
+            <Icon iconName="calendar"></Icon>
+            <p>2021-02-28</p>
+        </div>
+    </div>
+    <div class="reading-time --sp">
+        <Icon  iconName="clock"></Icon>
+        <p id="readingTimeSp"></p>
+    </div>
+        <div class="sns-link__group">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-via="1keiuu" data-related="" data-show-count="false">Tweet</a><script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+</div>
+<div class="thumbnail__wrapper">
+    <img  width="1200px" height="630px" src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-8.jpg" class="thumbnail" alt="thumbnail" >
+</div>
+
+2021年2月の振り返りです。  
+2月はWebSpeedHackathonに出たり、フォースタでの最後の一ヶ月だったりと結構濃い一ヶ月でした。
+
+## WebSpeedHackathonを通してフロントエンドがより好きになった
+
+パフォーマンスチューニングの勉強を通して、普段使う機会のなかったwebpackやbabelといったフロントエンド周辺環境を勉強するいい機会になりました。  
+babelのトランスパイルを通してASTへの変換で遊んだりと、アプリ開発以外のコードを書くようになり少し成長を感じました。  
+一方でLINE社のコーディング試験は相変わらず通過できず。コーディング試験のさを感じています。  
+Exercismを毎日解き始めたり、アルゴリズムの勉強を始めたりしてるし、一ヶ月後くらいの結果に出てほしい。
+
+## habitifyで習慣管理を始めた
+
+お馴染みhabitify  
+
+<ogp-card :ogpindex="0" :ogps="ogps"></ogp-card>
+
+<br/>  
+
+進捗率はあまり良くないですね、、
+
+<div class="img__wrapper">
+    <img src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/articles/8/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202021-02-28%2019.36.50.png">  
+</div>
+
+ランニングは28日間で11回で距離は27.3km。  
+数字としては良くない。一週間で3回程度。  
+週5で走れてない原因は作業を遅くまでしてしまう事かな。睡眠の質的にも早く切り上げて朝活したい。。  
+    
+来月は週5で走行距離60kmを目指します。  
+(この目標をどうやって日頃からリマインドするかが問題なんだよね。。。)
+
+## フォースタインターン卒業
+4ヶ月という短さでしたが、長い目で見たら自分の今後のキャリアに影響する大切な期間だったと思います。  
+この間でハッカソン出たり、Qiita書いたり、勉強会で発表したりと、エンジニアとしての第一歩が踏み出せた気がします。  
+働き口が無くて困り果てていた時、採用していただいた皆様には本当に感謝しかないです。  
+<br/>  
+
+## サウナしきじに行けた
+
+サウナの聖地に行きました。  
+
+<div class="img__wrapper">
+    <img src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/articles/8/E0E1C7C8-0BD6-4FD1-9CE7-5E0B9BEDC24D.jpg">  
+</div>
+
+<br/>  
+
+水風呂には滝があって、薬草の香りも最高でした。  
+やっぱサウナいくとリフレッシュできますね〜  
+
+さわやかハンバーグも初めて食べた。  
+みんなが絶賛してて天邪鬼の自分は避けてきたのですが、食べてみると案の定美味しかったです。  
+
+あと今月は新宿のマッサージによく行きましたね。おかげで作業効率上がりました。  
+<ogp-card :ogpindex="1" :ogps="ogps"></ogp-card>
+
+## 終わりに
+休む間も無く3月から新しいインターンが始まります。  
+刺激的な環境である事は間違いないし楽しもう！  
+
+【今月の学び】  
+ブログは写真がある方が読みやすい(増やしていく)

@@ -39,6 +39,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .ogp-card__wrapper {
   width: 100%;
+  margin: 40px 0;
   display: flex;
   justify-content: center;
 
@@ -66,7 +67,7 @@ export default defineComponent({
         height: 150px;
         width: 150px;
         object-fit: cover;
-        margin-bottom: 0;
+        margin: 0;
       }
 
       .ogp-card__inner {

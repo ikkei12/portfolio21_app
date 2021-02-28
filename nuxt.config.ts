@@ -155,8 +155,8 @@ export default {
           wordsPerMinute: 700,
         })
         document.readingTime = time
-        const path = require('path')
         // categoryの取得、設定
+        const path = require('path')
         const { CategoryHook } = require(path.resolve(
           __dirname,
           './nuxt_content/hooks/CategoryHook.ts'
