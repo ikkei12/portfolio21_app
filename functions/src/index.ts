@@ -41,7 +41,12 @@ export const getOgpInfo = functions
           }
           const $ = cheerio.load(html)
           ogp.title = $('title').text()
-          ogp.image = $("meta[property='og:image']").attr('content')
+          if ($("meta[property='og:image']").attr('content')) {
+            ogp.image = $("meta[property='og:image']").attr('content')
+          } else {
+            ogp.image =
+              'https://storage.googleapis.com/portfolio21-56e7e.appspot.com/articles/placeholder/lazy_with_icon.png'
+          }
           ogp.description = $("meta[property='og:description']").attr('content')
 
           res.send({ ogp })
