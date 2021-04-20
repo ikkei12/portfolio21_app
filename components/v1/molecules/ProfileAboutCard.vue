@@ -16,8 +16,10 @@
     <div class="flex">
       <Icon icon-name="buildingFill" :size="20" color="#333" />
       <p>
-        student of <strong>{{ personalInfo.university }} </strong>and member of
-        <strong>{{ personalInfo.organisation }}</strong>
+        student of <strong>{{ personalInfo.university }} </strong
+        ><span v-if="personalInfo.organisation.length > 0">
+          member of <strong>{{ personalInfo.organisation }}</strong></span
+        >
       </p>
     </div>
   </Card>
