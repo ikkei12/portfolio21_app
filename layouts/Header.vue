@@ -68,7 +68,7 @@ export default defineComponent({
   height: 60px;
   padding-right: 45px;
   z-index: 10;
-  background: $primary;
+  background: $header;
   width: 100%;
   box-shadow: 0 0 10px rgba(89, 89, 89, 0.072);
   justify-content: flex-end;
@@ -86,22 +86,21 @@ export default defineComponent({
 
     .link__text {
       font-weight: 500;
-      color: #fff;
+      color: $black;
 
       &.--active {
         padding-bottom: 3px;
-        color: #fff;
       }
     }
 
     .link__border {
       padding-top: 1px;
       height: 2px;
-      width: 20%;
+      width: 30%;
 
       &.--active {
         height: 0;
-        border-bottom: 3px solid #fff;
+        border-bottom: 3px solid $primary;
       }
     }
   }
