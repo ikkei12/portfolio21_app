@@ -14,10 +14,10 @@
         </div>
       </section>
       <section id="second-view" class="second-view__wrapper">
-        <ProfileAboutCard
+        <!-- <ProfileAboutCard
           class="profile-page__card"
           :personal-info="personalInfo"
-        />
+        /> -->
         <ProfileCareerCard
           class="profile-page__card"
           :career-nodes="careerNodes"
@@ -190,7 +190,7 @@ export default defineComponent({
       display: flex;
 
       .profile-page__card {
-        width: 50%;
+        width: 100%;
       }
     }
   }

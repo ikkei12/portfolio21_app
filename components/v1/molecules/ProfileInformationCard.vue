@@ -1,7 +1,7 @@
 <template>
   <div class="info__card">
     <div class="inner">
-      <div class="profile-image__wrapper">
+      <!-- <div class="profile-image__wrapper">
         <img
           src="~/assets/images/profile.webp"
           alt="Profile image"
@@ -9,9 +9,9 @@
           width="230px"
           height="230px"
         />
-      </div>
+      </div> -->
       <h3 class="name-ja">Harashima Ikkei</h3>
-      <p class="name-en">原島 一桂</p>
+      <!-- <p class="name-en">原島 一桂</p> -->
       <h3 class="title">Welcome to My Portfolio</h3>
 
       <LinkIconGroup />

@@ -53,12 +53,13 @@ export default defineComponent({
 <style scoped lang="scss">
 .list__wrapper {
   height: 100%;
+  width: 99%;
   display: flex;
   align-items: center;
   position: relative;
 
   .thumbnail__wrapper {
-    width: 45%;
+    width: 55%;
     height: 100%;
     position: absolute;
     z-index: 0;
@@ -72,7 +73,6 @@ export default defineComponent({
     height: 100%;
     overflow-y: scroll;
     z-index: 2;
-    padding-right: 10px;
 
     &::-webkit-scrollbar {
       display: none;
