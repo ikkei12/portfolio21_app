@@ -1,12 +1,12 @@
 <template>
   <div class="node">
     <div class="node__inner">
-      <Dot :size="18" class="node-dot" color="#7db5b5" />
+      <Dot :size="18" class="node-dot" color="#D3D3D3" />
       <p class="date">{{ node.date }}</p>
-      <p class="title">{{ node.title }}</p>
+      <p class="title">{{ node.titleEn }}</p>
     </div>
     <div v-if="node.description" class="description__wrapper">
-      <p class="description">{{ node.description }}</p>
+      <p class="description">{{ node.descriptionEn }}</p>
     </div>
   </div>
 </template>
@@ -37,15 +37,14 @@ export default defineComponent({
     .date {
       margin: 0 14px;
       font-size: 14px;
-      font-weight: bold;
       color: #565656;
+      letter-spacing: 0.1rem;
     }
 
     .title {
-      font-size: 15px;
+      font-size: 20px;
       margin-left: 12px;
-      font-weight: bold;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.1rem;
     }
   }
 

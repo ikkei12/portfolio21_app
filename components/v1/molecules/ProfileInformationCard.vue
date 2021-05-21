@@ -10,9 +10,9 @@
           height="230px"
         />
       </div> -->
-      <h3 class="name-ja">Harashima Ikkei</h3>
-      <!-- <p class="name-en">原島 一桂</p> -->
-      <h3 class="title">Welcome to My Portfolio</h3>
+      <h3 class="name-en">Ikkei Harashima</h3>
+      <!-- <p class="name-ja">原島 一桂</p> -->
+      <h3 class="title">Portfolio</h3>
 
       <LinkIconGroup />
       <a href="mailto:ikkei12.inw@gmail.com" class="link">
@@ -75,14 +75,18 @@ export default defineComponent({
     }
 
     .name-en {
-      font-size: 20px;
-      font-weight: 400;
+      font-size: 2.5rem;
       white-space: nowrap;
+      font-family: Roboto;
+      font-style: italic;
+      font-weight: 500;
     }
 
     .title {
       font-size: 48px;
-      font-weight: bold;
+      font-family: Roboto;
+      font-style: italic;
+      font-weight: 500;
       margin: 30px 0;
       line-height: 50px;
     }
