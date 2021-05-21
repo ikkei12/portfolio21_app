@@ -204,7 +204,7 @@ export default defineComponent({
 
       .top-view__wrapper {
         align-items: flex-start;
-        justify-content: flex-start;
+        justify-content: center;
         padding: 80px 0 60px;
         width: 100%;
         margin-bottom: 80px;
@@ -218,6 +218,17 @@ export default defineComponent({
         flex-direction: column;
         justify-content: flex-start;
         padding: 0 3%;
+      }
+    }
+  }
+}
+@include tab {
+  .profile-page {
+    .profile-page__inner {
+      .top-view__wrapper {
+        .top-view__inner {
+          width: 75%;
+        }
       }
     }
   }

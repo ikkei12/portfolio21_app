@@ -73,7 +73,7 @@ export default defineComponent({
 @include sp {
   .card {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
 
     .thumbnail {
       border-top-right-radius: 10px;
