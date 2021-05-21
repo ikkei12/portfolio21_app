@@ -12,6 +12,7 @@
             <Icon icon-name="arrowDown" color="#3b8070" />
           </button>
         </div>
+        <LinkIconGroup />
       </section>
       <section id="second-view" class="second-view__wrapper">
         <!-- <ProfileAboutCard
@@ -29,14 +30,14 @@
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
 import ProfileInformationCard from '@/components/v1/molecules/ProfileInformationCard.vue'
-import ProfileAboutCard from '@/components/v1/molecules/ProfileAboutCard.vue'
 import ProfileCareerCard from '@/components/v1/molecules/ProfileCareerCard.vue'
 import Icon from '@/components/v1/atoms/Icon.vue'
+import LinkIconGroup from '@/components/v1/organisms/LinkIconGroup.vue'
 import { CareerNode, PersonalInformation } from '~/@types/Home'
 export default defineComponent({
   components: {
     ProfileInformationCard,
-    ProfileAboutCard,
+    LinkIconGroup,
     ProfileCareerCard,
     Icon,
   },
@@ -76,7 +77,7 @@ export default defineComponent({
   overflow: hidden;
 
   .profile-page__inner {
-    width: 75%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,8 +86,10 @@ export default defineComponent({
     .top-view__wrapper {
       height: 100vh;
       width: 100%;
+      position: relative;
       padding-top: 60px;
       display: flex;
+      justify-content: center;
       align-items: center;
 
       .scroll-button__wrapper {

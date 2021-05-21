@@ -1,78 +1,29 @@
 <template>
   <div class="info__card">
     <div class="inner">
-      <!-- <div class="profile-image__wrapper">
-        <img
-          src="~/assets/images/profile.webp"
-          alt="Profile image"
-          class="profile-image"
-          width="230px"
-          height="230px"
-        />
-      </div> -->
       <h3 class="name-en">Ikkei Harashima</h3>
-      <!-- <p class="name-ja">原島 一桂</p> -->
       <h3 class="title">Portfolio</h3>
-
-      <LinkIconGroup />
-      <a href="mailto:ikkei12.inw@gmail.com" class="link">
-        <div class="link__inner">
-          <div class="icon__wrapper">
-            <img
-              src="~/assets/images/logo/email.webp"
-              class="icon"
-              alt="email icon"
-              height="100px"
-              width="100px"
-            />
-          </div>
-          <p class="contact-msg">Contact Me</p>
-        </div>
-      </a>
     </div>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
-import LinkIconGroup from '@/components/v1/organisms/LinkIconGroup.vue'
 
 export default defineComponent({
-  components: {
-    LinkIconGroup,
-  },
+  components: {},
 })
 </script>
 <style scoped lang="scss">
 .info__card {
-  height: 60%;
+  width: 75%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 
   .inner {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-    .profile-image__wrapper {
-      width: 100px;
-      height: 100px;
-      margin: 0 0 20px;
-
-      .profile-image {
-        border-radius: 50%;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .name-ja {
-      font-size: 2.5rem;
-      font-weight: 500;
-      letter-spacing: 0.15vw;
-      white-space: nowrap;
-    }
 
     .name-en {
       font-size: 2.5rem;
