@@ -5,31 +5,35 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent, ref } from '@vue/composition-api'
 
 export default defineComponent({
   props: {
     url: { type: String, required: true },
-    active: {
-      type: Boolean,
-    },
+  },
+  setup() {
+    const active = ref(false)
+    return active
   },
 })
 </script>
 <style scoped lang="scss">
 .thumbnail {
-  width: 100%;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  height: fit-content;
-
+  opacity: 1;
+  width: 33.3%;
+  height: 250px;
+  filter: grayscale(100%) brightness(60%);
+  transition: 0.7s;
+  cursor: pointer;
   img {
     width: 100%;
+    object-fit: cover;
+    height: 100%;
   }
-
+  &:hover {
+    filter: grayscale(0%) brightness(100%);
+    transition: 0.7s;
+  }
   &.--active {
     opacity: 1;
     transition: 0.8s;
