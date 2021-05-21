@@ -2,7 +2,7 @@
   <div class="profile-page">
     <div class="profile-page__inner">
       <section class="top-view__wrapper">
-        <div class="profile-page__card">
+        <div class="top-view__inner">
           <ProfileTitle />
           <ProfileThumbnail />
         </div>
@@ -17,14 +17,7 @@
         </div>
       </section>
       <section id="second-view" class="second-view__wrapper">
-        <!-- <ProfileAboutCard
-          class="profile-page__card"
-          :personal-info="personalInfo"
-        /> -->
-        <ProfileCareerCard
-          class="profile-page__card"
-          :career-nodes="careerNodes"
-        />
+        <ProfileCareerCard :career-nodes="careerNodes" />
       </section>
     </div>
   </div>
@@ -91,7 +84,7 @@ export default defineComponent({
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      .profile-page__card {
+      .top-view__inner {
         width: 75%;
         height: 100%;
         display: flex;
@@ -198,10 +191,7 @@ export default defineComponent({
       height: 100vh;
       align-items: center;
       display: flex;
-
-      .profile-page__card {
-        width: 100%;
-      }
+      justify-content: center;
     }
   }
 }
@@ -223,13 +213,6 @@ export default defineComponent({
         height: unset;
         flex-direction: column;
         justify-content: flex-start;
-
-        .profile-page__card {
-          width: 95%;
-          height: unset;
-          padding: 0;
-          margin-bottom: 50px;
-        }
       }
     }
   }

@@ -50,7 +50,7 @@ export default defineComponent({
 
   .description__wrapper {
     height: 18px;
-    padding-left: 126px;
+    padding-left: 140px;
     display: inline-block;
 
     .description {

@@ -1,23 +1,27 @@
 {
   "nodes": [
-    { "title": "慶應義塾大学経済学部入学","titleEn": "Keio University Faculty of Economics", "date": "2017/04~" },
+    {
+      "title": "慶應義塾大学経済学部入学",
+      "titleEn": "Keio University Faculty of Economics.",
+      "date": "2017/04~"
+    },
     {
       "title": "株式会社7garden インターン開始",
-      "titleEn": "Internship at 7garden",
+      "titleEn": "Internship at 7garden.",
       "description": "ゲストハウスの立ち上げ",
       "descriptionEn": "Set up a guest house",
       "date": "2018/05~"
     },
     {
       "title": "株式会社カイエン インターン開始",
-      "titleEn": "Internship at cayenn",
+      "titleEn": "Internship at cayenn.",
       "description": "webフロント開発",
       "descriptionEn": "debugger and web front-end",
       "date": "2019/02~"
     },
     {
       "title": "株式会社Parchie インターン開始",
-      "titleEn": "Internship at parchie",
+      "titleEn": "Internship at parchie.",
       "description": "web engineer(Vue.js × Ruby on Rails) in the startup",
       "date": "2020/02~"
     },
@@ -30,7 +34,7 @@
     },
     {
       "title": "株式会社 PLAID インターン開始",
-      "titleEn": "Internship at for PLAID",
+      "titleEn": "Internship at PLAID.",
       "date": "2021/03~"
     }
   ]
