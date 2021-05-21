@@ -7,7 +7,7 @@
       class="link"
     >
       <img
-        src="~/assets/images/logo/github.webp"
+        src="~/assets/images/logo/github-black.webp"
         class="icon"
         alt="icon"
         height="100px"
@@ -21,7 +21,7 @@
       class="link"
     >
       <img
-        src="~/assets/images/logo/twitter.webp"
+        src="~/assets/images/logo/twitter-black.webp"
         class="icon"
         alt="icon"
         height="100px"
@@ -29,13 +29,13 @@
       />
     </a>
     <a
-      href="https://qiita.com/ikkei12"
+      href="https://www.wantedly.com/id/keiu"
       target="_blank"
       rel="noopener noreferrer"
       class="link"
     >
       <img
-        src="~/assets/images/logo/qiita.webp"
+        src="~/assets/images/logo/wantedly-black.webp"
         class="icon"
         alt="icon"
         height="100px"
@@ -46,19 +46,20 @@
 </template>
 <style scoped lang="scss">
 .link__group {
-  height: 30px;
   display: flex;
-  width: 100%;
-  justify-content: flex-start;
-
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 35px;
+  bottom: 35px;
   &:nth-child(3) {
     margin-right: 0;
   }
 
   .link {
-    margin-right: 16px;
-    height: 30px;
-    width: 30px;
+    margin-bottom: 16px;
+    height: 25px;
+    width: 25px;
     display: block;
 
     img {

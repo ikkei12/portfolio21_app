@@ -2,7 +2,7 @@
   <div class="article-card__group">
     <div class="inner">
       <ArticleCard
-        v-for="(article, i) in articles"
+        v-for="(article, i) in articlesForDisplay"
         :key="`article${i}`"
         :article="article"
       />
@@ -25,6 +25,14 @@ export default defineComponent({
       default: [],
     },
   },
+  setup(props) {
+    const articlesForDisplay = props.articles.slice(
+      1,
+      props.articles.length - 1
+    )
+
+    return { articlesForDisplay }
+  },
 })
 </script>
 <style scoped lang="scss">
@@ -33,7 +41,7 @@ export default defineComponent({
   justify-content: center;
 
   .inner {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;

@@ -96,7 +96,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    '@nuxtjs/stylelint-module',
+    // '@nuxtjs/stylelint-module',
     '@nuxtjs/composition-api',
   ],
 
@@ -116,9 +116,15 @@ export default {
     ],
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
+    'nuxt-webfontloader'
   ],
   styleResources: {
     scss: ['@/assets/scss/utilities.scss', '@/assets/scss/variables.scss'],
+  },
+  webfontloader: {
+    google: {
+      families: ['Roboto:400,500', 'Roboto:ital:500'],
+    },
   },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},

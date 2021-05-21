@@ -7,10 +7,13 @@
         <div id="lottie" ref="lottieRef" />
       </div>
     </div> -->
+    <LinkIconGroup />
   </div>
 </template>
 
 <script lang="ts">
+import LinkIconGroup from '@/components/v1/organisms/LinkIconGroup.vue'
+
 import {
   defineComponent,
   // onMounted,
@@ -24,6 +27,7 @@ import Header from './Header.vue'
 export default defineComponent({
   components: {
     Header,
+    LinkIconGroup,
   },
   // const overlayRef = ref()
   // const timerID = ref()

@@ -23,7 +23,7 @@ export default defineComponent({
 </script>
 <style scoped lang="scss">
 .qiita-cards__group {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

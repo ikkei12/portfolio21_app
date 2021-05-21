@@ -43,7 +43,7 @@ export default defineComponent({
 </script>
 <style scoped lang="scss">
 .article-card {
-  padding: 0 2%;
+  padding: 0 1%;
   margin-top: 50px;
   width: calc(100% / 3);
 

@@ -46,7 +46,7 @@ export default defineComponent({
     .categoryies-list__title {
       padding: 1vh;
       padding-bottom: 0.5vh;
-      color: #034646;
+      color: $primary;
     }
 
     .list-item__link {
@@ -57,7 +57,7 @@ export default defineComponent({
       h3 {
         padding: 1vh;
         font-weight: bold;
-        color: #034646;
+        color: $primary;
       }
     }
   }

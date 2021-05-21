@@ -23,8 +23,9 @@ export default defineComponent({
 <style scoped lang="scss">
 .products-page__container {
   height: 100vh;
-  width: 90%;
-  overflow: hidden;
+  width: 100%;
   max-width: 1480px;
+  display: flex;
+  justify-content: flex-end;
 }
 </style>
