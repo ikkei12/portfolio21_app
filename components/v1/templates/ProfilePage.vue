@@ -12,7 +12,7 @@
             aria-label="Scroll"
             @click="handleScrollButtonClick"
           >
-            <Icon icon-name="arrowDown" color="#3b8070" />
+            <Icon icon-name="arrowDown" color="#333" />
           </button>
         </div>
         <LinkIconGroup />
@@ -115,7 +115,7 @@ export default defineComponent({
           display: inline-block;
           background: #fff;
           font-size: 14px;
-          border: 2px #3b8070 solid;
+          border: 2px #333 solid;
           width: 46px;
           height: 46px;
           border-radius: 50%;
@@ -139,7 +139,7 @@ export default defineComponent({
           height: 100%;
           border-radius: 50%;
           z-index: -1;
-          background: #3b8070;
+          background: #333;
           -webkit-animation: ripple 4s cubic-bezier(0.3, 0, 0.1, 0) infinite;
           animation: ripple 4s cubic-bezier(0.3, 0, 0.1, 0) infinite;
         }

@@ -1,5 +1,5 @@
 <template>
-  <div class="info__card">
+  <div class="profile-title">
     <h3 class="name-en">Ikkei Harashima</h3>
     <h3 class="title">Portfolio</h3>
   </div>
@@ -12,11 +12,11 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="scss">
-.info__card {
+.profile-title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
+  z-index: 5;
   .name-en {
     font-size: 4rem;
     white-space: nowrap;
@@ -71,7 +71,7 @@ export default defineComponent({
 }
 
 @include sp {
-  .info__card {
+  .profile-title {
     .link {
       margin-top: 2vh;
     }

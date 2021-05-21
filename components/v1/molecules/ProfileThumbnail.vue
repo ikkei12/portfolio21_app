@@ -1,6 +1,10 @@
 <template>
   <div class="thumbnail">
-    <div class="image-wrapper" :class="{ '--active': activeIndex == 0 }">
+    <!-- TODO: 画像を毎回ランダムに持ってくる -->
+    <div
+      class="image-wrapper"
+      :class="{ '--next': activeIndex == 4, '--active': activeIndex == 0 }"
+    >
       <img
         src="~/assets/images/top/1.webp"
         class="icon"
@@ -14,8 +18,44 @@
         src="~/assets/images/top/2.webp"
         class="icon"
         alt="icon"
-        height="600px"
-        width="400px"
+        height="650px"
+        width="430px"
+      />
+    </div>
+    <div
+      class="image-wrapper"
+      :class="{ '--next': activeIndex == 1, '--active': activeIndex == 2 }"
+    >
+      <img
+        src="~/assets/images/top/3.webp"
+        class="icon"
+        alt="icon"
+        height="490px"
+        width="700px"
+      />
+    </div>
+    <div
+      class="image-wrapper"
+      :class="{ '--next': activeIndex == 2, '--active': activeIndex == 3 }"
+    >
+      <img
+        src="~/assets/images/top/4.webp"
+        class="icon"
+        alt="icon"
+        height="650px"
+        width="430px"
+      />
+    </div>
+    <div
+      class="image-wrapper"
+      :class="{ '--next': activeIndex == 3, '--active': activeIndex == 4 }"
+    >
+      <img
+        src="~/assets/images/top/5.webp"
+        class="icon"
+        alt="icon"
+        height="650px"
+        width="430px"
       />
     </div>
   </div>
@@ -27,8 +67,9 @@ export default defineComponent({
   components: {},
   setup() {
     const activeIndex = ref(0)
+    const maxActiveIndex = ref(4)
     const timerID = setInterval(() => {
-      if (activeIndex.value >= 1) activeIndex.value = 0
+      if (activeIndex.value >= maxActiveIndex.value) activeIndex.value = 0
       else activeIndex.value++
     }, 5000)
     onUnmounted(() => {
@@ -49,11 +90,18 @@ export default defineComponent({
     z-index: -1;
     margin: auto;
     height: fit-content;
-    opacity: 0;
+    opacity: 0.2;
     transition: 1.5s;
+    filter: blur(4px);
     &.--active {
       opacity: 1;
       transition: 1.5s;
+      z-index: 3;
+      filter: blur(0);
+    }
+    &.--next {
+      opacity: 0.4;
+      z-index: 2;
     }
   }
 }
