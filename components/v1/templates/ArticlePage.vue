@@ -46,9 +46,9 @@ import Title from '@/components/v1/atoms/Title.vue'
 import ArticleCategoriesList from '@/components/v1/organisms/ArticleCategoriesList.vue'
 import Icon from '@/components/v1/atoms/Icon.vue'
 import QiitaCardsGroup from '@/components/v1/organisms/QiitaCardsGroup.vue'
+import { ArticleCardRow } from '@/components/v1/molecules/ArticleCardRow'
 import { Article, ArticleCategoryItem } from '~/@types/Article'
 import { QiitaArticle } from '~/@types/Ogp'
-import { ArticleCardRow } from '@/components/v1/molecules/ArticleCardRow'
 export default defineComponent({
   components: {
     ArticleCardsGroup,
