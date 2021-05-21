@@ -233,4 +233,15 @@ export default defineComponent({
     }
   }
 }
+@include sp {
+  .profile-page {
+    .profile-page__inner {
+      .top-view__wrapper {
+        .top-view__inner {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 </style>

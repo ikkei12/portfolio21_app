@@ -52,6 +52,7 @@
   position: fixed;
   left: 35px;
   bottom: 35px;
+  z-index: 10;
   &:nth-child(3) {
     margin-right: 0;
   }
@@ -67,6 +68,12 @@
       width: 100%;
       border-radius: 50%;
     }
+  }
+}
+@include tab {
+  .link__group {
+    left: 5px;
+    bottom: 5px;
   }
 }
 </style>
