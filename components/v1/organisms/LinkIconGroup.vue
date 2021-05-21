@@ -72,8 +72,13 @@
 }
 @include tab {
   .link__group {
-    left: 5px;
-    bottom: 5px;
+    left: 10px;
+    bottom: 8px;
+
+    .link {
+      height: 30px;
+      width: 30px;
+    }
   }
 }
 </style>

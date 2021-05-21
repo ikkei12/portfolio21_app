@@ -52,6 +52,12 @@ export default defineComponent({
     .link {
       margin-top: 2vh;
     }
+
+    .title,
+    .name-en {
+      color: white;
+      font-size: 2rem;
+    }
   }
 }
 </style>
