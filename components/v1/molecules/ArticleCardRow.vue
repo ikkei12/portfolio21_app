@@ -4,12 +4,12 @@
       class="thumbnail"
       :src="content.thumbnail"
       alt="thumbnail"
-      width="300px"
-      height="150px"
+      width="380px"
+      height="200px"
     />
     <div class="inner">
-      <p class="created-at">{{ content.createdDate }}</p>
       <p class="title">{{ content.title }}</p>
+      <p class="created-at">{{ content.createdDate }}</p>
     </div>
   </div>
 </template>
@@ -27,10 +27,10 @@ export default defineComponent({
 .card {
   display: flex;
   height: 100%;
+  width: 100%;
   border-radius: 10px;
   background: #fff;
   box-shadow: 0 0 20px rgba(89, 89, 89, 0.072);
-
   .thumbnail {
     height: 100%;
     border-top-left-radius: 10px;
@@ -40,10 +40,14 @@ export default defineComponent({
   .inner {
     padding: 25px 15px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .title {
       color: black;
       font-weight: bold;
+      margin-bottom: 20px;
     }
 
     .created-at {
