@@ -1,9 +1,12 @@
 <template>
-  <div class="info__card">
-    <div class="inner">
-      <h3 class="name-en">Ikkei Harashima</h3>
-      <h3 class="title">Portfolio</h3>
-    </div>
+  <div class="image-wrapper">
+    <img
+      src="~/assets/images/top/1.webp"
+      class="icon"
+      alt="icon"
+      height="490px"
+      width="700px"
+    />
   </div>
 </template>
 <script lang="ts">
@@ -14,6 +17,15 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="scss">
+.image-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: auto;
+  height: fit-content;
+}
 .info__card {
   width: 75%;
   display: flex;

@@ -2,7 +2,10 @@
   <div class="profile-page">
     <div class="profile-page__inner">
       <section class="top-view__wrapper">
-        <ProfileInformationCard class="profile-page__card" />
+        <div class="profile-page__card">
+          <ProfileTitle />
+          <ProfileThumbnail />
+        </div>
         <div v-if="isPC" class="scroll-button__wrapper">
           <button
             class="scroll-button ripple"
@@ -29,14 +32,14 @@
 </template>
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
-import ProfileInformationCard from '@/components/v1/molecules/ProfileInformationCard.vue'
 import ProfileCareerCard from '@/components/v1/molecules/ProfileCareerCard.vue'
 import Icon from '@/components/v1/atoms/Icon.vue'
 import LinkIconGroup from '@/components/v1/organisms/LinkIconGroup.vue'
+import ProfileTitle from '~/components/v1/molecules/ProfileTitle.vue'
 import { CareerNode, PersonalInformation } from '~/@types/Home'
 export default defineComponent({
   components: {
-    ProfileInformationCard,
+    ProfileTitle,
     LinkIconGroup,
     ProfileCareerCard,
     Icon,
@@ -89,12 +92,19 @@ export default defineComponent({
       position: relative;
       padding-top: 60px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
-
+      .profile-page__card {
+        width: 75%;
+        height: 100%;
+        display: flex;
+        margin-right: 120px;
+        position: relative;
+        align-items: center;
+      }
       .scroll-button__wrapper {
         position: absolute;
-        bottom: 100px;
+        bottom: 20px;
         left: 0;
         right: 0;
         margin: auto;
