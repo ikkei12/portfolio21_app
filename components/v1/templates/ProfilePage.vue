@@ -15,7 +15,6 @@
             <Icon icon-name="arrowDown" color="#333" />
           </button>
         </div>
-        <LinkIconGroup />
       </section>
       <section id="second-view" class="second-view__wrapper">
         <!-- <ProfileAboutCard
@@ -34,13 +33,11 @@
 import { defineComponent, PropType } from '@vue/composition-api'
 import ProfileCareerCard from '@/components/v1/molecules/ProfileCareerCard.vue'
 import Icon from '@/components/v1/atoms/Icon.vue'
-import LinkIconGroup from '@/components/v1/organisms/LinkIconGroup.vue'
 import ProfileTitle from '~/components/v1/molecules/ProfileTitle.vue'
 import { CareerNode, PersonalInformation } from '~/@types/Home'
 export default defineComponent({
   components: {
     ProfileTitle,
-    LinkIconGroup,
     ProfileCareerCard,
     Icon,
   },

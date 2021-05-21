@@ -4,6 +4,7 @@
       <ProductsListThumbnail
         v-for="(product, i) in products"
         :key="'thumbnail' + i"
+        :product="product"
         :url="product.contents[0].image.url"
       />
     </div>

@@ -49,7 +49,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
+  position: fixed;
   left: 35px;
   bottom: 35px;
   &:nth-child(3) {
@@ -58,8 +58,8 @@
 
   .link {
     margin-bottom: 16px;
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     display: block;
 
     img {

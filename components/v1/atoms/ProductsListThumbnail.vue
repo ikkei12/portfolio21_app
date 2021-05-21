@@ -1,8 +1,13 @@
 <template>
-  <div class="thumbnail" :class="{ '--active': active }">
-    <img :src="url" alt="thumbnail" width="100%" height="auto" />
-    <div />
-  </div>
+  <nuxt-link
+    class="link"
+    :to="{ name: 'products-slug', params: { slug: product.slug } }"
+  >
+    <div class="thumbnail" :class="{ '--active': isActive }">
+      <img :src="url" alt="thumbnail" width="100%" height="auto" />
+      <div />
+    </div>
+  </nuxt-link>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from '@vue/composition-api'
@@ -10,18 +15,24 @@ import { defineComponent, ref } from '@vue/composition-api'
 export default defineComponent({
   props: {
     url: { type: String, required: true },
+    product: { type: Object, required: true },
   },
-  setup() {
-    const active = ref(false)
-    return active
+  setup(props) {
+    const isActive = ref(false)
+    return { isActive }
   },
 })
 </script>
 <style scoped lang="scss">
-.thumbnail {
-  opacity: 1;
+.link {
+  display: block;
   width: 33.3%;
   height: 250px;
+}
+.thumbnail {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
   filter: grayscale(100%) brightness(60%);
   transition: 0.7s;
   cursor: pointer;
