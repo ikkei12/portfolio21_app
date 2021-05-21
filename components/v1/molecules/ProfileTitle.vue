@@ -33,39 +33,16 @@ export default defineComponent({
     margin-top: 10px;
     line-height: 50px;
   }
+}
 
-  .link {
-    text-decoration: none;
-    color: black;
-    margin-top: 40px;
+@include tab {
+  .profile-title {
+    padding: 0 5%;
 
-    .link__inner {
-      background: #c62828;
-      display: flex;
-      align-items: center;
-      border-radius: 4px;
-      padding: 4px 16px 4px 4px;
-
-      .icon__wrapper {
-        height: 30px;
-        width: 30px;
-        display: block;
-
-        .icon {
-          height: 100%;
-          width: 100%;
-          border-radius: 50%;
-        }
-      }
-
-      .contact-msg {
-        color: #fff;
-        font-weight: bold;
-      }
-    }
-
-    p {
-      margin-left: 8px;
+    .title,
+    .name-en {
+      color: white;
+      font-size: 3rem;
     }
   }
 }

@@ -201,18 +201,23 @@ export default defineComponent({
     .profile-page__inner {
       width: 100%;
       display: block;
-      padding: 0 12px;
 
       .top-view__wrapper {
-        height: unset;
         align-items: flex-start;
+        justify-content: flex-start;
         padding: 80px 0 60px;
+        width: 100%;
+        margin-bottom: 80px;
+        .top-view__inner {
+          margin-right: 0;
+        }
       }
 
       .second-view__wrapper {
         height: unset;
         flex-direction: column;
         justify-content: flex-start;
+        padding: 0 3%;
       }
     }
   }

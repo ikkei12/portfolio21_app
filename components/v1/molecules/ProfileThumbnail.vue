@@ -106,6 +106,12 @@ export default defineComponent({
   }
 }
 
-@include sp {
+@include tab {
+  .thumbnail {
+    .image-wrapper {
+      top: 0;
+      left: 0;
+    }
+  }
 }
 </style>

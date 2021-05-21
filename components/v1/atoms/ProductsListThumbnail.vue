@@ -62,4 +62,10 @@ export default defineComponent({
     transform: translateY(0);
   }
 }
+
+@include tab {
+  .link {
+    width: 100%;
+  }
+}
 </style>
