@@ -186,6 +186,14 @@ export default defineComponent({
   }
 }
 
+@include tab {
+  .article-page {
+    padding-top: 70px;
+    .article-page__inner {
+      padding: 0;
+    }
+  }
+}
 @include sp {
   .article-page {
     padding-right: 0;
@@ -208,10 +216,6 @@ export default defineComponent({
       &.--active {
         width: 100%;
       }
-    }
-
-    .article-page__inner {
-      width: 95%;
     }
   }
 }
