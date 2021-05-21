@@ -1,0 +1,98 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@nuxtjs/composition-api"
+    versions:
+    - 0.19.1
+    - 0.20.0
+    - 0.20.1
+    - 0.20.2
+    - 0.21.0
+    - 0.22.0
+    - 0.22.1
+    - 0.22.3
+    - 0.22.4
+    - 0.23.0
+    - 0.23.1
+    - 0.23.2
+    - 0.23.3
+  - dependency-name: npm
+    versions:
+    - 7.10.0
+    - 7.11.0
+    - 7.5.2
+    - 7.5.3
+    - 7.5.4
+    - 7.5.6
+    - 7.6.0
+    - 7.6.1
+    - 7.6.2
+    - 7.6.3
+    - 7.7.0
+    - 7.7.4
+    - 7.7.5
+    - 7.7.6
+    - 7.8.0
+    - 7.9.0
+  - dependency-name: sass
+    versions:
+    - 1.32.11
+    - 1.32.6
+    - 1.32.7
+    - 1.32.8
+  - dependency-name: swiper
+    versions:
+    - 6.4.10
+    - 6.4.11
+    - 6.4.12
+    - 6.4.14
+    - 6.4.15
+    - 6.4.9
+    - 6.5.0
+    - 6.5.1
+    - 6.5.2
+    - 6.5.3
+    - 6.5.4
+    - 6.5.5
+    - 6.5.6
+    - 6.5.7
+  - dependency-name: firebase
+    versions:
+    - 8.2.10
+    - 8.2.5
+    - 8.2.6
+    - 8.2.7
+    - 8.2.8
+    - 8.2.9
+    - 8.3.0
+    - 8.3.1
+    - 8.3.2
+    - 8.3.3
+    - 8.4.1
+  - dependency-name: eslint
+    versions:
+    - 7.19.0
+    - 7.20.0
+    - 7.21.0
+    - 7.22.0
+    - 7.23.0
+    - 7.24.0
+  - dependency-name: ts-jest
+    versions:
+    - 26.5.0
+    - 26.5.1
+    - 26.5.2
+    - 26.5.3
+    - 26.5.4
+  - dependency-name: "@nuxt/content"
+    versions:
+    - 1.12.0
+    - 1.13.1
+  - dependency-name: "@nuxtjs/axios"
+    versions:
+    - 5.13.0
