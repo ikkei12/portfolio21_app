@@ -9,32 +9,34 @@
       "title": "株式会社7garden インターン開始",
       "titleEn": "Internship at 7garden.",
       "description": "ゲストハウスの立ち上げ",
-      "descriptionEn": "Set up a guest house",
+      "descriptionEn": "- set up the new guest house.",
       "date": "2018/05~"
     },
     {
       "title": "株式会社カイエン インターン開始",
       "titleEn": "Internship at cayenn.",
       "description": "webフロント開発",
-      "descriptionEn": "debugger and web front-end",
+      "descriptionEn": "- debugger and web front-end.",
       "date": "2019/02~"
     },
     {
       "title": "株式会社Parchie インターン開始",
       "titleEn": "Internship at parchie.",
-      "description": "web engineer(Vue.js × Ruby on Rails) in the startup",
+      "description": "",
+      "descriptionEn": "- web engineer (Vue.js × Ruby on Rails × AWS) in the startup",
       "date": "2020/02~"
     },
     {
       "title": "株式会社 forStartups インターン開始",
       "titleEn": "Internship at for Startups,Inc.",
       "description": "STARTUPDBの開発",
-      "descriptionEn": "web engineer(Vue.js × Ruby)",
+      "descriptionEn": "- web engineer(Vue.js × Ruby on Rails)",
       "date": "2020/10~"
     },
     {
       "title": "株式会社 PLAID インターン開始",
       "titleEn": "Internship at PLAID.",
+      "descriptionEn": "web engineer (Vue.js × Node.js × GCP)",
       "date": "2021/03~"
     }
   ]

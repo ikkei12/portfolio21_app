@@ -174,7 +174,7 @@ export default defineComponent({
     right: 30px;
     top: 90px;
     z-index: 6;
-    background: $primary;
+    background: $secondary;
     border: 0;
     border-radius: 50%;
     width: 70px;

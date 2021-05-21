@@ -31,6 +31,18 @@ export default defineComponent({
   border-radius: 10px;
   background: #fff;
   box-shadow: 0 0 20px rgba(89, 89, 89, 0.072);
+  &:hover {
+    .inner {
+      .title {
+        color: rgba(0, 0, 0, 0.737);
+      }
+    }
+
+    .thumbnail {
+      filter: opacity(0.7);
+      transition: 0.4s;
+    }
+  }
   .thumbnail {
     height: 100%;
     border-top-left-radius: 10px;

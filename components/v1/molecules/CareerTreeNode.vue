@@ -5,7 +5,7 @@
       <p class="date">{{ node.date }}</p>
       <p class="title">{{ node.titleEn }}</p>
     </div>
-    <div v-if="node.description" class="description__wrapper">
+    <div v-if="node.descriptionEn" class="description__wrapper">
       <p class="description">{{ node.descriptionEn }}</p>
     </div>
   </div>
