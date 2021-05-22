@@ -17,6 +17,7 @@
     "@firebase/functions-types": "^0.4.0",
     "canvas": "^2.6.1",
     "cheerio": "^1.0.0-rc.5",
+    "cloudinary-core": "^2.11.4",
     "dotenv": "^8.2.0",
     "firebase-admin": "^9.4.2",
     "firebase-functions": "^3.11.0",
