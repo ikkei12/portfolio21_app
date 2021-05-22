@@ -60,7 +60,7 @@
         <div v-if="product.github_url" class="product-url__wrapper">
           <div class="icon__wrapper">
             <img
-              src="@/assets/images/logo/github-black.webp"
+              src="@/assets/images/logo/webp/github-black.webp"
               alt="github icon"
               width="auto"
               height="100%"
