@@ -6,13 +6,19 @@
       rel="noopener noreferrer"
       class="link"
     >
-      <img
-        src="~/assets/images/logo/github-black.webp"
-        class="icon"
-        alt="icon"
-        height="100px"
-        width="100px"
-      />
+      <picture>
+        <source
+          type="image/webp"
+          srcset="~/assets/images/logo/webp/github-black.webp"
+        />
+        <img
+          src="~/assets/images/logo/png/github-black.png"
+          class="icon"
+          alt="icon"
+          height="100px"
+          width="100px"
+        />
+      </picture>
     </a>
     <a
       href="https://twitter.com/1keiuu"
@@ -20,13 +26,19 @@
       rel="noopener noreferrer"
       class="link"
     >
-      <img
-        src="~/assets/images/logo/twitter-black.webp"
-        class="icon"
-        alt="icon"
-        height="100px"
-        width="100px"
-      />
+      <picture>
+        <source
+          type="image/webp"
+          srcset="~/assets/images/logo/webp/twitter-black.webp"
+        />
+        <img
+          src="~/assets/images/logo/png/twitter-black.png"
+          class="icon"
+          alt="icon"
+          height="100px"
+          width="100px"
+        />
+      </picture>
     </a>
     <a
       href="https://www.wantedly.com/id/keiu"
@@ -34,13 +46,19 @@
       rel="noopener noreferrer"
       class="link"
     >
-      <img
-        src="~/assets/images/logo/wantedly-black.webp"
-        class="icon"
-        alt="icon"
-        height="100px"
-        width="100px"
-      />
+      <picture>
+        <source
+          type="image/webp"
+          srcset="~/assets/images/logo/webp//wantedly-black.webp"
+        />
+        <img
+          src="~/assets/images/logo/png/wantedly-black.png"
+          class="icon"
+          alt="icon"
+          height="100px"
+          width="100px"
+        />
+      </picture>
     </a>
   </div>
 </template>

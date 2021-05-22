@@ -1,75 +1,101 @@
 <template>
   <div class="thumbnail">
     <!-- TODO: 画像を毎回ランダムに持ってくる -->
-    <div
-      class="image-wrapper"
+
+    <picture
+      class="image-wrapper --vertical"
       :class="{ '--next': activeIndex == 4, '--active': activeIndex == 0 }"
     >
+      <source type="image/webp" srcset="~/assets/images/top/webp/1.webp" />
       <img
-        src="~/assets/images/top/1.webp"
-        class="icon"
-        alt="icon"
+        src="~/assets/images/top/jpg/1.jpg"
+        class="thumbnail"
+        alt="thumbnail"
         height="490px"
         width="700px"
       />
-    </div>
-    <div class="image-wrapper" :class="{ '--active': activeIndex == 1 }">
+    </picture>
+    <picture
+      class="image-wrapper --horizontal"
+      :class="{ '--active': activeIndex == 1 }"
+    >
+      <source type="image/webp" srcset="~/assets/images/top/webp/2.webp" />
       <img
-        src="~/assets/images/top/2.webp"
-        class="icon"
-        alt="icon"
+        src="~/assets/images/top/jpg/2.jpg"
+        class="thumbnail"
+        alt="thumbnail"
         height="650px"
         width="430px"
       />
-    </div>
-    <div
-      class="image-wrapper"
+    </picture>
+
+    <picture
+      class="image-wrapper --vertical"
       :class="{ '--next': activeIndex == 1, '--active': activeIndex == 2 }"
     >
+      <source type="image/webp" srcset="~/assets/images/top/webp/3.webp" />
       <img
-        src="~/assets/images/top/3.webp"
-        class="icon"
-        alt="icon"
+        src="~/assets/images/top/jpg/3.jpg"
+        class="thumbnail"
+        alt="thumbnail"
         height="490px"
         width="700px"
       />
-    </div>
-    <div
-      class="image-wrapper"
+    </picture>
+
+    <picture
+      class="image-wrapper --horizontal"
       :class="{ '--next': activeIndex == 2, '--active': activeIndex == 3 }"
     >
+      <source type="image/webp" srcset="~/assets/images/top/webp/4.webp" />
       <img
-        src="~/assets/images/top/4.webp"
-        class="icon"
-        alt="icon"
+        src="~/assets/images/top/jpg/4.jpg"
+        class="thumbnail"
+        alt="thumbnail"
         height="650px"
         width="430px"
       />
-    </div>
-    <div
-      class="image-wrapper"
+    </picture>
+    <picture
+      class="image-wrapper --vertical"
       :class="{ '--next': activeIndex == 3, '--active': activeIndex == 4 }"
     >
+      <source type="image/webp" srcset="~/assets/images/top/webp/5.webp" />
       <img
-        src="~/assets/images/top/5.webp"
-        class="icon"
-        alt="icon"
+        src="~/assets/images/top/jpg/5.jpg"
+        class="thumbnail"
+        alt="thumbnail"
         height="650px"
         width="430px"
       />
-    </div>
-    <div
-      class="image-wrapper"
+    </picture>
+
+    <picture
+      class="image-wrapper --vertical"
       :class="{ '--next': activeIndex == 4, '--active': activeIndex == 5 }"
     >
+      <source type="image/webp" srcset="~/assets/images/top/webp/6.webp" />
       <img
-        src="~/assets/images/top/6.webp"
-        class="icon"
-        alt="icon"
+        src="~/assets/images/top/jpg/6.jpg"
+        class="thumbnail"
+        alt="thumbnail"
         height="650px"
         width="430px"
       />
-    </div>
+    </picture>
+    <picture
+      class="image-wrapper --vertical"
+      :class="{ '--next': activeIndex == 5, '--active': activeIndex == 6 }"
+    >
+      <source type="image/webp" srcset="~/assets/images/top/webp/7.webp" />
+      <img
+        src="~/assets/images/top/jpg/7.jpg"
+        class="thumbnail"
+        alt="thumbnail"
+        height="650px"
+        width="430px"
+      />
+    </picture>
   </div>
 </template>
 <script lang="ts">
@@ -101,10 +127,17 @@ export default defineComponent({
     bottom: 0;
     z-index: -1;
     margin: auto;
-    height: fit-content;
     opacity: 0.2;
     transition: 1.5s;
     filter: blur(4px);
+    &.--vertical {
+      height: 490px;
+      width: 700px;
+    }
+    &.--horizontal {
+      height: 650px;
+      width: 430px;
+    }
     &.--active {
       opacity: 1;
       transition: 1.5s;

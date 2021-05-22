@@ -60,7 +60,7 @@
         <div v-if="product.github_url" class="product-url__wrapper">
           <div class="icon__wrapper">
             <img
-              src="@/assets/images/logo/github-black.webp"
+              src="@/assets/images/logo/webp/github-black.webp"
               alt="github icon"
               width="auto"
               height="100%"
@@ -155,17 +155,18 @@ export default defineComponent({
     padding: 0 0%;
 
     .swiper-slide__inner {
-      background: $secondary;
+      background: $secondary__thin;
       border-radius: 8px;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 5% 5%;
+      padding: 8%;
 
       .swiper-slide__img {
         width: 100%;
         height: 100%;
         object-fit: contain;
+        box-shadow: 0 0 20px rgb(89 89 89 / 60%);
       }
     }
   }
