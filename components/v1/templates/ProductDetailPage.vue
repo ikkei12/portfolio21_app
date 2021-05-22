@@ -155,17 +155,18 @@ export default defineComponent({
     padding: 0 0%;
 
     .swiper-slide__inner {
-      background: $secondary;
+      background: $secondary__thin;
       border-radius: 8px;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 5% 5%;
+      padding: 8%;
 
       .swiper-slide__img {
         width: 100%;
         height: 100%;
         object-fit: contain;
+        box-shadow: 0 0 20px rgb(89 89 89 / 60%);
       }
     }
   }

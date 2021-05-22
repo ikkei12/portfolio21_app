@@ -51,8 +51,8 @@ export default defineComponent({
 
   .thumbnail-pagination__item {
     margin-right: 3%;
-    height: 50px;
-    background: $secondary;
+    height: 75px;
+    background: $secondary__thin;
     cursor: pointer;
     filter: opacity(0.4);
     padding: 5px 8px;
@@ -65,8 +65,22 @@ export default defineComponent({
 
     &.--active {
       filter: opacity(1);
-      border: 2px solid $primary;
+      border: 3px solid $primary;
     }
+  }
+}
+@include tab {
+  .thumbnail-pagination .thumbnail-pagination__item {
+    height: 50px;
+  }
+}
+@include sp {
+  .thumbnail-pagination {
+    justify-content: start;
+  }
+
+  .thumbnail-pagination .thumbnail-pagination__item {
+    height: 50px;
   }
 }
 </style>
