@@ -58,6 +58,18 @@
         width="430px"
       />
     </div>
+    <div
+      class="image-wrapper"
+      :class="{ '--next': activeIndex == 4, '--active': activeIndex == 5 }"
+    >
+      <img
+        src="~/assets/images/top/6.webp"
+        class="icon"
+        alt="icon"
+        height="650px"
+        width="430px"
+      />
+    </div>
   </div>
 </template>
 <script lang="ts">
@@ -67,7 +79,7 @@ export default defineComponent({
   components: {},
   setup() {
     const activeIndex = ref(0)
-    const maxActiveIndex = ref(4)
+    const maxActiveIndex = ref(5)
     const timerID = setInterval(() => {
       if (activeIndex.value >= maxActiveIndex.value) activeIndex.value = 0
       else activeIndex.value++
