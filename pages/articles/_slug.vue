@@ -4,9 +4,9 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
-import { Context } from '@nuxt/types'
 import ArticleDetailPage from '@/components/v1/templates/ArticleDetailPage.vue'
 import { Article } from '~/@types/Article'
+import { Context } from '@nuxt/types'
 
 export type OGP = {
   title: string

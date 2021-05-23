@@ -87,12 +87,10 @@ export const createOgpImageAndSave = functions.https.onRequest(
       }
 
       const body = request.body
-      const image = await generateArticleOgp(body.title)
-      await upload(image, body.slug)
+      const imageURL = await generateArticleOgp(body.title)
+      // await upload(image, body.slug)
       response.send({
-        url: `${functions.config().cloud_storage.path}/ogp/files/${
-          body.slug
-        }.png?authuser=1`,
+        url: imageURL,
       })
     })
   }

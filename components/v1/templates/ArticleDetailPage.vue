@@ -16,12 +16,13 @@ import { defineComponent, PropType, onMounted } from '@vue/composition-api'
 import { IContentDocument } from '@nuxt/content/types/content'
 import ContentPagination from '@/components/v1/organisms/ContentPagination.vue'
 import ContentsTable from '@/components/v1/organisms/ContentsTable.vue'
-
+import ReadingTimeCard from '@/components/v1/molecules/ReadingTimeCard.vue'
 export default defineComponent({
   name: 'ChipGroup',
   components: {
     ContentPagination,
     ContentsTable,
+    ReadingTimeCard,
   },
   props: {
     article: { type: Object as PropType<IContentDocument> },

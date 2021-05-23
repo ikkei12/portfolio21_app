@@ -7,9 +7,11 @@
 import { defineComponent } from '@vue/composition-api'
 import ProductDetailPage from '@/components/v1/templates/ProductDetailPage.vue'
 import { IContentDocument } from '@nuxt/content/types/content'
+import ProductsProvider from '~/components/v1/providers/ProductsProvider.vue'
 export default defineComponent({
   components: {
     ProductDetailPage,
+    ProductsProvider,
   },
   async asyncData({ $content, params }) {
     const slug = params.slug

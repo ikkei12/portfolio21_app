@@ -27,12 +27,14 @@ import { defineComponent, PropType } from '@vue/composition-api'
 import ProfileCareerCard from '@/components/v1/molecules/ProfileCareerCard.vue'
 import Icon from '@/components/v1/atoms/Icon.vue'
 import ProfileTitle from '~/components/v1/molecules/ProfileTitle.vue'
+import ProfileThumbnail from '~/components/v1/molecules/ProfileThumbnail.vue'
 import { CareerNode, PersonalInformation } from '~/@types/Home'
 export default defineComponent({
   components: {
     ProfileTitle,
     ProfileCareerCard,
     Icon,
+    ProfileThumbnail,
   },
   props: {
     careerNodes: {

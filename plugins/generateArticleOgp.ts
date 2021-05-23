@@ -1,6 +1,6 @@
 import cloudinary from '~/plugins/cloudinary'
 
-export default (ogpText) => {
+export default (ogpText: string) => {
   const encodeText = encodeURI(ogpText)
 
   // 第一引数は画像名、第二引数はオプション
