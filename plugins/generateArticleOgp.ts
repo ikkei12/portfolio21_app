@@ -13,7 +13,7 @@ export default (ogpText: string) => {
           font_size: 40,
           text_align: 'center',
           text: encodeText,
-        },
+        } as any,
         width: '1000',
         color: '#333',
         crop: 'fit',
