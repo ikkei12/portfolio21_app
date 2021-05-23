@@ -116,7 +116,7 @@ export default {
     ],
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
   ],
   styleResources: {
     scss: ['@/assets/scss/utilities.scss', '@/assets/scss/variables.scss'],
