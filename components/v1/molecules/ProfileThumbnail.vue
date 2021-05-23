@@ -109,7 +109,7 @@ export default defineComponent({
     const timerID = setInterval(() => {
       if (activeIndex.value >= maxActiveIndex.value) activeIndex.value = 0
       else activeIndex.value++
-    }, 5000)
+    }, 4000)
     onUnmounted(() => {
       window.clearInterval(timerID)
     })
