@@ -1,35 +1,50 @@
 <template>
-  <div class="thumbnail" :class="{ '--active': active }">
-    <img :src="url" alt="thumbnail" width="100%" height="auto" />
-    <div />
-  </div>
+  <nuxt-link
+    class="link"
+    :to="{ name: 'products-slug', params: { slug: product.slug } }"
+  >
+    <div class="thumbnail" :class="{ '--active': isActive }">
+      <img :src="url" alt="thumbnail" width="100%" height="auto" />
+      <div />
+    </div>
+  </nuxt-link>
 </template>
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent, ref } from '@vue/composition-api'
 
 export default defineComponent({
   props: {
     url: { type: String, required: true },
-    active: {
-      type: Boolean,
-    },
+    product: { type: Object, required: true },
+  },
+  setup(props) {
+    const isActive = ref(false)
+    return { isActive }
   },
 })
 </script>
 <style scoped lang="scss">
+.link {
+  display: block;
+  width: 33.3%;
+  height: 250px;
+}
 .thumbnail {
+  opacity: 1;
   width: 100%;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  height: fit-content;
-
+  height: 100%;
+  filter: grayscale(100%) brightness(60%);
+  transition: 0.7s;
+  cursor: pointer;
   img {
     width: 100%;
+    object-fit: cover;
+    height: 100%;
   }
-
+  &:hover {
+    filter: grayscale(0%) brightness(100%);
+    transition: 0.7s;
+  }
   &.--active {
     opacity: 1;
     transition: 0.8s;
@@ -45,6 +60,12 @@ export default defineComponent({
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@include tab {
+  .link {
+    width: 100%;
   }
 }
 </style>

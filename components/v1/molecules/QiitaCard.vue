@@ -49,7 +49,6 @@ export default defineComponent({
   display: block;
   padding: 0 2%;
   width: calc(100% / 3);
-  margin-top: 50px;
 
   @include tab {
     width: calc(100% / 2);

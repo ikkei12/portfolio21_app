@@ -1,7 +1,6 @@
 <template>
   <Card class="career__card">
     <div class="card__inner">
-      <h2 class="title">Career</h2>
       <CareerTree :career-nodes="careerNodes" />
     </div>
   </Card>

@@ -12,22 +12,25 @@
       class="categories-list__wrapper"
       :class="{ '--active': isActive }"
     >
-      <!-- <button
-        v-show="isActive"
-        class="menu__button --close"
-        @click="closeDrawer"
-      >
-        <Icon color="white" icon-name="cross" />
-      </button> -->
       <ArticleCategoriesList :categories="categories" />
     </div>
     <div class="article-page__inner">
       <section class="article__section">
-        <Title :title="`${title ? title : '最新'}の記事`" color="#AEDADA" />
+        <Title
+          class="article-page__title"
+          :title="`${title ? title : '最新'}の記事`"
+          color="#C1C1C1"
+        />
+        <nuxt-link
+          :to="'/articles/' + articles[0].slug"
+          class="article-card__link"
+        >
+          <ArticleCardRow :content="articles[0]" />
+        </nuxt-link>
         <ArticleCardsGroup :articles="articles" />
       </section>
       <section v-if="pageType !== 'categories'" class="qiita__section">
-        <Title title="Qiita" color="#AEDADA" />
+        <Title title="Qiita" color="#C1C1C1" class="article-page__title" />
         <QiitaCardsGroup :qiita-articles="qiitaArticles" />
         <a href="https://qiita.com/ikkei12" class="qiita-user__link">
           <p>Qiitaの記事をもっと見る</p>
@@ -43,6 +46,7 @@ import Title from '@/components/v1/atoms/Title.vue'
 import ArticleCategoriesList from '@/components/v1/organisms/ArticleCategoriesList.vue'
 import Icon from '@/components/v1/atoms/Icon.vue'
 import QiitaCardsGroup from '@/components/v1/organisms/QiitaCardsGroup.vue'
+import ArticleCardRow from '@/components/v1/molecules/ArticleCardRow.vue'
 import { Article, ArticleCategoryItem } from '~/@types/Article'
 import { QiitaArticle } from '~/@types/Ogp'
 export default defineComponent({
@@ -52,6 +56,7 @@ export default defineComponent({
     ArticleCategoriesList,
     Icon,
     QiitaCardsGroup,
+    ArticleCardRow,
   },
   props: {
     articles: {
@@ -102,7 +107,7 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   height: 100%;
-  width: 100%;
+  width: 90%;
   min-height: 100vh;
   justify-content: center;
   position: relative;
@@ -115,12 +120,27 @@ export default defineComponent({
 
   .article__section {
     margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .article-page__title {
+    margin-bottom: 30px;
+    margin-left: 2%;
+  }
+
+  .article-card__link {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    padding: 0 1%;
   }
 
   .qiita__section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
 
     .qiita-user__link {
@@ -154,7 +174,7 @@ export default defineComponent({
     right: 30px;
     top: 90px;
     z-index: 6;
-    background: $primary;
+    background: $secondary;
     border: 0;
     border-radius: 50%;
     width: 70px;
@@ -166,6 +186,14 @@ export default defineComponent({
   }
 }
 
+@include tab {
+  .article-page {
+    padding-top: 70px;
+    .article-page__inner {
+      padding: 0;
+    }
+  }
+}
 @include sp {
   .article-page {
     padding-right: 0;
@@ -188,10 +216,6 @@ export default defineComponent({
       &.--active {
         width: 100%;
       }
-    }
-
-    .article-page__inner {
-      width: 95%;
     }
   }
 }

@@ -60,14 +60,14 @@ export default defineComponent({
   text-decoration: none;
   display: inline-block;
   width: 100%;
-  margin-top: 2vh;
+  padding: 2vh 0;
+  border-bottom: 2px solid $third__thin;
 
   .list-item {
     display: flex;
     align-items: center;
     padding: 3vh 2vw;
     cursor: pointer;
-    border-bottom: 2px solid $secondary__thin;
     position: relative;
 
     .list-item__index {
@@ -92,11 +92,9 @@ export default defineComponent({
   }
 
   &.--active {
-    background: $primary__thin;
-
-    .list-item {
-      border-bottom: 2px solid $secondary;
-    }
+    background: rgba(255, 255, 255, 0.216);
+    border-bottom: 2px solid $black__thin;
+    backdrop-filter: blur(4px);
 
     .list-item__index {
       color: black;
