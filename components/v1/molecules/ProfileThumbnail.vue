@@ -3,7 +3,7 @@
     <!-- TODO: 画像を毎回ランダムに持ってくる -->
 
     <picture
-      class="image-wrapper --vertical"
+      class="image-wrapper --horizontal"
       :class="{ '--next': activeIndex == 4, '--active': activeIndex == 0 }"
     >
       <source type="image/webp" srcset="~/assets/images/top/webp/1.webp" />
@@ -16,7 +16,7 @@
       />
     </picture>
     <picture
-      class="image-wrapper --horizontal"
+      class="image-wrapper --vertical"
       :class="{ '--active': activeIndex == 1 }"
     >
       <source type="image/webp" srcset="~/assets/images/top/webp/2.webp" />
@@ -30,7 +30,7 @@
     </picture>
 
     <picture
-      class="image-wrapper --vertical"
+      class="image-wrapper --horizontal"
       :class="{ '--next': activeIndex == 1, '--active': activeIndex == 2 }"
     >
       <source type="image/webp" srcset="~/assets/images/top/webp/3.webp" />
@@ -44,7 +44,7 @@
     </picture>
 
     <picture
-      class="image-wrapper --horizontal"
+      class="image-wrapper --vertical"
       :class="{ '--next': activeIndex == 2, '--active': activeIndex == 3 }"
     >
       <source type="image/webp" srcset="~/assets/images/top/webp/4.webp" />
@@ -130,11 +130,11 @@ export default defineComponent({
     opacity: 0.2;
     transition: 1.5s;
     filter: blur(4px);
-    &.--vertical {
+    &.--horizontal {
       height: 490px;
       width: 700px;
     }
-    &.--horizontal {
+    &.--vertical {
       height: 650px;
       width: 430px;
     }
