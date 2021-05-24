@@ -11,7 +11,7 @@ export default (ogpText: string) => {
         overlay: {
           font_family: 'Sawarabi Gothic',
           font_weight: 'bold',
-          font_size: 46,
+          font_size: 53,
           text_align: 'start',
           text: encodeText,
         } as any,
