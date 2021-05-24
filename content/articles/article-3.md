@@ -35,7 +35,7 @@
     </div>
 </div>
 <div class="thumbnail__wrapper">
-    <img  width="1200px" height="630px" src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-3.png?authuser=1" class="thumbnail" alt="thumbnail" >
+    <img  width="1200px" height="630px" src="https://res.cloudinary.com/dcaiaukf4/image/upload/c_fit,co_rgb:333,l_text:Sawarabi%20Gothic_53_bold_start:2021%25E5%25B9%25B4%25E3%2581%25AB%25E3%2582%2584%25E3%2582%258B%25E4%25BA%258B,w_1000/v1621601547/ogp_b3ezfg.jpg" class="thumbnail" alt="thumbnail" >
 </div>
 
 ## はじめに

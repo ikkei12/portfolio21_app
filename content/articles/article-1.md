@@ -37,7 +37,7 @@
 
 <div class="thumbnail__wrapper">
     <img width="1200px" height="630px"
-    src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-1.png?authuser=1" class="thumbnail" alt="thumbnail" >
+    src="https://res.cloudinary.com/dcaiaukf4/image/upload/c_fit,co_rgb:333,l_text:Sawarabi%20Gothic_53_bold_start:Jamstack%25E3%2581%25AA%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25AA%25E3%2582%25AA%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F,w_1000/v1621601547/ogp_b3ezfg.jpg" class="thumbnail" alt="thumbnail" >
 </div>
 
 ## はじめに

@@ -34,7 +34,7 @@
     </div>
 </div>
 <div class="thumbnail__wrapper">
-    <img  width="1200px" height="630px" src="https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-6.png?authuser=1" class="thumbnail" alt="thumbnail" >
+    <img  width="1200px" height="630px" src="https://res.cloudinary.com/dcaiaukf4/image/upload/c_fit,co_rgb:333,l_text:Sawarabi%20Gothic_53_bold_start:2%25E6%259C%2588%25E7%25AC%25AC1%25E9%2580%25B1%25E3%2581%25AE%25E6%258C%25AF%25E3%2582%258A%25E8%25BF%2594%25E3%2582%258A,w_1000/v1621601547/ogp_b3ezfg.jpg" class="thumbnail" alt="thumbnail" >
 </div>
 
 2月第1週を適当に振り返って行きます。
