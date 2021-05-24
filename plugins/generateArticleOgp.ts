@@ -1,4 +1,4 @@
-import cloudinary from '~/plugins/cloudinary'
+import cloudinary from '../plugins/cloudinary'
 
 export default (ogpText: string) => {
   const encodeText = encodeURI(ogpText)
@@ -9,12 +9,13 @@ export default (ogpText: string) => {
     transformation: [
       {
         overlay: {
-          font_family: 'notosansjp-bold.otf',
-          font_size: 40,
-          text_align: 'center',
+          font_family: 'Sawarabi Gothic',
+          font_weight: 'bold',
+          font_size: 46,
+          text_align: 'start',
           text: encodeText,
         } as any,
-        width: '1000',
+        width: '900',
         color: '#333',
         crop: 'fit',
       },

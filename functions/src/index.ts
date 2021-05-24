@@ -1,4 +1,3 @@
-import * as fs from 'fs'
 import * as functions from 'firebase-functions'
 import * as admin from 'firebase-admin'
 import generateArticleOgp from '../../plugins/generateArticleOgp'
@@ -70,21 +69,21 @@ export const createOgpImageAndSave = functions.https.onRequest(
       response.set('Access-Control-Allow-Methods', 'POST')
       response.set('Access-Control-Allow-Headers', 'Content-Type')
 
-      const upload = async (image: Buffer, slug: string): Promise<void> => {
-        const loaclTargetPath = `/tmp/target.png`
-        const targetPath = `ogp/files/${slug}.png`
+      // const upload = async (image: Buffer, slug: string): Promise<void> => {
+      //   const loaclTargetPath = `/tmp/target.png`
+      //   const targetPath = `ogp/files/${slug}.png`
 
-        fs.writeFileSync(loaclTargetPath, image)
+      //   fs.writeFileSync(loaclTargetPath, image)
 
-        // Storageにアップロード
-        await admin
-          .storage()
-          .bucket(functions.config().cloud_storage.bucket)
-          .upload(loaclTargetPath, { destination: targetPath })
+      //   // Storageにアップロード
+      //   await admin
+      //     .storage()
+      //     .bucket(functions.config().cloud_storage.bucket)
+      //     .upload(loaclTargetPath, { destination: targetPath })
 
-        // tmpファイルの削除
-        fs.unlinkSync(loaclTargetPath)
-      }
+      //   // tmpファイルの削除
+      //   fs.unlinkSync(loaclTargetPath)
+      // }
 
       const body = request.body
       const imageURL = await generateArticleOgp(body.title)

@@ -7,7 +7,7 @@ import { defineComponent } from '@vue/composition-api'
 import ArticleDetailPage from '@/components/v1/templates/ArticleDetailPage.vue'
 import { Article } from '~/@types/Article'
 import { Context } from '@nuxt/types'
-
+import generateArticleOgp from '../../plugins/generateArticleOgp'
 export type OGP = {
   title: string
   description: string
@@ -30,21 +30,26 @@ export default defineComponent({
       url: 'https://portfolio21-56e7e.web.app/articles',
       image: '',
     }
-    await $axios
-      .post(
-        'https://us-central1-portfolio21-56e7e.cloudfunctions.net/createOgpImageAndSave',
-        {
-          title: fixedArticle.title,
-          slug: fixedArticle.slug,
-          name: '@1keiuu',
-        }
-      )
-      .then((res) => {
-        ogpInfo.image = res.data.url
-        ogpInfo.description = fixedArticle.description
-        ogpInfo.title = fixedArticle.title
-      })
-      .catch((e) => console.error(e))
+    // await $axios
+    //   .post(
+    //     'https://us-central1-portfolio21-56e7e.cloudfunctions.net/createOgpImageAndSave',
+    //     {
+    //       title: fixedArticle.title,
+    //       slug: fixedArticle.slug,
+    //       name: '@1keiuu',
+    //     }
+    //   )
+    //   .then((res) => {
+    //     console.log(res.data)
+    //     ogpInfo.image = res.data.url
+    //     ogpInfo.description = fixedArticle.description
+    //     ogpInfo.title = fixedArticle.title
+    //   })
+    //   .catch((e) => console.error(e))
+    ogpInfo.image = generateArticleOgp(fixedArticle.title)
+    ogpInfo.description = fixedArticle.description
+    ogpInfo.title = fixedArticle.title
+
     return { article, prev, next, ogpInfo }
   },
   head() {
