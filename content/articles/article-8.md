@@ -2,7 +2,7 @@
     position: 8
     title: 2021年2月の振り返り
     description: 2021年2月の振り返りです。フォースタでのインターンが終わって3月からは新しいインターンが始まります。
-    thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-8.jpg
+    thumbnail: https://res.cloudinary.com/dcaiaukf4/image/upload/c_fit,co_rgb:333,l_text:Sawarabi%20Gothic_53_bold_start:2021%25E5%25B9%25B42%25E6%259C%2588%25E3%2581%25AE%25E6%258C%25AF%25E3%2582%258A%25E8%25BF%2594%25E3%2582%258A,w_1000/v1621601547/ogp_b3ezfg.jpg
     createdDate: "2021-02-28"
     category_ids: 
         - 54

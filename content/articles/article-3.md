@@ -2,7 +2,7 @@
     position: 3
     title: 2021年にやる事
     description: 2021年にやる事を書きました。年末に振り返る用。
-    thumbnail: https://storage.googleapis.com/portfolio21-56e7e.appspot.com/ogp/files/article-3.png?authuser=1
+    thumbnail: https://res.cloudinary.com/dcaiaukf4/image/upload/c_fit,co_rgb:333,l_text:Sawarabi%20Gothic_53_bold_start:2021%25E5%25B9%25B4%25E3%2581%25AB%25E3%2582%2584%25E3%2582%258B%25E4%25BA%258B,w_1000/v1621601547/ogp_b3ezfg.jpg
     createdDate: "2021-01-24"
     category_ids: 
         - 51 
