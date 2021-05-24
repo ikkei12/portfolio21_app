@@ -15,7 +15,7 @@ export default (ogpText: string) => {
           text_align: 'start',
           text: encodeText,
         } as any,
-        width: '900',
+        width: '1000',
         color: '#333',
         crop: 'fit',
       },
